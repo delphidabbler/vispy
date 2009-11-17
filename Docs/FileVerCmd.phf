@@ -1,0 +1,251 @@
+@PROJECT_NAME           Version Information Spy Command Line Program.
+@PROJECT_DESC           Command line application that displays version
+                        information embedded in program files, DLLs etc.
+@ROOT                   ..\Src\CmdApp
+@AUTHOR                 Peter D Johnson, LLANARTH, Ceredigion, Wales, UK.
+@EMAIL                  delphidabbler@yahoo.co.uk
+@COPYRIGHT              © Peter D Johnson, 2003-2007
+@LEGAL_NOTICE           This program is released under the Mozilla Public
+                        License v1.1. See FileVerCmd.dpr for details.
+@WEBSITE                http://www.delphidabbler.com/
+@HISTORY(
+  @REVISION(
+    @VERSION            1.0 (build 1)
+    @DATE               24/02/2003
+    @COMMENTS           Original version.
+    @COMPILERS          + Delphi 4
+                        + Version Information Expert v2.8.2
+    @FILES(
+      @NEW(
+        @FILE           FileVerCmd.dpr
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UStdOutStream.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\..\Intf\IntfVerInfoReader.pas
+        @VERSION        1.0
+        @COMMENTS       Shared file.
+      )
+      @NEW(
+        @FILE           ..\..\..\Intf\IntfVerInfoReport.pas
+        @VERSION        1.0
+        @COMMENTS       Shared file.
+      )
+      @NEW(
+        @FILE           ..\Shared\UFileReaderLoader.pas
+        @VERSION        1.0
+        @COMMENTS       Shared file.
+      )
+      @NEW(
+        @FILE           ..\Shared\UDLLLoader.pas
+        @VERSION        1.1
+        @COMMENTS       Shared file: previously used only in FileVer.exe.
+      )
+      @NEW(
+        @FILE           ..\Shared\UReporterLoader.pas
+        @VERSION        1.0
+        @COMMENTS       Shared file.
+      )
+      @NEW(
+        @FILE           VFileVerCmd.vi
+        @COMMENTS       Original version.
+        @DATE           24/02/2003
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0 (build 2)
+    @DATE               31/05/2003
+    @COMMENTS           No change - updated product and file version information
+                        only
+    @COMPILERS          + Delphi 4
+                        + Version Information Expert v2.9
+    @FILES(
+      @UPDATED(
+        @FILE           VFileVerCmd.vi
+        @DATE           31/05/2003
+        @COMMENTS       Updated file and product version.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0 (build 3)
+    @DATE               14/08/2003
+    @COMMENTS           No change - updated product and file version information
+                        only.
+    @COMPILERS          + Delphi 4
+                        + Version Information Expert v2.9
+    @FILES(
+      @UPDATED(
+        @FILE           VFileVerCmd.vi
+        @DATE           14/08/2003
+        @COMMENTS       Updated file and product version.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0 (build 4)
+    @DATE               17/08/2003
+    @COMPILERS          + Delphi 4
+                        + Version Information Expert v2.9
+    @COMMENTS           No change - updated product and file version information
+                        only.
+    @FILES(
+      @UPDATED(
+        @FILE           VFileVerCmd.vi
+        @DATE           17/08/2003
+        @COMMENTS       Updated file and product version.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0 (build 5)
+    @DATE               10/09/2003
+    @COMMENTS           No change - updated product and file version information
+                        only
+    @COMPILERS          + Delphi 4
+                        + Version Information Expert v2.9
+    @FILES(
+      @UPDATED(
+        @FILE           VFileVerCmd.vi
+        @DATE           10/09/2003
+        @COMMENTS       Updated file and product version numbers.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.1 (build 6)
+    @COMMENTS           + Now get some program-wide information from
+                          UGlobals.pas rather than local constants and literals.
+                        + Use revised method of loading required DLLs.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor v2.10.1
+    @DATE               20/10/2004
+    @FILES(
+      @UPDATED(
+        @FILE           FileVerCmd.dpr
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           ..\Shared\UDLLLoader.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           ..\Shared\UFileReaderLoader.pas
+        @VERSION        2.0
+      )
+      @NEW(
+        @FILE           ..\Shared\UGlobals.pas
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           ..\Shared\UReporterLoader.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           ..\..\..\Intf\IntfVerInfoReader.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           ..\..\..\Intf\IntfVerInfoReport.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           VFileVerCmd.vi
+        @DATE           19/10/2004
+        @COMMENTS       + Updated file and product numbers.
+                        + Updated copyright date to range from 2003 to current
+                          year.
+                        + Updated comments field to note Mozilla public license.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.1 (build 7)
+    @DATE               07/03/2005
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor v2.10.1
+    @FILES(
+      @UPDATED(
+        @FILE           VFileVerCmd.vi
+        @DATE           07/03/2005
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.1 (build 8)
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor v2.10.1
+    @DATE               23/11/2005
+    @FILES(
+      @UPDATED(
+        @FILE           VFileVerCmd.vi
+        @COMMENTS       Updated product and build number.
+        @DATE           23/11/2005
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.1.1 (build 9)
+    @COMPILERS          + Delphi 7
+                        + Microsoft Help Workshop v4
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler v5.4
+    @COMMENTS           + Restructured source tree and location of main icon.
+                        + Moved to new EULA and updated version information
+                          accordingly.
+                        + Added batch file used to build project.
+    @DATE               28/08/2007
+    @FILES(
+      @UPDATED(
+        @FILE           FileVerCmd.dpr
+        @VERSION        1.2
+      )
+      @NEW(
+        @FILE           Build.bat
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           FVCImages.rc
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           VFileVerCmd.vi
+        @DATE           28/08/2007
+        @COMMENTS       + Changed Comments string to refer to external EULA.
+                        + Added MPL and build instructions.
+                        + Removed path to BRCC32.
+                        + Updated file and product numbers.
+      )
+      @UPDATED(
+        @FILE           ..\Reader\Exports\IntfVerInfoReader.pas
+        @VERSION        2.0
+        @RENAMED_FROM   ..\..\..\Intf\IntfVerInfoReader.pas
+        @COMMENTS       File moved, not updated.
+      )
+      @UPDATED(
+        @FILE           ..\Reporter\Exports\IntfVerInfoReport.pas
+        @VERSION        2.0
+        @COMMENTS       File moved, not updated.
+        @RENAMED_FROM   ..\..\..\Intf\IntfVerInfoReport.pas
+      )
+      @UPDATED(
+        @FILE           ..\Shared\UGlobals.pas
+        @VERSION        1.1
+      )
+      @NEW(
+        @FILE           Images\FileVerCmd.ico
+        @DATE           07/07/1998
+        @COMMENTS       FileVer MAINICON.
+      )
+    )
+  )
+)

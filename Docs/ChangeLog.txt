@@ -1,0 +1,212 @@
+Release 7.0.3
+FileVer.exe v7.0.2 (build 62) of 28 August 2007
+FileVerCM.dll v3.0.2 (build 10) of 28 August 2007
+FileVerCmd.exe v1.1.1 (build 9) of 28 August 2007
+FVFileReader.dll v2.0.1 (build 9) of 28 August 2007
+FVReport.dll v2.0.1 (build 9) of 28 August 2007
+VIBinData.dll v1.0.5 (build 6) of 26 August 2007
++ Restructured source tree.
++ Performed various refactorings.
++ Fixed bugs in Windows application:
+  - Fixed error in main window caption.
+  - Fixed display problems in advanced tab of explorer extension dialog box.
++ Moved to new EULA and updated version information in each executable accordingly.
++ Updated help file re new EULA and updated help copyright dates.
++ Improved code that checks if shell extension server is registered.
++ Changed installer to:
+  - Include product version number in setup program name.
+  - Use internal scripting to display custom messages.
+  - Changed to install VIBinData.dll to application folder instead of as shared DLL in Common Files.
++ Added batch files used to build sub projects.
+
+Release 7.0.2
+FileVer.exe v7.0.1 (build 61) of 23 November 2005
+FileVerCM.dll v3.0.1 (build 9) of 23 November 2005
+FileVerCmd.exe v1.1 (build 8) of 23 November 2005
+FVFileReader.dll v2.0 (build 8) of 23 November 2005
+FVReport.dll v2.0 (build 8) of 23 November 2005
+VIBinData.dll v1.0.4 (build 5) of 19 October 2004
++ Fixed minor bug where, on Windows 9x, context menu handler does not display Explorer status bar hints correctly. 
+
+Release 7.0.1
+FileVer.exe v7.0.1 (build 60) of 07 March 2005
+FileVerCM.dll v3.0 (build 8) of 07 March 2005
+FileVerCmd.exe v1.1 (build 7) of 07 March 2005
+FVFileReader.dll v2.0 (build 7) of 07 March 2005
+FVReport.dll v2.0 (build 7) of 07 March 2005
+VIBinData.dll v1.0.4 (build 5) of 19 October 2004
++ Revised dialogs that display HTML to:
+  - Hide 3D borders.
+  - Inhibit display of context menus.
+  - Load HTML internally rather than from temporary file.
+
+Release 7.0
+FileVer.exe v7.0 (build 59) of 20 October 2004
+FileVerCM.dll v3.0 (build 7) of 20 October 2004
+FileVerCmd.exe v1.1 (build 6) of 20 October 2004
+FVFileReader.dll v2.0 (build 6) of 20 October 2004
+FVReport.dll v2.0 (build 6) of 20 October 2004
+VIBinData.dll v1.0.4 (build 5) of 19 October 2004
++ Major new release.
++ New Explorer property sheet extension that adds a tab to a file's property sheet that displays extended version information.
++ Explorer context menu handler updated to support Unicode hints. The Version Information menu option is disabled when the selected file has no version information.
++ Main program's explorer extension options dialog rewritten to support both shell extensions. Also allows new file types to be added.
++ Improved support for auto-registering new file types with shell extensions.
++ Improved dynamic loading of DLLs.
++ Extended integrity checking for translations / string tables.
++ New HTML reports explain inconsistencies between translations and string tables.
++ Detailed HTML report redesigned and contains more information. These dialogs are now displayed in integrated web browser controls.
++ Source code generation now includes option to correct inconsistencies.
++ Added code to DLL that reads version information to check whether a file contains version information.
++ Made several user interface changes:
+  - New Display Option tabbed dialog to configure display.
+  - Problem translations are now highlighted and optionally explained.
+  - String information with non-standard names can now be highlighted.
+  - Full text of lines truncated in the display can be displayed in pop-up windows.
+  - XP Themes now supported.
++ Removed dependency on external DLL for web access.
++ All user interaction centralised in action lists.
++ Various source code refactorings implemented.
++ Minor bug in the format of error strings fixed in VIBinData.dll.
++ Revised help files.
++ Installer now created using InnoSetup.
+
+Release 6.1.3
+FileVer.exe v6.1.2 (build 58) of 10 September 2003
+FileVerCM.dll v2.0 (build 6) of 10 September 2003
+FileVerCmd.exe v1.0 (build 5) of 10 September 2003
+FVFileReader.dll v1.0.1 (build 5) of 10 September 2003
+FVReport.dll v1.0.1 (build 5) of 10 September 2003
+VIBinData.dll v1.0.3 (build 4) of 17 August 2003
+DDNet.dll v1.0 (build 1) of 18 November 2002
++ Added additional checks in FVFileReader.dll for valid DOS files and added support for detecting virtual device drivers.
+
+Release 6.1.2
+FileVer.exe v6.1.2 (build 57) of 17 August 2003
+FileVerCM.dll v2.0 (build 5) of 17 August 2003
+FileVerCmd.exe v1.0 (build 4) of 17 August 2003
+FVFileReader.dll v1.0 (build 4) of 17 August 2003
+FVReport.dll v1.0.1 (build 4) of 17 August 2003
+VIBinData.dll v1.0.3 (build 4) of 17 August 2003
+DDNet.dll v1.0 (build 1) of 18 November 2002
++ Updated VIBinData.dll to fix problem in displaying string table information from some programs (e.g. Wise installer) which have string values padded by characters and data length is not is standard format.
++ Fixed problem with HTML reports in FileVer.exe that was causing old versions of reports to be displayed in place of new versions.
+
+Version 6.1.1 - no public release
+FileVer.exe v6.1.1 (build 56) of 14 August 2003
+FileVerCM.dll v2.0 (build 4) of 14 August 2003
+FileVerCmd.exe v1.0 (build 3) of 14 August 2003
+FVFileReader.dll v1.0 (build 3) of 14 August 2003
+FVReport.dll v1.0.1 (build 3) of 14 August 2003
+VIBinData.dll v1.0.2 (build 3) of 22 Jun 2003
+DDNet.dll v1.0 (build 1) of 18 November 2002
++ Fixed access violation bug when loading a version information resource that contains no translations.
++ Fixed table display error in HTML reports.
++ Fixed access violation problem in VIBinData.dll and ensured correct name given to root version info nodes (neither fix affects operation of Version Information Spy).
+
+Release 6.1
+FileVer.exe v6.1 (build 55) of 31 May 2003
+FleVerCM.dll v2.0 (build 3) of 31 May 2003
+FileVerCmd.exe v1.0 (build 2) of 31 May 2003
+FVFileReader.dll v1.0 (build 2) of 31 May 2003
+FVReport.dll v1.0 (build 2) of 31 May 2003
+VIBinData.dll v1.0.1 (build 2) of 31 May 2003
+DDNet.dll v1.0 (build 1) of 18 November 2002
++ Fixed problem in VIBinData.dll that was preventing string information being read from some executable files on NT platforms.
++ Changed method used to identify error or non-standard translations in GUI application.
++ GUI application now displays number of translations and number of selected translation.
+
+Release 6.0
+FileVer.exe v6.0 (build 54) of 24 February 2003
+FileVerCM.dll v2.0 (build 2) of 24 February 2003
+FileVerCmd.exe v1.0 (build 1) of 24 February 2003
+FVFileReader.dll v1.0 (build 1) of 24 February 2003
+FVReport.dll v1.0 (build 1) of 24 February 2003
+VIBinData.dll v1.0 (build 1) of 04 August 2002
+DDNet.dll v1.0 (build 1) of 18 November 2002
++ New major release.
++ Added support for reading version information from binary resource files.
++ Added facility to display various reports (text, HTML and RC source) about the currently loaded file's version information. Uses new FVReport.dll
++ Added ability to automatically register the context menu handler for the types of files successfully opened by the program.
++ Now access delphiDabbler website rather than PJSoft website.
++ Changed to use object in FVFileReader.dll to read data rather than compiled-in code.
++ Added new COM server object that manages registered and recorded extensions that context menu handler works with.
++ Changes method of reporting errors in context menu handler.
++ Added new command line program that reports version information data to standard output.
+
+Release 5.0
+FileVer.exe v5.0 of 04 August 2002
+FileVerCM.dll v1.0 of 04 August 2002
+VIBinData.dll v1.0 of 04 August 2002
+PJSoftNet.dll v1.0 of 29 October 2000
++ New major release.
++ Engine used to read version info from files completely rewritten and now uses VIBinData.dll to perform the reading.
++ Can now read version info from files that are not internally consistent - here there is an internal integrity problem within version information this is now flagged in display.
++ All string information stored in version info is now displayed rather just the predefined strings, and the string information can now be sorted on the string name.
++ Added display of Creation date from fixed file fixed file information and provided option to the fixed file info structure information.
++ Rearranged menus
++ Added a context menu handler (in FileVerCM.dll) that can interface with Explorer to display a "Version Information" menu option to the context menu that appears when executable files are right-clicked in Explorer. Such version info can be displayed in either single or multiple instances of the program.
++ Updated help file re new features and a "What's new" topic added.
++ Program's own version information now sepcified in a .vi file.
+
+Release 4.0
+FileVer.exe v4.0 of 30 March 2002
+PJSoftNet.dll v1.0 of 29 October 2000
++ Complete rewrite to support version information resources that contain one or more translations.
++ Implemented a new user interface.
++ More informative descriptions of fixed file information flags and codes now provided.
++ Provided menu in addition to toolbar.
++ Added user customisation of whether toolbar is displayed and how some fixed file information is displayed.
++ Rewrote help file to describe new facilities and user interface and added a contents dialog box.
++ Added access to PJSoft website from program's menu
+
+Release 3.0
+FileVer.exe v3.0 of 04 December 1999
++ Moved to 32 bit code.
++ Gave program a new interface.
++ Greatly simplified code.
++ Rewrote help file for new interface. Help file now has hyperlinks to author's website and e-mail.
++ Removed context sensitive help from browse dialogue box.
++ Window now remembers position and size between executions using registry.
++ User can no longer determine whether or not window size is saved.
++ Added HTML and other documentation.
++ Included source code in distribution.
++ Created installation program using InstallShield Express.
++ Moved to Delphi 4 compiler.
++ Removed context sensitive help from browse dialog box.
+
+Release 2.1
+FileVer.exe v2.1 of 27 August 1998
++ Made program's window become active after file had been dropped on it - previously File Manager had remained active.
+
+Version 2.0 - no public release
+FileVer.exe v2.0 of 07 July 1998
++ Total rewrite.
++ Gave new look and feel common to all my "spy" programs.
++ Shared some code with other "spy" programs.
++ Added Windows help to program.
++ Made window resizeable.
++ Made system menu available again.
++ Made About Box accessible from system menu rather than button.
++ Changed icon.
++ Added facility to optionally remember window size and position.
++ Removed bug that caused spurious blank line to appear at bottom of display.
+
+Version 1.3 - no public release
+FileVer.exe v1.3 of 15 May 1998
++ Added facility to browse for file rather than having to type in path and name.
+
+Version 1.2 - no public release
+FileVer.exe v1.2 of 15 May 1998
++ Replaced dedicated drag/drop handling with TPJDropFiles component.
++ Removed system menu from window.
+
+Version 1.1 - no public release
+FileVer.exe v1.1 of 03 May 1998
++ Added ability to drag and drop files from Windows File Manager.
++ Automatically refresh display when a new file name is entered (removed Refresh button).
+
+Version 1.0 - no public release
+FileVer.exe v1.0 of 16 February 1998
++ Original version (16 bit).
++ Compiled with Delphi 1.

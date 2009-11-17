@@ -1,0 +1,84 @@
+;## @PROJECT_NAME               Version Information Spy
+;## @PROJECT_DESC               Displays version information embedded in program
+;##                             files, DLLs etc.
+;## @FILE                       FileVer.cnt
+;## @COMMENTS                   Help contents file.
+;## @HISTORY(
+;##   @REVISION(
+;##     @VERSION                1.0
+;##     @DATE                   30/03/2002
+;##     @COMMENTS               Original version.
+;##   )
+;##   @REVISION(
+;##     @VERSION                1.1
+;##     @DATE                   04/08/2002
+;##     @COMMENTS               Added new Explorer Extension topic under "Using
+;##                             the program" heading and What's new top at top
+;##                             of contents.
+;##   )
+;##   @REVISION(
+;##     @VERSION                1.2
+;##     @DATE                   24/02/2003
+;##     @COMMENTS               + Updated What's new to release 6
+;##                             + Added new command line topic
+;##   )
+;##   @REVISION(
+;##     @VERSION                1.3
+;##     @COMMENTS               + Revised topic list, adding new entries.
+;##                             + Changed some identifiers that have been
+;##                               renamed.
+;##     @DATE                   19/10/2004
+;##   )
+;##   @REVISION(
+;##     @VERSION                1.4
+;##     @COMMENTS               Changed to refer to EULA rather than Copyright
+;##                             and licensing.
+;##     @DATE                   22/08/2007
+;##   )
+;## )
+
+
+;** ***** BEGIN LICENSE BLOCK *****
+;** 
+;** Version: MPL 1.1
+;** 
+;** The contents of this file are subject to the Mozilla Public License Version
+;** 1.1 (the "License"); you may not use this file except in compliance with the
+;** License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+;** 
+;** Software distributed under the License is distributed on an "AS IS" basis,
+;** WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+;** the specific language governing rights and limitations under the License.
+;** 
+;** The Original Code is FileVer.cnt.
+;** 
+;** The Initial Developer of the Original Code is Peter Johnson
+;** (http://www.delphidabbler.com/).
+;** 
+;** Portions created by the Initial Developer are Copyright (C) 2002-2007 Peter
+;** Johnson. All Rights Reserved.
+;** 
+;** Contributor(s):
+;** 
+;** ***** END LICENSE BLOCK *****
+
+
+:Base FileVer.hlp
+:Title Version Information Spy Help
+1 Overview=OVERVIEW
+1 Using the Program
+2 User Interface=USER_INTERFACE
+2 Opening A File=LOADING_FILES
+2 Menus and Toolbars=COMMANDS
+2 Creating Reports=CREATING_REPORTS
+2 Recreating RC Source Code=RECREATING_SOURCE
+2 Dealing with Errors and Inconsistencies=DEALING_WITH_ERRORS
+2 Explorer Extensions=EXPLORER_EXTENSIONS
+2 Command Line Program=COMMAND_LINE_PROGRAM
+1 Version Information
+2 Displaying Version Information=DISPLAY
+2 About Fixed File Information=FIXED_FILE_INFO
+2 About String Information=STRING_INFO
+1 License and Author
+2 End User License Agreement=COPYRIGHT
+2 About the Author=AUTHOR

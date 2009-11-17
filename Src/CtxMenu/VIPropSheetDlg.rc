@@ -1,0 +1,55 @@
+/* ##
+  @PROJECT_NAME             Version Information Spy Shell Extension.
+  @PROJECT_DESC             Provides a context menu handler that can launch
+                            Version Information Spy from the Explorer context
+                            menu for executable files and adds a version info
+                            tab to the property sheet.
+                            version information to a stream.
+  @FILE                     VIPropSheetDlg.rc
+  @COMMENTS                 Defines an empty dialog box template that is used
+                            as the basis of the Explorer version information
+                            property sheet.
+  @DEPENDENCIES             None.
+  @HISTORY(
+    @REVISION(
+      @VERSION              1.0
+      @DATE                 24/05/2004
+      @COMMENTS             Original version.
+    )
+  )
+*/
+
+
+/*
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is VIPropSheetDlg.rc.
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2004 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s):
+ *
+ * ***** END LICENSE BLOCK *****
+ */
+
+
+VIPROPSHEETDLG DIALOG 74, 84, 227, 250
+STYLE WS_POPUP | WS_CAPTION | WS_VISIBLE
+CAPTION ""
+FONT 8, "MS Sans Serif"
+{
+}

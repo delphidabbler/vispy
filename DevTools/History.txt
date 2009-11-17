@@ -1,0 +1,16 @@
+FILES IN DEVTOOLS DIRECTORY
+
+-------|--------------------|-------|-------------------------------------------
+VIS    |                    |       |
+Release| File               |Version| Description
+-------|--------------------|-------|-------------------------------------------
+0.7.3  | BuildAll.bat       | 1.0   | Builds all projects and install program
+0.7.3  | BuildHelp.bat      | 1.0   | Builds all help files in project
+0.7.3  | BuildInstaller.bat | 1.0   | Build program's installer
+0.7.3  | BuildPascal.bat    | 1.0   | Builds all Pascal files in project
+0.7.3  | BuildResources     | 1.0   | Builds all binary .res files in project
+0.7.3  | CollectAssets.bat  | 1.0   | Copies in required 3rd party files
+0.7.3  | ReleaseExe.bat     | 1.0   | Create executable code release zip file
+0.7.3  | ReleaseSrc.bat     | 1.0   | Creates source code release zip file
+0.7.3  | Tidy.bat           | 1.0   | Deletes backup and temp source files
+-------|--------------------|-------|-------------------------------------------

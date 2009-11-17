@@ -1,0 +1,50 @@
+body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+}
+
+h1 {
+  font-size: 16pt;
+  font-weight: bold;
+  color: #003399;
+}
+
+h2 {
+  font-size: 14pt;
+  font-weight: bold;
+  color: #003399;
+}
+
+h3 {
+  font-size: 12pt;
+  font-weight: bold;
+  color: #003399
+}
+
+p {
+}
+
+td {
+  font-size: 10pt
+}
+
+th {
+  text-align : left;
+  font-size: 10pt;
+  font-weight: bold
+}
+
+pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 10pt;
+  font-style: normal;
+  font-weight: normal;
+  padding : 6px;
+  background-color: #EEEEEE;
+  border: 1px solid #CCCCCC;
+}
+
+.highlight {
+  color: #FF3333
+}
+

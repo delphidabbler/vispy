@@ -1,0 +1,94 @@
+;## @PROJECT_NAME               Version Information Spy
+;## @PROJECT_DESC               Displays version information embedded in program
+;##                             files, DLLs etc.
+;## @FILE                       FileVer.hpj
+;## @COMMENTS                   Help project file.
+;## @HISTORY(
+;##   @REVISION(
+;##     @VERSION                1.0
+;##     @DATE                   07/07/1998
+;##     @COMMENTS               Original version.
+;##   )
+;##   @REVISION(
+;##     @VERSION                2.0
+;##     @DATE                   04/12/1999
+;##     @COMMENTS               Total rewrite of previous version. Removed
+;##                             mappings and added copyright information.
+;##   )
+;##   @REVISION(
+;##     @VERSION                2.1
+;##     @DATE                   30/03/2002
+;##     @COMMENTS               + Added reference to new contents file.
+;##                             + Added window definition.
+;##                             + Updated copyright date.
+;##                             + Changed output path for help file.
+;##   )
+;##   @REVISION(
+;##     @VERSION                2.2
+;##     @DATE                   04/08/2002
+;##     @COMMENTS               + Added [Map] section to include new help map
+;##                               file.
+;##                             + Increased width of main window.
+;##                             + Changed output path for help file.
+;##   )
+;##   @REVISION(
+;##     @VERSION                2.3
+;##     @DATE                   24/02/2003
+;##     @COMMENTS               Updated copyright date to 2003.
+;##   )
+;##   @REVISION(
+;##     @VERSION                2.4
+;##     @DATE                   19/10/2004
+;##     @COMMENTS               + Updated copyright date to 2004.
+;##                             + Removed the now unused [MAP] section.
+;##   )
+;##   @REVISION(
+;##     @VERSION                2.5
+;##     @DATE                   19/08/2007
+;##     @COMMENTS               + Changed path to output file name to reflect
+;##                               restructure of source tree.
+;##                             + Updated copyright date range to include 2007.
+;##   )
+;## )
+
+
+;** ***** BEGIN LICENSE BLOCK *****
+;** 
+;** Version: MPL 1.1
+;** 
+;** The contents of this file are subject to the Mozilla Public License Version
+;** 1.1 (the "License"); you may not use this file except in compliance with the
+;** License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+;** 
+;** Software distributed under the License is distributed on an "AS IS" basis,
+;** WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+;** the specific language governing rights and limitations under the License.
+;** 
+;** The Original Code is FileVer.hpj.
+;** 
+;** The Initial Developer of the Original Code is Peter Johnson
+;** (http://www.delphidabbler.com/).
+;** 
+;** Portions created by the Initial Developer are Copyright (C) 1998-2007 Peter
+;** Johnson. All Rights Reserved.
+;** 
+;** Contributor(s):
+;** 
+;** ***** END LICENSE BLOCK *****
+
+
+[OPTIONS]
+HCW=0
+LCID=0x809 0x0 0x0 ;English (United Kingdom)
+REPORT=Yes
+TITLE=Version Information Spy Help
+CNT=FileVer.cnt
+COPYRIGHT=FileVer copyright © P.D.Johnson 1998-2007.
+BMROOT=Bitmaps
+HLP=..\..\..\Exe\FileVer.hlp
+
+[FILES]
+FileVer.rtf
+
+[WINDOWS]
+main="Version Information Spy Help",(555,100,458,600),27904,(r14876671),(r15132390),f2

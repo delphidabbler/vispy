@@ -1,0 +1,110 @@
+<?xml version="1.0" ?>
+<XML_DIZ_INFO>
+	<MASTER_PAD_VERSION_INFO>
+		<MASTER_PAD_VERSION>2.01</MASTER_PAD_VERSION>
+		<MASTER_PAD_EDITOR>PADGen 2.0.1.22 http://www.padgen.org</MASTER_PAD_EDITOR>
+		<MASTER_PAD_INFO>Portable Application Description, or PAD for short, is a data set that is used by shareware authors to disseminate information to anyone interested in their software products. To find out more go to http://www.asp-shareware.org/pad</MASTER_PAD_INFO>
+	</MASTER_PAD_VERSION_INFO>
+	<Company_Info>
+		<Company_Name>DelphiDabbler</Company_Name>
+		<Address_1 />
+		<Address_2 />
+		<City_Town>Llanarth</City_Town>
+		<State_Province>Ceredigion</State_Province>
+		<Zip_Postal_Code />
+		<Country>UK</Country>
+		<Company_WebSite_URL>http://www.delphidabbler.com/</Company_WebSite_URL>
+		<Contact_Info>
+			<Author_First_Name>Peter</Author_First_Name>
+			<Author_Last_Name>Johnson</Author_Last_Name>
+			<Author_Email>delphidabbler@yahoo.co.uk</Author_Email>
+			<Contact_First_Name>Peter</Contact_First_Name>
+			<Contact_Last_Name>Johnson</Contact_Last_Name>
+			<Contact_Email>delphidabbler@yahoo.co.uk</Contact_Email>
+		</Contact_Info>
+		<Support_Info>
+			<Sales_Email>delphidabbler@yahoo.co.uk</Sales_Email>
+			<Support_Email>delphidabbler@yahoo.co.uk</Support_Email>
+			<General_Email>delphidabbler@yahoo.co.uk</General_Email>
+			<Sales_Phone />
+			<Support_Phone />
+			<General_Phone />
+			<Fax_Phone />
+		</Support_Info>
+	</Company_Info>
+	<Program_Info>
+		<Program_Name>Version Information Spy</Program_Name>
+		<Program_Version>7.0.3</Program_Version>
+		<Program_Release_Month>08</Program_Release_Month>
+		<Program_Release_Day>28</Program_Release_Day>
+		<Program_Release_Year>2007</Program_Release_Year>
+		<Program_Cost_Dollars>0</Program_Cost_Dollars>
+		<Program_Cost_Other_Code />
+		<Program_Cost_Other />
+		<Program_Type>Freeware</Program_Type>
+		<Program_Release_Status>Minor Update</Program_Release_Status>
+		<Program_Install_Support>Install and Uninstall</Program_Install_Support>
+		<Program_OS_Support>Win98,WinME,WinNT 4.x,Windows2000,WinXP,Windows2003</Program_OS_Support>
+		<Program_Language>English</Program_Language>
+		<Program_Change_Info>Fixed minor bugs and changed to new EULA</Program_Change_Info>
+		<Program_Specific_Category>Utilities</Program_Specific_Category>
+		<Program_Category_Class>System Utilities::Shell Tools</Program_Category_Class>
+		<Program_Categories>Utilities - Shell</Program_Categories>
+		<Program_System_Requirements>Internet Explorer 5.5 and later</Program_System_Requirements>
+		<Includes_JAVA_VM>N</Includes_JAVA_VM>
+		<Includes_VB_Runtime>N</Includes_VB_Runtime>
+		<Includes_DirectX>N</Includes_DirectX>
+		<File_Info>
+			<Filename_Versioned>vis703.zip</Filename_Versioned>
+			<Filename_Previous>vis702.zip</Filename_Previous>
+			<Filename_Generic>vis.zip</Filename_Generic>
+			<Filename_Long>dd-vis7.zip</Filename_Long>
+			<File_Size_Bytes>696097</File_Size_Bytes>
+			<File_Size_K>679</File_Size_K>
+			<File_Size_MB>0.66</File_Size_MB>
+		</File_Info>
+		<Expire_Info>
+			<Has_Expire_Info>N</Has_Expire_Info>
+			<Expire_Count />
+			<Expire_Based_On>Days</Expire_Based_On>
+			<Expire_Other_Info />
+			<Expire_Month />
+			<Expire_Day />
+			<Expire_Year />
+		</Expire_Info>
+	</Program_Info>
+	<Program_Descriptions>
+		<English>
+			<Keywords>Delphi, program, application, download, free, open source, version information, executable, NE format, PE format, explorer, explorer extension, resource files, context menu, property sheet</Keywords>
+			<Char_Desc_45>Displays version information in executables</Char_Desc_45>
+			<Char_Desc_80>Program that displays version information embedded in executable files</Char_Desc_80>
+			<Char_Desc_250>Open sour program that displays version information embedded in executable files and provides Windows Explorer Shell extensions to enable right click access to a file's version information and adds a new tab to an executable file's property sheet.</Char_Desc_250>
+			<Char_Desc_450>An open source program that displays version information embedded in executable files. Provides Windows Explorer Shell extensions to enable right click access to the program and adds a tab to the file's property sheet. A command line version is also provided. Extensive HTML and text reports of version information are available as is decompilation into source code. Version information can also be extracted from binary resource files. </Char_Desc_450>
+			<Char_Desc_2000>Version Information Spy 7 displays the version information contained in an executable file or DLL. The program comes in 3 flavours. The first is a Windows application that displays version information in its main window and can generate text or HTML reports and decompiled RC source code that optionally fixes any errors in the version information. There are also two Explorer extensions available. One adds a "Version Information" menu item to the context menu displayed by Windows Explorer when a supported file type is right clicked. When selected, this menu option starts the Windows application and displays version information about the selected file. The second extension add a new "Version Extra" tab to the file's property sheet that expands on the information already presented on the exiting "Version" tab. The file types recognised by the extensions are user-configurable. Finally there is a command line application that writes information about version information contained in a given file to standard output. Either a plain text description or decompiled RC source code can be displayed. These reports can be redirected to output files. Version information can be extracted from any Windows NE or PE (16 or 32 bit) format executable files (i.e. exes, dlls etc). Version Information Spy 7 can also extract version information from 32 bit binary resource files that contain a version information resource. Multi-lingual version information resources are supported. The program can read version information from most of the many programs that don't follow the Windows version information specification exactly, including some that defeat the Windows version API functions.</Char_Desc_2000>
+		</English>
+	</Program_Descriptions>
+	<Web_Info>
+		<Application_URLs>
+			<Application_Info_URL>http://www.delphidabbler.com/software?id=vis</Application_Info_URL>
+			<Application_Order_URL>http://www.delphidabbler.com/software?id=vis</Application_Order_URL>
+			<Application_Screenshot_URL>http://www.delphidabbler.com/pad/vis-scr.gif</Application_Screenshot_URL>
+			<Application_Icon_URL>http://www.delphidabbler.com/pad/vis-ico.gif</Application_Icon_URL>
+			<Application_XML_File_URL>http://www.delphidabbler.com/pad/vis-pad.xml</Application_XML_File_URL>
+		</Application_URLs>
+		<Download_URLs>
+			<Primary_Download_URL>http://www.delphidabbler.com/download?file=dd-vis7.zip</Primary_Download_URL>
+			<Secondary_Download_URL />
+			<Additional_Download_URL_1 />
+			<Additional_Download_URL_2 />
+		</Download_URLs>
+	</Web_Info>
+	<Permissions>
+		<Distribution_Permissions>See License.txt for details of permissions to distribute the binary version of the program. A source code version of some of DelphiDabbler Version Information Spy's functionality that you may use, modify and distribute is available to you free of charge from http://www.delphidabbler.com/ under the Mozilla Public License and other open source software licenses. The Mozilla Public License can be found at http://www.mozilla.org/MPL/.</Distribution_Permissions>
+		<EULA>See License.txt included with the distribution. This is open source software. The software is available from www.delphidabbler.com/software?id=vis.</EULA>
+	</Permissions>
+	<ASP>
+		<ASP_FORM>Y</ASP_FORM>
+		<ASP_Member>N</ASP_Member>
+		<ASP_Member_Number />
+	</ASP>
+</XML_DIZ_INFO>

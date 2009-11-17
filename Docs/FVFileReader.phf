@@ -1,0 +1,268 @@
+@PROJECT_NAME           Version Information Spy File Reader DLL.
+@PROJECT_DESC           Enables version information data to be read from
+                        excutable and binary resource files that contain version
+                        information.
+@ROOT                   ..\Src\Reader
+@AUTHOR                 Peter D Johnson, LLANARTH, Ceredigion, Wales, UK.
+@EMAIL                  delphidabbler@yahoo.co.uk
+@COPYRIGHT              © Peter D Johnson, 2003-2007.
+@LEGAL_NOTICE           This program is released under the Mozilla Public
+                        License v1.1. See FVFileReader.dpr for details.
+@WEBSITE                http://www.delphidabbler.com/
+@HISTORY(
+  @REVISION(
+    @VERSION            1.0 (build 1)
+    @COMMENTS           Original version.
+    @COMPILERS          + Delphi 4
+                        + Version Information Expert v2.8.2
+    @DATE               24/02/2003
+    @FILES(
+      @NEW(
+        @FILE           FVFileReader.dpr
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UVerInfoStream.pas
+        @VERSION        1.0
+        @COMMENTS       Previously part of FileVer.exe
+      )
+      @NEW(
+        @FILE           UVIBinary.pas
+        @VERSION        1.1
+        @COMMENTS       Previously part of FileVer.exe
+      )
+      @NEW(
+        @FILE           UFileReader.pas
+        @VERSION        2.0
+        @COMMENTS       Previously part of FileVer.exe - under name
+                        UVersionInfo.pas
+      )
+      @NEW(
+        @FILE           UResourceUtils.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UResourceFileStream.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UResourceFile.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UVInfoResFileStream.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\..\Intf\IntfBinaryVerInfo.pas
+        @VERSION        1.0
+        @COMMENTS       From VIBinData.dll project.
+      )
+      @NEW(
+        @FILE           ..\..\..\Intf\IntfVerInfoReader.pas
+        @VERSION        1.0
+        @COMMENTS       Shared file.
+      )
+      @NEW(
+        @FILE           ..\Shared\UDLLLoader.pas
+        @VERSION        1.1
+        @COMMENTS       Previously only used in FileVer.exe, now shared.
+      )
+      @NEW(
+        @FILE           VFVFileReader.vi
+        @COMMENTS       Original version.
+        @DATE           24/02/2003
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0 (build 2)
+    @DATE               31/05/2003
+    @COMPILERS          + Delphi 4
+                        + Version Information Expert v2.9
+    @COMMENTS           No change - updated product and file version information
+                        only.
+    @FILES(
+      @UPDATED(
+        @FILE           VFVFileReader.vi
+        @DATE           31/05/2003
+        @COMMENTS       Updated file and product version.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0 (build 3)
+    @DATE               14/08/2003
+    @COMMENTS           No change - updated product and file version information
+                        only.
+    @COMPILERS          + Delphi 4
+                        + Version Information Expert v2.9
+    @FILES(
+      @UPDATED(
+        @FILE           VFVFileReader.vi
+        @DATE           14/08/2003
+        @COMMENTS       Updated file and product version.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0 (build 4)
+    @DATE               17/08/2003
+    @COMMENTS           No change - updated product and file version information
+                        only.
+    @COMPILERS          + Delphi 4
+                        + Version Information Expert v2.9
+    @FILES(
+      @UPDATED(
+        @FILE           VFVFileReader.vi
+        @DATE           17/08/2003
+        @COMMENTS       Updated file and product version.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0.1 (build 5)
+    @DATE               10/09/2003
+    @COMPILERS          + Delphi 4
+                        + Version Information Expert v2.9
+    @COMMENTS           Added additional checks for valid DOS files and added
+                        support for detecting virtual device drivers.
+    @FILES(
+      @UPDATED(
+        @FILE           UFileReader.pas
+        @VERSION        2.1
+      )
+      @UPDATED(
+        @FILE           VFVFileReader.vi
+        @DATE           10/09/2003
+        @COMMENTS       Updated file and product version numbers.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.0 (build 6)
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor v2.10.1
+    @COMMENTS           + Added support for new IVerInfoVarReader2 interface
+                          (extended status flags).
+                        + Added support for new IVerInfoFileQuery interface.
+                        + Uses revised method for loading required DLLs.
+                        + Now gets some constant values from new UGlobals unit.
+    @DATE               20/10/2004
+    @FILES(
+      @UPDATED(
+        @FILE           FVFileReader.dpr
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           UFileReader.pas
+        @VERSION        3.0
+      )
+      @UPDATED(
+        @FILE           UResourceFile.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           UVIBinary.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           ..\Shared\UDLLLoader.pas
+        @VERSION        2.0
+      )
+      @NEW(
+        @FILE           ..\Shared\UGlobals.pas
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           ..\..\..\Intf\IntfVerInfoReader.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           VFVFileReader.vi
+        @DATE           19/10/2004
+        @COMMENTS       + Updated file and product version numbers
+                        + Change copyright date to ramge from 2003 to current
+                          year.
+                        + Changed Comments field to refer to Mozilla public
+                          license.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.0 (build 7)
+    @DATE               07/03/2005
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor v2.10.1
+    @FILES(
+      @UPDATED(
+        @FILE           VFVFileReader.vi
+        @DATE           07/03/2005
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.0 (build 8)
+    @DATE               23/11/2005
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor v2.10.1
+    @FILES(
+      @UPDATED(
+        @FILE           VFVFileReader.vi
+        @DATE           23/11/2005
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.0.1 (build 9)
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor v2.10.1
+                        + Borland Resource Compiler v4.
+    @COMMENTS           + Restructured source tree.
+                        + Moved to new EULA and updated version information
+                          accordingly.
+                        + Added batch file used to build project.
+    @DATE               28/08/2007
+    @FILES(
+      @UPDATED(
+        @FILE           FVFileReader.dpr
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           VFVFileReader.vi
+        @DATE           28/08/2007
+        @COMMENTS       + Changed Comments string to refer to external EULA.
+                        + Added MPL and build instructions.
+                        + Removed path to BRCC32.
+                        + Updated file and product numbers.
+                        + Removed resource identifier.
+      )
+      @UPDATED(
+        @FILE           ..\Imports\IntfBinaryVerInfo.pas
+        @VERSION        1.0
+        @RENAMED_FROM   ..\..\..\Intf\IntfBinaryVerInfo.pas
+        @COMMENTS       File moved, not updated.
+      )
+      @UPDATED(
+        @FILE           ..\Shared\UGlobals.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           Exports\IntfVerInfoReader.pas
+        @VERSION        2.0
+        @COMMENTS       File moved, not updated.
+        @RENAMED_FROM   ..\..\..\Intf\IntfVerInfoReader.pas
+      )
+      @NEW(
+        @FILE           Build.bat
+        @VERSION        1.0
+      )
+    )
+  )
+)

@@ -1,0 +1,1743 @@
+<*HelpAuthor HTA1.9*>
+AK
+28
+[Footnotes]
+$=Overview
+#=OVERVIEW
+@=Overview of Version Information Spy.
+K=overview
+[End]
+12
+NS
+1
+HS
+3
+0
+
+0
+LOADING_FILES
+
+BD
+4
+2
+0
+HS
+5
+0
+
+0
+COMMAND_LINE_PROGRAM
+
+HS
+6
+2
+
+0
+
+ExecFile("http://www.delphidabbler.com/")
+HS
+7
+0
+
+0
+USER_INTERFACE
+
+HS
+8
+0
+
+0
+EXPLORER_EXTENSIONS
+
+HS
+9
+0
+
+0
+FEATURES
+
+HS
+10
+0
+
+0
+CREATING_REPORTS
+
+HS
+11
+0
+
+0
+RECREATING_SOURCE
+
+HS
+12
+0
+
+0
+DEALING_WITH_ERRORS
+
+HS
+13
+0
+
+0
+COPYRIGHT
+
+3630
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}{\f2\fnil \fcharset2 WingDings;}{\f3\fnil \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f0\fs24\cf3\b Overview\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par 
+\par \plain\f0\fs18\cf2\i Version Information Spy\plain\f0\fs18\cf2  allows you to see details of the version information stored in an executable or \plain\f1\fs18\cf2 32 bit binary resource file\plain\f0\fs18\cf2 . \plain\f1\fs18\cf2 It also allows you to check the integrety of the data and to create reports and decompile to RC source code.
+\par \plain\f1\fs8\cf2 
+\par \plain\f2\fs18\cf2 \'Fc\plain\f3\fs18\cf2 \tab \plain\f3\fs18\cf1 \protect <HS 9>\plain\f3\fs18\cf2 Read the program's feature list\plain\f3\fs18\cf1 \protect </HS 9>\plain\f0\fs18\cf2 
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 This help file focusses on helping you to use \plain\f1\fs18\cf2\i Version Information Spy\plain\f1\fs18\cf2  while also giving some background on the data stored inside a program's version information.
+\par \plain\f1\fs12\cf2 
+\par \plain\f1\fs18\cf2\b Key tasks\plain\f1\fs18\cf2 
+\par \plain\f1\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f2\fs18\cf2 \'Fc\plain\f1\fs18\cf2 \tab \plain\f1\fs18\cf1 \protect <HS 7>\plain\f1\fs18\cf2 Learning the user interface\plain\f1\fs18\cf1 \protect </HS 7>\plain\f1\fs18\cf2 
+\par \plain\f2\fs18\cf2 \'Fc\plain\f1\fs18\cf2 \tab \plain\f1\fs18\cf1 \protect <HS 3>\plain\f1\fs18\cf2 Opening a file\plain\f1\fs18\cf1 \protect </HS 3>\plain\f1\fs18\cf2 
+\par \plain\f2\fs18\cf2 \'Fc\plain\f1\fs18\cf2 \tab \plain\f1\fs18\cf1 \protect <HS 10>\plain\f1\fs18\cf2 Creating reports\plain\f1\fs18\cf1 \protect </HS 10>\plain\f1\fs18\cf2 
+\par \plain\f2\fs18\cf2 \'Fc\plain\f1\fs18\cf2 \tab \plain\f1\fs18\cf1 \protect <HS 11>\plain\f1\fs18\cf2 Recreating RC source code\plain\f1\fs18\cf1 \protect </HS 11>\plain\f1\fs18\cf2 
+\par \plain\f2\fs18\cf2 \'Fc\plain\f1\fs18\cf2 \tab \plain\f1\fs18\cf1 \protect <HS 12>\plain\f1\fs18\cf2 Dealing with errors and inconsistencies\plain\f1\fs18\cf1 \protect </HS 12>\plain\f1\fs18\cf2 
+\par \plain\f2\fs18\cf2 \'Fc\plain\f1\fs18\cf2 \tab \plain\f1\fs18\cf1 \protect <HS 8>\plain\f1\fs18\cf2 Using the Explorer extensions\plain\f1\fs18\cf1 \protect </HS 8>\plain\f1\fs18\cf2 
+\par \plain\f2\fs18\cf2 \'Fc\plain\f1\fs18\cf2 \tab \plain\f1\fs18\cf1 \protect <HS 5>\plain\f1\fs18\cf2 Using the command line program\plain\f1\fs18\cf1 \protect </HS 5>\plain\f1\fs18\cf2 
+\par \pard \plain\f0\fs12\cf2 
+\par \plain\f1\fs18\cf2\b Copyright & License\plain\f1\fs18\cf2 
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 This open source program is copyright \'A9 1998-2007 by Peter D Johnson (DelphiDabbler), Llanarth, Ceredigion, Wales, UK.\plain\f0\fs18\cf3  \plain\f0\fs18\cf1 \protect <HS 6>\plain\f0\fs18\cf3 http://www.\plain\f1\fs18\cf3 delphidabbler.com\plain\f0\fs18\cf3 /\plain\f0\fs18\cf1 \protect </HS 6>\plain\f1\fs18\cf2 . To use the program you must accept the \plain\f1\fs18\cf1 \protect <HS 13>\plain\f1\fs18\cf2 End User License Agreement\plain\f1\fs18\cf1 \protect </HS 13>\plain\f1\fs18\cf2 . Source code of portions of the program is released under the Mozilla Public Lience v1.1.\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs18\cf2\i 
+\par }
+
+[Footnotes]
+$=Main Features
+#=FEATURES
+@=Describes key features of program.
+K=features
+[End]
+2
+NS
+1
+BD
+4
+2
+0
+3211
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}{\f2\fnil \fcharset2 Wingdings;}{\f3\fnil \fcharset2 WingDings;}{\f4\fnil \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f1\fs24\cf3\b Main Features\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par 
+\par \plain\f1\fs18\cf2 The k\plain\f0\fs18\cf2 ey features \plain\f1\fs18\cf2 of \plain\f1\fs18\cf2\i Version Information Spy\plain\f1\fs18\cf2  are\plain\f0\fs18\cf2 :
+\par \plain\f0\fs12\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f2\fs18\cf2 \'Fc\plain\f0\fs18\cf2 \tab \plain\f1\fs18\cf2 Version information can be read from 16 and 32 bit executables (.exe, .dll, .ocx etc) \plain\f1\fs18\cf2\i and\plain\f1\fs18\cf2  from 32 bit binary resource files.\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \plain\f2\fs18\cf2 \'Fc\plain\f0\fs18\cf2 \tab \plain\f1\fs18\cf2 Version information that contains information in more than one language is supported.\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \plain\f2\fs18\cf2 \'Fc\plain\f0\fs18\cf2 \tab \plain\f1\fs18\cf2 Reports describing a file's version information can be produced in text and HTML format.\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \plain\f2\fs18\cf2 \'Fc\plain\f0\fs18\cf2 \tab \plain\f1\fs18\cf2 Binary version information can be de-compiled into the equivalent RC source code - and any errors and inconsistencies in the original code can optionally be fixed.\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \plain\f3\fs18\cf2 \'Fc\plain\f1\fs18\cf2 \tab Version information that departs from the Microsoft standard (and some that defeat the Windows API calls) are handled. Any inconsistencies in version information can be flagged up. Reports of errors and suggestions for fixes can be displayed.
+\par \plain\f1\fs8\cf2 
+\par \plain\f2\fs18\cf2 \'Fc\plain\f0\fs18\cf2 \tab \plain\f1\fs18\cf2 There is a command line application that can produce text reports or decompiled source code.
+\par \plain\f0\fs8\cf2 
+\par \plain\f2\fs18\cf2 \'Fc\plain\f0\fs18\cf2 \tab \plain\f1\fs18\cf2\i Version Information Spy\plain\f1\fs18\cf2  integrates with the Windows shell to provide two highly customisable shell extensions:
+\par \pard \fi-400 \li800 \tx800 \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 1)\tab A context menu handler that launches \plain\f1\fs18\cf2\i Version Information Spy\plain\f1\fs18\cf2  to display version info for a selected executable or resource file.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 2)\tab A property sheet extension that provides extended version information in a selected file's property sheet.
+\par \pard \fi-400 \li400 \tx400 \plain\f1\fs8\cf2 
+\par \plain\f3\fs18\cf2 \'Fc\plain\f4\fs18\cf2 \tab \plain\f1\fs18\cf2 The configurable user interface supports XP themes.\plain\f0\fs18\cf2\i 
+\par \pard \plain\f0\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs18\cf2 
+\par }
+
+[Footnotes]
+$=User Interface
+#=USER_INTERFACE
+@=Description of the user interface.
+K=interface;user interface
+[End]
+7
+NS
+1
+BD
+4
+2
+0
+HS
+5
+0
+
+0
+DISPLAY
+
+HS
+6
+0
+
+0
+DLG_DISPLAY_OPTIONS
+
+HS
+7
+0
+
+0
+COMMANDS
+
+HS
+8
+0
+
+0
+EXPLORER_EXTENSIONS
+
+HS
+10
+0
+
+0
+TOOLBAR
+
+3093
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f0\fs24\cf3\b User Interface\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par 
+\par \plain\f0\fs18\cf2\i Version Information Spy's\plain\f0\fs18\cf2  main window is separated into three main areas:
+\par \plain\f0\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f0\fs18\cf2 1)\tab \plain\f0\fs18\cf2\b The menu bar.\plain\f0\fs18\cf2 
+\par \plain\f0\fs18\cf2\b \tab \plain\f0\fs18\cf2 Use the \plain\f0\fs18\cf1 \protect <HS 7>\plain\f0\fs18\cf2 menu commands\plain\f0\fs18\cf1 \protect </HS 7>\plain\f0\fs18\cf2  to control the program.
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 2)\tab \plain\f0\fs18\cf2\b The toolbar.\plain\f0\fs18\cf2 
+\par \plain\f0\fs18\cf2\b \tab \plain\f0\fs18\cf2 Buttons that replicate \plain\f1\fs18\cf2 some of the \plain\f0\fs18\cf2 menu commands are displayed on the \plain\f0\fs18\cf1 \protect <HS 10>\plain\f0\fs18\cf2 toolbar\plain\f0\fs18\cf1 \protect </HS 10>\plain\f0\fs18\cf2 . The toolbar is optional and may be hidden. The \plain\f0\fs18\cf2\i Options | Toolbar\plain\f0\fs18\cf2  menu option is used to display and hide the toolbar.
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 3)\tab \plain\f0\fs18\cf2\b The display area.\plain\f0\fs18\cf2 
+\par \plain\f0\fs18\cf2\b \tab \plain\f0\fs18\cf2 This is where details of the \plain\f1\fs18\cf2 current file's is\plain\f0\fs18\cf2  displayed. See \plain\f0\fs18\cf1 \protect <HS 5>\plain\f0\fs18\cf2 Displaying Version Information\plain\f0\fs18\cf1 \protect </HS 5>\plain\f0\fs18\cf2  for further details. \plain\f1\fs18\cf2 The display area can be customised using the \plain\f1\fs18\cf2\i Options | Display Options\plain\f1\fs18\cf2  menu command to access the \plain\f1\fs18\cf1 \protect <HS 6>\plain\f1\fs18\cf2 Display Options dialog box\plain\f1\fs18\cf1 \protect </HS 6>\plain\f1\fs18\cf2 .\plain\f0\fs18\cf2 
+\par \pard \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 The program's window can be resized in the usual fashion - and its size and placement is remembered between executions.
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2\i Version Information Spy\plain\f0\fs18\cf2  can optionally be activated from Windows Explorer by selecting "Version Information" from the menu that appears when an executable file is right clicked. \plain\f1\fs18\cf2 The program also adds a new page to Explorer's property dialog box for files that contain version information. \plain\f0\fs18\cf2 See the \plain\f0\fs18\cf1 \protect <HS 8>\plain\f1\fs18\cf2 Using\plain\f0\fs18\cf2  the Explorer Extension\plain\f1\fs18\cf2 s\plain\f0\fs18\cf1 \protect </HS 8>\plain\f0\fs18\cf2  topic for more information.
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs18\cf2\i 
+\par }
+
+[Footnotes]
+$=Opening a File
+#=LOADING_FILES
+@=Information on how to load a file into the program.
+K=loading files;files
+[End]
+6
+NS
+1
+BU
+2
+
+1
+JumpID(DISPLAY)
+BU
+3
+
+1
+JumpID(EXPLORER_EXTENSIONS)
+BD
+4
+2
+0
+BM
+5
+BtnOpen.bmp
+1
+1
+HS
+6
+0
+
+0
+EXPLORER_EXTENSIONS
+
+2867
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f1\fs24\cf3\b Opening a File\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par 
+\par \plain\f0\fs18\cf2 There are several ways in which files can be loaded into the program. They are:
+\par \plain\f0\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f0\fs18\cf2 1)\tab Select \plain\f1\fs18\cf2 the \plain\f1\fs18\cf2\i File | Open\plain\f1\fs18\cf2  menu item\plain\f0\fs18\cf2 . This displays a standard Windows dialog box where a file can be selected. By default the dialog box only displays EXE and DLL file. Other file types can be displayed by selecting the \plain\f0\fs18\cf2\i All Files\plain\f0\fs18\cf2  filter.
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 2)\tab Select the \plain\f0\fs18\cf1 \protect <BM 5>\plain\f0\fs18\cf2  button on the toolbar. This displays the same dialog box as described in 1 above. (Note: if the toolbar is not visible it can be displayed using the \plain\f0\fs18\cf2\i Options | Toolbar\plain\f0\fs18\cf2  menu option).
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 3)\tab Select a file in Windows Explorer and drag it over the \plain\f0\fs18\cf2\i Version Information Spy\plain\f0\fs18\cf2  window and then drop it. 
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 4)\tab \plain\f1\fs18\cf2 Use the Explorer extensions to either display a selected file's version information in the program or on a custom property sheet. See \plain\f1\fs18\cf1 \protect <HS 6>\plain\f1\fs18\cf2 Using the Explorer Extensions\plain\f1\fs18\cf1 \protect </HS 6>\plain\f1\fs18\cf2  topic for more information. extension.
+\par \plain\f1\fs8\cf2 
+\par \plain\f0\fs18\cf2 5)\tab Pass a file name to the program on the command line.
+\par \pard \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 Once a file has been loaded the program attempts to extract version information from it. If su\plain\f1\fs18\cf2 c\plain\f0\fs18\cf2 cessful the information is displayed in the main window. Should the selected file contain no version information then a message is displayed to that effect.
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2\i See also:\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f0\fs18\cf1 \protect <BU 2>\plain\f0\fs18\cf2 \tab Displaying Version Information.
+\par \plain\f0\fs18\cf1 \protect <BU 3>\plain\f0\fs18\cf2 \tab \plain\f1\fs18\cf2 Using\plain\f0\fs18\cf2  the Explorer Extension\plain\f1\fs18\cf2 s\plain\f0\fs18\cf2 .
+\par }
+
+[Footnotes]
+$=Menus and Toolbars
+#=COMMANDS
+@=Details of the program's menu and toolbar commands.
+K=menus;main menu;popup menus;toolbar
+[End]
+8
+NS
+1
+HS
+3
+0
+
+0
+MENU_FILE
+
+BD
+4
+2
+0
+HS
+5
+0
+
+0
+MENU_REPORT
+
+HS
+6
+0
+
+0
+MENU_OPTIONS
+
+HS
+7
+0
+
+0
+MENU_HELP
+
+HS
+8
+0
+
+0
+TOOLBAR
+
+HS
+9
+0
+
+0
+MENU_POPUPS
+
+2249
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}{\f2\fnil \fcharset2 WingDings;}{\f3\fnil \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f1\fs24\cf3\b Menus\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par 
+\par \plain\f1\fs18\cf2 The program's main menu has the following items:
+\par \plain\f1\fs12\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f2\fs18\cf2 \'A7\plain\f1\fs18\cf2 \tab \plain\f1\fs18\cf1 \protect <HS 3>\plain\f1\fs18\cf2 File\plain\f1\fs18\cf1 \protect </HS 3>\plain\f1\fs18\cf2 
+\par \tab for opening files and closing the program.
+\par \plain\f1\fs8\cf2 
+\par \plain\f2\fs18\cf2 \'A7\plain\f1\fs18\cf2 \tab \plain\f1\fs18\cf1 \protect <HS 5>\plain\f1\fs18\cf2 Report\plain\f1\fs18\cf1 \protect </HS 5>\plain\f1\fs18\cf2 
+\par \tab for choosing the various types of reports.
+\par \plain\f1\fs8\cf2 
+\par \plain\f2\fs18\cf2 \'A7\plain\f1\fs18\cf2 \tab \plain\f1\fs18\cf1 \protect <HS 6>\plain\f1\fs18\cf2 Options\plain\f1\fs18\cf1 \protect </HS 6>\plain\f1\fs18\cf2 
+\par \tab for customising the program.
+\par \plain\f1\fs8\cf2 
+\par \plain\f2\fs18\cf2 \'A7\plain\f1\fs18\cf2 \tab \plain\f1\fs18\cf1 \protect <HS 7>\plain\f1\fs18\cf2 Help\plain\f1\fs18\cf1 \protect </HS 7>\plain\f1\fs18\cf2 
+\par \tab for access to further help and web based information.
+\par \pard \plain\f0\fs12\cf2\b 
+\par \plain\f1\fs18\cf2 Commands can also be issued using:
+\par \plain\f1\fs12\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f2\fs18\cf2 \'A7\plain\f3\fs18\cf2 \tab the \plain\f3\fs18\cf1 \protect <HS 8>\plain\f3\fs18\cf2 toolbar\plain\f3\fs18\cf1 \protect </HS 8>\plain\f3\fs18\cf2 .
+\par \plain\f3\fs8\cf2 
+\par \plain\f2\fs18\cf2 \'A7\plain\f3\fs18\cf2 \tab pop-up \plain\f3\fs18\cf1 \protect <HS 9>\plain\f3\fs18\cf2 context menus\plain\f3\fs18\cf1 \protect </HS 9>\plain\f1\fs18\cf2 .\plain\f0\fs18\cf2\b 
+\par \pard \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs18\cf2 
+\par }
+
+[Footnotes]
+$=Menu - File
+#=MENU_FILE
+@=Command from the File menu.
+K=file menu;menu;menu,file
+[End]
+3
+NS
+1
+HS
+2
+0
+
+0
+LOADING_FILES
+
+BD
+4
+2
+0
+1421
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f1\fs24\cf3\b File Menu Commands\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par 
+\par \plain\f1\fs18\cf2 The following items are present on the \plain\f1\fs18\cf2\i File\plain\f1\fs18\cf2  menu.\plain\f0\fs18\cf2 
+\par \pard \fi-4000 \li4000 \tx3000 \tx4000 \plain\f0\fs8\cf2 
+\par \pard \fi-480 \li480 \tx480 \plain\f1\fs18\cf2\b Open \plain\f1\fs18\cf2  \plain\f1\fs16\cf2 Ctrl+O\plain\f1\fs18\cf2 
+\par \pard \li400 \plain\f0\fs18\cf2 Displays file open dialog box where desired file can be opened. Files can be opened in other ways. See \plain\f0\fs18\cf1 \protect <HS 2>\plain\f1\fs18\cf2 Opening a\plain\f0\fs18\cf2  File\plain\f0\fs18\cf1 \protect </HS 2>\plain\f0\fs18\cf2  for further information.
+\par \pard \fi-480 \li480 \tx480 \plain\f0\fs8\cf2 
+\par \plain\f1\fs18\cf2\b Exit\plain\f1\fs18\cf2 
+\par \pard \li400 \plain\f0\fs18\cf2 Closes the program.\plain\f1\fs18\cf2 
+\par \pard \fi-4000 \li4000 \tx3000 \tx4000 \plain\f0\fs8\cf2 
+\par \pard \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs8\cf2 
+\par }
+
+[Footnotes]
+$=Menu - Report
+#=MENU_REPORT
+@=Commands from the Report menu.
+K=report menu;menu;menu,report
+[End]
+6
+NS
+1
+HS
+2
+0
+
+0
+DLG_REPORT_SOURCE
+
+HS
+3
+0
+
+0
+DLG_REPORT_SOURCE
+
+BD
+4
+2
+0
+HS
+5
+0
+
+0
+DLG_REPORT_HTML
+
+HS
+6
+0
+
+0
+DLG_REPORT_TEXT
+
+2763
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f1\fs24\cf3\b Report Menu Commands\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par 
+\par \plain\f1\fs18\cf2 The following items are present on the \plain\f1\fs18\cf2\i Report\plain\f1\fs18\cf2  menu.\plain\f0\fs18\cf2 
+\par \pard \fi-4000 \li4000 \tx3000 \tx4000 \plain\f0\fs8\cf2 
+\par \pard \fi-480 \li480 \tx480 \plain\f1\fs18\cf2\b Source Code\plain\f1\fs18\cf2 
+\par \pard \li400 Shows a \plain\f1\fs18\cf1 \protect <HS 2>\plain\f1\fs18\cf2 dialog box\plain\f1\fs18\cf1 \protect </HS 2>\plain\f1\fs18\cf2  that displays the decompiled RC source code for the current file's version information. The source code can be saved, copied or viewed in \plain\f1\fs18\cf2\i NotePad\plain\f1\fs18\cf2 .\plain\f0\fs18\cf2 
+\par \pard \fi-480 \li480 \tx480 \plain\f0\fs8\cf2 
+\par \plain\f1\fs18\cf2\b Corrected Source Code\plain\f1\fs18\cf2 
+\par \pard \li400 This menu option is only available if there are errors or inconsistencies in the currrent file's version information. A \plain\f1\fs18\cf1 \protect <HS 3>\plain\f1\fs18\cf2 dialog box\plain\f1\fs18\cf1 \protect </HS 3>\plain\f1\fs18\cf2  is displayed that contains RC source code for the version information that has been modified to correct the errors. The source code can be saved, copied or viewed in \plain\f1\fs18\cf2\i NotePad\plain\f1\fs18\cf2 .
+\par \pard \fi-480 \li480 \tx480 \plain\f0\fs8\cf2 
+\par \plain\f1\fs18\cf2\b HTML Description\plain\f1\fs18\cf2 
+\par \pard \li400 Shows a \plain\f1\fs18\cf1 \protect <HS 5>\plain\f1\fs18\cf2 dialog\plain\f1\fs18\cf1 \protect </HS 5>\plain\f1\fs18\cf2  that displays a HTML formatted report that describes the current file's version information in detail. The report can be saved, copied or viewed in \plain\f1\fs18\cf2\i Internet Explorer\plain\f1\fs18\cf2 .\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \pard \fi-480 \li480 \tx480 \plain\f1\fs18\cf2\b Text Description\plain\f1\fs18\cf2 
+\par \pard \li400 Displays a \plain\f1\fs18\cf1 \protect <HS 6>\plain\f1\fs18\cf2 dialog\plain\f1\fs18\cf1 \protect </HS 6>\plain\f1\fs18\cf2  that contains a plain text report that describes the current file's version information. The report can be saved, copied or viewed in an external application.\plain\f0\fs18\cf2 
+\par \pard \fi-4000 \li4000 \tx3000 \tx4000 \plain\f0\fs8\cf2 
+\par \pard \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs8\cf2 
+\par }
+
+[Footnotes]
+$=Menu - Options
+#=MENU_OPTIONS
+@=Commands from the Options menu.
+K=options menu;menu;menu,options
+[End]
+5
+NS
+1
+HS
+2
+0
+
+0
+TOOLBAR
+
+HS
+3
+0
+
+0
+DLG_DISPLAY_OPTIONS
+
+BD
+4
+2
+0
+HS
+5
+0
+
+0
+DLG_EXPLORER_EXT
+
+2092
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f1\fs24\cf3\b Options Menu Commands\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par 
+\par \plain\f1\fs18\cf2 The following items are present on the \plain\f1\fs18\cf2\i Options\plain\f1\fs18\cf2  menu.\plain\f0\fs18\cf2 
+\par \pard \fi-4000 \li4000 \tx3000 \tx4000 \plain\f0\fs8\cf2 
+\par \pard \fi-480 \li480 \tx480 \plain\f1\fs18\cf2\b Toolbar\plain\f1\fs18\cf2 
+\par \pard \li400 This menu item toggles the \plain\f1\fs18\cf1 \protect <HS 2>\plain\f1\fs18\cf2 toolbar\plain\f1\fs18\cf1 \protect </HS 2>\plain\f1\fs18\cf2  on and off. If the menu item is checked the toolbar is visible and when unchecked the toolbar is hidden.\plain\f0\fs18\cf2 
+\par \pard \fi-480 \li480 \tx480 \plain\f0\fs8\cf2 
+\par \plain\f1\fs18\cf2\b Display Options\plain\f1\fs18\cf2 
+\par \pard \li400 Choose this menu option to access the \plain\f1\fs18\cf1 \protect <HS 3>\plain\f1\fs18\cf2 Display Options dialog box\plain\f1\fs18\cf1 \protect </HS 3>\plain\f1\fs18\cf2  that is used to change the way the program displays version information and how it report errors. 
+\par \pard \fi-480 \li480 \tx480 \plain\f0\fs8\cf2 
+\par \plain\f1\fs18\cf2\b Explorer Extensions\plain\f1\fs18\cf2 
+\par \pard \li400 This menu option displays the \plain\f1\fs18\cf1 \protect <HS 5>\plain\f1\fs18\cf2 Explorer Extensions dialog box\plain\f1\fs18\cf1 \protect </HS 5>\plain\f1\fs18\cf2  that is used to configure the program's Explorer context menu and property sheet extensions. If the server that provides the extensions is not registered then this menu item will be disabled.\plain\f0\fs18\cf2 
+\par \pard \fi-480 \li480 \tx480 \plain\f0\fs8\cf2 
+\par \pard \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs8\cf2 
+\par }
+
+[Footnotes]
+$=Menu - Help
+#=MENU_HELP
+@=Commands from the Help menu.
+K=help menu;menu;menu,help
+[End]
+3
+NS
+1
+HS
+2
+2
+
+0
+
+ExecFile("http://www.delphidabbler.com/")
+BD
+4
+2
+0
+1629
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f1\fs24\cf3\b Help Menu Commands\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par 
+\par \plain\f1\fs18\cf2 The following items are present on the \plain\f1\fs18\cf2\i Help\plain\f1\fs18\cf2  menu.\plain\f0\fs18\cf2 
+\par \pard \fi-4000 \li4000 \tx3000 \tx4000 \plain\f0\fs8\cf2 
+\par \pard \fi-480 \li480 \tx480 \plain\f1\fs18\cf2\b Contents\plain\f1\fs16\cf2\b  \plain\f1\fs16\cf2  F1\plain\f1\fs18\cf2 
+\par \pard \li400 Displays the Help Contents dialog box.\plain\f0\fs18\cf2 
+\par \pard \fi-480 \li480 \tx480 \plain\f0\fs8\cf2 
+\par \plain\f1\fs18\cf2\b DelphiDabbler Website\plain\f1\fs18\cf2 
+\par \pard \li400 Goes online to the\plain\f1\fs18\cf3  \plain\f1\fs18\cf1 \protect <HS 2>\plain\f1\fs18\cf3 DelphiDabbler\plain\f1\fs18\cf1 \protect </HS 2>\plain\f1\fs18\cf3  \plain\f1\fs18\cf2 website. Updates to \plain\f1\fs18\cf2\i Version Information Spy\plain\f1\fs18\cf2  are posted here first.
+\par \pard \fi-480 \li480 \tx480 \plain\f0\fs8\cf2 
+\par \plain\f1\fs18\cf2\b About\plain\f1\fs18\cf2 
+\par \pard \fi-4000 \li4400 \tx3000 \tx4000 Displays the program's about box.\plain\f0\fs18\cf2 
+\par \pard \fi-480 \li480 \tx480 \plain\f0\fs8\cf2 
+\par \pard \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs8\cf2 
+\par }
+
+[Footnotes]
+$=Toolbar
+#=TOOLBAR
+@=Details of the toolbar commands.
+K=toolbar
+[End]
+8
+NS
+1
+HS
+2
+2
+
+0
+
+ExecFile("http://www.delphidabbler.com/")
+BD
+4
+2
+0
+BM
+5
+BtnOpen.bmp
+1
+1
+BM
+7
+BtnHelp.bmp
+1
+1
+BM
+8
+BtnAbout.bmp
+1
+1
+BM
+10
+BtnWebsite.bmp
+1
+1
+HS
+11
+0
+
+0
+LOADING_FILES
+
+1923
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f1\fs24\cf3\b Toolbar\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par 
+\par \plain\f1\fs18\cf2 The toolbar's buttons provide quick access to a small number of the program's commands. The available buttons are:
+\par \plain\f0\fs12\cf2 
+\par \pard \fi-800 \li800 \tx800 \plain\f0\fs18\cf2\i Toolbar \tab Action
+\par button\plain\f0\fs18\cf2 \tab 
+\par \plain\f0\fs18\cf1 \protect <BM 5>\plain\f0\fs18\cf2 \tab Displays file open dialog box where desired file can be opened. Files can be opened in other ways. See \plain\f0\fs18\cf1 \protect <HS 11>\plain\f1\fs18\cf2 Opening a\plain\f0\fs18\cf2  File\plain\f0\fs18\cf1 \protect </HS 11>\plain\f0\fs18\cf2  for further information.
+\par \plain\f0\fs18\cf1 \protect <BM 7>\plain\f0\fs18\cf2 \tab Displays the help file's contents page.
+\par \plain\f0\fs18\cf1 \protect <BM 10>\plain\f0\fs18\cf2 \tab Accesses the\plain\f0\fs18\cf3  \plain\f0\fs18\cf1 \protect <HS 2>\plain\f1\fs18\cf3 DelphiDabbler.com\plain\f1\fs18\cf1 \protect </HS 2>\plain\f0\fs18\cf3  \plain\f0\fs18\cf2 website at the home page. Updates to the program are posted on this site.
+\par \plain\f0\fs18\cf1 \protect <BM 8>\plain\f0\fs18\cf2 \tab Displays the program's about box which shows version and copyright information.
+\par \pard \plain\f1\fs12\cf2 
+\par \plain\f1\fs18\cf2 The toolbar can be toggled on and off using the \plain\f1\fs18\cf2\i Options | Toolbar\plain\f1\fs18\cf2  menu item.\plain\f0\fs12\cf2 
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs8\cf2 
+\par }
+
+[Footnotes]
+$=Popup Menus
+#=MENU_POPUPS
+@=Details of pop-up menu
+K=popup menus
+[End]
+2
+NS
+1
+BD
+4
+2
+0
+1105
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f1\fs24\cf3\b Popup Menu Commands\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par 
+\par \plain\f1\fs18\cf2 There is only one context pop-up menu in the program and that appears when the \plain\f1\fs18\cf2\i String File Information\plain\f1\fs18\cf2  list is right clicked. This menu has a single item:
+\par \plain\f1\fs12\cf2 
+\par \plain\f1\fs18\cf2\b Sort by Name\plain\f1\fs18\cf2  \plain\f1\fs16\cf2 Ctrl+N\plain\f1\fs18\cf2 
+\par \pard \li400 This sorts the string file information on the string names. This can also be achieved by clicking the column header.\plain\f0\fs18\cf2 
+\par \pard \fi-480 \li480 \tx480 \plain\f0\fs8\cf2 
+\par \pard \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs8\cf2 
+\par }
+
+[Footnotes]
+$=Explorer Extensions
+#=EXPLORER_EXTENSIONS
+@=Information about using the program's Explorer extensions.
+K=explorer extensions;explorer extensions,using
+[End]
+5
+NS
+1
+HS
+2
+0
+
+0
+DLG_EXPLORER_EXT
+
+HS
+3
+0
+
+0
+DLG_EXPLORER_EXT
+
+BD
+4
+2
+0
+HS
+5
+0
+
+0
+DLG_EXPLORER_EXT
+
+3903
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f1\fs24\cf3\b Using\plain\f0\fs24\cf3\b  the Explorer Extension\plain\f1\fs24\cf3\b s\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par 
+\par \plain\f0\fs18\cf2 When \plain\f0\fs18\cf2\i Version Information Spy\plain\f0\fs18\cf2  is installed a\plain\f1\fs18\cf2  \plain\f0\fs18\cf2 Windows Explorer \plain\f1\fs18\cf2 shell extension \plain\f0\fs18\cf2 is provided. \plain\f1\fs18\cf2 The extension provides two facilities when a file containing version information is selected in Explorer.
+\par \plain\f1\fs12\cf2 
+\par \plain\f1\fs18\cf2\b Explorer Context Menu\plain\f1\fs18\cf2 
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 A new \plain\f1\fs18\cf2\i Version Information\plain\f1\fs18\cf2  menu option is added to the Explorer context menu. Selecting this menu option opens \plain\f1\fs18\cf2\i Version Information Spy\plain\f1\fs18\cf2  and displays the file's version information.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 The context menu item only appears for files with extensions that are known to \plain\f1\fs18\cf2\i Version Information Spy\plain\f1\fs18\cf2 . Further extensions can be added and activated using the \plain\f1\fs18\cf2\i Advanced\plain\f1\fs18\cf2  tab of \plain\f1\fs18\cf1 \protect <HS 2>\plain\f1\fs18\cf2 Explorer Extensions dialog box\plain\f1\fs18\cf1 \protect </HS 2>\plain\f1\fs18\cf2 . Alternatively the program can ask the user whether to activate the context menu for a previusly unkown file type when such a file is opened.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 By default a single instance of the program is used for all files accessed via this context menu, but this can be changed.
+\par \plain\f1\fs12\cf2 
+\par \plain\f1\fs18\cf2\b Property Sheet Enhancement\plain\f1\fs18\cf2 
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2\i Version Information Spy\plain\f1\fs18\cf2  can also add a new \plain\f1\fs18\cf2\i Version Extra\plain\f1\fs18\cf2  tab to a file's property sheet. This new tab provides more information that the existing \plain\f1\fs18\cf2\i Version\plain\f1\fs18\cf2  tab. It has a similar display layout to the main program, but does not support all the highlighting and reporting features of the full program. If these facilities are required then clicking the \plain\f1\fs18\cf2\i Advanced\plain\f1\fs18\cf2  button starts the main program and displays the file's information in it.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 Like the context menu handler, the property sheet is only available for files with a known extension. The \plain\f1\fs18\cf2\i Advanced\plain\f1\fs18\cf2  tab of the \plain\f1\fs18\cf1 \protect <HS 3>\plain\f1\fs18\cf2 Explorer Extensions dialog box\plain\f1\fs18\cf1 \protect </HS 3>\plain\f1\fs18\cf2  can also be used to add further file extensions. The automatic registration of unknown file extensions noted above also works for the property sheet.
+\par \plain\f1\fs12\cf2 
+\par \plain\f1\fs18\cf2\b Customising the Shell Extensions\plain\f1\fs18\cf2 
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 The behaviour of both the context menu and the property sheet can be customised, or switched on or off, by using the \plain\f1\fs18\cf1 \protect <HS 5>\plain\f1\fs18\cf2 Explorer Extensions dialog box\plain\f1\fs18\cf1 \protect </HS 5>\plain\f1\fs18\cf2 . The dialog box is displayed by selecting the \plain\f1\fs18\cf2\i Options | Explorer Extension\plain\f1\fs18\cf2  menu option.
+\par \plain\f1\fs8\cf2 
+\par \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs18\cf2\i 
+\par }
+
+[Footnotes]
+$=Command Line Program
+#=COMMAND_LINE_PROGRAM
+@=Information about the command line program.
+K=command line program
+[End]
+5
+NS
+1
+KP
+2
+KP
+3
+BD
+4
+2
+0
+KP
+5
+4266
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}{\f2\fnil \fcharset0 Courier New;}{\f3\fnil \fcharset2 Wingdings;}{\f4\fnil \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f1\fs24\cf3\b Command Line Program\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par 
+\par \plain\f1\fs18\cf2 The command line program can read version information from a file passed as a parameter on the command line. By default, some text describing the version information is displayed. This description is in the same format as can be displayed in the main Windows application. The program can also display decompiled resource source code. All output is to the standard output, which can be redirected as required.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 The program's usage is:
+\par \plain\f1\fs8\cf2 
+\par \pard \li400 \plain\f2\fs18\cf1 \protect <KP 3>\plain\f2\fs18\cf2 FileVerCmd \plain\f2\fs18\cf2\i <filename>\plain\f2\fs18\cf2  [ -r | -R | -p | -P | -q | -Q ]\plain\f2\fs18\cf1 \protect </KP 3>\plain\f2\fs18\cf2 
+\par \pard \li800 \plain\f1\fs18\cf2 or
+\par \pard \li400 \plain\f2\fs18\cf1 \protect <KP 5>\plain\f2\fs18\cf2 FileVerCmd -? | -h | -H\plain\f2\fs18\cf1 \protect </KP 5>\plain\f2\fs18\cf2 
+\par \pard \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2\i <filename>\plain\f1\fs18\cf2  is the name of the file to be analysed. The various switches that can follow the file name are:
+\par \plain\f1\fs8\cf2 
+\par \pard \fi-1200 \li1600 \tx1600 \plain\f1\fs18\cf2\i -r or -R\plain\f1\fs18\cf2 \tab Displays resource source code rather than a description.
+\par \plain\f1\fs18\cf2\i -p or -P\plain\f1\fs18\cf2 \tab Prompts and waits for input before exiting program.
+\par \plain\f1\fs18\cf2\i -q\plain\f1\fs18\cf2 \tab Displays only version information and error codes - other output is inhibited.
+\par \plain\f1\fs18\cf2\i -Q\plain\f1\fs18\cf2 \tab Displays version information only - other output and error codes are inhibited.
+\par \plain\f1\fs18\cf2\i -?, -h or -H\plain\f1\fs18\cf2 \tab Displays brief help in standard output - other parameters are ignored.
+\par \pard \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 Switches can be preceeded by either \plain\f2\fs18\cf2\b /\plain\f1\fs18\cf2  or \plain\f2\fs18\cf2\b -\plain\f1\fs18\cf2 .
+\par \plain\f1\fs12\cf2 
+\par \plain\f1\fs18\cf2\b Example\plain\f1\fs18\cf2 
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 Assume you have a program containing version information that you wish to include in another application you are building, but don't have the version information source. You can use \plain\f2\fs18\cf2 FileVerCmd\plain\f1\fs18\cf2  and a resource compiler, such as Borland \plain\f2\fs18\cf2 BRCC32\plain\f1\fs18\cf2 , to create a binary resource file read for linking into a new application.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 A batch file with the following contents will copy version information out of \plain\f2\fs18\cf2 FileVerCM.dll\plain\f1\fs18\cf2  (the explorer extension) and compile it into \plain\f2\fs18\cf2 VFileVerCM.res\plain\f1\fs18\cf2 . The code assumes that \plain\f2\fs18\cf2 FileVerCmd\plain\f1\fs18\cf2  and \plain\f2\fs18\cf2 BRCC32\plain\f1\fs18\cf2  are on the path and that the batch file is in the same folder as \plain\f2\fs18\cf2 FileVerCM\plain\f1\fs18\cf2 .
+\par \plain\f1\fs8\cf2 
+\par \pard \li400 \plain\f2\fs18\cf1 \protect <KP 2>\plain\f2\fs18\cf2 @echo off
+\par C:\\Prg\\Apps\\VerInfo\\Exe\\FileVerCmd
+\par \plain\f3\fs18\cf2 \'C4\plain\f2\fs18\cf2  C:\\Prg\\Apps\\VerInfo\\Exe\\FileVerCM.dll /r /q >test.rc
+\par brcc32 test.rc -foVFileVerCM.res
+\par del test.rc\plain\f2\fs18\cf1 \protect </KP 2>\plain\f2\fs18\cf2 
+\par \plain\f2\fs8\cf2 
+\par \pard \plain\f4\fs18\cf2 Note that \plain\f3\fs18\cf2 \'C4\plain\f4\fs18\cf2  indicates a continuation of a single line\plain\f1\fs18\cf2  in the above code.\plain\f2\fs18\cf2 
+\par \plain\f4\fs8\cf2 
+\par \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs18\cf2 
+\par }
+
+[Footnotes]
+$=Creating Reports
+#=CREATING_REPORTS
+@=Informaton about how to create reports.
+K=reports;reports,creating
+[End]
+7
+NS
+1
+HS
+2
+0
+
+0
+DLG_REPORT_TEXT
+
+HS
+3
+0
+
+0
+DLG_REPORT_HTML
+
+BD
+4
+2
+0
+HS
+5
+0
+
+0
+DLG_DISPLAY_OPTIONS
+
+HS
+6
+0
+
+0
+DLG_BAD_TRANS
+
+BU
+7
+
+1
+JumpID(RECREATING_SOURCE)
+3197
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f1\fs24\cf3\b Creating Reports\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par 
+\par \plain\f1\fs18\cf2\i Version Information Spy\plain\f1\fs18\cf2  doesn't just display the version information from within a program, it also lets you get some reports on the content. There are three main reports that are available:
+\par \plain\f1\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f1\fs18\cf2 1)\tab A plain text description of the version information contained in the current file. This is provided in a human readable format suitable for documenting a program. Any structural problems are flagged up but not explained. This report appears in the \plain\f1\fs18\cf1 \protect <HS 2>\plain\f1\fs18\cf2 Descriptive Text Report dialog box\plain\f1\fs18\cf1 \protect </HS 2>\plain\f1\fs18\cf2  and is accessed via the \plain\f1\fs18\cf2\i Reports | Text Description\plain\f1\fs18\cf2  menu option.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 2)\tab A HTML description of a file's version information. This report provides essentially the same information as the plain text report but it is laid out in a much more attractive and readbale format. The report goes into more detail about any translation / string table inconsistencies. This report is displayed in the \plain\f1\fs18\cf1 \protect <HS 3>\plain\f1\fs18\cf2 Descriptive HTML Report dialog box\plain\f1\fs18\cf1 \protect </HS 3>\plain\f1\fs18\cf2  and is displayed by clicking the \plain\f1\fs18\cf2\i Reports | HTML Description\plain\f1\fs18\cf2  menu item.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 3)\tab For files that have structural inconsistencies a separate report of each translation or string table's problems is available. This report is in HTML format. It describes the problem in detail and suggests source code changes to fix the problem. This facility can be enabled and disabled via the \plain\f1\fs18\cf1 \protect <HS 5>\plain\f1\fs18\cf2 Display Options dialog box\plain\f1\fs18\cf1 \protect </HS 5>\plain\f1\fs18\cf2  (\plain\f1\fs18\cf2\i Translations\plain\f1\fs18\cf2  tab). When enabled a \plain\f1\fs18\cf2\i Explain Problem\plain\f1\fs18\cf2  button appears above the main window's translations drop-down list whenever the current translation exhibits inconsistencies. Clicking the button displays the report in the \plain\f1\fs18\cf1 \protect <HS 6>\plain\f1\fs18\cf2 Translation Inconsistency Explanation dialog box\plain\f1\fs18\cf1 \protect </HS 6>\plain\f1\fs18\cf2 .\plain\f0\fs18\cf2 
+\par \pard \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs18\cf2 
+\par \plain\f0\fs18\cf2\i See also:\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f0\fs18\cf1 \protect <BU 7>\plain\f1\fs18\cf2 \tab Recreating RC source code.\plain\f0\fs18\cf2 
+\par }
+
+[Footnotes]
+$=Recreating RC Source Code
+#=RECREATING_SOURCE
+@=Description of how to recreate source code used to create some version information.
+K=source code;source code,recreating
+[End]
+6
+NS
+1
+BU
+2
+
+1
+JumpID(CREATING_REPORTS)
+HS
+3
+0
+
+0
+COMMAND_LINE_PROGRAM
+
+BD
+4
+2
+0
+HS
+5
+0
+
+0
+DLG_REPORT_SOURCE
+
+HS
+6
+0
+
+0
+DLG_REPORT_SOURCE
+
+2549
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}{\f2\fnil \fcharset0 Courier New;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f1\fs24\cf3\b Recreating RC Source Code\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par 
+\par \plain\f1\fs18\cf2\i Version Information Spy\plain\f1\fs18\cf2  can recreate, or at least estimate, the resource source code that was used to create the version information resource.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 To do this open a file in the program to display its version information. Now select the \plain\f1\fs18\cf2\i Report | Source Code\plain\f1\fs18\cf2  menu option. This will display the decompiled source in the \plain\f1\fs18\cf1 \protect <HS 5>\plain\f1\fs18\cf2 Resource Source Code dialog box\plain\f1\fs18\cf1 \protect </HS 5>\plain\f1\fs18\cf2 . You can copy this source to the clipboard or save it to disk. A resource compiler such as Borland's \plain\f2\fs18\cf2 BRCC32\plain\f1\fs18\cf2  or \plain\f2\fs18\cf2 BRC32\plain\f1\fs18\cf2  will be able to compile this code into a binary resource or directly link it into a program.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 If the version information has inconsistencies the program can also create source code that fixes the problems. Use the \plain\f1\fs18\cf2\i Report | Corrected Source Code\plain\f1\fs18\cf2  menu option to do this which displayed the result in the \plain\f1\fs18\cf1 \protect <HS 6>\plain\f1\fs18\cf2 Resource Source Code dialog box\plain\f1\fs18\cf1 \protect </HS 6>\plain\f1\fs18\cf2 .
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 The command line version of \plain\f1\fs18\cf2\i Version Information Spy\plain\f1\fs18\cf2  can also be used to recreate a RC source file from a program's version information. See the \plain\f1\fs18\cf1 \protect <HS 3>\plain\f1\fs18\cf2 command line program\plain\f1\fs18\cf1 \protect </HS 3>\plain\f1\fs18\cf2  topic for an example of how to do this.\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs18\cf2 
+\par \plain\f0\fs18\cf2\i See also:\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f0\fs18\cf1 \protect <BU 2>\plain\f1\fs18\cf2 \tab Creating reports\plain\f0\fs18\cf2 
+\par }
+
+[Footnotes]
+$=Dealing With Errors and Inconsistencies
+#=DEALING_WITH_ERRORS
+@=Discusses how to deal with errors and inconsistencies in version information.
+K=author
+[End]
+7
+NS
+1
+HS
+2
+0
+
+0
+DLG_BAD_TRANS
+
+HS
+3
+0
+
+0
+CREATING_REPORTS
+
+BD
+4
+2
+0
+HS
+5
+0
+
+0
+DLG_DISPLAY_OPTIONS
+
+BU
+6
+
+1
+JumpID(CREATING_REPORTS)
+BU
+7
+
+1
+JumpID(RECREATING_SOURCE)
+3163
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f1\fs24\cf3\b Dealing With Errors and Inconsistencies\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par 
+\par \plain\f1\fs18\cf2\i Version Information Spy\plain\f1\fs18\cf2  can handle version information data that breaks the resource's data format rules. It can even display some code that the Windows API will fail on. It silently reads and displays the data in these cases.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 The program can also cope with version information that breaks the semantic rules set down by Microsoft. It detects some of these and draws them to the user's attention. In particular the program flags up the following conditions:
+\par \plain\f1\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f1\fs18\cf2 1)\tab Where there is translation information present but there are no string tables.
+\par 2)\tab Where there are string tables but no translation data.
+\par 3)\tab Where there are both string tables and translation data but the string table's locale information does not match the translation data.
+\par \pard \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 These cases are highlighted in the following ways:
+\par \plain\f1\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f1\fs18\cf2 1)\tab Highlighting a problem translation in the translation drop down list.
+\par 2)\tab Placing a brief description of the error above the drop down list.
+\par 3)\tab Displaying a button above the drop down list that displays a report of the problem in the \plain\f1\fs18\cf1 \protect <HS 2>\plain\f1\fs18\cf2 Translation Inconsistency Explanation dialog box\plain\f1\fs18\cf1 \protect </HS 2>\plain\f1\fs18\cf2  when clicked. This report also suggests how to fix the problem.
+\par 4)\tab Noting problems in the text and HTML \plain\f1\fs18\cf1 \protect <HS 3>\plain\f1\fs18\cf2 reports\plain\f1\fs18\cf1 \protect </HS 3>\plain\f1\fs18\cf2 .
+\par \pard \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 The first three methods noted above can be configured and disabled or enabled by the user in the \plain\f1\fs18\cf1 \protect <HS 5>\plain\f1\fs18\cf2 Display Options dialog box\plain\f1\fs18\cf1 \protect </HS 5>\plain\f1\fs18\cf2 .
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 Finally, the program can generate RC source code for the version information that either fixes the problems or notes the problems in comments in the code.\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs18\cf2 
+\par \plain\f0\fs18\cf2\i See also:\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f1\fs18\cf1 \protect <BU 6>\plain\f1\fs18\cf2 \tab Creating reports
+\par \plain\f1\fs18\cf1 \protect <BU 7>\plain\f1\fs18\cf2 \tab Recreating RC source code\plain\f0\fs18\cf2 
+\par }
+
+[Footnotes]
+$=Displaying Version Information
+#=DISPLAY
+@=Describes how version information is displayed in the main window.
+K=displaying version information
+[End]
+5
+NS
+1
+HS
+2
+0
+
+0
+DLG_DISPLAY_OPTIONS
+
+BD
+4
+2
+0
+HS
+5
+0
+
+0
+FIXED_FILE_INFO
+
+HS
+6
+0
+
+0
+STRING_INFO
+
+3838
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f0\fs24\cf3\b Displaying Version Information\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par 
+\par \plain\f0\fs18\cf2 When a file containing version information is loaded the information is displayed in the main window.
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 Version information falls into two distinct types: Fixed File Information and Variable Information. 
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2\b Fixed file information\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 Fixed File Information describes the various attributes of the file concerned. This information is displayed at the top of the main window.\plain\f1\fs18\cf2  \plain\f0\fs18\cf1 \protect <HS 5>\plain\f0\fs18\cf2 More info...\plain\f0\fs18\cf1 \protect </HS 5>\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2\b Variable information\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 The variable information \plain\f1\fs18\cf2 section \plain\f0\fs18\cf2 largely consists of descriptive strings \plain\f1\fs18\cf2 (\plain\f0\fs18\cf2 String File Information\plain\f1\fs18\cf2 )\plain\f0\fs18\cf2 . This information is displayed towards the bottom of the main window. There can be more than one table of string information \plain\f1\fs18\cf2 in a version information resource. These are u\plain\f0\fs18\cf2 sually in different languages and / or \plain\f1\fs18\cf2 use different \plain\f0\fs18\cf2 character sets.
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 The different combinations of languages and character sets are listed in the "Translations" drop down list. Selecting a "translation" from this list displays the table of String File Information \plain\f1\fs18\cf2 that is \plain\f0\fs18\cf2 associated with it. When the file is first loaded the string table associated with the first translation in the file is displayed. Most files contain only one "translation". \plain\f0\fs18\cf1 \protect <HS 6>\plain\f0\fs18\cf2 More info...\plain\f0\fs18\cf1 \protect </HS 6>\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 String information can be sorted by name by clicking the string name column header\plain\f1\fs18\cf2  or by right clicking and selecting the \plain\f1\fs18\cf2\i Sort By Name\plain\f1\fs18\cf2  menu option.\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 The version information specification requires that the translations and string information language and character codes should match - but some programs do not follow this rule. \plain\f1\fs18\cf2 Problems can be either that there is \plain\f0\fs18\cf2 no translation associated with a particular string table or \plain\f1\fs18\cf2 that there is \plain\f0\fs18\cf2 no string table associated with a \plain\f1\fs18\cf2 given \plain\f0\fs18\cf2 translation.\plain\f1\fs18\cf2  \plain\f0\fs18\cf2\i Version Information Spy\plain\f0\fs18\cf2  detect\plain\f1\fs18\cf2 s\plain\f0\fs18\cf2  these problems \plain\f1\fs18\cf2 and can highlight them, provide additional information and suggest fixes. These features are configured on the \plain\f1\fs18\cf2\i Translation\plain\f1\fs18\cf2  tab of the \plain\f1\fs18\cf1 \protect <HS 2>\plain\f1\fs18\cf2 Display Options dialog box\plain\f1\fs18\cf1 \protect </HS 2>\plain\f1\fs18\cf2 . \plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs18\cf2 
+\par }
+
+[Footnotes]
+$=About Fixed File Information
+#=FIXED_FILE_INFO
+@=Detailed description of Fixed File Information.
+K=fixed file information
+A=FFIHelp
+[End]
+9
+NS
+1
+BU
+2
+
+1
+JumpID(STRING_INFO)
+BD
+3
+2
+0
+BU
+4
+
+1
+JumpID(DISPLAY)
+HS
+5
+0
+
+0
+DLG_DISPLAY_OPTIONS
+
+HS
+6
+0
+
+0
+DLG_DISPLAY_OPTIONS
+
+HS
+7
+0
+
+0
+DLG_DISPLAY_OPTIONS
+
+HS
+8
+0
+
+0
+STRING_INFO
+
+HS
+9
+0
+
+0
+STRING_INFO
+
+10071
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}{\f2\fnil \fcharset2 WingDings;}{\f3\fnil \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f0\fs24\cf3\b About Fixed File Information\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par 
+\par \plain\f1\fs18\cf2 Fixed file information is made up of several integer valued fields, as follows\plain\f0\fs18\cf2 :
+\par \plain\f0\fs12\cf2 
+\par \plain\f0\fs18\cf2\b File Version
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 Specifies the version number for the file.
+\par \plain\f0\fs12\cf2 
+\par \plain\f0\fs18\cf2\b Product Version\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 Specifies the version number of the product \plain\f1\fs18\cf2 of \plain\f0\fs18\cf2 which the file is part.
+\par \plain\f0\fs12\cf2 
+\par \plain\f0\fs18\cf2\b File Flags Mask\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \plain\f1\fs18\cf2 This bit mask s\plain\f0\fs18\cf2 pecifies which elements of \plain\f1\fs18\cf2 the \plain\f0\fs18\cf2 File Flags \plain\f1\fs18\cf2 field \plain\f0\fs18\cf2 (below) are valid. Only if an element is present in File Flags Mask is the corresponding element of File Flags valid. \plain\f0\fs18\cf2\i Version Information Spy\plain\f0\fs18\cf2  can display either the numeric value of this item (in hexadecimal) or can described it fully - use the \plain\f0\fs18\cf2\i Describe \plain\f1\fs18\cf2\i f\plain\f0\fs18\cf2\i ile \plain\f1\fs18\cf2\i f\plain\f0\fs18\cf2\i lags\plain\f0\fs18\cf2  \plain\f1\fs18\cf2 check box on the \plain\f1\fs18\cf2\i Fixed File Info\plain\f1\fs18\cf2  tab of the \plain\f1\fs18\cf1 \protect <HS 7>\plain\f1\fs18\cf2 Display Options dialog box\plain\f1\fs18\cf1 \protect </HS 7>\plain\f1\fs18\cf2  to \plain\f0\fs18\cf2 choose\plain\f1\fs18\cf2  the display format\plain\f0\fs18\cf2 .
+\par \plain\f0\fs12\cf2 
+\par \plain\f0\fs18\cf2\b File Flags\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 Specifies the Boolean attributes of the file\plain\f1\fs18\cf2  in a bitmask\plain\f0\fs18\cf2 .
+\par \plain\f0\fs8\cf2 
+\par \pard \fi-2000 \li2400 \tx2400 \plain\f0\fs18\cf2\i Flag\tab Purpose
+\par \plain\f0\fs8\cf2 
+\par  \plain\f0\fs18\cf2 Debug\tab File may contain debugging information or have debugging features enabled.
+\par \plain\f0\fs8\cf2 
+\par  \plain\f0\fs18\cf2 Pre-release\tab This is a development version of the file.
+\par \plain\f0\fs8\cf2 
+\par  \plain\f0\fs18\cf2 Patched\tab File has been patched.
+\par \plain\f0\fs8\cf2 
+\par  \plain\f0\fs18\cf2 Private build\tab File was not built using standard release procedures. The \plain\f0\fs18\cf1 \protect <HS 8>\plain\f0\fs18\cf2 String Information\plain\f0\fs18\cf1 \protect </HS 8>\plain\f0\fs18\cf2  should contain a PrivateBuild string.
+\par \plain\f0\fs8\cf2 
+\par  \plain\f0\fs18\cf2 Dynamically-created\tab The version information was created dynamically rather than using the VERSIONINFO resource statement.
+\par \plain\f0\fs8\cf2 
+\par  \plain\f0\fs18\cf2 Special build\tab This is a variation on a standard build. The \plain\f0\fs18\cf1 \protect <HS 9>\plain\f0\fs18\cf2 String Information\plain\f0\fs18\cf1 \protect </HS 9>\plain\f0\fs18\cf2  should contain a SpecialBuild string.
+\par \pard \plain\f0\fs8\cf2 
+\par \plain\f1\fs18\cf2 The display format used for File Flags depends on the Display Options setting noted in the description of File Flags Mask.\plain\f0\fs8\cf2 
+\par \plain\f0\fs12\cf2 
+\par \plain\f0\fs18\cf2\b Operating System\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 Specifies the operating system for which this file was designed. The value displayed describes both the base and target operating systems. 
+\par \plain\f0\fs12\cf2 
+\par \plain\f0\fs18\cf2\b File Type\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 Specifies the general type of the file. Further information about the types of some files may be given by the File Sub Type \plain\f1\fs18\cf2 field \plain\f0\fs18\cf2 (below). Supported file types are:
+\par \plain\f0\fs8\cf2 
+\par \pard \fi-400 \li800 \tx400 \tx800 \plain\f2\fs18\cf2 \'A7\plain\f1\fs18\cf2 \tab \plain\f0\fs18\cf2 Application
+\par \plain\f2\fs18\cf2 \'A7\plain\f1\fs18\cf2 \tab \plain\f0\fs18\cf2 Dynamic-link library (DLL)
+\par \plain\f2\fs18\cf2 \'A7\plain\f1\fs18\cf2 \tab \plain\f0\fs18\cf2 Device driver*
+\par \plain\f2\fs18\cf2 \'A7\plain\f1\fs18\cf2 \tab \plain\f0\fs18\cf2 Font*
+\par \plain\f2\fs18\cf2 \'A7\plain\f1\fs18\cf2 \tab \plain\f0\fs18\cf2 Static-link library
+\par \plain\f2\fs18\cf2 \'A7\plain\f1\fs18\cf2 \tab Virtual d\plain\f0\fs18\cf2 evice*.
+\par \pard \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 Any other file type will be flagged as \plain\f0\fs18\cf2\i unknown\plain\f0\fs18\cf2 . \plain\f1\fs18\cf2 F\plain\f0\fs18\cf2 ile types marked with an asterisk \plain\f1\fs18\cf2 have \plain\f0\fs18\cf2 further information provided by the File Sub Type \plain\f1\fs18\cf2 field\plain\f0\fs18\cf2 .
+\par \plain\f0\fs12\cf2 
+\par \plain\f0\fs18\cf2\b File Sub Type\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 For certain file types\plain\f1\fs18\cf2 ,\plain\f0\fs18\cf2  File Sub Type provides \plain\f1\fs18\cf2 additional\plain\f0\fs18\cf2  information\plain\f1\fs18\cf2  to that given by the File Type field\plain\f0\fs18\cf2 . The following table lists the file types for which \plain\f1\fs18\cf2 further\plain\f0\fs18\cf2  information is available and details what information is provided:
+\par \plain\f0\fs8\cf2 
+\par \pard \fi-1200 \li1600 \tx1600 \plain\f0\fs18\cf2\i File type\tab Additional information\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 Device driver\tab The type of driver is specified. It can be one of:
+\par \pard \fi-2400 \li4400 \tx2400 \plain\f2\fs18\cf2 \'A7\plain\f1\fs18\cf2 \tab \plain\f0\fs18\cf2 Communications driver
+\par \plain\f2\fs18\cf2 \'A7\plain\f3\fs18\cf2 \tab \plain\f0\fs18\cf2 Printer driver
+\par \plain\f2\fs18\cf2 \'A7\plain\f3\fs18\cf2 \tab \plain\f0\fs18\cf2 Keyboard driver
+\par \plain\f2\fs18\cf2 \'A7\plain\f3\fs18\cf2 \tab \plain\f0\fs18\cf2 Language driver
+\par \plain\f2\fs18\cf2 \'A7\plain\f3\fs18\cf2 \tab \plain\f0\fs18\cf2 Display driver
+\par \plain\f2\fs18\cf2 \'A7\plain\f3\fs18\cf2 \tab \plain\f0\fs18\cf2 Mouse driver
+\par \plain\f2\fs18\cf2 \'A7\plain\f3\fs18\cf2 \tab \plain\f0\fs18\cf2 Network driver
+\par \plain\f2\fs18\cf2 \'A7\plain\f3\fs18\cf2 \tab \plain\f0\fs18\cf2 System driver
+\par \plain\f2\fs18\cf2 \'A7\plain\f3\fs18\cf2 \tab \plain\f0\fs18\cf2 Installable driver
+\par \plain\f2\fs18\cf2 \'A7\plain\f3\fs18\cf2 \tab \plain\f0\fs18\cf2 Sound driver.
+\par \pard \fi-1200 \li1600 \tx1600 \plain\f1\fs18\cf2 \tab \plain\f0\fs18\cf2 If the type is not recognised or not specified then \plain\f0\fs18\cf2\i Unknown driver type\plain\f0\fs18\cf2  is displayed.
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 Font\tab The type of font is specified:
+\par \pard \fi-2400 \li4400 \tx2400 \plain\f2\fs18\cf2 \'A7\plain\f3\fs18\cf2 \tab \plain\f0\fs18\cf2 Raster font
+\par \plain\f2\fs18\cf2 \'A7\plain\f3\fs18\cf2 \tab \plain\f0\fs18\cf2 Vector font
+\par \plain\f2\fs18\cf2 \'A7\plain\f3\fs18\cf2 \tab \plain\f0\fs18\cf2 TrueType font
+\par \pard \fi-1200 \li1600 \tx1600 \plain\f0\fs8\cf2 
+\par \plain\f1\fs18\cf2 \tab \plain\f0\fs18\cf2 If the font type is not recognised or not specified then \plain\f0\fs18\cf2\i Unkown font type\plain\f0\fs18\cf2  is displayed.
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 Virtual device\tab The virtual-device identifier from the virtual-device control block is displayed as a hexadecimal value.
+\par \pard \plain\f0\fs12\cf2 
+\par \plain\f0\fs18\cf2\b Creation Date\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 The file's creation date may be included in the version information, although \plain\f1\fs18\cf2 this is rarely used and is usually set to \plain\f0\fs18\cf2 zero\plain\f1\fs18\cf2  \plain\f0\fs18\cf2 (\plain\f0\fs18\cf2\i Version Information Spy\plain\f0\fs18\cf2  displays zero values as "No date specified")\plain\f1\fs18\cf2 . This field is not displayed by default - check the \plain\f1\fs18\cf2\i Display creation date\plain\f1\fs18\cf2  check box on the \plain\f1\fs18\cf2\i Fixed File Info\plain\f1\fs18\cf2  tab of the \plain\f1\fs18\cf1 \protect <HS 5>\plain\f1\fs18\cf2 Display Options dialog box\plain\f1\fs18\cf1 \protect </HS 5>\plain\f1\fs18\cf2  to display the field.\plain\f0\fs18\cf2 
+\par \plain\f0\fs12\cf2 
+\par \plain\f0\fs18\cf2\b Fixed File Info Structure Information\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 The fixed file information's structure signature and version number can optionally be displayed. The signature should be FEEF04BD (hex) and the structure version should be 1.0 in order to be confident that \plain\f0\fs18\cf2\i Version Information Spy\plain\f0\fs18\cf2  has interpreted the structure correctly.\plain\f1\fs18\cf2  This information is not displayed by default - check the \plain\f1\fs18\cf2\i Display structure information\plain\f1\fs18\cf2  check box on the \plain\f1\fs18\cf2\i Fixed File Info\plain\f1\fs18\cf2  tab of the \plain\f1\fs18\cf1 \protect <HS 6>\plain\f1\fs18\cf2 Display Options dialog box\plain\f1\fs18\cf1 \protect </HS 6>\plain\f1\fs18\cf2  to enable this feature.\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf1 \protect <BD 3>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 3>\plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2\i See also:\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f0\fs18\cf1 \protect <BU 2>\plain\f0\fs18\cf2 \tab About String Information
+\par \plain\f0\fs18\cf1 \protect <BU 4>\plain\f0\fs18\cf2 \tab Displaying Version Information
+\par }
+
+[Footnotes]
+$=About String Information
+#=STRING_INFO
+@=Detailed description of String Information.
+K=string information
+A=StrTableHelp
+[End]
+7
+NS
+1
+BU
+2
+
+1
+JumpID(FIXED_FILE_INFO)
+BU
+3
+
+1
+JumpID(DISPLAY)
+BD
+4
+2
+0
+HS
+5
+0
+
+0
+FIXED_FILE_INFO
+
+HS
+6
+0
+
+0
+FIXED_FILE_INFO
+
+HS
+7
+0
+
+0
+DLG_DISPLAY_OPTIONS
+
+3914
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f0\fs24\cf3\b About String Information\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par 
+\par \plain\f0\fs18\cf2 String information is stored in Name/Value pairs. A different set of string information can exist for each "translation" in the version information resource. \plain\f0\fs18\cf2\i Version Information Spy\plain\f0\fs18\cf2  displays all the string names and values defined in a given translation. 
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 Microsoft have predefined the meaning of some string names as follows:
+\par \plain\f0\fs8\cf2 
+\par \pard \fi-1600 \li2000 \tx2000 \plain\f0\fs18\cf2\i String Name\tab Description\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 Comments\tab Custom information to be used for diagnostic purposes.
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 CompanyName\tab Name of company that produced the file.
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 FileDescription\tab Describes the purpose of the file.
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 FileVersion\tab A text representation of the file's version number.
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 InternalName\tab The internal name of the file if any. If there is no internal name the name of the file without extension is used.
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 LegalCopyright\tab Copyright notices that apply to the file.
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 LegalTrademarks\tab Trademarks that apply to the file.
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 OriginalFileName\tab Original name of the file.
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 PrivateBuild\tab Gives information about the private build of a file. The "private build" element of the file flags should be provided. See \plain\f0\fs18\cf1 \protect <HS 5>\plain\f0\fs18\cf2 About Fixed File Information\plain\f0\fs18\cf1 \protect </HS 5>\plain\f0\fs18\cf2  for details of file flags.
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 ProductName\tab Name of the product with which the file is distributed.
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 ProductVersion\tab A text representation of the version number of the product with which the file is distributed.
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 SpecialBuild\tab States how this file differs from the standard version of the file. The "special build" element of the file flags should be provided. See \plain\f0\fs18\cf1 \protect <HS 6>\plain\f0\fs18\cf2 About Fixed File Information\plain\f0\fs18\cf1 \protect </HS 6>\plain\f0\fs18\cf2  for details of file flags.
+\par \pard \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 Other string names can be (are often are) used. The program displays all the strings, not just the predefined ones.\plain\f1\fs18\cf2  Non-standard string names can be highlighted and the highlight colour customised. Highlighting is configured on the \plain\f1\fs18\cf2\i String Info\plain\f1\fs18\cf2  tab of the \plain\f1\fs18\cf1 \protect <HS 7>\plain\f1\fs18\cf2 Display Options dialog box\plain\f1\fs18\cf1 \protect </HS 7>\plain\f1\fs18\cf2 .\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2\i See also:\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f0\fs18\cf1 \protect <BU 2>\plain\f0\fs18\cf2 \tab About Fixed File Information
+\par \plain\f0\fs18\cf1 \protect <BU 3>\plain\f0\fs18\cf2 \tab Displaying Version Information
+\par }
+
+[Footnotes]
+$=End User License Agreement
+#=COPYRIGHT
+@=End User License Agreement
+K=copyright;licensing;end user license agreement
+[End]
+4
+NS
+1
+BD
+2
+2
+0
+HS
+3
+2
+
+0
+
+ExecFile("http://www.delphidabbler.com/")
+HS
+4
+2
+
+0
+
+ExecFile("http://www.mozilla.org/MPL/")
+6289
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f1\fs24\cf3\b End User License Agreement\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par 
+\par \plain\f1\fs18\cf2\b 1. Definitions\plain\f1\fs18\cf2 
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 In this document the following definitions apply:
+\par \plain\f1\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f1\fs18\cf2   a. \tab "Product" means DelphiDabbler Version Information Spy and related documentation.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2   b.\tab  "Author" means the author and copyright holder of of the software, that is Peter D Johnson, http://www.delphidabbler.com/.
+\par \pard \plain\f1\fs12\cf2 
+\par \plain\f1\fs18\cf2\b 2. Introduction\plain\f1\fs18\cf2 
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 A source code version of some of DelphiDabbler Version Information Spy's functionality that you may use, modify and distribute is available to you free of charge from\plain\f1\fs18\cf3  \plain\f1\fs18\cf1 \protect <HS 3>\plain\f1\fs18\cf3 http://www.delphidabbler.com/\plain\f1\fs18\cf1 \protect </HS 3>\plain\f1\fs18\cf2  under the Mozilla Public License and other open source software licenses. The Mozilla Public License can be found at\plain\f1\fs18\cf3  \plain\f1\fs18\cf1 \protect <HS 4>\plain\f1\fs18\cf3 http://www.mozilla.org/MPL/\plain\f1\fs18\cf1 \protect </HS 4>\plain\f1\fs18\cf2 .
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 The accompanying executable code version of the Product is made available to you under the terms of this end user license agreement. By installing or using DelphiDabbler Version Information Spy you are consenting to be bound by the agreement. If you do not agree to the terms and conditions of this agreement do not install or use any part of DelphiDabbler Version Information Spy.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 DelphiDabbler Version Information Spy is copyright (c) 1998-2007 by Peter D Johnson, http://www.delphidabbler.com/.
+\par \plain\f1\fs12\cf2 
+\par \plain\f1\fs18\cf2\b 3. License Grant\plain\f1\fs18\cf2 
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 The Author grants you a non-exclusive license to use the executable code version of DelphiDabbler Version Information Spy. You may install as many copies of the program as you wish and may distribute the program providing this license agreement and any other copyright or legal notices are distributed with the Product.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 This agreement will also govern any software upgrades provided by the Author that replace and/or supplement the original Product, unless such upgrades are accompanied by a separate license, in which case the terms of that license will govern.
+\par \plain\f1\fs12\cf2 
+\par \plain\f1\fs18\cf2\b 4. Termination\plain\f1\fs18\cf2 
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 If you breach this Agreement your right to use the Product will terminate immediately and without notice, but all provisions of this agreement except the License Grant (Section 3) will survive termination and continue in effect. Upon termination, you must destroy all copies of the Product.
+\par \plain\f1\fs12\cf2 
+\par \plain\f1\fs18\cf2\b 5. Proprietary Rights
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 Portions of the Product are available in source code form under the terms of the Mozilla Public License and other open source licenses from http://www.delphidabbler.com/. Nothing in this agreement will be construed to limit any rights granted under the Open Source Licenses. Subject to the foregoing, the Author, for himself and on behalf of his licensors, hereby reserves all intellectual property rights in the Product, except for the rights expressly granted in this agreement. You may not remove or alter any copyright or other proprietary notice in or on the Product.
+\par \plain\f1\fs12\cf2 
+\par \plain\f1\fs18\cf2\b 6. Disclaimer Of Warranty\plain\f1\fs18\cf2 
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 THE PRODUCT IS PROVIDED "AS IS" WITH ALL FAULTS. TO THE EXTENT PERMITTED BY LAW, THE AUTHOR HEREBY DISCLAIMS ALL WARRANTIES, WHETHER EXPRESS OR IMPLIED, INCLUDING WITHOUT  IMITATION WARRANTIES THAT THE PRODUCT IS FREE OF DEFECTS, MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE AND NON-INFRINGING. YOU BEAR ENTIRE RISK AS TO SELECTING THE PRODUCT FOR YOUR PURPOSES AND AS TO THE QUALITY AND PERFORMANCE OF THE PRODUCT. THIS LIMITATION WILL APPLY NOTWITHSTANDING THE FAILURE OF ESSENTIAL PURPOSE OF ANY REMEDY. SHOULD THE PRODUCT PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+\par \plain\f1\fs12\cf2 
+\par \plain\f1\fs18\cf2\b 7. Limitation Of Liability\plain\f1\fs18\cf2 
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 EXCEPT AS REQUIRED BY LAW, THE AUTHOR AND HIS LICENSORS, CONTRIBUTORS AND DISTRIBUTORS WILL NOT BE LIABLE FOR ANY GENERAL, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES ARISING OUT OF OR IN ANY WAY RELATING TO THIS AGREEMENT OR THE USE OF OR INABILITY TO USE THE PRODUCT, INCLUDING WITHOUT LIMITATION DAMAGES FOR LOSS OF GOODWILL, WORK STOPPAGE, LOST PROFITS, LOSS OF DATA, AND COMPUTER FAILURE OR MALFUNCTION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES AND REGARDLESS OF THE THEORY (CONTRACT, TORT OR OTHERWISE) UPON WHICH SUCH CLAIM IS BASED.
+\par \plain\f1\fs12\cf2 
+\par \plain\f1\fs18\cf2\b 8. Miscellaneous\plain\f1\fs18\cf2 
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 This Agreement constitutes the entire agreement between the Author and you concerning the subject matter hereof, and it may only be modified by a written amendment signed by the Author.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 Except to the extent applicable law, if any, provides otherwise, this Agreement will be governed by the laws of the United Kingdom.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf1 \protect <BD 2>\plain\f1\fs8\cf2  \plain\f1\fs18\cf1 \protect </BD 2>\plain\f0\fs8\cf2 
+\par }
+
+[Footnotes]
+$=About the Author
+#=AUTHOR
+@=Information about the author.
+K=author
+[End]
+3
+NS
+1
+BD
+4
+2
+0
+HS
+5
+2
+
+0
+
+ExecFile("http://www.delphidabbler.com/")
+1144
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f0\fs24\cf3\b About the Author\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par 
+\par \plain\f0\fs18\cf2 I'm Peter Johnson \plain\f1\fs18\cf2 (aka DelphiDabbler) \plain\f0\fs18\cf2 - a hobbyist programmer living in Ceredigion in West Wales, UK. I write mainly in Delphi, but occasionally dabble in other languages. 
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 Several of my programs and Delphi components are freely available from my\plain\f1\fs18\cf2  web site\plain\f0\fs18\cf3  \plain\f0\fs18\cf1 \protect <HS 5>\plain\f1\fs18\cf3 DelphiDabbler.com\plain\f0\fs18\cf1 \protect </HS 5>\plain\f0\fs18\cf2 . Updates are uploaded as they become available.
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs18\cf2 
+\par }
+
+[Footnotes]
+$=Display Options Dialog
+#=DLG_DISPLAY_OPTIONS
+@=Explains purpose and use of the Display Options dialog box. This topic is assessed directly from the program by it's A-keyword that matches the Delphi name of the dialog.
+K=display options
+A=DisplayOptsDlg
+[End]
+2
+NS
+1
+BD
+4
+2
+0
+6371
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}{\f2\fnil \fcharset2 WingDings;}{\f3\fnil \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f1\fs24\cf3\b Display Options Dialog Box\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par 
+\par \plain\f1\fs18\cf2 This tabbed dialog box is used to customise Version Information Spy's appearance. It is accessed from the \plain\f1\fs18\cf2\i Options | Display Options\plain\f1\fs18\cf2  dialog box. The four tabs are:
+\par \plain\f1\fs12\cf2 
+\par \plain\f1\fs18\cf2\b Pop-ups\plain\f1\fs18\cf2 
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 Used to determine whether a pop-up hint is displayed when the cursor hovers over information that extends beyond the edge of the display. If the \plain\f1\fs18\cf2\i Display overflow text in pop-up window\plain\f1\fs18\cf2  check box is checked these pop-up windows are displayed (the default). Clear the check box to prevent pop-ups.
+\par \plain\f1\fs12\cf2 
+\par \plain\f1\fs18\cf2\b Fixed File Info\plain\f1\fs18\cf2 
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 This tab is used to configure how fixed file information is displayed. There are three options, each selected via a check box:
+\par \plain\f1\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f2\fs18\cf2 \'A7\plain\f1\fs18\cf2 \tab \plain\f1\fs18\cf2\i Display structure information\plain\f1\fs18\cf2 
+\par \tab Two lines of information that describe the fixed file information record structure can be displayed - the structure's version number and a "signature". This information is the same for every program, so the information is of little value and is hidden by default. Check the \plain\f1\fs18\cf2\i Display structure information\plain\f1\fs18\cf2  check box to display it.
+\par \pard \plain\f1\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f2\fs18\cf2 \'A7\plain\f3\fs18\cf2 \tab \plain\f3\fs18\cf2\i Display creation date\plain\f3\fs18\cf2 
+\par \tab Programmers may store a program's creation date in a fixed file information field, although this is rarely done. \plain\f3\fs18\cf2\i Version Information Spy\plain\f3\fs18\cf2  can display this field, which is hidden by default. Check the \plain\f3\fs18\cf2\i Display creation date\plain\f3\fs18\cf2  box to display the creation date.
+\par \pard \plain\f3\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f2\fs18\cf2 \'A7\plain\f3\fs18\cf2 \tab \plain\f3\fs18\cf2\i Describe file flags\plain\f3\fs18\cf2 
+\par \tab The File Flags and File Flags Mask fixed file information fields are bitmasks that can either be displayed as hex values or as natural language descriptions of the flags. Check the box to display the natural language description and clear it to display the value in hexadecimal.
+\par \pard \plain\f3\fs12\cf2 
+\par \plain\f3\fs18\cf2\b Translation\plain\f3\fs18\cf2 
+\par \plain\f3\fs8\cf2 
+\par \plain\f1\fs18\cf2 Several programs contain version information that departs from the Microsoft specification which states that for each translation there should be a matching string table. \plain\f1\fs18\cf2\i Version Information Spy\plain\f1\fs18\cf2  can detect any deviation from the standard and can highlight or provide additional information about such inconsistencies. This tab is used to determine how these errors are reported.
+\par \plain\f1\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f2\fs18\cf2 \'A7\plain\f3\fs18\cf2 \tab \plain\f3\fs18\cf2\i Highlight inconsistent translation entries\plain\f3\fs18\cf2 
+\par \tab When this check box is checked inconsistent translations are highlighted in the translation drop-down list using the colour specified by the \plain\f3\fs18\cf2\i Highlight colour\plain\f3\fs18\cf2  colour selector.
+\par \pard \plain\f3\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f2\fs18\cf2 \'A7\plain\f3\fs18\cf2 \tab \plain\f3\fs18\cf2\i Explain translation inconsistencies\plain\f3\fs18\cf2 
+\par \tab A brief explanation of any translation inconsistencies is displayed above the translation drop-down list if this box is checked.
+\par \pard \plain\f3\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f2\fs18\cf2 \'A7\plain\f3\fs18\cf2 \tab \plain\f3\fs18\cf2\i Add explanation button\plain\f3\fs18\cf2 
+\par \tab If this box is checked a button is displayed above the translation drop-down list whenever an inconsistent translation is selected. Clicking the button displays detailed information about the problem aloing with a suggestion as to how to fix it.
+\par \pard \plain\f3\fs12\cf2 
+\par \plain\f3\fs18\cf2\b String Info\plain\f3\fs18\cf2 
+\par \plain\f3\fs8\cf2 
+\par \plain\f1\fs18\cf2 This tab is used to configure how the string file information is displayed. While most software names the strings in this section according to the standard recommended by Microsoft it is possible (and quite common) to include arbitrary string names in string tables. \plain\f1\fs18\cf2\i Version Information Spy\plain\f1\fs18\cf2  can highlight such names in the colour specified in the \plain\f1\fs18\cf2\i Highlight colour\plain\f1\fs18\cf2  colour selector. You must check the \plain\f1\fs18\cf2\i Highlight non-standard string information items\plain\f1\fs18\cf2  check box to enable this feature.
+\par \plain\f1\fs12\cf2 
+\par \plain\f1\fs18\cf2\b Other Controls\plain\f1\fs18\cf2 
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 You can restore all the display options to their default values by clicking the \plain\f1\fs18\cf2\i Restore Defaults\plain\f1\fs18\cf2  button.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 All changes can be aborted by clicking the \plain\f1\fs18\cf2\i Cancel\plain\f1\fs18\cf2  button. Click \plain\f1\fs18\cf2\i OK\plain\f1\fs18\cf2  to accept changes. Changes are immediately reflected in the display.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 The dialog box remembers the tab that was in use when the dialog is closed and displays the same tab again when the dialog is next opened.
+\par \plain\f1\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs18\cf2 
+\par }
+
+[Footnotes]
+$=Explorer Extensions Dialog
+#=DLG_EXPLORER_EXT
+@=Explains how to use the Explorer Extensions dialog box. This topic is accessible directly from the program.
+K=explorer extensions;explorer extensions,configuration
+A=ExplExtDlg
+[End]
+4
+NS
+1
+BU
+2
+
+1
+JumpID(EXPLORER_EXTENSIONS)
+HS
+3
+0
+
+0
+DLG_ADD_EXTENSION
+
+BD
+4
+2
+0
+7122
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}{\f2\fnil \fcharset2 WingDings;}{\f3\fnil \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f0\fs24\cf3\b Explorer Extension Configuration Dialog Box\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par 
+\par \plain\f0\fs18\cf2 This dialog box permits the Explorer \plain\f1\fs18\cf2 shell \plain\f0\fs18\cf2 extension\plain\f1\fs18\cf2 s\plain\f0\fs18\cf2  to be enabled, disabled and configured. The dialog is displayed by selecting the \plain\f0\fs18\cf2\i Options | Explorer Extension\plain\f1\fs18\cf2\i s\plain\f0\fs18\cf2  menu option.
+\par \plain\f0\fs8\cf2 
+\par \plain\f1\fs18\cf2 The dialog box has two tabs - basic and advanced. The basic tab can be used for straightforward configuration of the extensions, while the advanced tab is used for more refined "tweaking".
+\par \plain\f1\fs12\cf2 
+\par \plain\f1\fs18\cf2\b Basic tab\plain\f1\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \plain\f1\fs18\cf2 This tab contains four check boxes that are used to set up the shell extensions and the behaviour of \plain\f1\fs18\cf2\i Version Information Spy\plain\f1\fs18\cf2  when working with the extensions. A description of each check box follows.
+\par \plain\f1\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f2\fs18\cf2 \'A7\plain\f3\fs18\cf2 \tab \plain\f1\fs18\cf2\i Enable Explorer context menu extension\plain\f1\fs18\cf2 
+\par \pard \li400 Use this check box to enable or disable the context menu handler. Enabling the handler registers it for use with all the file extensions listed on the \plain\f1\fs18\cf2\i Advanced\plain\f1\fs18\cf2  tab. This handler adds a \plain\f1\fs18\cf2\i Version Information\plain\f1\fs18\cf2  menu item to Explorer's context menu that opens the selected file in \plain\f1\fs18\cf2\i Version Information Spy\plain\f1\fs18\cf2 .
+\par \plain\f1\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f2\fs18\cf2 \'A7\plain\f3\fs18\cf2 \tab \plain\f1\fs18\cf2\i Enable Explorer property sheet tab\plain\f1\fs18\cf2 
+\par \pard \li400 This check box enables or disables the property sheet tab extension. Enabling the property sheet tab registers it for use with all the file extensions listed on the \plain\f1\fs18\cf2\i Advanced\plain\f1\fs18\cf2  tab. This extension adds a \plain\f1\fs18\cf2\i Version Extra\plain\f1\fs18\cf2  tab to a file's property sheet and displays version information in it.
+\par \plain\f1\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f2\fs18\cf2 \'A7\plain\f3\fs18\cf2 \tab \plain\f1\fs18\cf2\i Explorer extensions use a single application instance\plain\f1\fs18\cf2 
+\par \pard \li400 The context menu handler extension activates \plain\f1\fs18\cf2\i Version Information Spy\plain\f1\fs18\cf2  to display version information for a selected file while the property sheet extension can activate \plain\f1\fs18\cf2\i Version Information Spy\plain\f1\fs18\cf2  when the \plain\f1\fs18\cf2\i Advanced\plain\f1\fs18\cf2  button is clicked. You can configure the extensions to re-use an open instance of \plain\f1\fs18\cf2\i Version Information Spy\plain\f1\fs18\cf2  (checked) or to always start a new instance (unchecked).
+\par \plain\f1\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f2\fs18\cf2 \'A7\plain\f3\fs18\cf2 \tab \plain\f1\fs18\cf2\i Ask user whether to register extension for new file extensions\plain\f1\fs18\cf2 
+\par \pard \li400 When \plain\f1\fs18\cf2\i Version Information Spy\plain\f1\fs18\cf2  opens a file which has an extension that is not known the to explorer extensions it can offer to register the extension with them. Check this box to use this facility.
+\par \pard \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 The \plain\f1\fs18\cf2\i Enable Explorer context menu extension\plain\f1\fs18\cf2  and \plain\f1\fs18\cf2\i Enable Explorer property sheet tab\plain\f1\fs18\cf2  check boxes can have indeterminate state. In this case check the \plain\f1\fs18\cf2\i Advanced\plain\f1\fs18\cf2  tab to see which file extensions are registered.\plain\f0\fs18\cf2 
+\par \plain\f1\fs12\cf2 
+\par \plain\f1\fs18\cf2\b Advanced tab\plain\f1\fs18\cf2 
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 This tab lists the types of file containing version information that are known to the program. Some file types are pre-defined while others have been added to the list by the user. There are two check boxes next to each file extension. Check the first check box (column CM) to register the file extension with the contect menu handler. Check the second box (column PS) to register it with the property sheet extension.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 You can use the \plain\f1\fs18\cf2\i Select All\plain\f1\fs18\cf2  button to check all the boxes or use \plain\f1\fs18\cf2\i Clear All\plain\f1\fs18\cf2  to clear all the boxes. This is the same as checking or clearing both the \plain\f1\fs18\cf2\i Enable Explorer context menu extension\plain\f1\fs18\cf2  and \plain\f1\fs18\cf2\i Enable Explorer property sheet tab\plain\f1\fs18\cf2  check boxes on the \plain\f1\fs18\cf2\i Basic\plain\f1\fs18\cf2  tab.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 New file extensions can be added to the list manually by clicking the \plain\f1\fs18\cf2\i Add\plain\f1\fs18\cf2  button and selecting the required file extension from the \plain\f1\fs18\cf1 \protect <HS 3>\plain\f1\fs18\cf2 Add Extension dialog box\plain\f1\fs18\cf1 \protect </HS 3>\plain\f1\fs18\cf2 . The newly added file extension appears in the list. You need to check the required boxes to register the extension.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 File extensions can be deleted from the list by highlighting the extension and clicking the \plain\f1\fs18\cf2\i Delete\plain\f1\fs18\cf2  button. Note that the .dll, .exe and .res extensions are required and cannot be deleted, although they can be hidden from the shell extensions by clearing the check boxes.
+\par \plain\f1\fs12\cf2 
+\par \plain\f1\fs18\cf2\b Other controls\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2 Once selections have been made choose the \plain\f0\fs18\cf2\i OK\plain\f0\fs18\cf2  button to confirm selections or the \plain\f0\fs18\cf2\i Cancel\plain\f0\fs18\cf2  button to abort the changes.\plain\f0\fs18\cf2\i 
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 The dialog box remembers the tab that was in use when the dialog is closed and displays the same tab again when the dialog is next opened.
+\par \plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs8\cf2 
+\par \plain\f0\fs18\cf2\i See also:\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f0\fs18\cf1 \protect <BU 2>\plain\f0\fs18\cf2 \tab \plain\f1\fs18\cf2 Using\plain\f0\fs18\cf2  the Explorer Extension\plain\f1\fs18\cf2 s\plain\f0\fs18\cf2 
+\par }
+
+[Footnotes]
+$=Add Extension Dialog Box
+#=DLG_ADD_EXTENSION
+@=Explains purpose and use of the Add Extension dialog box. This topic is assessed directly from the program by it's A-keyword that matches the Delphi name of the dialog.
+K=explorer extensions;explorer extensions,configuration
+A=ExplExtAddDlg
+[End]
+3
+NS
+1
+HS
+2
+0
+
+0
+DLG_EXPLORER_EXT
+
+BD
+4
+2
+0
+1567
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f1\fs24\cf3\b Add Extension Dialog Box\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 This dialog box is displayed when the \plain\f1\fs18\cf2\i Add\plain\f1\fs18\cf2  button of the \plain\f1\fs18\cf1 \protect <HS 2>\plain\f1\fs18\cf2 Explorer Extensions dialog box\plain\f1\fs18\cf1 \protect </HS 2>\plain\f1\fs18\cf2  is clicked. It is used to select or enter an extension that will be added to the list of extensions supported by the program's Explorer extensions.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 Either select an extension from the list of extensions known to Windows or enter one in the edit box then press \plain\f1\fs18\cf2\i OK\plain\f1\fs18\cf2  to add the extension or \plain\f1\fs18\cf2\i Cancel\plain\f1\fs18\cf2  to abort the process.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 Note that extensions already known to the explorer extensions are displayed in grey and the \plain\f1\fs18\cf2\i OK\plain\f1\fs18\cf2  button is disabled if one of these extensions in selected.
+\par \plain\f1\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs18\cf2 
+\par }
+
+[Footnotes]
+$=Descriptive HTML Report Dialog
+#=DLG_REPORT_HTML
+@=Explains purpose and use of the HTML Report dialog box. This topic is assessed directly from the program by it's A-keyword that matches the Delphi name of the dialog.
+K=reports;reports,html description
+A=HTMLReportDlg
+[End]
+3
+NS
+1
+HS
+2
+0
+
+0
+
+KLink("reports");
+BD
+4
+2
+0
+1955
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f1\fs24\cf3\b Descriptive HTML Report\plain\f0\fs24\cf3\b  Dialog Box\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par 
+\par \plain\f1\fs18\cf2 This dialog box displays a descriptive report of the current file's version information in HTML format. Any inconsistencies in the file are noted. Further explanation of some of the items in the report is available, indicated by help icons. Clicking the icons causes relevant topics in the help file to be displayed.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 To save a copy of the report in HTML format to disk click the \plain\f1\fs18\cf2\i Save\plain\f1\fs18\cf2  button. The \plain\f1\fs18\cf2\i Copy\plain\f1\fs18\cf2  button stores the HTML on the clipboard in text format.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 Clicking the \plain\f1\fs18\cf2\i View in IE\plain\f1\fs18\cf2  button displays the HTML report in Internet Explorer. If the program can't find the browser the button is disabled. Internet Explorer is used even if it is not the system's default browser because the HTML code uses the res:// protocol and this is not supported by other manaufacturer's browsers.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 Click \plain\f1\fs18\cf2\i Close\plain\f1\fs18\cf2  to dismiss the dialog box.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf1 \protect <HS 2>\plain\f1\fs18\cf2 Other reports\plain\f1\fs18\cf1 \protect </HS 2>\plain\f1\fs18\cf2  are also available.
+\par \plain\f1\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs18\cf2 
+\par }
+
+[Footnotes]
+$=Descriptive Text Report Dialog
+#=DLG_REPORT_TEXT
+@=Explains purpose and use of the Plain Text Report dialog box. This topic is assessed directly from the program by it's A-keyword that matches the Delphi name of the dialog.
+K=reports;reports,plain text description
+A=TextReportDlg
+[End]
+4
+NS
+1
+HS
+2
+0
+
+0
+
+KLink("reports");
+HS
+3
+0
+
+0
+COMMAND_LINE_PROGRAM
+
+BD
+4
+2
+0
+1748
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f1\fs24\cf3\b Descriptive Text Report\plain\f0\fs24\cf3\b  Dialog Box\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par 
+\par \plain\f1\fs18\cf2 This dialog box displays a descriptive, plain text, description of the current file's version information. The report is the same as the equivalent report displayed by the \plain\f1\fs18\cf1 \protect <HS 3>\plain\f1\fs18\cf2 command line program\plain\f1\fs18\cf1 \protect </HS 3>\plain\f1\fs18\cf2 .
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 Clicking the \plain\f1\fs18\cf2\i View Externally\plain\f1\fs18\cf2  button displays the report in the default text editor. If no text editor is registered then an error message is displayed. 
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 To save a copy of the report to disk click the \plain\f1\fs18\cf2\i Save\plain\f1\fs18\cf2  button. The \plain\f1\fs18\cf2\i Copy\plain\f1\fs18\cf2  button stores the report text on the clipboard.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 Click \plain\f1\fs18\cf2\i Close\plain\f1\fs18\cf2  to dismiss the dialog box.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf1 \protect <HS 2>\plain\f1\fs18\cf2 Other reports\plain\f1\fs18\cf1 \protect </HS 2>\plain\f1\fs18\cf2  are also available.
+\par \plain\f1\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs18\cf2 
+\par }
+
+[Footnotes]
+$=Resource Source Code Dialog
+#=DLG_REPORT_SOURCE
+@=Explains purpose and use of the Resource Source Code dialog boxes. This topic is assessed directly from the program by the A-keywords that matches the Delphi name of the source code and corrected source code dialogs.
+K=reports;reports,source code;source code;source code,dialog
+A=SourceReportDlg;FixedSourceReportDlg
+[End]
+3
+NS
+1
+HS
+2
+0
+
+0
+
+KLink("reports");
+BD
+4
+2
+0
+2682
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}{\f2\fnil \fcharset2 WingDings;}{\f3\fnil \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f1\fs24\cf3\b Resource Source Code \plain\f0\fs24\cf3\b Dialog Box\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par 
+\par \plain\f1\fs18\cf2 This dialog displays decompiled RC source code for the current file's version information. It is displayed when either the \plain\f1\fs18\cf2\i Report | Source Code\plain\f1\fs18\cf2  or \plain\f1\fs18\cf2\i Report | Corrected Source Code\plain\f1\fs18\cf2  menu options are selected. (The latter is only enabled if the program detects problems with the version information).
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 The code varies slightly depending on which menu option was used to display the dialog box. Here are the differences:
+\par \plain\f1\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f2\fs18\cf2 \'A7\plain\f1\fs18\cf2 \tab \plain\f1\fs18\cf2\i Report | Source Code\plain\f1\fs18\cf2 
+\par \pard \li400 The source code is a an estimation of the code that was used to create the resource. If any errors or inconsistencies have been detected the they are noted in comments in the source code but are not fixed.
+\par \pard \plain\f1\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f2\fs18\cf2 \'A7\plain\f3\fs18\cf2 \tab \plain\f1\fs18\cf2\i Report | Corrected Source Code\plain\f1\fs18\cf2 
+\par \pard \li400 The source code corrects the errors that were detected and comments are used to identify the changes.
+\par \pard \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 Clicking the \plain\f1\fs18\cf2\i View Externally\plain\f1\fs18\cf2  button displays the source code in Windows NotePad. 
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 To save the source code to disk click the \plain\f1\fs18\cf2\i Save\plain\f1\fs18\cf2  button. The \plain\f1\fs18\cf2\i Copy\plain\f1\fs18\cf2  button stores the code on the clipboard in text format.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 Click \plain\f1\fs18\cf2\i Close\plain\f1\fs18\cf2  to dismiss the dialog box.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf1 \protect <HS 2>\plain\f1\fs18\cf2 Other reports\plain\f1\fs18\cf1 \protect </HS 2>\plain\f1\fs18\cf2  are also available.
+\par \plain\f1\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs18\cf2 
+\par }
+
+[Footnotes]
+$=Translation Inconsistency Explanation Dialog Box
+#=DLG_BAD_TRANS
+@=Explains purpose and use of the Translation Inconsistency Explanation dialog box. This topic is assessed directly from the program by it's A-keyword that matches the Delphi name of the dialog.
+K=translation errors
+A=ErrorReportDlg
+[End]
+3
+NS
+1
+HS
+2
+0
+
+0
+DLG_DISPLAY_OPTIONS
+
+BD
+4
+2
+0
+2423
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}{\f2\fnil \fcharset2 WingDings;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f1\fs24\cf3\b Translation Inconsistency Explanation Dialog Box\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 Providing the facility is enabled (see "Enabling the dialog box" below), \plain\f1\fs18\cf2\i Version Information Spy\plain\f1\fs18\cf2  shows this dialog box when the user has clicked the \plain\f1\fs18\cf2\i Explain Problem\plain\f1\fs18\cf2  button on the main user interface. The button appears when an inconsistency in a translation or string table has been detected.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 The dialog box displays report on the problem that caused the translation inconsistency. An explanation of the problem is offered along with some RC source code that shows the changes to the version information necessary to fix the problem.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 Click the \plain\f1\fs18\cf2\i Close\plain\f1\fs18\cf2  button to dismiss the dialog box.
+\par \plain\f1\fs12\cf2 
+\par \plain\f1\fs18\cf2\b Enabling the dialog box\plain\f1\fs18\cf2 
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 If no \plain\f1\fs18\cf2\i Explain Problem\plain\f1\fs18\cf2  button is displayed when a translation inconsistency is reported you can switch the feature on as follows:
+\par \plain\f1\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f2\fs18\cf2 \'A7\plain\f1\fs18\cf2 \tab Select the \plain\f1\fs18\cf2\i Options | Display Options\plain\f1\fs18\cf2  menu item to show the \plain\f1\fs18\cf1 \protect <HS 2>\plain\f1\fs18\cf2 Display Options dialog box\plain\f1\fs18\cf1 \protect </HS 2>\plain\f1\fs18\cf2 .
+\par \plain\f2\fs18\cf2 \'A7\plain\f1\fs18\cf2 \tab Choose the \plain\f1\fs18\cf2\i Translations\plain\f1\fs18\cf2  tab.
+\par \plain\f2\fs18\cf2 \'A7\plain\f1\fs18\cf2 \tab Check the \plain\f1\fs18\cf2\i Add explanation button\plain\f1\fs18\cf2  check box.
+\par \pard \plain\f1\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs18\cf2 
+\par }
+

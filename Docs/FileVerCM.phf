@@ -1,0 +1,430 @@
+@PROJECT_NAME           Version Information Spy Context Menu Handler.
+@PROJECT_DESC           Provides a context menu handler that can launch Version
+                        Information Spy from the Explorer context menu for
+                        executable files.
+@ROOT                   ..\Src\CtxMenu
+@AUTHOR                 Peter D Johnson, LLANARTH, Ceredigion, Wales, UK.
+@EMAIL                  delphidabbler@yahoo.co.uk
+@COPYRIGHT              © Peter D Johnson, 2002-2007.
+@LEGAL_NOTICE           This program is released under the Mozilla Public
+                        License v1.1. See FileVerCM.dpr for details.
+@WEBSITE                http://www.delphidabbler.com/
+@HISTORY(
+  @REVISION(
+    @VERSION            1.0 (build 1)
+    @DATE               04/08/2002
+    @COMMENTS           Original version.
+    @COMPILERS          + Delphi 4
+                        + Version Information Expert v2.8.2
+    @FILES(
+      @NEW(
+        @FILE           FileVerCM.dpr
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UFileVerCMHandler.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UFileVerCMFactory.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UFileVerCMExp.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UFileVerCMReg.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           VFileVerCM.vi
+        @DATE           04/08/2002
+        @COMMENTS       Original version.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.0 (build 2)
+    @COMMENTS           + Added new COM server object that manages registered
+                          and recorded extensions that context menu handler
+                          works with.
+                        + Changes method of reporting errors with menu handler.
+    @COMPILERS          + Delphi 4
+                        + Version Information Expert v2.8.2
+    @DATE               24/02/2003
+    @FILES(
+      @UPDATED(
+        @FILE           FileVerCM.dpr
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           UFileVerCMHandler.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           UFileVerCMReg.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           UFileVerCMExp.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           UFileVerCMFactory.pas
+        @VERSION        2.0
+      )
+      @NEW(
+        @FILE           UFileVerCMBase.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\..\Intf\IntfFileVerCM.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\Shared\URegistry.pas
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           VFileVerCM.vi
+        @COMMENTS       Updated file and product numbers and changed names to
+                        record change from PJSoft to DelphiDabbler.
+        @DATE           24/02/2003
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.0 (build 3)
+    @DATE               31/05/2003
+    @COMPILERS          + Delphi 4
+                        + Version Information Expert v2.9
+    @COMMENTS           No change - updated product and file version information
+                        only.
+    @FILES(
+      @UPDATED(
+        @FILE           VFileVerCM.vi
+        @DATE           31/05/2003
+        @COMMENTS       Updated file and product version.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.0 (build 4)
+    @DATE               14/08/2003
+    @COMMENTS           No change - updated product and file version information
+                        only.
+    @COMPILERS          + Delphi 4
+                        + Version Information Expert v2.9
+    @FILES(
+      @UPDATED(
+        @FILE           VFileVerCM.vi
+        @DATE           14/08/2003
+        @COMMENTS       Updated file and product version.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.0 (build 5)
+    @DATE               17/08/2003
+    @COMMENTS           No change - updated product and file version information
+                        only.
+    @COMPILERS          + Delphi 4
+                        + Version Information Expert v2.9
+    @FILES(
+      @UPDATED(
+        @FILE           VFileVerCM.vi
+        @DATE           17/08/2003
+        @COMMENTS       Updated file and product version.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.0 (build 6)
+    @DATE               10/09/2003
+    @COMMENTS           No change - updated product and file version information
+                        only.
+    @COMPILERS          + Delphi 4
+                        + Version Information Expert v2.9
+    @FILES(
+      @UPDATED(
+        @FILE           VFileVerCM.vi
+        @DATE           10/09/2003
+        @COMMENTS       Updated file and product version numbers.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0 (build 7)
+    @COMMENTS           Major update that:
+                        + Adds a a property sheet extension to the Explorer
+                          properties dialog that provides a detailed version
+                          information report for registered files.
+                        + Updates the context menu handler to show greyed out
+                          menu when a file contains no version information
+                          (rather than previous error message).
+                        + Changes the registration COM server to support
+                          recording and registering file extensions for either
+                          of the shell extensions (contect menu handler and
+                          property sheet page).
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor 2.10.1
+                        + Borland Resource Compiler v5.4
+                        + Microsoft Help Workshop v4
+                        + Help Topic Author v1.14
+    @DATE               20/10/2004
+    @FILES(
+      @UPDATED(
+        @FILE           FileVerCM.dpr
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           UBaseCOMObj.pas
+        @VERSION        1.1
+        @RENAMED_FROM   UFileVerCMBase.pas
+      )
+      @UPDATED(
+        @FILE           UCOMLibExp.pas
+        @VERSION        2.0
+        @RENAMED_FROM   UFileVerCMExp.pas
+      )
+      @UPDATED(
+        @FILE           UObjFactory.pas
+        @VERSION        2.1
+        @RENAMED_FROM   UFileVerCMFactory.pas
+      )
+      @UPDATED(
+        @FILE           UCtxMenuHandler.pas
+        @VERSION        2.0
+        @RENAMED_FROM   UFileVerCMHandler.pas
+      )
+      @UPDATED(
+        @FILE           UShellExtReg.pas
+        @VERSION        3.0
+        @RENAMED_FROM   UFileVerCMReg.pas
+      )
+      @NEW(
+        @FILE           UShellExtBase.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UPropSheetHandler.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UVIShellExtBase.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UPSEngine.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UPSView.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UPropSheetCard.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UVIPropSheetCard.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UWidget.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UWButton.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UWComboBox.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UWLabel.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UWListView.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\Shared\DLLLoader.pas
+        @VERSION        2.0
+      )
+      @NEW(
+        @FILE           ..\Shared\UDisplayFmt.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\Shared\UFileReaderLoader.pas
+        @VERSION        2.0
+      )
+      @NEW(
+        @FILE           ..\Shared\UGlobals.pas
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           ..\Shared\URegistry.pas
+        @VERSION        2.0
+      )
+      @NEW(
+        @FILE           ..\Shared\UVerUtils.pas
+        @VERSION        2.1
+      )
+      @NEW(
+        @FILE           ..\..\..\Intf\IntfVerInfoReader.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           ..\..\..\Intf\IntfFileVerShellExt.pas
+        @VERSION        2.0
+        @RENAMED_FROM   ..\..\..\Intf\IntfFileVerCM.pas
+      )
+      @NEW(
+        @FILE           VIPropSheetDlg.rc
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           VFileVerCM.vi
+        @DATE           19/10/2004
+        @COMMENTS       + Update file and product version numbers.
+                        + Changed File Description to reflect new purpose.
+                        + Changed Comments to refer to Mozilla public license.
+      )
+      @NEW(
+        @FILE           Help\FileVerShExt.hap
+        @DATE           30/05/2004
+        @COMMENTS       New help source file.
+      )
+      @NEW(
+        @FILE           Help\FileVerShExt.hpj
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           Help\FileVerShExt.map
+        @VERSION        1.0
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0 (build 8)
+    @DATE               07/03/2005
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor 2.10.1
+                        + Borland Resource Compiler v5.4
+                        + Microsoft Help Workshop v4
+                        + Help Topic Author v1.14
+    @FILES(
+      @UPDATED(
+        @FILE           VFileVerCM.vi
+        @DATE           07/03/2005
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0.1 (build 9)
+    @DATE               23/11/2005
+    @COMMENTS           Fixed minor bug where hint displayed by context menu
+                        handler in Explorer status bar was always Unicode. Fixed
+                        so that Unicode or ANSI text was used depending on type
+                        requested by Windows.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor 2.10.1
+                        + Borland Resource Compiler v5.4
+                        + Microsoft Help Workshop v4
+                        + Help Topic Author v1.14
+    @FILES(
+      @UPDATED(
+        @FILE           UCtxMenuHandler.pas
+        @VERSION        2.1
+      )
+      @UPDATED(
+        @FILE           VFIleVerCM.vi
+        @DATE           23/11/2005
+        @COMMENTS       Updated file and product version numbers.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0.2 (build 10)
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler v5.4
+                        + Microsoft Help Workshop v4
+                        + Help Topic Author v1.14
+    @COMMENTS           + Refactored some code and adjusted some file paths re
+                          restructured code.
+                        + Added Build batch file.
+                        + Added revised copyright statement to version
+                          information.
+                        + Updated copyright date in help file.
+                        + Moved to new EULA and updated version information
+                          accordingly.
+                        + Code that checks if shell extension server is
+                          registered no longer case insensitive.
+    @DATE               28/08/2007
+    @FILES(
+      @UPDATED(
+        @FILE           FileVerCM.dpr
+        @VERSION        2.1
+      )
+      @NEW(
+        @FILE           Build.bat
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           UCard.pas
+        @VERSION        1.1
+        @RENAMED_FROM   UPropSheetCard.pas
+      )
+      @UPDATED(
+        @FILE           UShellExtReg.pas
+        @VERSION        3.1
+      )
+      @UPDATED(
+        @FILE           UVIPropSheetCard.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           UWidget.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           VFileVerCM.vi
+        @DATE           28/08/2007
+        @COMMENTS       + Changed Comments string to refer to external EULA.
+                        + Added MPL and build instructions.
+                        + Removed path to BRCC32.
+                        + Updated file and product numbers.
+                        + Removed resource identifier.
+      )
+      @UPDATED(
+        @FILE           ..\Reader\Exports\IntfVerInfoReader.pas
+        @VERSION        2.0
+        @COMMENTS       File moved, not updated.
+        @RENAMED_FROM   ..\..\..\Intf\IntfVerInfoReader.pas
+      )
+      @UPDATED(
+        @FILE           ..\Shared\UGlobals.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           Exports\IntfFileVerSheelExt.pas
+        @VERSION        2.0
+        @COMMENTS       File moved, not updated.
+        @RENAMED_FROM   ..\..\..\Intf\IntfFileVerShellExt.pas
+      )
+      @UPDATED(
+        @FILE           Help\FileVerShExt.hpj
+        @VERSION        1.1
+      )
+    )
+  )
+)
