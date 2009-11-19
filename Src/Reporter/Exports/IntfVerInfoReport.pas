@@ -1,34 +1,12 @@
-{ ##
-  @PROJECT_NAME             Version Information Spy Reporter DLL
-  @PROJECT_DESC             Provides reporter objects that write reports about
-                            version information to a stream, either as resource
-                            source code or as a description.
-  @FILE                     IntfVerInfoReport.pas
-  @COMMENTS                 Provides interface to objects that can write version
-                            information reports to streams.
-  @DEPENDENCIES             None.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 24/02/2003
-      @COMMENTS             Original version.
-    )
-    @REVISION(
-      @VERSION              2.0
-      @DATE                 20/05/2004
-      @COMMENTS             + Added completely new IVerInfoErrReporter interface
-                              to access new error reporter object in
-                              FVReport.dll.
-                            + Added new CLSID to identify the error reporter
-                              object that implements the new interface.
-                            + Added new CLSID for a new object in FVReport.dll
-                              that implements IVerInfoReporter.
-    )
-  )
-}
-
-
 {
+ * IntfVerInfoReport.pas
+ *
+ * Provides interface to objects that can write version information reports to
+ * streams.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  * 
  * Version: MPL 1.1
@@ -46,11 +24,12 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  * 
- * Portions created by the Initial Developer are Copyright (C) 2003-2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2003-2009 Peter
  * Johnson. All Rights Reserved.
- * 
+ *
  * Contributor(s):
- * 
+ *   NONE
+ *
  * ***** END LICENSE BLOCK *****
 }
 
@@ -84,18 +63,18 @@ const
   // HTML source code report generator: supports IVerInfoReporter
   CLSID_VerInfoHTMLReporter:
     TGUID = '{0B75983C-3A13-4F4A-A1FB-44B22BD8D60A}';
+  // XML report generator: supports IVerInfoErrReporter
+  CLSID_VerInfoXMLReporter:
+    TGUID = '{2474CA9D-7323-4692-BDD9-3ECDA12D33DF}';
   // HTML error reporter: supports IVerInfoErrReporter
   CLSID_VerInfoHTMLErrReporter:
     TGUID = '{5AD57743-04EF-47B9-8CCD-2805F0AAF41A}';
-
 
 type
 
   {
   IVerInfoReporter:
     Interface to objects that can write version information reports.
-
-    Inheritance: IVerInfoReporter => [IUnknown]
   }
   IVerInfoReporter = interface(IUnknown)
     ['{07D632A3-8563-4AEF-A2D0-07122158E837}']
@@ -120,8 +99,6 @@ type
   IVerInfoErrReporter:
     Interface to objects that can write report of any inconsistencies or errors
     in version information.
-
-    Inheritance: IVerInfoErrReporter => [IInterface]
   }
   IVerInfoErrReporter = interface(IInterface)
     ['{7D3692D3-80B6-472D-B3E2-C11D2C885302}']
@@ -150,3 +127,4 @@ type
 implementation
 
 end.
+
