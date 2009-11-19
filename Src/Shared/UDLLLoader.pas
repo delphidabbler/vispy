@@ -322,7 +322,7 @@ begin
   inherited;
   // Add the [Common Files]\DelphiDabbler\ folder to search list
   Paths.Add(
-    MakePathName(PJSysInfo.SIGetCommonFilesFolder) + cDeveloperAlias + '\'
+    MakePathName(TPJSystemFolders.CommonFiles) + cDeveloperAlias + '\'
   );
 end;
 
