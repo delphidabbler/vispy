@@ -1,38 +1,12 @@
-{ ##
-  @PROJECT_NAME             Version Information Spy Reporter DLL
-  @PROJECT_DESC             Provides reporter objects that write reports about
-                            version information to a stream.
-  @FILE                     VIReport.dpr
-  @COMMENTS                 Main project file.
-  @AUTHOR                   Peter D Johnson, LLANARTH, Ceredigion, Wales, UK.
-  @EMAIL                    delphidabbler@yahoo.co.uk
-  @COPYRIGHT                © Peter D Johnson, 2003-2007.
-  @WEBSITE                  http://www.delphidabbler.com/
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 24/02/2003
-      @COMMENTS             Original version.
-    )
-    @REVISION(
-      @VERSION              2.0
-      @DATE                 20/10/2004
-      @COMMENTS             + Added new units: UHTMLWriter, UTextStreamWriter,
-                              UPlainReporter, URCReporter, UHTMLReporter,
-                              UReportConsts, UReportExp, UErrorReporter.
-    )
-    @REVISION(
-      @VERSION              2.1
-      @DATE                 21/08/2007
-      @COMMENTS             Changed paths to some interfaces. Interfaces are no
-                            longer in Intf folder but in Exports sub folder of
-                            relevant DLL source code.
-    )
-  )
-}
-
-
 {
+ * FVReport.dpr
+ *
+ * Main project file for FVReport.dll that provides reporter objects that write
+ * reports about version information to a stream.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  *
  * Version: MPL 1.1
@@ -50,10 +24,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2003-2007 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2003-2009 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }
@@ -75,7 +50,8 @@ uses
   UHTMLReporter in 'UHTMLReporter.pas',
   UReportConsts in 'UReportConsts.pas',
   UReportExp in 'UReportExp.pas',
-  UErrorReporter in 'UErrorReporter.pas';
+  UErrorReporter in 'UErrorReporter.pas',
+  UXMLReporter in 'UXMLReporter.pas';
 
 exports
   // Routine exported from DLL that is used to create required objects
