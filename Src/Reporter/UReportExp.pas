@@ -1,30 +1,20 @@
-{ ##
-  @PROJECT_NAME             Version Information Spy Reporter DLL
-  @PROJECT_DESC             Provides reporter objects that write reports about
-                            version information to a stream.
-  @FILE                     UReportExp.pas
-  @COMMENTS                 Defines exported report object creator routine.
-  @DEPENDENCIES             None.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 20/05/2004
-      @COMMENTS             Original version - updated version of function
-                            extracted from previous version of UReporter.pas.
-    )
-  )
-}
-
-
 {
+ * UReportExp.pas
+ *
+ * Defines exported report object creator routine that creates report objects in
+ * FVReport.dll.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
- * 
+ *
  * Version: MPL 1.1
- * 
+ *
  * The contents of this file are subject to the Mozilla Public License Version
  * 1.1 (the "License"); you may not use this file except in compliance with the
  * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
- * 
+ *
  * Software distributed under the License is distributed on an "AS IS" basis,
  * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
  * the specific language governing rights and limitations under the License.
@@ -34,10 +24,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2009 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }
@@ -64,7 +55,7 @@ uses
   // Delphi
   Windows, ActiveX,
   // Project
-  UPlainReporter, UHTMLReporter, URCReporter, UErrorReporter,
+  UPlainReporter, UHTMLReporter, URCReporter, UXMLReporter, UErrorReporter,
   IntfVerInfoReport;
 
 
@@ -94,6 +85,9 @@ begin
       // Create resource source reporter
       IVerInfoReporter(Obj) := THTMLReporter.Create
         as IVerInfoReporter
+    else if IsEqualIID(CLSID, CLSID_VerInfoXMLReporter) then
+      IVerInfoReporter(Obj) := TXMLReporter.Create
+        as IVerInfoReporter
     else if IsEqualIID(CLSID, CLSID_VerInfoHTMLErrReporter) then
       IVerInfoErrReporter(Obj) := TErrorReporter.Create
         as IVerInfoErrReporter
@@ -111,3 +105,4 @@ begin
 end;
 
 end.
+
