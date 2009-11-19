@@ -1,252 +1,15 @@
-{ ##
-  @FILE                     FmMain.pas
-  @COMMENTS                 Defines main program window, user interaction and
-                            display of version information.
-  @PROJECT_NAME             Version Information Spy Windows application.
-  @PROJECT_DESC             Displays version information embedded in executable
-                            and binary resource files.
-  @DEPENDENCIES             Required components:
-                            + TPJAboutBox Release 3.2
-                            + TPJVersionInfo Release 3.1
-                            + Drop file components release 3.2 for
-                              TPJFormDropFiles
-                            + TPJRegWdwState Release 4.2\
-                            + PJMessageDialogs unit v2.0
-                            DLLs:
-                            + Requires FVFileReader.dll to read the version info
-                              from executable files.
-                            + FVFileReader.dll itself requires VIBinData.dll.
-  @OTHER_NAMES              + Original unit name was Main.pas
-                            + Changed to Main_f.pas at v2.0
-                            + Changed to FmMain.pas at v4.0
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 25/04/1998
-      @COMMENTS             Original version
-    )
-    @REVISION(
-      @VERSION              1.1
-      @DATE                 03/05/1998
-      @COMMENTS             + Removed Refresh button and re-wrote display
-                              refresh code accordingly.
-                            + Added file drag-drop ability
-                            + Added ability to automatically refresh display
-                              when user exits file name edit box or presses
-                              enter in it. Display only refreshes if file name
-                              has actually changed.
-                            + Made pressing escape restore previous file name.
-                            + File names now always appear in lower case.
-                            + Added comment listing component dependencies.
-    )
-    @REVISION(
-      @VERSION              1.2
-      @DATE                 15/05/1998
-      @COMMENTS             + Added TPJDropFiles component to access files
-                              dragged from File Manager and removed all specific
-                              code used to allow file drag and drop.
-                            + Removed system menu from form.
-    )
-    @REVISION(
-      @VERSION              1.3
-      @DATE                 15/05/1998
-      @COMMENTS             + Added standard open dialogue box to use as browse
-                              dialogue along with a browse button and supporting
-                              code to use the dialogue.
-                            + Rearranged form so that file name edit box /
-                              browse button are at top and About and Exit
-                              buttons are in a new panel at the bottom.
-                            + Also added some rulings using bevels.
-                            + Modified tab order accordingly.
-                            + Prevented program from beeping when user presses
-                              enter after entering a file name in edit box.
-    )
-    @REVISION(
-      @VERSION              2.0
-      @DATE                 07/07/1998
-      @COMMENTS             + Renamed from main.pas.
-                            + Uses new code based on spy template altered to add
-                              required functionality and to remove unwanted
-                              features.
-                            + This code implements main user interface. Reads
-                              version information using logic from v1.
-    )
-    @REVISION(
-      @VERSION              2.1
-      @DATE                 27/08/1998
-      @COMMENTS             Updated DropFiles event handler to activate this
-                            program's window after files had been dropped.
-    )
-    @REVISION(
-      @VERSION              3.0
-      @DATE                 29/11/1999
-      @COMMENTS             + Entirely reworked code to support new interface -
-                              all program's functionality is now in this unit
-                              (other units have been dropped).
-                            + Made use of TPJRegWdwState component to remember
-                              window's position and size between executions
-                              instead of using custom code in a separate unit.
-    )
-    @REVISION(
-      @VERSION              4.0
-      @DATE                 30/03/2002
-      @COMMENTS             + Complete rewrite to support version information
-                              resources that contain one or more translations.
-                            + Implemented another new user interface.
-                            + More informative descriptions of fixed file
-                              information flags and codes now provided.
-                            + Provided menu in addition to toolbar.
-                            + Added user customisation of whether toolbar is
-                              displayed and how some fixed file information is
-                              displayed.
-                            + Made Help | Contents menu option display contents
-                              dialog rather than contents topic.
-    )
-    @REVISION(
-      @VERSION              5.0
-      @DATE                 04/08/2002
-      @COMMENTS             + Now uses version information access code from an
-                              external DLL rather than the TPJVersionInfo
-                              component. This code can display version info from
-                              files that are not internally consistant. The DLL
-                              is loaded dynamically and the application is
-                              terminated gracefully if the DLL is not present.
-                            + Where there is an internal integrity problem
-                              within version information this is now flagged by
-                              displayed affected translations in red.
-                            + Improved error handling when accessing the PJSoft
-                              website via PJSoftNet.dll.
-                            + Reworked display methods to use new version info
-                              object.
-                            + All version information string information is now
-                              displayed rather just the predefined strings. The
-                              string information can now be sorted on the string
-                              name.
-                            + Added display of Creation date in fixed file
-                              information and provided option to the fixed file
-                              info structure information.
-                            + Moved File | Preferences sub menu to its own
-                              Options menu.
-                            + Added ability to configure the new context menu
-                              handler.
-                            + Added ability to open file from command line.
-                            + Added ability to optionally run only one instance
-                              of application when called from context menu
-                              handler.
-                            + Gave main form window class a unique name for
-                              search purposes.
-                            + Added custom exception dialog box.
-    )
-    @REVISION(
-      @VERSION              6.0
-      @DATE                 24/02/2003
-      @COMMENTS             + Changed to use object in FVFileReader.dll to read
-                              data - we no longer use UVersionInfo unit (which
-                              has been removed). Display methods for again
-                              revised to work with new DLL.
-                            + Now access delphiDabbler website rather than
-                              PJSoft website. Method of accessing changed to use
-                              the DDNet COM server.
-                            + Version number and date formatting routines moved
-                              to UDisplayFmt unit.
-                            + Changed to use constants instead of enumerations
-                              for variable ver info status codes.
-                            + Upgraded PJDropFiles component to release 3 and
-                              removed exception handling from its drop files
-                              event handler now that component handles its
-                              exceptions properly.
-                            + Added .res files to file open dialog box.
-                            + Added new method to align dialogs over form.
-                            + Added facility to display reports about the
-                              currently loaded file's version information - new
-                              "Report" main menu item and choice between a
-                              description of version info and source code.
-                            + File name is no longer displayed in title bar if
-                              file could not be loaded.
-                            + Added ability to automatically register the
-                              context menu handler for the types of files
-                              successfully opened by the program.
-    )
-    @REVISION(
-      @VERSION              6.1
-      @DATE                 31/05/2003
-      @COMMENTS             Changed display of translations to:
-                            + Display any error for selected translation above
-                              combo box (rather than after translation in combo
-                              box).
-                            + Display number of translations and index of
-                              selected translation.
-    )
-    @REVISION(
-      @VERSION              6.2
-      @DATE                 14/08/2003
-      @COMMENTS             + Placed assertion in DisplayStringInfo method to
-                              check there a some string tables to display.
-                            + Added test to cmbTrans change event handler to
-                              check if there are any translations and to execute
-                              different code (to clear string table and reset
-                              translation count and error messages) if so.
-                            + Deleted call to DisplayStringInfo method from
-                              Display method - this code is now executed from
-                              cmbTransChange method that is triggered from
-                              DisplayTransInfo method.
-    )
-    @REVISION(
-      @VERSION              7.0
-      @DATE                 05/06/2004
-      @COMMENTS             Major update: many aspects of form and its code
-                            changed:
-                            + The form now inherits from THelpAwareForm to
-                              provide help support.
-                            + User interface reworked to support Windows XP
-                              themes.
-                            + Toolbar buttons changed, glyphs updated and panel
-                              based toolbar replaced by toolbar control.
-                            + Added glyphs to main menu items where relevant.
-                            + Removed custom draw and event management code for
-                              controls that display version information. Manager
-                              objects are now used to provide and extend this
-                              functionality.
-                            + Replaced all menu event handlers with TAction
-                              objects stored in action list. Some standard
-                              actions utilised.
-                            + DelphiDabbler website is now accessed directly
-                              rather than via a COM server object.
-                            + Added access to new Display Options dialog and
-                              removed menu items previously used to configure
-                              options that are now dealt with by the dialog.
-                            + Modifed to use new report dialog class heirachies
-                              rather than single report dialog class. Also added
-                              access to new "corrected source code" report and
-                              changed some report headings.
-                            + Added custom button that is displayed when there
-                              are inconsistent translations. The button triggers
-                              and action that displays an explanation of the
-                              problem.
-                            + Moved remaining string literals to resource
-                              strings.
-                            + Deleted code to align dialog boxes: they now align
-                              themselves.
-                            + Window class name now provided by overriding the
-                              WindowClassName method inherited from TBaseForm,
-                              instead of overriding CreateParams method.
-                            + Refactored various methods.
-                            + Now gets registry key for window information from
-                              registry.
-                            + Now set up Application's Title and HelpFile
-                              in form creation rather than in project file.
-    )
-    @REVISION(
-      @VERSION              7.1
-      @DATE                 28/08/2007
-      @COMMENTS             Fixed bug where form caption was being incorrectly
-                            set on startup. Now displays application name.
-    )
-  )
-}
-
-
 {
+ * FmMain.pas
+ *
+ * Defines main program window, user interaction and display of version
+ * information for FileVer.exe.
+ *
+ * Originally named Main.pas. Changed to Main_f.pas at v2.0. Changed to
+ * FmMain.pas at v4.0.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  *
  * Version: MPL 1.1
@@ -264,10 +27,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 1998-2007 Peter
+ * Portions created by the Initial Developer are Copyright (C) 1998-2009 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }
@@ -296,8 +60,6 @@ type
   TMainForm:
     Application's main form class: handles main user interface code and
     initialisation and finalisation.
-
-    Inheritance: TMainForm -> THelpAwareForm -> TBaseForm -> [TForm]
   }
   TMainForm = class(THelpAwareForm)
     bvlSpacer1: TBevel;
@@ -360,6 +122,8 @@ type
     actReportFixedSource: TAction;
     miReportSourceFixed: TMenuItem;
     RegisterExplorerExtensions1: TMenuItem;
+    actReportXML: TAction;
+    miReportXML: TMenuItem;
     procedure fdfFileCatcherDropFiles(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -379,6 +143,7 @@ type
     procedure actDisplayOptsExecute(Sender: TObject);
     procedure actExplainProblemExecute(Sender: TObject);
     procedure actReportFixedSourceExecute(Sender: TObject);
+    procedure actReportXMLExecute(Sender: TObject);
   private
     fFixedLVMgr: TLVDisplayMgr;
       {Object that manages display of fixed file info list view}
@@ -408,8 +173,10 @@ type
       {Flag indicating whether shell extension COM server is registered}
     procedure ApplyDisplaySettings;
       {Updates display according to persistent settings}
+    function ReportTitle: string;
+      {Builds a report title from current file name}
     procedure ShowReport(const DlgClass: TReportDlgClass;
-      const Heading: string);
+      const AHeading: string);
       {Display a report of the current version information using the given
       heading. The report is displayed in a format that depends on the given
       dialog box type}
@@ -486,7 +253,7 @@ uses
   Math, Graphics, ComObj, ShellAPI, Forms, Dialogs,
   // Project
   IntfFileVerShellExt,
-  FmHTMLReport, FmTextReport, FmSourceReport,
+  FmHTMLReport, FmTextReport, FmSourceReport, FmXMLReport,
   FmFixedSourceReport, FmErrorReport, FmExplExt, FmDisplayOpts, FmRegExtQuery,
   UGlobals, URegistry, USettings, UStartup, UVerUtils, UDisplayFmt;
 
@@ -631,42 +398,35 @@ procedure TMainForm.actReportFixedSourceExecute(Sender: TObject);
   {Displays dialog box that contains the source code for the currently loaded
   version information with all inconsistencies fixed}
 begin
-  ShowReport(
-    TFixedSourceReportDlg,              // dialog box class
-    Format(sReportTitle, [fFileName])   // report heading
-      + #13#10 + sReportCreator         //   (2 lines)
-  );
+  ShowReport(TFixedSourceReportDlg, ReportTitle + #13#10 + sReportCreator);
 end;
 
 procedure TMainForm.actReportHTMLExecute(Sender: TObject);
   {Displays dialog box that contains an HTML description of the currently loaded
   version information}
 begin
-  ShowReport(
-    THTMLReportDlg,                     // dialog box class
-    Format(sReportTitle, [fFileName])   // heading
-  );
+  ShowReport(THTMLReportDlg, ReportTitle);
 end;
 
 procedure TMainForm.actReportSourceExecute(Sender: TObject);
   {Displays dialog box that contains the source code for the currently loaded
   version information}
 begin
-  ShowReport(
-    TSourceReportDlg,                   // dialog box class
-    Format(sReportTitle, [fFileName])   // report heading
-      + #13#10 + sReportCreator         //   (2 lines)
-  );
+  ShowReport(TSourceReportDlg, ReportTitle + #13#10 + sReportCreator);
 end;
 
 procedure TMainForm.actReportTextExecute(Sender: TObject);
   {Displays dialog box that contains a description of the currently loaded
   version information}
 begin
-  ShowReport(
-    TTextReportDlg,                     // dialog box class
-    Format(sReportTitle, [fFileName])   // report heading
-  );
+  ShowReport(TTextReportDlg, ReportTitle);
+end;
+
+procedure TMainForm.actReportXMLExecute(Sender: TObject);
+  {Displays dialog box that contains an XML description of the currently loaded
+  version information}
+begin
+  ShowReport(TXMLReportDlg, ReportTitle);
 end;
 
 procedure TMainForm.actSortStringInfoExecute(Sender: TObject);
@@ -1248,6 +1008,12 @@ begin
   SubKey := URegistry.GUIWindowKey(Self.Name);
 end;
 
+function TMainForm.ReportTitle: string;
+  {Builds a report title from current file name}
+begin
+  Result := Format(sReportTitle, [ExtractFileName(fFileName)]);
+end;
+
 procedure TMainForm.SetupFixedLV;
   {Sets up fixed file info list view control with required number of lines}
 var
@@ -1289,14 +1055,14 @@ begin
 end;
 
 procedure TMainForm.ShowReport(const DlgClass: TReportDlgClass;
-  const Heading: string);
+  const AHeading: string);
   {Display a report of the current version information using the given heading.
   The report is displayed in a format that depends on the given dialog box type}
 begin
   with DlgClass.Create(Self) do
     try
       // Set up properties
-      Heading := Heading;
+      Heading := AHeading;    // ! bug fix
       VerInfo := fVIAccessor.VerInfo;
       // Display dialog box
       ShowModal;
@@ -1383,6 +1149,7 @@ begin
   actReportHTML.Enabled := Assigned(fVIAccessor.VerInfo);
   actReportText.Enabled := Assigned(fVIAccessor.VerInfo);
   actReportSource.Enabled := Assigned(fVIAccessor.VerInfo);
+  actReportXML.Enabled := Assigned(fVIAccessor.VerInfo);
   // ... and fixed source code report only available if we also have some errors
   actReportFixedSource.Enabled := Assigned(fVIAccessor.VerInfo)
     and IsTranslationError;

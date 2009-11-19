@@ -16,7 +16,7 @@ inherited MainForm: TMainForm
   object bvlSpacer1: TBevel
     Left = 0
     Top = 29
-    Width = 327
+    Width = 319
     Height = 4
     Align = alTop
     Shape = bsTopLine
@@ -24,7 +24,7 @@ inherited MainForm: TMainForm
   object bvlSpacer2: TBevel
     Left = 0
     Top = 233
-    Width = 327
+    Width = 319
     Height = 2
     Align = alTop
     Shape = bsSpacer
@@ -32,7 +32,7 @@ inherited MainForm: TMainForm
   object tbarMain: TToolBar
     Left = 0
     Top = 0
-    Width = 327
+    Width = 319
     Height = 29
     Caption = 'tbarMain'
     Flat = True
@@ -65,7 +65,7 @@ inherited MainForm: TMainForm
   object pnlFixed: TPanel
     Left = 0
     Top = 33
-    Width = 327
+    Width = 319
     Height = 200
     Align = alTop
     BevelOuter = bvNone
@@ -74,7 +74,7 @@ inherited MainForm: TMainForm
     object gpFixed: TGroupBox
       Left = 4
       Top = 4
-      Width = 319
+      Width = 311
       Height = 192
       Align = alClient
       Caption = ' Fixed File &Information '
@@ -106,8 +106,8 @@ inherited MainForm: TMainForm
   object pnlVar: TPanel
     Left = 0
     Top = 235
-    Width = 327
-    Height = 271
+    Width = 319
+    Height = 269
     Align = alClient
     BevelOuter = bvNone
     BorderWidth = 4
@@ -115,8 +115,8 @@ inherited MainForm: TMainForm
     object gpVar: TGroupBox
       Left = 4
       Top = 4
-      Width = 319
-      Height = 263
+      Width = 311
+      Height = 261
       Align = alClient
       Caption = ' Variable Information '
       TabOrder = 0
@@ -228,6 +228,9 @@ inherited MainForm: TMainForm
       end
       object miReportText: TMenuItem
         Action = actReportText
+      end
+      object miReportXML: TMenuItem
+        Action = actReportXML
       end
     end
     object miOptions: TMenuItem
@@ -774,6 +777,11 @@ inherited MainForm: TMainForm
       Category = 'Report'
       Caption = '&Corrected Source Code...'
       OnExecute = actReportFixedSourceExecute
+    end
+    object actReportXML: TAction
+      Category = 'Report'
+      Caption = '&XML'
+      OnExecute = actReportXMLExecute
     end
   end
 end
