@@ -1,43 +1,12 @@
-{ ##
-  @FILE                     FileVerCmd.dpr
-  @COMMENTS                 Main project file that also includes code to access
-                            and display version information.
-  @PROJECT_NAME             Version Information Spy Command Line Program
-  @PROJECT_DESC             Command line application that displays version
-                            information embedded in executable and binary
-                            resource files.
-  @AUTHOR                   Peter D Johnson, LLANARTH, Ceredigion, Wales, UK.
-  @EMAIL                    delphidabbler@yahoo.co.uk
-  @COPYRIGHT                © Peter D Johnson, 2003-2007.
-  @WEBSITE                  http://www.delphidabbler.com/
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 24/02/2003
-      @COMMENTS             Original version.
-    )
-    @REVISION(
-      @VERSION              1.1
-      @DATE                 20/10/2004
-      @COMMENTS             + Added UGlobals unit.
-                            + Now uses constants from UGlobals for some system
-                              wide information.
-    )
-    @REVISION(
-      @VERSION              1.2
-      @DATE                 21/08/2007
-      @COMMENTS             + Changed paths to some interfaces. Interfaces are
-                              no longer in Intf folder but in Exports sub folder
-                              of relevant DLL source code.
-                            + Deleted reference to FileVerCmd.res and replaced
-                              with inclusion of FVCImages.res that now contains
-                              MAINICON.
-    )
-  )
-}
-
-
 {
+ * FileVerCmd.dpr
+ *
+ * Main project file for FileVerCmd.exe command line application. This file
+ * contains main program logic.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  *
  * Version: MPL 1.1
@@ -55,7 +24,7 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2003-2007 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2003-2009 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
@@ -95,11 +64,12 @@ resourcestring
   sFileCreator = 'Created by ' + cLongSuiteName + ' ' + cDeveloperAlias;
   sUsage =
     'Usage is:'#13#10#13#10 +
-    '  %0:s filename [-r] [-p] [-q|-Q]'#13#10 +
+    '  %0:s filename [-r|-x] [-p] [-q|-Q]'#13#10 +
     '    or'#13#10 +
     '  %0:s -? | -h [-p]'#13#10#13#10 +
     '  Switches:'#13#10 +
     '    -r,-R    : display resource source code rather than description'#13#10+
+    '    -x,-X    : display XML description'#13#10+
     '    -p,-P    : prompt and wait for input before closing'#13#10 +
     '    -q       : display only version info and errors - other output ' +
                     'inhibited'#13#10 +
@@ -108,6 +78,14 @@ resourcestring
     '    -?,-h,-H : displays this help (-q,-Q,-r & filename ignored)';
   sClosePrompt = 'Press return to close program';
 
+type
+  // Defines all the different kinds of display that can be created
+  TDisplayKind = (
+    dkDescribe,   // display text description of version information
+    dkRCSource,   // display version information source code
+    dkXML         // display XML description of version information
+  );
+
 var
   // Global flags
   PauseBeforeClose: Boolean;
@@ -115,9 +93,9 @@ var
   WantHelp: Boolean;
     {Flag true if help information is to be displayed rather than showing
     version information}
-  DisplaySource: Boolean;
-    {Flag true if resource source to be displayed, false if resource is to be
-    described}
+  DisplayKind: TDisplayKind = dkDescribe;
+    {Describes how to display output: text description, RC source code or
+    XML description}
   OutputMode: Integer;
     {Level of output to be used: 0 -> all output displayed, 1 -> resource
     information and error messages to be displayed and 2 -> only resource info
@@ -170,21 +148,22 @@ begin
   // Create title
   Title := Format(sFileTitle, [ParamStr(1)]);
   // Create header string to be displayed in report
-  if DisplaySource then
-    Header := Title + #13#10 + sFileCreator
-  else
-    // simple write out file name for simple description
-    Header := Format(sFileTitle, [ParamStr(1)]);
+  case DisplayKind of
+    dkDescribe,
+    dkXML:      Header := Format(sFileTitle, [ExtractFileName(ParamStr(1))]);
+    dkRCSource: Header := Title + #13#10 + sFileCreator;
+  end;
   // Create stream onto standard output for use by reporter
   Stm := TStdOutIStream.Create;
   // Load the reporter DLL
   RepLoader := TReporterLoader.Create;
   try
     // Select required reporter obect
-    if DisplaySource then
-      CLSID := CLSID_VerInfoRCReporter      // resource source output
-    else
-      CLSID := CLSID_VerInfoPlainReporter;  // description of ver info output
+    case DisplayKind of
+      dkDescribe: CLSID := CLSID_VerInfoPlainReporter;
+      dkRCSource: CLSID := CLSID_VerInfoRCReporter;
+      dkXML:      CLSID := CLSID_VerInfoXMLReporter;
+    end;
     // Create the required reporter object
     if Succeeded(RepLoader.CreateFunc(CLSID, Reporter)) then
       // Do report onto standard output
@@ -237,8 +216,16 @@ begin
   // -h or -? switches => display help
   WantHelp := FindCmdLineSwitch('h', ['/', '-'], True) or
     FindCmdLineSwitch('?', ['/', '-'], False);
-  // -r switch => display resource source code rather than description
-  DisplaySource := FindCmdLineSwitch('r', ['/', '-'], True);
+  // determine display style:
+  // -r switch => display resource source code
+  // -x switch => display xml description
+  // no switch => display text description
+  if FindCmdLineSwitch('r',  ['/', '-'], True) then
+    DisplayKind := dkRCSource
+  else if FindCmdLineSwitch('x',  ['/', '-'], True) then
+    DisplayKind := dkXML
+  else
+    DisplayKind := dkDescribe;
   // -Q and -q switch: determines what output is produced
   if FindCmdLineSwitch('q', ['/', '-'], False) then
     OutputMode := 1
