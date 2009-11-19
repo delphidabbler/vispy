@@ -1,104 +1,11 @@
-{ ##
-  @FILE                     FileVer.dpr
-  @COMMENTS                 Main project file
-  @PROJECT_NAME             Version Information Spy Windows application.
-  @PROJECT_DESC             Displays version information embedded in executable
-                            and binary resource files.
-  @AUTHOR                   Peter D Johnson, LLANARTH, Ceredigion, Wales, UK.
-  @EMAIL                    delphidabbler@yahoo.co.uk
-  @COPYRIGHT                © Peter D Johnson, 1998-2007.
-  @WEBSITE                  http://www.delphidabbler.com/
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 25/04/1998
-      @COMMENTS             Original version
-    )
-    @REVISION(
-      @VERSION              2.0
-      @DATE                 07/07/1998
-      @COMMENTS             + Totally re-written to accomodate new units added
-                              to project
-                            + Re-named main unit
-    )
-    @REVISION(
-      @VERSION              3.0
-      @DATE                 29/11/1999
-      @COMMENTS             Re-written to remove abandoned units.
-    )
-    @REVISION(
-      @VERSION              4.0
-      @DATE                 30/03/2002
-      @COMMENTS             Modified for new and renamed units
-                            + Added UVerUtils, USettings and UPJSoftNet units.
-                            + Renamed Main_f.pas to FmMain.pas
-    )
-    @REVISION(
-      @VERSION              5.0
-      @DATE                 03/08/2002
-      @COMMENTS             + Added new units: FmCtxMenu.pas, UCtxMenuMgr.pas,
-                              UDLLLoader.pas, UPJSoftNet.pas, UStartup.pas,
-                              UVerInfoStream.pas, UVersionInfo.pas,
-                              UVIBinary.pas.
-                            + Added include statement for new version
-                              information resource (version information no
-                              longer added automatically by compiler).
-                            + Added code to detect if program is to run or is to
-                              terminate in favour of another instance of the
-                              program. The program halts without creating a main
-                              window if it is not to run.
-    )
-    @REVISION(
-      @VERSION              6.0
-      @DATE                 24/02/2003
-      @COMMENTS             + Added new units: UFileReaderLoader, UDisplayFmt,
-                              IntfVerInfoReader, UReporterLoader,
-                              IntfVerInfoReport, UStringListStream, FmReport,
-                              IntfFileVerCM, URegistry.
-                            + Removed units: UVersionInfo, UVerInfoStream,
-                              UVIBinary, UPJSoftNet.
-                            + Moved UDLLLoader and UVerUtils to shared units
-                              folder.
-    )
-    @REVISION(
-      @VERSION              7.0
-      @DATE                 20/10/2004
-      @COMMENTS             + Added new units: CmpHotButton, CmpTextBox, FmBase,
-                              FmBaseTabbedDlg, FmDisplayOpts, FmErrorReport,
-                              FmExplExtAdd, FmFixedSourceReport, FmGenericDlg,
-                              FmGenericOKDlg, FmGenericViewDlg, FmHelpAware,
-                              FmHTMLReport, FmRegExtQuery, FmSourceReport,
-                              FmTextReport, FrHTMLViewer, FrMemoViewer,
-                              FrViewerBase, UCBDisplayMgr, UDictionaries,
-                              UDisplayMgrs, UExtensions, UGlobals,
-                              ULVDisplayMgr, UPopupWindow.
-                            + Renamed FmCtxMenu as FmExplExt and
-                              IntfFileVerCM as IntfFileVerShellExt.
-                            + Removed Application.HelpFile and Application.Title
-                              settings (now set in main form).
-    )
-    @REVISION(
-      @VERSION              7.1
-      @DATE                 07/03/2005
-      @COMMENTS             Added new unit: IntfUIHandlers.
-    )
-    @REVISION(
-      @VERSION              7.2
-      @DATE                 21/08/2007
-      @COMMENTS             + Fixed corrupt form entries for FmHTMLReport and
-                              FmFixedSourceReport.
-                            + Changed paths to some interfaces. Interfaces are
-                              no longer in Intf folder but in Exports sub folder
-                              of relevant DLL source code.
-                            + Deleted reference to FileVer.res and replaced with
-                              inclusion of Images.res that now contains the
-                              program's MAINICON.
-    )
-  )
-}
-
-
 {
+ * FileVer.dpr
+ *
+ * Main project file for FileVer.exe application.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  *
  * Version: MPL 1.1
@@ -116,10 +23,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 1998-2007 Peter
+ * Portions created by the Initial Developer are Copyright (C) 1998-2009 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }
@@ -172,7 +80,8 @@ uses
   IntfFileVerShellExt in '..\CtxMenu\Exports\IntfFileVerShellExt.pas',
   IntfUIHandlers in 'IntfUIHandlers.pas',
   IntfVerInfoReader in '..\Reader\Exports\IntfVerInfoReader.pas',
-  IntfVerInfoReport in '..\Reporter\Exports\IntfVerInfoReport.pas';
+  IntfVerInfoReport in '..\Reporter\Exports\IntfVerInfoReport.pas',
+  FmXMLReport in '..\Reporter\FmXMLReport.pas' {XMLReportDlg};
 
 {$Resource Images.res}    // contains program's icon
 {$Resource VFileVer.res}  // version information
