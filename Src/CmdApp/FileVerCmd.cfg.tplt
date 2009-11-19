@@ -24,8 +24,7 @@
 -$X+
 -$YD
 -$Z1
--cg
--AWinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;
+-CC
 -H+
 -W+
 -M
@@ -33,8 +32,6 @@
 -K$00400000
 -E"..\..\Exe"
 -N"..\..\Bin\CmdApp"
--LE"c:\program files\borland\delphi7\Projects\Bpl"
--LN"c:\program files\borland\delphi7\Projects\Bpl"
 -U"..\..\Bin\CmdApp"
 -O"..\..\Bin\CmdApp"
 -I"..\..\Bin\CmdApp"

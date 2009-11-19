@@ -25,11 +25,10 @@ U=0
 V=1
 W=0
 X=1
-Y=0
+Y=1
 Z=1
 ShowHints=1
 ShowWarnings=1
-UnitAliases=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;
 NamespacePrefix=
 SymbolDeprecated=1
 SymbolLibrary=1
@@ -91,27 +90,25 @@ ImageBase=4194304
 ExeDescription=
 [Directories]
 OutputDir=..\..\Exe
-UnitOutputDir=..\..\Bin\App
+UnitOutputDir=..\..\Bin\CtxMenu
 PackageDLLOutputDir=
 PackageDCPOutputDir=
-SearchPath=..\..\Bin\App
-Packages=VCLX30;VCL30;VCLDB30;VCLDBX30;VCLSMP30;QRPT30
+SearchPath=..\..\Bin\CtxMenu;Help
 Conditionals=
 DebugSourceDirs=
 UsePackages=0
 [Parameters]
 RunParams=
-HostApplication=D:\Prg\Rel\Apps\VerInfo\Exe\FileVer.exe
 Launcher=
 UseLauncher=0
 DebugCWD=
 [Version Info]
 IncludeVerInfo=0
-AutoIncBuild=1
-MajorVer=4
+AutoIncBuild=0
+MajorVer=1
 MinorVer=0
 Release=0
-Build=152
+Build=0
 Debug=0
 PreRelease=0
 Special=0
@@ -120,25 +117,13 @@ DLL=0
 Locale=2057
 CodePage=1252
 [Version Info Keys]
-CompanyName=PJSoft
-FileDescription=Version Information Spy
-FileVersion=4.0.0.152
-InternalName=FileVer
-LegalCopyright=Copyright © P.D.Johnson, 1999-2002.
+CompanyName=
+FileDescription=
+FileVersion=
+InternalName=
+LegalCopyright=
 LegalTrademarks=
-OriginalFilename=FileVer.exe
-ProductName=Version Information Spy
-ProductVersion=Release 4.0
-Comments=This program is placed in the public domain. It can be freely copied and distributed on a not-for-profit basis.
-[HistoryLists\hlUnitAliases]
-Count=1
-Item0=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;
-[HistoryLists\hlSearchPath]
-Count=1
-Item0=..\..\Bin\App
-[HistoryLists\hlUnitOutputDirectory]
-Count=1
-Item0=..\..\Bin\App
-[HistoryLists\hlOutputDirectorry]
-Count=1
-Item0=..\..\Exe
+OriginalFilename=
+ProductName=
+ProductVersion=
+Comments=

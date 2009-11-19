@@ -29,7 +29,6 @@ Y=1
 Z=1
 ShowHints=1
 ShowWarnings=1
-UnitAliases=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;
 NamespacePrefix=
 SymbolDeprecated=1
 SymbolLibrary=1
@@ -95,13 +94,10 @@ UnitOutputDir=..\..\Bin\Reporter
 PackageDLLOutputDir=
 PackageDCPOutputDir=
 SearchPath=..\..\Bin\Reporter
-Packages=Vcl40;Vclx40;VclSmp40;Qrpt40;Vcldb40;vcldbx40;ibevnt40;nmfast40;FlatStyle;RichEdit98;HTAComponents;HTACompTest
 Conditionals=
 DebugSourceDirs=
 UsePackages=0
 [Parameters]
-RunParams="D:\Prg\Rel\Apps\VerInfo\FileVer\Docs\EG Code\Avconsol.exe"
-HostApplication=D:\Prg\Rel\Apps\VerInfo\Exe\FileVer.exe
 Launcher=
 UseLauncher=0
 DebugCWD=
@@ -122,23 +118,11 @@ CodePage=1252
 [Version Info Keys]
 CompanyName=
 FileDescription=
-FileVersion=1.0.0.0
+FileVersion=
 InternalName=
 LegalCopyright=
 LegalTrademarks=
 OriginalFilename=
 ProductName=
-ProductVersion=1.0.0.0
+ProductVersion=
 Comments=
-[HistoryLists\hlUnitAliases]
-Count=1
-Item0=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;
-[HistoryLists\hlSearchPath]
-Count=1
-Item0=..\..\Bin\App
-[HistoryLists\hlUnitOutputDirectory]
-Count=1
-Item0=..\..\Bin\App
-[HistoryLists\hlOutputDirectorry]
-Count=1
-Item0=..\..\Exe
