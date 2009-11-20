@@ -28,7 +28,7 @@ K{\footnote {K}overview}
 \par \pard \plain\f0\fs12\cf0 
 \par \plain\f1\fs18\cf0\b Copyright & License\plain\f1\fs18\cf0 
 \par \plain\f1\fs8\cf0 
-\par \plain\f1\fs18\cf0 This open source program is copyright \'A9 1998-2007 by Peter D Johnson (DelphiDabbler), Llanarth, Ceredigion, Wales, UK.\plain\f0\fs18\cf2  {\strike http://www.delphidabbler.com/}{\v *!ExecFile("http://www.delphidabbler.com/")}\plain\f1\fs18\cf0 . To use the program you must accept the {\strike End User License Agreement}{\v COPYRIGHT}. Source code of portions of the program is released under the Mozilla Public Lience v1.1.\plain\f0\fs18\cf0 
+\par \plain\f1\fs18\cf0 This open source program is copyright \'A9 1998-2009 by Peter D Johnson (DelphiDabbler), Llanarth, Ceredigion, Wales, UK.\plain\f0\fs18\cf2  {\strike http://www.delphidabbler.com/}{\v *!ExecFile("http://www.delphidabbler.com/")}\plain\f1\fs18\cf0 . To use the program you must accept the {\strike End User License Agreement}{\v COPYRIGHT}. Source code of portions of the program is released under the Mozilla Public Lience v1.1.\plain\f0\fs18\cf0 
 \par \plain\f0\fs8\cf0 
 \par \pard \brdrt \brdrs  \plain\f0\fs18\cf0\i 
 \par \page 
@@ -47,7 +47,7 @@ K{\footnote {K}features}
 \par \plain\f0\fs8\cf0 
 \par \plain\f2\fs18\cf0 \'Fc\plain\f0\fs18\cf0 \tab \plain\f1\fs18\cf0 Version information that contains information in more than one language is supported.\plain\f0\fs18\cf0 
 \par \plain\f0\fs8\cf0 
-\par \plain\f2\fs18\cf0 \'Fc\plain\f0\fs18\cf0 \tab \plain\f1\fs18\cf0 Reports describing a file's version information can be produced in text and HTML format.\plain\f0\fs18\cf0 
+\par \plain\f2\fs18\cf0 \'Fc\plain\f0\fs18\cf0 \tab \plain\f1\fs18\cf0 Reports describing a file's version information can be produced in text, XML and HTML format.\plain\f0\fs18\cf0 
 \par \plain\f0\fs8\cf0 
 \par \plain\f2\fs18\cf0 \'Fc\plain\f0\fs18\cf0 \tab \plain\f1\fs18\cf0 Binary version information can be de-compiled into the equivalent RC source code - and any errors and inconsistencies in the original code can optionally be fixed.\plain\f0\fs18\cf0 
 \par \plain\f0\fs8\cf0 
@@ -191,7 +191,10 @@ K{\footnote {K}report menu;menu;menu,report}
 \par \pard \li400 Shows a {\strike dialog}{\v DLG_REPORT_HTML} that displays a HTML formatted report that describes the current file's version information in detail. The report can be saved, copied or viewed in \plain\f1\fs18\cf0\i Internet Explorer\plain\f1\fs18\cf0 .\plain\f0\fs18\cf0 
 \par \plain\f0\fs8\cf0 
 \par \pard \fi-480 \li480 \tx480 \plain\f1\fs18\cf0\b Text Description\plain\f1\fs18\cf0 
-\par \pard \li400 Displays a {\strike dialog}{\v DLG_REPORT_TEXT} that contains a plain text report that describes the current file's version information. The report can be saved, copied or viewed in an external application.\plain\f0\fs18\cf0 
+\par \pard \li400 Displays a {\strike dialog}{\v DLG_REPORT_TEXT} that contains a plain text report that describes the current file's version information. The report can be saved, copied or viewed in an external application.
+\par \pard \fi-480 \li480 \tx480 \plain\f0\fs8\cf0 
+\par \plain\f1\fs18\cf0\b XML\plain\f1\fs18\cf0 
+\par \pard \li400 Shows a {\strike dialog}{\v DLG_REPORT_XML} that displays an XML document that encapsulates the current file's version information. The XML can be saved, copied or viewed in Windows Notepad.\plain\f0\fs18\cf0 
 \par \pard \fi-4000 \li4000 \tx3000 \tx4000 \plain\f0\fs8\cf0 
 \par \pard \brdrt \brdrs  
 \par \page 
@@ -321,13 +324,14 @@ K{\footnote {K}command line program}
 \par \plain\f1\fs8\cf0 
 \par \plain\f1\fs18\cf0 The program's usage is:
 \par \plain\f1\fs8\cf0 
-\par \pard \li400 \keep \plain\f4\fs18\cf0 FileVerCmd \plain\f4\fs18\cf0\i <filename>\plain\f4\fs18\cf0  [ -r | -R | -p | -P | -q | -Q ]
+\par \pard \li400 \keep \plain\f4\fs18\cf0 FileVerCmd \plain\f4\fs18\cf0\i <filename>\plain\f4\fs18\cf0  [-r | -x] [-p] [-q | -Q]
 \par \pard \li800 \plain\f1\fs18\cf0 or
-\par \pard \li400 \keep \plain\f4\fs18\cf0 FileVerCmd -? | -h | -H
+\par \pard \li400 \keep \plain\f4\fs18\cf0 FileVerCmd -? | -h 
 \par \pard \plain\f1\fs8\cf0 
 \par \plain\f1\fs18\cf0\i <filename>\plain\f1\fs18\cf0  is the name of the file to be analysed. The various switches that can follow the file name are:
 \par \plain\f1\fs8\cf0 
 \par \pard \fi-1200 \li1600 \tx1600 \plain\f1\fs18\cf0\i -r or -R\plain\f1\fs18\cf0 \tab Displays resource source code rather than a description.
+\par \plain\f1\fs18\cf0\i -x or -X\plain\f1\fs18\cf0 \tab Displays an XML document that encapsulates the version information.
 \par \plain\f1\fs18\cf0\i -p or -P\plain\f1\fs18\cf0 \tab Prompts and waits for input before exiting program.
 \par \plain\f1\fs18\cf0\i -q\plain\f1\fs18\cf0 \tab Displays only version information and error codes - other output is inhibited.
 \par \plain\f1\fs18\cf0\i -Q\plain\f1\fs18\cf0 \tab Displays version information only - other output and error codes are inhibited.
@@ -360,13 +364,16 @@ K{\footnote {K}reports;reports,creating}
 \par \plain\f1\fs24\cf2\b Creating Reports\plain\f0\fs18\cf0 
 \par \plain\f0\fs8\cf0  
 \par \pard 
-\par \plain\f1\fs18\cf0\i Version Information Spy\plain\f1\fs18\cf0  doesn't just display the version information from within a program, it also lets you get some reports on the content. There are three main reports that are available:
+\par \plain\f1\fs18\cf0\i Version Information Spy\plain\f1\fs18\cf0  doesn't just display the version information from within a program, it also lets you get some reports on the content. There are four main reports that are available:
 \par \plain\f1\fs8\cf0 
 \par \pard \fi-400 \li400 \tx400 \plain\f1\fs18\cf0 1)\tab A plain text description of the version information contained in the current file. This is provided in a human readable format suitable for documenting a program. Any structural problems are flagged up but not explained. This report appears in the {\strike Descriptive Text Report dialog box}{\v DLG_REPORT_TEXT} and is accessed via the \plain\f1\fs18\cf0\i Reports | Text Description\plain\f1\fs18\cf0  menu option.
 \par \plain\f1\fs8\cf0 
 \par \plain\f1\fs18\cf0 2)\tab A HTML description of a file's version information. This report provides essentially the same information as the plain text report but it is laid out in a much more attractive and readbale format. The report goes into more detail about any translation / string table inconsistencies. This report is displayed in the {\strike Descriptive HTML Report dialog box}{\v DLG_REPORT_HTML} and is displayed by clicking the \plain\f1\fs18\cf0\i Reports | HTML Description\plain\f1\fs18\cf0  menu item.
 \par \plain\f1\fs8\cf0 
-\par \plain\f1\fs18\cf0 3)\tab For files that have structural inconsistencies a separate report of each translation or string table's problems is available. This report is in HTML format. It describes the problem in detail and suggests source code changes to fix the problem. This facility can be enabled and disabled via the {\strike Display Options dialog box}{\v DLG_DISPLAY_OPTIONS} (\plain\f1\fs18\cf0\i Translations\plain\f1\fs18\cf0  tab). When enabled a \plain\f1\fs18\cf0\i Explain Problem\plain\f1\fs18\cf0  button appears above the main window's translations drop-down list whenever the current translation exhibits inconsistencies. Clicking the button displays the report in the {\strike Translation Inconsistency Explanation dialog box}{\v DLG_BAD_TRANS}.\plain\f0\fs18\cf0 
+\par \plain\f1\fs18\cf0 3)\tab A XML document containing all of a file's version information. This report is displayed in the 
+\par \pard \fi-400 \li800 \tx400 {\strike XML Report dialog box}{\v DLG_REPORT_XML} which is activated from the \plain\f1\fs18\cf0\i Reports | XML\plain\f1\fs18\cf0  menu item.
+\par \pard \fi-400 \li400 \tx400 \plain\f1\fs8\cf0 
+\par \plain\f1\fs18\cf0 4)\tab For files that have structural inconsistencies a separate report of each translation or string table's problems is available. This report is in HTML format. It describes the problem in detail and suggests source code changes to fix the problem. This facility can be enabled and disabled via the {\strike Display Options dialog box}{\v DLG_DISPLAY_OPTIONS} (\plain\f1\fs18\cf0\i Translations\plain\f1\fs18\cf0  tab). When enabled a \plain\f1\fs18\cf0\i Explain Problem\plain\f1\fs18\cf0  button appears above the main window's translations drop-down list whenever the current translation exhibits inconsistencies. Clicking the button displays the report in the {\strike Translation Inconsistency Explanation dialog box}{\v DLG_BAD_TRANS}.\plain\f0\fs18\cf0 
 \par \pard \plain\f0\fs8\cf0 
 \par \pard \brdrt \brdrs  \plain\f0\fs18\cf0 
 \par \pard \plain\f0\fs18\cf0\i See also:\plain\f0\fs18\cf0 
@@ -632,7 +639,7 @@ K{\footnote {K}copyright;licensing;end user license agreement}
 \par \plain\f1\fs8\cf0 
 \par \plain\f1\fs18\cf0 The accompanying executable code version of the Product is made available to you under the terms of this end user license agreement. By installing or using DelphiDabbler Version Information Spy you are consenting to be bound by the agreement. If you do not agree to the terms and conditions of this agreement do not install or use any part of DelphiDabbler Version Information Spy.
 \par \plain\f1\fs8\cf0 
-\par \plain\f1\fs18\cf0 DelphiDabbler Version Information Spy is copyright (c) 1998-2007 by Peter D Johnson, http://www.delphidabbler.com/.
+\par \plain\f1\fs18\cf0 DelphiDabbler Version Information Spy is copyright (c) 1998-2009 by Peter D Johnson, http://www.delphidabbler.com/.
 \par \plain\f1\fs12\cf0 
 \par \plain\f1\fs18\cf0\b 3. License Grant\plain\f1\fs18\cf0 
 \par \plain\f1\fs8\cf0 
@@ -803,6 +810,28 @@ A{\footnote {A}ExplExtAddDlg}
 \par \plain\f1\fs18\cf0 Either select an extension from the list of extensions known to Windows or enter one in the edit box then press \plain\f1\fs18\cf0\i OK\plain\f1\fs18\cf0  to add the extension or \plain\f1\fs18\cf0\i Cancel\plain\f1\fs18\cf0  to abort the process.
 \par \plain\f1\fs8\cf0 
 \par \plain\f1\fs18\cf0 Note that extensions already known to the explorer extensions are displayed in grey and the \plain\f1\fs18\cf0\i OK\plain\f1\fs18\cf0  button is disabled if one of these extensions in selected.
+\par \plain\f1\fs8\cf0 
+\par \pard \fi-400 \li400 \tx400 \brdrt \brdrs \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \page 
+${\footnote {$}XML Report Dialog}
+#{\footnote {#}DLG_REPORT_XML}
+@{\footnote {@}Explains purpose and use of the XML Report dialog box. This topic is assessed directly from the program by it's A-keyword that matches the Delphi name of the dialog.}
+K{\footnote {K}reports;reports,xml description}
+A{\footnote {A}XMLReportDlg}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \plain\f1\fs24\cf2\b XTML Report\plain\f0\fs24\cf2\b  Dialog Box\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0  
+\par \pard 
+\par \plain\f1\fs18\cf0 This dialog box displays the content of the current current file's version information in XML format. Any inconsistencies in the file are not noted - this is purely a description of the version information as read.
+\par \plain\f1\fs8\cf0 
+\par \plain\f1\fs18\cf0 To save a copy of the report in XML format to disk click the \plain\f1\fs18\cf0\i Save\plain\f1\fs18\cf0  button. The \plain\f1\fs18\cf0\i Copy\plain\f1\fs18\cf0  button stores the HTML on the clipboard in text format.
+\par \plain\f1\fs8\cf0 
+\par \plain\f1\fs18\cf0 Clicking the \plain\f1\fs18\cf0\i View \plain\f1\fs18\cf0 button displays the XML report in Windows Notepad..
+\par \plain\f1\fs8\cf0 
+\par \plain\f1\fs18\cf0 Click \plain\f1\fs18\cf0\i Close\plain\f1\fs18\cf0  to dismiss the dialog box.
+\par \plain\f1\fs8\cf0 
+\par \plain\f1\fs18\cf0 {\strike Other reports}{\v !KLink("reports");} are also available.
 \par \plain\f1\fs8\cf0 
 \par \pard \fi-400 \li400 \tx400 \brdrt \brdrs \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
 \par \page 

@@ -1,6 +1,6 @@
 <*HelpAuthor HTA1.9*>
 AK
-28
+29
 [Footnotes]
 $=Overview
 #=OVERVIEW
@@ -107,7 +107,7 @@ COPYRIGHT
 \par \pard \plain\f0\fs12\cf2 
 \par \plain\f1\fs18\cf2\b Copyright & License\plain\f1\fs18\cf2 
 \par \plain\f1\fs8\cf2 
-\par \plain\f1\fs18\cf2 This open source program is copyright \'A9 1998-2007 by Peter D Johnson (DelphiDabbler), Llanarth, Ceredigion, Wales, UK.\plain\f0\fs18\cf3  \plain\f0\fs18\cf1 \protect <HS 6>\plain\f0\fs18\cf3 http://www.\plain\f1\fs18\cf3 delphidabbler.com\plain\f0\fs18\cf3 /\plain\f0\fs18\cf1 \protect </HS 6>\plain\f1\fs18\cf2 . To use the program you must accept the \plain\f1\fs18\cf1 \protect <HS 13>\plain\f1\fs18\cf2 End User License Agreement\plain\f1\fs18\cf1 \protect </HS 13>\plain\f1\fs18\cf2 . Source code of portions of the program is released under the Mozilla Public Lience v1.1.\plain\f0\fs18\cf2 
+\par \plain\f1\fs18\cf2 This open source program is copyright \'A9 1998-2009 by Peter D Johnson (DelphiDabbler), Llanarth, Ceredigion, Wales, UK.\plain\f0\fs18\cf3  \plain\f0\fs18\cf1 \protect <HS 6>\plain\f0\fs18\cf3 http://www.\plain\f1\fs18\cf3 delphidabbler.com\plain\f0\fs18\cf3 /\plain\f0\fs18\cf1 \protect </HS 6>\plain\f1\fs18\cf2 . To use the program you must accept the \plain\f1\fs18\cf1 \protect <HS 13>\plain\f1\fs18\cf2 End User License Agreement\plain\f1\fs18\cf1 \protect </HS 13>\plain\f1\fs18\cf2 . Source code of portions of the program is released under the Mozilla Public Lience v1.1.\plain\f0\fs18\cf2 
 \par \plain\f0\fs8\cf2 
 \par \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs18\cf2\i 
 \par }
@@ -125,7 +125,7 @@ BD
 4
 2
 0
-3211
+3216
 {\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}{\f2\fnil \fcharset2 Wingdings;}{\f3\fnil \fcharset2 WingDings;}{\f4\fnil \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
 \par \plain\f1\fs24\cf3\b Main Features\plain\f0\fs18\cf2 
 \par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
@@ -136,7 +136,7 @@ BD
 \par \plain\f0\fs8\cf2 
 \par \plain\f2\fs18\cf2 \'Fc\plain\f0\fs18\cf2 \tab \plain\f1\fs18\cf2 Version information that contains information in more than one language is supported.\plain\f0\fs18\cf2 
 \par \plain\f0\fs8\cf2 
-\par \plain\f2\fs18\cf2 \'Fc\plain\f0\fs18\cf2 \tab \plain\f1\fs18\cf2 Reports describing a file's version information can be produced in text and HTML format.\plain\f0\fs18\cf2 
+\par \plain\f2\fs18\cf2 \'Fc\plain\f0\fs18\cf2 \tab \plain\f1\fs18\cf2 Reports describing a file's version information can be produced in text, XML and HTML format.\plain\f0\fs18\cf2 
 \par \plain\f0\fs8\cf2 
 \par \plain\f2\fs18\cf2 \'Fc\plain\f0\fs18\cf2 \tab \plain\f1\fs18\cf2 Binary version information can be de-compiled into the equivalent RC source code - and any errors and inconsistencies in the original code can optionally be fixed.\plain\f0\fs18\cf2 
 \par \plain\f0\fs8\cf2 
@@ -412,7 +412,7 @@ $=Menu - Report
 @=Commands from the Report menu.
 K=report menu;menu;menu,report
 [End]
-6
+7
 NS
 1
 HS
@@ -447,7 +447,14 @@ HS
 0
 DLG_REPORT_TEXT
 
-2763
+HS
+7
+0
+
+0
+DLG_REPORT_XML
+
+3154
 {\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
 \par \plain\f1\fs24\cf3\b Report Menu Commands\plain\f0\fs18\cf2 
 \par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
@@ -464,7 +471,10 @@ DLG_REPORT_TEXT
 \par \pard \li400 Shows a \plain\f1\fs18\cf1 \protect <HS 5>\plain\f1\fs18\cf2 dialog\plain\f1\fs18\cf1 \protect </HS 5>\plain\f1\fs18\cf2  that displays a HTML formatted report that describes the current file's version information in detail. The report can be saved, copied or viewed in \plain\f1\fs18\cf2\i Internet Explorer\plain\f1\fs18\cf2 .\plain\f0\fs18\cf2 
 \par \plain\f0\fs8\cf2 
 \par \pard \fi-480 \li480 \tx480 \plain\f1\fs18\cf2\b Text Description\plain\f1\fs18\cf2 
-\par \pard \li400 Displays a \plain\f1\fs18\cf1 \protect <HS 6>\plain\f1\fs18\cf2 dialog\plain\f1\fs18\cf1 \protect </HS 6>\plain\f1\fs18\cf2  that contains a plain text report that describes the current file's version information. The report can be saved, copied or viewed in an external application.\plain\f0\fs18\cf2 
+\par \pard \li400 Displays a \plain\f1\fs18\cf1 \protect <HS 6>\plain\f1\fs18\cf2 dialog\plain\f1\fs18\cf1 \protect </HS 6>\plain\f1\fs18\cf2  that contains a plain text report that describes the current file's version information. The report can be saved, copied or viewed in an external application.
+\par \pard \fi-480 \li480 \tx480 \plain\f0\fs8\cf2 
+\par \plain\f1\fs18\cf2\b XML\plain\f1\fs18\cf2 
+\par \pard \li400 Shows a \plain\f1\fs18\cf1 \protect <HS 7>\plain\f1\fs18\cf2 dialog\plain\f1\fs18\cf1 \protect </HS 7>\plain\f1\fs18\cf2  that displays an XML document that encapsulates the current file's version information. The XML can be saved, copied or viewed in Windows Notepad.\plain\f0\fs18\cf2 
 \par \pard \fi-4000 \li4000 \tx3000 \tx4000 \plain\f0\fs8\cf2 
 \par \pard \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs8\cf2 
 \par }
@@ -734,7 +744,7 @@ BD
 0
 KP
 5
-4266
+4382
 {\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}{\f2\fnil \fcharset0 Courier New;}{\f3\fnil \fcharset2 Wingdings;}{\f4\fnil \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
 \par \plain\f1\fs24\cf3\b Command Line Program\plain\f0\fs18\cf2 
 \par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
@@ -743,13 +753,14 @@ KP
 \par \plain\f1\fs8\cf2 
 \par \plain\f1\fs18\cf2 The program's usage is:
 \par \plain\f1\fs8\cf2 
-\par \pard \li400 \plain\f2\fs18\cf1 \protect <KP 3>\plain\f2\fs18\cf2 FileVerCmd \plain\f2\fs18\cf2\i <filename>\plain\f2\fs18\cf2  [ -r | -R | -p | -P | -q | -Q ]\plain\f2\fs18\cf1 \protect </KP 3>\plain\f2\fs18\cf2 
+\par \pard \li400 \plain\f2\fs18\cf1 \protect <KP 3>\plain\f2\fs18\cf2 FileVerCmd \plain\f2\fs18\cf2\i <filename>\plain\f2\fs18\cf2  [-r | -x] [-p] [-q | -Q]\plain\f2\fs18\cf1 \protect </KP 3>\plain\f2\fs18\cf2 
 \par \pard \li800 \plain\f1\fs18\cf2 or
-\par \pard \li400 \plain\f2\fs18\cf1 \protect <KP 5>\plain\f2\fs18\cf2 FileVerCmd -? | -h | -H\plain\f2\fs18\cf1 \protect </KP 5>\plain\f2\fs18\cf2 
+\par \pard \li400 \plain\f2\fs18\cf1 \protect <KP 5>\plain\f2\fs18\cf2 FileVerCmd -? | -h \plain\f2\fs18\cf1 \protect </KP 5>\plain\f2\fs18\cf2 
 \par \pard \plain\f1\fs8\cf2 
 \par \plain\f1\fs18\cf2\i <filename>\plain\f1\fs18\cf2  is the name of the file to be analysed. The various switches that can follow the file name are:
 \par \plain\f1\fs8\cf2 
 \par \pard \fi-1200 \li1600 \tx1600 \plain\f1\fs18\cf2\i -r or -R\plain\f1\fs18\cf2 \tab Displays resource source code rather than a description.
+\par \plain\f1\fs18\cf2\i -x or -X\plain\f1\fs18\cf2 \tab Displays an XML document that encapsulates the version information.
 \par \plain\f1\fs18\cf2\i -p or -P\plain\f1\fs18\cf2 \tab Prompts and waits for input before exiting program.
 \par \plain\f1\fs18\cf2\i -q\plain\f1\fs18\cf2 \tab Displays only version information and error codes - other output is inhibited.
 \par \plain\f1\fs18\cf2\i -Q\plain\f1\fs18\cf2 \tab Displays version information only - other output and error codes are inhibited.
@@ -780,7 +791,7 @@ $=Creating Reports
 @=Informaton about how to create reports.
 K=reports;reports,creating
 [End]
-7
+8
 NS
 1
 HS
@@ -820,18 +831,28 @@ BU
 
 1
 JumpID(RECREATING_SOURCE)
-3197
+HS
+8
+0
+
+0
+DLG_REPORT_XML
+
+3633
 {\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
 \par \plain\f1\fs24\cf3\b Creating Reports\plain\f0\fs18\cf2 
 \par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
 \par 
-\par \plain\f1\fs18\cf2\i Version Information Spy\plain\f1\fs18\cf2  doesn't just display the version information from within a program, it also lets you get some reports on the content. There are three main reports that are available:
+\par \plain\f1\fs18\cf2\i Version Information Spy\plain\f1\fs18\cf2  doesn't just display the version information from within a program, it also lets you get some reports on the content. There are four main reports that are available:
 \par \plain\f1\fs8\cf2 
 \par \pard \fi-400 \li400 \tx400 \plain\f1\fs18\cf2 1)\tab A plain text description of the version information contained in the current file. This is provided in a human readable format suitable for documenting a program. Any structural problems are flagged up but not explained. This report appears in the \plain\f1\fs18\cf1 \protect <HS 2>\plain\f1\fs18\cf2 Descriptive Text Report dialog box\plain\f1\fs18\cf1 \protect </HS 2>\plain\f1\fs18\cf2  and is accessed via the \plain\f1\fs18\cf2\i Reports | Text Description\plain\f1\fs18\cf2  menu option.
 \par \plain\f1\fs8\cf2 
 \par \plain\f1\fs18\cf2 2)\tab A HTML description of a file's version information. This report provides essentially the same information as the plain text report but it is laid out in a much more attractive and readbale format. The report goes into more detail about any translation / string table inconsistencies. This report is displayed in the \plain\f1\fs18\cf1 \protect <HS 3>\plain\f1\fs18\cf2 Descriptive HTML Report dialog box\plain\f1\fs18\cf1 \protect </HS 3>\plain\f1\fs18\cf2  and is displayed by clicking the \plain\f1\fs18\cf2\i Reports | HTML Description\plain\f1\fs18\cf2  menu item.
 \par \plain\f1\fs8\cf2 
-\par \plain\f1\fs18\cf2 3)\tab For files that have structural inconsistencies a separate report of each translation or string table's problems is available. This report is in HTML format. It describes the problem in detail and suggests source code changes to fix the problem. This facility can be enabled and disabled via the \plain\f1\fs18\cf1 \protect <HS 5>\plain\f1\fs18\cf2 Display Options dialog box\plain\f1\fs18\cf1 \protect </HS 5>\plain\f1\fs18\cf2  (\plain\f1\fs18\cf2\i Translations\plain\f1\fs18\cf2  tab). When enabled a \plain\f1\fs18\cf2\i Explain Problem\plain\f1\fs18\cf2  button appears above the main window's translations drop-down list whenever the current translation exhibits inconsistencies. Clicking the button displays the report in the \plain\f1\fs18\cf1 \protect <HS 6>\plain\f1\fs18\cf2 Translation Inconsistency Explanation dialog box\plain\f1\fs18\cf1 \protect </HS 6>\plain\f1\fs18\cf2 .\plain\f0\fs18\cf2 
+\par \plain\f1\fs18\cf2 3)\tab A XML document containing all of a file's version information. This report is displayed in the 
+\par \pard \fi-400 \li800 \tx400 \plain\f1\fs18\cf1 \protect <HS 8>\plain\f1\fs18\cf2 XML Report dialog box\plain\f1\fs18\cf1 \protect </HS 8>\plain\f1\fs18\cf2  which is activated from the \plain\f1\fs18\cf2\i Reports | XML\plain\f1\fs18\cf2  menu item.
+\par \pard \fi-400 \li400 \tx400 \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 4)\tab For files that have structural inconsistencies a separate report of each translation or string table's problems is available. This report is in HTML format. It describes the problem in detail and suggests source code changes to fix the problem. This facility can be enabled and disabled via the \plain\f1\fs18\cf1 \protect <HS 5>\plain\f1\fs18\cf2 Display Options dialog box\plain\f1\fs18\cf1 \protect </HS 5>\plain\f1\fs18\cf2  (\plain\f1\fs18\cf2\i Translations\plain\f1\fs18\cf2  tab). When enabled a \plain\f1\fs18\cf2\i Explain Problem\plain\f1\fs18\cf2  button appears above the main window's translations drop-down list whenever the current translation exhibits inconsistencies. Clicking the button displays the report in the \plain\f1\fs18\cf1 \protect <HS 6>\plain\f1\fs18\cf2 Translation Inconsistency Explanation dialog box\plain\f1\fs18\cf1 \protect </HS 6>\plain\f1\fs18\cf2 .\plain\f0\fs18\cf2 
 \par \pard \plain\f0\fs8\cf2 
 \par \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs18\cf2 
 \par \plain\f0\fs18\cf2\i See also:\plain\f0\fs18\cf2 
@@ -1325,7 +1346,7 @@ ExecFile("http://www.mozilla.org/MPL/")
 \par \plain\f1\fs8\cf2 
 \par \plain\f1\fs18\cf2 The accompanying executable code version of the Product is made available to you under the terms of this end user license agreement. By installing or using DelphiDabbler Version Information Spy you are consenting to be bound by the agreement. If you do not agree to the terms and conditions of this agreement do not install or use any part of DelphiDabbler Version Information Spy.
 \par \plain\f1\fs8\cf2 
-\par \plain\f1\fs18\cf2 DelphiDabbler Version Information Spy is copyright (c) 1998-2007 by Peter D Johnson, http://www.delphidabbler.com/.
+\par \plain\f1\fs18\cf2 DelphiDabbler Version Information Spy is copyright (c) 1998-2009 by Peter D Johnson, http://www.delphidabbler.com/.
 \par \plain\f1\fs12\cf2 
 \par \plain\f1\fs18\cf2\b 3. License Grant\plain\f1\fs18\cf2 
 \par \plain\f1\fs8\cf2 
@@ -1562,6 +1583,45 @@ BD
 \par \plain\f1\fs18\cf2 Either select an extension from the list of extensions known to Windows or enter one in the edit box then press \plain\f1\fs18\cf2\i OK\plain\f1\fs18\cf2  to add the extension or \plain\f1\fs18\cf2\i Cancel\plain\f1\fs18\cf2  to abort the process.
 \par \plain\f1\fs8\cf2 
 \par \plain\f1\fs18\cf2 Note that extensions already known to the explorer extensions are displayed in grey and the \plain\f1\fs18\cf2\i OK\plain\f1\fs18\cf2  button is disabled if one of these extensions in selected.
+\par \plain\f1\fs8\cf2 
+\par \pard \fi-400 \li400 \tx400 \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs18\cf2 
+\par }
+
+[Footnotes]
+$=XML Report Dialog
+#=DLG_REPORT_XML
+@=Explains purpose and use of the XML Report dialog box. This topic is assessed directly from the program by it's A-keyword that matches the Delphi name of the dialog.
+K=reports;reports,xml description
+A=XMLReportDlg
+[End]
+3
+NS
+1
+HS
+2
+0
+
+0
+
+KLink("reports");
+BD
+4
+2
+0
+1589
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss \fcharset0 Arial;}}{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue128;}\pard \plain \plain\f0\fs18\cf1 \protect <NS 1>\plain\f0\fs8\cf2 
+\par \plain\f1\fs24\cf3\b XTML Report\plain\f0\fs24\cf3\b  Dialog Box\plain\f0\fs18\cf2 
+\par \plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </NS 1>\plain\f0\fs8\cf2 
+\par 
+\par \plain\f1\fs18\cf2 This dialog box displays the content of the current current file's version information in XML format. Any inconsistencies in the file are not noted - this is purely a description of the version information as read.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 To save a copy of the report in XML format to disk click the \plain\f1\fs18\cf2\i Save\plain\f1\fs18\cf2  button. The \plain\f1\fs18\cf2\i Copy\plain\f1\fs18\cf2  button stores the HTML on the clipboard in text format.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 Clicking the \plain\f1\fs18\cf2\i View \plain\f1\fs18\cf2 button displays the XML report in Windows Notepad..
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf2 Click \plain\f1\fs18\cf2\i Close\plain\f1\fs18\cf2  to dismiss the dialog box.
+\par \plain\f1\fs8\cf2 
+\par \plain\f1\fs18\cf1 \protect <HS 2>\plain\f1\fs18\cf2 Other reports\plain\f1\fs18\cf1 \protect </HS 2>\plain\f1\fs18\cf2  are also available.
 \par \plain\f1\fs8\cf2 
 \par \pard \fi-400 \li400 \tx400 \plain\f0\fs18\cf1 \protect <BD 4>\plain\f0\fs8\cf2  \plain\f0\fs18\cf1 \protect </BD 4>\plain\f0\fs18\cf2 
 \par }
