@@ -1,5 +1,5 @@
 inherited XMLReportDlg: TXMLReportDlg
-  Caption = 'XMLReportDlg'
+  Caption = 'XML Report'
   PixelsPerInch = 96
   TextHeight = 13
   inherited pnlBody: TPanel
