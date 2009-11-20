@@ -81,7 +81,7 @@ uses
   IntfUIHandlers in 'IntfUIHandlers.pas',
   IntfVerInfoReader in '..\Reader\Exports\IntfVerInfoReader.pas',
   IntfVerInfoReport in '..\Reporter\Exports\IntfVerInfoReport.pas',
-  FmXMLReport in '..\Reporter\FmXMLReport.pas' {XMLReportDlg};
+  FmXMLReport in 'FmXMLReport.pas' {XMLReportDlg};
 
 {$Resource Images.res}    // contains program's icon
 {$Resource VFileVer.res}  // version information

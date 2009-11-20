@@ -78,7 +78,7 @@ implementation
 
 uses
   // Delphi
-  ShellAPI,
+  SysUtils, ShellAPI, Windows,
   // Project
   IntfVerInfoReport;
 
