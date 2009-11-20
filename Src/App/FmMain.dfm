@@ -780,7 +780,7 @@ inherited MainForm: TMainForm
     end
     object actReportXML: TAction
       Category = 'Report'
-      Caption = '&XML'
+      Caption = '&XML...'
       OnExecute = actReportXMLExecute
     end
   end
