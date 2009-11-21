@@ -1227,6 +1227,27 @@ Src\App\Help\FileVer.hap
         16 Nov 2009  - Moved to SVN
 
 --------------------------------------------------------------------------------
+Src\App\Help\FileVer.hpj
+--------------------------------------------------------------------------------
+v1.0 of 07 Jul 1998  - Original version.
+v2.0 of 04 Dec 1999  - Total rewrite of previous version. Removed mappings and
+                       added copyright information.
+v2.1 of 30 Mar 2002  - Added reference to new contents file.
+                     - Added window definition.
+                     - Updated copyright date.
+                     - Changed output path for help file.
+v2.2 of 04 Aug 2002  - Added [Map] section to include new help map file.
+                     - Increased width of main window.
+                     - Changed output path for help file.
+v2.3 of 24 Feb 2002  - Updated copyright date to 2003.
+v2.4 of 19 Oct 2033  - Updated copyright date to 2004.
+                     - Removed the now unused [MAP] section.
+v2.5 of 19 Aug 2007  - Changed path to output file name to reflect restructure
+                       of source tree.
+                     - Updated copyright date range to include 2007.
+        16 Nov 2009  - Moved to SVN
+
+--------------------------------------------------------------------------------
 Src\App\Help\FileVer.inc
 --------------------------------------------------------------------------------
 v1.0 of 07 Jul 1998  - Original version.
