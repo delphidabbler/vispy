@@ -1384,6 +1384,26 @@ Src\CtxMenu\Help\FileVerShExt.hap
         16 Nov 2009  - Moved to SVN
 
 --------------------------------------------------------------------------------
+Src\Installer\FileVer7.iss
+--------------------------------------------------------------------------------
+v1.0 of 26 Oct 2004  - Original version. Set setup version to 7.0.0
+v1.1 of 07 Mar 2005  - Changed setup version to 7.0.1
+v1.2 of 23 Nov 2006  - Changed setup version to 7.0.2
+v2.0 of 28 Aug 2007  - Now uses ISPP macros and defines to make install script
+                       version information self-updating.
+                     - Changed location of various source files.
+                     - Appended project version number to end of install file
+                       name.
+                     - Changed file to include MPL.
+                     - Added [Code] section to file that references external
+                       Pascal script file that causes uninstaller to display
+                       informational message. This replaces call to external
+                       UninstMsg.exe program.
+                     - Changed to install VIBinData.dll to application folder
+                       instead of as shared DLL in Common Files.
+        16 Nov 2009  - Moved to SVN
+
+--------------------------------------------------------------------------------
 Src\Installer\UninstMsg\UninstMsg.dpr
 --------------------------------------------------------------------------------
 v1.0 of 26 Oct 2004  - Original version of program run by installer that
