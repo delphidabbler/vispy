@@ -1,6 +1,40 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+<!--
+ * ReadMe.html
+ *
+ * Instructions for building Version Information Spt.
+ *
+ * $Rev$
+ * $Date$
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is ReadMe.html
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2002009 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributors:
+ *   NONE
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 
@@ -14,18 +48,12 @@
 	<meta http-equiv="Content-Language" content="en" />
 
 	<style type="text/css">
-		<!--
 		body {
 			margin: 1em;
 			padding: 0;
 			font-family: Verdana, Arial, sans-serif;
 			font-size: 9pt;
 			line-height: 150%;
-		}
-		table {
-			font-size: 9pt;
-			margin: 0.5em 0 0 0;
-			padding: 0;
 		}
 		h1 {
 			margin: 0 0 1em 0;
@@ -114,8 +142,6 @@
 		}
 		.pullout {
 			border-left: 8px silver solid;
-			xborder-bottom: 2px silver solid;
-			xborder-top: 2px silver solid;
 			background-color: #eee;
 			margin: 0.5em 0 0 0;
 			padding: 0.25em 0.5em;
@@ -146,13 +172,6 @@
 			font-size: 8pt;
 			text-align: right;
 		}
-		td.pad-left, th.pad-left {
-			padding-left: 2em;
-		}
-		th.left-align {
-			text-align: left;
-		}
-		-->
 	</style>
 
 </head>
@@ -238,8 +257,8 @@
 </p>
 
 <p>
-	<em>Version Information Spy</em> has been tested on Windows 2000 and Windows
-	XP.
+	<em>Version Information Spy</em> has been tested on Windows 2000, XP and
+	Vista.
 </p>
 
 
@@ -262,8 +281,13 @@
 	</div>
 	<ol>
 		<li>
-			To install on a Windows NT/2000/XP system you need to be logged on
-			with power user or administrator privileges.
+			To install on a Windows NT, 2000 or XP you need to be logged on with
+			power user or administrator privileges.
+		</li>
+		<li>
+			On Windows Vista and later the setup program will request elevation.
+			If you are not logged on with sufficient privileges an administrator
+			password will be requested.
 		</li>
 		<li>
 			If you have any earlier version of <em>Version Information Spy</em>
@@ -331,7 +355,8 @@
 			</li>
 			<li>
 				The program's uninstall information is registered with the
-				<em>Add / Remove Programs</em> control panel applet.
+				<em>Add / Remove Programs</em> or <em>Programs and Features</em>
+				control panel applet.
 			</li>
 		</ul>
 	</li>
@@ -357,12 +382,17 @@
 		<em>Version Information Spy</em> instances before attempting to
 		uninstall the program.
 	</p>
+	<p>
+		The same privileges used to install the program will be required to
+		remove it.
+	</p>
 </div>
 
 <p>
-	The program can be uninstalled via <em>Add/Remove Programs</em> from the
-	Control Panel or by choosing the <em>Uninstall Version Information Spy</em>
-	from the program's start menu group.
+	The program can be uninstalled via <em>Add/Remove Programs</em> or
+	<em>Programs and Features</em> accessed from the Control Panel or by
+	choosing the <em>Uninstall Version Information Spy</em> option from the
+	program's start menu group.
 </p>
 
 
@@ -375,14 +405,28 @@
 </h2>
 
 <p>
-	There are no remaining reported bugs in release 7.
+	Please do report any bugs you find. To do this proceed as follows:
 </p>
 
-<p>
-	Please do report any bugs you find. Bugs can be reported on-line via the
-	website's <a href="http://www.delphidabbler.com/contact">Contact Page</a>.
-</p>
-
+<ol class="spaced">
+	<li>
+		Go to the <a 
+			href="http://www.delphidabbler.com/url/vitools-issues"
+		>Version Information Tools Issue Tracker</a> on Google Code.
+	</li>
+	<li>
+		Review the list of reported bugs. If the bug you have found is listed
+		and not fixed please add any information you can to the existing report.
+		If the bug is fixed, update to the latest release.
+	</li>
+	<li>
+		If the bug has not been reported please add it. Because the bug tracker
+		is used for more that one application be sure to specify that the bug
+		was found in <em>Version Information Spy</em>. Please provide as much
+		information as you can includin the program version and which version of
+		Windows and Internet Explorer you are using.
+	</li>
+</ol>
 
 
 <p class="gototop">
@@ -425,10 +469,12 @@
 	<em>Version Information Spy</em> installs and requires another DelphiDabbler
 	product &ndash; Version Information Manipulator Library
 	(<code>VIBinData.dll</code>). The library was written by Peter D Johnson and
-	is copyright &copy; 2002-2007 Peter D Johnson, www.delphidabbler.com.
+	is copyright &copy; 2002-2009 Peter D Johnson, www.delphidabbler.com.
 	Portions of the DLL's source code are available from
 	http://www.delphidabbler.com/ under the terms of the Mozilla Public License
-	(http://www.mozilla.org/MPL/).
+	(<a
+		href="http://www.mozilla.org/MPL/MPL-1.1"
+	>http://www.mozilla.org/MPL/MPL-1.1</a>).
 </p>
 
 
@@ -442,11 +488,19 @@
 
 <p>
 	The source code for this program along with some required library and
-	component files is available from the
-	<a href="http://www.delphidabbler.com/software?id=vis&amp;tab=src">program's
+	component files is available from the <a
+		href="http://www.delphidabbler.com/software/vis/download">program's
 	home page</a>.
 </p>
 
+<p>
+	The source code is maintained as part of the <em>Version Information
+	Tools</em> project on Google Code. See the project's <a
+		href="http://code.google.com/p/verinfo-tools/source/browse/"
+	>subversion repository</a> and navigate to the <code>trunk/vis</code>
+	directory for the latest development tree (which may not be stable) or the
+	stable releases beneath the <code>tags\vis</code> directory.
+</p>
 
 
 <p class="gototop">
@@ -459,31 +513,33 @@
 
 <p>
 	I'm Peter Johnson &ndash; a hobbyist programmer living in Ceredigion in West
-	Wales,  UK, writing write mainly in Delphi. My programs are available for
-	download from:
-	<a href="http://www.delphidabbler.com/">http://www.delphidabbler.com/</a>.
-
+	Wales,  UK, writing write mainly in Delphi. My programs and library code are
+	available for from <a
+		href="http://www.delphidabbler.com/"
+	>http://www.delphidabbler.com/</a>.
 </p>
 
 <p>
-	I can be <a href="http://www.delphidabbler.com/contact">contacted via the
-	website.</a>
+	I can be <a
+		href="http://www.delphidabbler.com/contact"
+	>contacted via the website.</a>
 </p> 
 
 
 <div class="endnotes">
 
 	<div class="comments">
-		Please
-		<a href="http://www.delphidabbler.com/contact">
-		let me know</a> if you have any comments about the program, if you have
-		found a bug, or you want to suggest any updates.
+		Please <a
+			href="http://www.delphidabbler.com/contact"
+		> let me know</a> if you have any comments about the program or you want
+		to suggest any updates. Please report bugs using the bug tracker (see
+		above).
 	</div>
 
 	<div class="copyright">
-		This read-me file is copyright &copy; 2005-2007, P D Johnson,
-		<a href="http://www.delphidabbler.com/">
-		www.delphidabbler.com</a>
+		This read-me file is copyright &copy; 2005-2009, P D Johnson, <a
+			href="http://www.delphidabbler.com/"
+		>www.delphidabbler.com</a>.
 	</div>
 
 </div>
