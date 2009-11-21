@@ -1,5 +1,5 @@
 @rem ---------------------------------------------------------------------------
-@rem Script used to prepare Version Information Spy project source code tree.
+@rem Script used to prepare the Version Information Spy project source tree.
 @rem
 @rem Copyright (C) Peter Johnson (www.delphidabbler.com), 2009
 @rem
@@ -9,11 +9,39 @@
 
 @echo off
 
+echo Creating output directories:
+
+setlocal
+cd ..
+
+echo   Bin and sub-directories
+if exist Bin rmdir Bin /S /Q
+mkdir Bin
+cd Bin
+mkdir App
+mkdir CmdApp
+mkdir CtxMenu
+mkdir Reader
+mkdir Reporter
+
+cd ..
+echo   Exe
+if exist Exe rmdir Exe /S /Q
+mkdir Exe
+
+echo   Release
+if exist Release rmdir Release /S /Q
+mkdir Release
+
+endlocal
+
+echo .
+
 setlocal
 
+echo Creating .cfg and .dof files from templates:
 cd ..\Src
 
-echo Creating .cfg and .dof files from templates:
 echo   FileVer
 copy App\FileVer.cfg.tplt App\FileVer.cfg
 copy App\FileVer.dof.tplt App\FileVer.dof
