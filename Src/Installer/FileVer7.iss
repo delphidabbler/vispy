@@ -1,24 +1,9 @@
-;===============================================================================
 ; FileVer7.iss
 ;
 ; Install file generation script for use with Inno Setup 5
 ;
-; v1.0 of 26 Oct 2004 - Original version. Set setup version to 7.0.0
-; v1.1 of 07 Mar 2005 - Changed setup version to 7.0.1
-; v1.2 of 23 Nov 2006 - Changed setup version to 7.0.2
-; v2.0 of 28 Aug 2007 - Now uses ISPP macros and defines to make install script
-;                       version information self-updating.
-;                     - Changed location of various source files.
-;                     - Appended project version number to end of install file
-;                       name.
-;                     - Changed file to include MPL.
-;                     - Added [Code] section to file that references external
-;                       Pascal script file that causes uninstaller to display
-;                       informational message. This replaces call to external
-;                       UninstMsg.exe program.
-;                     - Changed to install VIBinData.dll to application folder
-;                       instead of as shared DLL in Common Files.
-;===============================================================================
+; $Rev$
+; $Date$
 ;
 ; ***** BEGIN LICENSE BLOCK *****
 ;
@@ -37,14 +22,14 @@
 ; The Initial Developer of the Original Code is Peter Johnson
 ; (http://www.delphidabbler.com/).
 ;
-; Portions created by the Initial Developer are Copyright (C) 2004-2007 Peter
+; Portions created by the Initial Developer are Copyright (C) 2004-2009 Peter
 ; Johnson. All Rights Reserved.
 ;
-; Contributor(s): None
+; Contributor(s):
+;   NONE
 ;
 ; ***** END LICENSE BLOCK *****
-;
-;===============================================================================
+
 
 #define DeleteToVerStart(str S) \
   /* assumes S begins with "Release " followed by version as x.x.x */ \
@@ -123,7 +108,6 @@ Source: {#SrcExePath}VIBinData.dll; DestDir: {app}; Flags: uninsrestartdelete
 ; Documentation
 Source: {#SrcDocsPath}License.txt; DestDir: {app}\Docs; Flags: ignoreversion
 Source: {#SrcDocsPath}ReadMe.htm; DestDir: {app}\Docs; Flags: isreadme ignoreversion
-Source: {#SrcDocsPath}pad_file.xml; DestDir: {app}\Docs; Flags: ignoreversion
 Source: {#SrcDocsPath}ChangeLog.txt; DestDir: {app}\Docs; Flags: ignoreversion
 
 [INI]
