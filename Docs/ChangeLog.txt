@@ -1,3 +1,16 @@
+Release 7.1.0
+FileVer.exe v7.1.0 (build 63) of 21 November 2009
+FileVerCM.dll v3.0.2 (build 11) of 21 November 2009
+FileVerCmd.exe v1.2.0 (build 10) of 21 November 2009
+FVFileReader.dll v2.0.1 (build 10) of 21 November 2009
+FVReport.dll v2.1.0 (build 10) of 21 November 2009
+VIBinData.dll v1.0.5 (build 6) of 26 August 2007
++ Added new XML report of version information to both GUI application (Reports menu) and command line application (-x switch). Report provided by updated FVReport.dll.
++ Fixed bug (issue #5) in GUI app's method of displaying reports: was not displaying required heading.
++ Updated help file
++ Updated documentation and removed PAD file from release.
++ Changed calls into DelphiDabbler System Information Library to avoid using deprecated routines.
+
 Release 7.0.3
 FileVer.exe v7.0.2 (build 62) of 28 August 2007
 FileVerCM.dll v3.0.2 (build 10) of 28 August 2007
