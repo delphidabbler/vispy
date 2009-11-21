@@ -2,9 +2,10 @@
 @rem Script used to create zip file containing binary release of Version
 @rem Information Spy
 @rem
-@rem Copyright (C) Peter Johnson (www.delphidabbler.com), 2007
+@rem Copyright (C) Peter Johnson (www.delphidabbler.com), 2007-2009
 @rem
-@rem v1.0 of 22 AUg 2007 - First version.
+@rem $Rev$
+@rem $Date$
 @rem ---------------------------------------------------------------------------
 
 @echo off
@@ -15,12 +16,12 @@ cd ..
 
 set OutFile=Release\dd-vis7.zip
 
-rem Delete any existing binary release zip file
+rem Ensure Release folder exists and does not contain output file
+if not exist Release mkDir Release
 if exist %OutFile% del %OutFile%
 
-rem Store setup file in zip file
+rem Create zip file containing setup program and readme
 zip -j -9 %OutFile% Exe\VIS-Setup-*.exe
-rem Store readme file in zip file
 zip -j -9 %OutFile% Docs\ReadMe.htm
 
 endlocal
