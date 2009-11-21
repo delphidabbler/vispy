@@ -1,0 +1,684 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!--
+ * Build.html
+ *
+ * Instructions for building Version Information Spt.
+ *
+ * $Rev$
+ * $Date$
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is Build.html
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2009 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributors:
+ *   NONE
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+	<title>
+		Building Version Information Spy
+	</title>
+	<style type="text/css">
+		body {
+			font-family: sans-serif;
+		}
+		dl.spaced dt {
+			margin-top: 0.5em;
+		}
+		h1 {
+			text-align: center;
+		}
+		h2 {
+			padding-bottom: 0.25em;
+			border-bottom: 1px silver solid;
+		}
+		.indent {
+			margin-left: 2em;
+		}
+		ul.spaced li,
+		ol.spaced li {
+			margin-top: 0.5em;
+		}
+		.prompt {
+			color: Blue;
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body>
+
+<h1>
+	Version Information Spy Build Instructions
+</h1>
+
+<h2>
+	Introduction
+</h2>
+
+<p>
+	<em>Version Information Spy</em> is written in Object Pascal and is targeted
+	at Delphi 7. The Delphi IDE can be used to modify the source and to perform
+	test builds. Final builds should be built using the provided build scripts,
+	but you can get away with using the IDE if you don't change any resources.
+</p>
+
+<h2>
+	Dependencies
+</h2>
+
+<p>
+	Several DelphiDabbler libraries and components are required in to compile
+	<em>Version Information Spy</em>. They are:
+</p>
+
+<ul>
+	<li>
+		<a
+			href="http://www.delphidabbler.com/software/aboutbox"
+		>About Box Component</a> v3.4 or later. <sup>1</sup>
+	</li>
+	<li>
+		<a
+			href="http://www.delphidabbler.com/software/verinfo"
+		>Version Information Component</a> v3.2 or later. <sup>1</sup>
+	</li>
+	<li>
+		<a
+			href="http://www.delphidabbler.com/software/dropfiles"
+		>Drop Files Components</a> v5.0.1 or later. <sup>1</sup>
+	</li>
+	<li>
+		<a
+			href="http://www.delphidabbler.com/software/wdwstate"
+		>Window State Components</a> v5.3.1 or later. <sup>1</sup>
+	</li>
+	<li>
+		<a
+			href="http://www.delphidabbler.com/software/msgdlg"
+		>Message Dialog Components</a> v2.2 or later. <sup>2</sup>
+	</li>
+	<li>
+		<a
+			href="http://www.delphidabbler.com/software/sysinfo"
+		>System Information Unit</a> v3.2.1 or later. <sup>2</sup>
+	</li>
+	<li>
+		<a
+			href="http://www.delphidabbler.com/software/streams"
+		>Stream Extension Classes</a> v3.0 or later. <sup>2</sup>
+	</li>
+</ul>
+
+<p>
+	<sup>1</sup> These components must be installed into the Delphi component
+	palette since they are required at design time. 
+</p>
+
+<p>
+	<sup>2</sup> These components and classes must be available on Delphi's
+	library path. They are not required at design time.
+</p>
+
+<p>
+	All the components and classes must be installed in the same directory, so
+	the easiest thing to do is to install everything into the Delphi user design
+	time package. <a
+		href="http://www.delphidabbler.com/url/install-comp"
+	>See here</a> if you need help doing this.
+</p>
+
+<p>
+	In addition the <code>VIBinData.dll</code> executable is required in order
+	for the <em>Version Information Spy</em> programs to run and for the
+	installer to be built. This library is available <a
+		href="http://www.delphidabbler.com/software/vibindata/download"
+	>here</a>. The source code for the DLL is available from <a
+		href="http://code.google.com/p/verinfo-tools/source/browse/#svn/trunk/vibindata"
+	>this repository</a>, but is not required to build <em>Version Information
+	Spy</em>.
+</p>
+
+<h2>
+	Build Tools
+</h2>
+
+<p>
+	You can edit and test compile parts of the project using the Delphi IDE.
+	Delphi 7 is the preferred compiler, and the rest of these instructions
+	assume it is being used. The code may compile with later Delphis, but this
+	is not guaranteed.
+</p>
+
+<p>
+	The following command line tools are required to compile the whole project
+	using the build scripts.
+</p>
+
+<dl class="spaced">
+	<dt>
+		<code>DCC32</code>
+	</dt>
+	<dd>
+		The Delphi command line compiler.
+	</dd>
+	<dt>
+		<code>BRCC32</code>
+	</dt>
+	<dd>
+		The Borland resource compiler. This is used to compile resource source
+		(<code>.rc</code>) files. <code>BRCC32</code> is supplied with Delphi 7.
+	</dd>
+	<dt>
+		<code>HCRTF</code>
+	</dt>
+	<dd>
+		Microsoft Help compiler. This is used to compile the WinHelp help file.
+		<code>HCRTF</code> is supplied with Delphi 7.
+	</dd>
+	<dt>
+		<code>ISCC</code>
+	</dt>
+	<dd>
+		Inno Setup command line compiler, supplied with Inno Setup. Requires
+		Inno Setup v5.x with <code>ISPP</code> v5.x. You can get Inno Setup from
+		<a
+			href="http://www.innosetup.com/"
+		>http://www.innosetup.com/</a>.
+	</dd>
+	<dt>
+		<code>VIEd</code>
+	</dt>
+	<dd>
+		DelphiDabbler Version Information Editor, available from <a
+			href="http://www.delphidabbler.com/software/vied"
+		>DelphiDabbler.com<a>. Requires v2.11 or later.
+	</dd>
+	<dt>
+		<code>ZIP</code>
+	</dt>
+	<dd>
+		This program is used to create the release file. You can get a Windows
+		command line version <a
+			href="http://stahlforce.com/dev/index.php?tool=zipunzip"
+		>here</a>. If you don't intend to create a release file then
+		<code>ZIP</code> is not required.
+	</dd> 
+</dl>
+
+<h2>
+	Preparation
+</h2>
+
+<h3>
+	Get the Source Code
+</h3>
+
+<p>
+	First you need to get the source code of <em>Version Information Spy</em>.
+	There are two choices:
+</p>
+
+<ol class="spaced">
+	<li>
+		Download the source code of the latest release from the <a
+			href="http://www.delphidabbler.com/software/vis/download"
+		>Version Information Spy Download Page</a>. Unzip the download into
+		a suitable folder, preserving the directory structure.
+	</li>
+	<li>
+		<div>
+			Get the source code of a suitable release or the latest development
+			code using <em>Subversion</em>. Check out the latest development
+			code into a folder named <code>vis</code> by doing:
+		</div>
+		<pre class="indent"><span class="prompt">&gt;</span> svn checkoput http://verinfo-tools.googlecode.com/svn/trunk/vis/ vis</pre>
+		<div>
+			Alternatively check out the source code of a release by doing
+		</div>
+		<pre class="indent"><span class="prompt">&gt;</span> svn checkout http://verinfo-tools.googlecode.com/svn/tags/vis/release-9.9.9/ vis</pre>
+		<div>
+			Replace <code>9.9.9</code> with the version number of the required
+			release. All available releases can be viewed in <a
+				href="http://code.google.com/p/verinfo-tools/source/browse/#svn/tags/vis"
+			>this branch</a> of the SVN repository.
+		</div>
+	</li>
+</ol>
+
+<h3>
+	Configure the Environment
+</h3>
+
+<p>
+	The build scripts require the following environment variables to be set:
+</p>
+
+<dl class="spaced">
+	<dt>
+		<code>DELPHI7</code>
+	</dt>
+	<dd>
+		Set to the install directory of Delphi 7: used to find
+		<code>BRCC32</code>, <code>DCC32</code> and <code>HCRTF</code>.
+	</dd>
+	<dt>
+		<code>DELPHIDABLIBD7</code>
+	</dt>
+	<dd>
+		Set to the directory where the required DelphiDabbler components are
+		installed in Delphi 7.
+	</dd>
+	<dt>
+		<code>INNOSETUP</code>
+	</dt>
+	<dd>
+		Set to the install directory of Inno Setup 5.
+	</dd>
+</dl>
+
+<p>
+	Note that <code>VIEd</code> and <code>ZIP</code> are expected to be found
+	on the system path. If their install directories are not on the path you
+	need to either move them to some directory that is on the path or update
+	the <code>PATH</code> environment directory accordingly.
+</p>
+
+<p>
+	You may find it convenient to create a batch file that sets up the
+	environment that you run from a command window before running the build
+	scripts.
+</p>
+
+<h3>
+	Configure the Source Tree
+</h3>
+
+<p>
+	After checking out or downloading and extracting the source code you should
+	have the following directory structure:
+</p>
+
+<pre>./
+  |
+  +-- DevTools               - scripts used to build project
+  |
+  +-- Docs                   - documentation
+  |
+  +-- Src                    - root of soruce code tree, contains .bpg file
+      |
+      +-- App                - main GUI application source
+      |   |
+      |   +-- Help           - main application help source
+      |   |
+      |   +-- Images         - images included in main app resources
+      |
+      +-- CmdApp             - command line app source
+      |   |
+      |   +-- Images         - images included in command line app resources
+      |
+      +-- CtxMenu            - context menu handler source
+      |   |
+      |   +-- Exports        - interfaces exported by context menu handler
+      |   |
+      |   +-- Help           - context menu handler help source
+      |
+      +-- Imports            - interfaces to third party DLLs
+      |
+      +-- Installer          - source code of installer
+      |
+      +-- Reader             - source of reader DLL
+      |   |
+      |   +-- Exports        - interfaces exported by reader DLL
+      |
+      +-- Reporter           - source of reporter DLL
+      |   |
+      |   +-- Exports        - interfaces exported by reporter DLL
+      |   |
+      |   +-- Res            - assets included in reporter DLL resources
+      |
+      +-- Shared             - common code shared by different projects</pre>
+
+<p>
+	If your source tree also contains one or more of the <code>Bin</code>,
+	<code>Exe</code> or <code>Release</code> directories that's OK, as will
+	become clear later. Subversion users will also see the usual hidden
+	<code>.svn</code> directories.
+</p>
+
+<p>
+	The first thing to do before attempting to hack the code is to configure the
+	source tree. Open a console window and navigate to the <code>DevTools</code>
+	directory. Run any script you have created to set the environment variables
+	then do:
+</p>
+
+<pre class="indent"><span class="prompt">&gt;</span> Config</pre>
+
+<p>
+	This script does two things:
+</p>
+
+<ol class="spaced">
+	<li>
+		It creates the <code>Bin</code>, <code>Exe</code> and
+		<code>Release</code> directories, along with various sub-directories of
+		<code>Bin</code> that are required to receive the binary code. If any of
+		these directories already existed they will have been emptied.
+	</li>
+	<li>
+		It creates the <code>.cfg</code> and <code>.dof</code> files from
+		template files. These files are required to configure the Delphi command
+		line compiler and IDE respectively. These new files will be ignored by
+		Subversion.
+	</li>
+</ol>
+
+<p>
+	You must now place a copy of <code>VIBinData.dll</code> into the
+	<code>Exe</code> directory. <em>Version Information Spy</em> requires this
+	DLL, which is not part of the project, in order to run. See above for
+	details of where to get the DLL.
+</p>
+
+<p>
+	If you intending to edit and compile the code using the Delphi IDE you must
+	also run the following script from the <code>DevTools</code> directory:
+</p>
+
+<pre class="indent"><span class="prompt">&gt;</span> BuildResources</pre>
+
+<p>
+	This creates the resource files that the IDE needs to link into compiled
+	executables.
+</p>
+
+<p>
+	You are now ready to modify the code if you wish and to build the source.
+</p>
+
+<h2>
+	Building Version Information Spy
+</h2>
+
+<p>
+	There are two ways of building the code:
+</p>
+
+<ol class="spaced">
+	<li>
+		By building each sub-project separately: each sub-directory of
+		<code>Src</code> except <code>Imports</code> and <code>Shared</code>
+		contain a script named <code>Build.bat</code> that is used to build
+		that sub-project.
+	</li>
+	<li>
+		The <code>DevTools</code> directory contains various scripts that can be
+		used to build the whole project and to create releases.
+	</li>
+</ol>
+
+<h3>
+	Using the DevTools Scripts
+</h3>
+
+<p>
+	All the development tools scripts are run from a console window with current
+	directory set to <code>DevTools</code>. Additionally, the environment
+	variables described above must be set.
+</p>
+
+<p>
+	The available tools are:
+</p>
+
+<dl class="spaced">
+	<dt>
+		<code>BuildResources</code>
+	</dt>
+	<dd>
+		Builds all the resources required by any of the project's applications
+		and DLLs. The generated <code>.res</code> files are placed in the
+		appropriate sub-directories of <code>Bin</code>. This tool must be used
+		before using <code>BuildPascal</code>.
+	</dd>
+	<dt>
+		<code>BuildPascal</code>
+	</dt>
+	<dd>
+		Builds the Pascal source code for all the project's applications and
+		DLLs and links in resources to create the final executable. The
+		executables are placed in the <code>Exe</code> directory.
+		<code>BuildResources</code> must be run before running this script.
+	</dd>
+	<dt>
+		<code>BuildHelp</code>
+	</dt>
+	<dd>
+		Generates the binary help files for the main GUI application and the
+		context menu handler. The help files and any associated
+		<code>.cnt</code> files are placed in the <code>Exe</code> directory.
+	</dd>
+	<dt>
+		<code>BuildInstaller</code>
+	</dt>
+	<dd>
+		Creates the install file. The executable files and help files must have
+		been generated and <code>VIBinData.dll</code> must have been copied to
+		the <code>Exe</code> directory before running this script. The resulting
+		installer is placed in the <code>Exe</code> directory.
+	</dd>
+	<dt>
+		<code>BuildAll</code>
+	</dt>
+	<dd>
+		This script builds all the executable files, the help files and the
+		installer. It is a shortcut for all the preceeding commands. 
+		<code>VIBinData.dll</code> must have been copied to the <code>Exe</code>
+		directory before running this script.
+	</dd>
+	<dt>
+		<code>Release</code>
+	</dt>
+	<dd>
+		Creates a <code>.zip</code> file containing the install file and a
+		read-me file. The <code>.zip</code> file is placed in the
+		<code>Release</code> directory.
+	</dd>
+	<dt>
+		<code>Tidy</code>
+	</dt>
+	<dd>
+		This script deletes temporary files from the <code>Src</code> and
+		<code>Docs</code> directories.
+	</dd>
+	<dt>
+		<code>Config</code>
+	</dt>
+	<dd>
+		Configures the source tree. See the previous section for details.
+	</dd>
+</dl>
+
+<h3>
+	Using the Separate Build Scripts
+</h3>
+
+<p>
+	Sub projects can be built using the <code>Build.bat</code> scripts found in
+	the sub project's source directory. The scripts are controlled by passing
+	parameters to them. They	 are described below.
+</p>
+
+<p>
+	To use a script open a console window, set up the environment and then set
+	the console's working directory to the appropriate source directory.
+</p>
+
+<p>
+	The available build scripts are:
+</p>
+
+<dl class="spaced">
+	<dt>
+		<code>.\Src\App\Build.bat</code>
+	</dt>
+	<dd>
+		<div>
+			Builds the main GUI application. Use one of the following
+			parameters:
+		</div>
+		<ul style="list-style:none">
+			<li>
+				<code>all</code> - builds everything.
+			</li>
+			<li>
+				<code>res</code> - builds binary resource files.
+			</li>
+			<li>
+				<code>pas</code> - builds Pascal source and links with resource
+				files.
+			</li>
+			<li>
+				<code>help</code> - builds help files.
+			</li>
+		</ul>
+	</dd>
+	<dt>
+		<code>.\Src\CmdApp\Build.bat</code>
+	</dt>
+	<dd>
+		<div>
+			Builds the command line application. Parameters are:
+		</div>
+		<ul style="list-style:none">
+			<li>
+				<code>all</code> - builds everything.
+			</li>
+			<li>
+				<code>res</code> - builds binary resource files.
+			</li>
+			<li>
+				<code>pas</code> - builds Pascal source and links with resource
+				files.
+			</li>
+		</ul>
+	</dd>
+	<dt>
+		<code>.\Src\CtxMenu\Build.bat</code>
+	</dt>
+	<dd>
+		<div>
+			Builds the context menu handler. The following parameters are
+			available:
+		</div>
+		<ul style="list-style:none">
+			<li>
+				<code>all</code> - builds everything.
+			</li>
+			<li>
+				<code>res</code> - builds binary resource files.
+			</li>
+			<li>
+				<code>pas</code> - builds Pascal source and links with resource
+				files.
+			</li>
+			<li>
+				<code>help</code> - builds help files.
+			</li>
+		</ul>
+	</dd>
+	<dt>
+		<code>.\Src\Installer\Build.bat</code>
+	</dt>
+	<dd>
+		Builds the installer. No parameters are required or supported. All the
+		executable and help files must have been built before running this
+		script and <code>VIBinData.dll</code> must have been copied to the
+		<code>Exe</code> directory.
+	</dd>
+	<dt>
+		<code>.\Src\Reader\Build.bat</code>
+	</dt>
+	<dd>
+		<div>
+			Builds the Version Information Reader DLL. Parameters are:
+		</div>
+		<ul style="list-style:none">
+			<li>
+				<code>all</code> - builds everything.
+			</li>
+			<li>
+				<code>res</code> - builds binary resource files.
+			</li>
+			<li>
+				<code>pas</code> - builds Pascal source and links with resource
+				files.
+			</li>
+		</ul>
+	</dd>
+	<dt>
+		<code>.\Src\Reporter\Build.bat</code>
+	</dt>
+	<dd>
+		<div>
+			Builds the Reporter DLL. Parameters are:
+		</div>
+		<ul style="list-style:none">
+			<li>
+				<code>all</code> - builds everything.
+			</li>
+			<li>
+				<code>res</code> - builds binary resource files.
+			</li>
+			<li>
+				<code>pas</code> - builds Pascal source and links with resource
+				files.
+			</li>
+		</ul>
+	</dd>
+</dl>
+
+<p>
+	Note: Many of the DevTools scripts call these scripts.
+</p>
+
+<h2>
+	Copyright
+</h2>
+
+<p>
+	If you are planning to re-use or modify any of the code, please see
+	<code>SourceCodeLicenses.txt</code> in the <code>Docs</code> directory for
+	an overview of the various open source licenses that apply to the
+	<em>Version Information Spy</em> source code.
+</p>
+
+
+
+</body>
+
+</html>
