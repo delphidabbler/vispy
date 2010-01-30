@@ -23,7 +23,11 @@ del /S %DocsDir%\*.~*
 echo.
 
 echo Deleting *.ddp from "%SrcDir%" and subfolders
-del %SrcDir%\App\*.ddp
+del /S %SrcDir%\*.ddp
+echo.
+
+echo Deleting *.dsk from "%SrcDir%" and subfolders
+del /S %SrcDir%\*.dsk
 echo.
 
 echo Done.
