@@ -2,9 +2,10 @@
 @rem Script used to delete Version Information Spy's temp and backup source
 @rem files
 @rem
-@rem Copyright (C) Peter Johnson (www.delphidabbler.com), 2007
+@rem Copyright (C) Peter Johnson (www.delphidabbler.com), 2007-2010
 @rem
-@rem v1.0 of 22 Aug 2007 - First version.
+@rem $Rev$
+@rem $Date$
 @rem ---------------------------------------------------------------------------
 
 setlocal

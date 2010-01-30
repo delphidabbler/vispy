@@ -1,9 +1,10 @@
 @rem ---------------------------------------------------------------------------
 @rem Script used to build all help files for Version Information Spy.
 @rem
-@rem Copyright (C) Peter Johnson (www.delphidabbler.com), 2007
+@rem Copyright (C) Peter Johnson (www.delphidabbler.com), 2007-2010
 @rem
-@rem v1.0 of 22 AUg 2007 - First version.
+@rem $Rev$
+@rem $Date$
 @rem ---------------------------------------------------------------------------
 
 @echo off
