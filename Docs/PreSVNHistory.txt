@@ -847,55 +847,73 @@ New:     Build.bat 1.0
 DevTools\BuildAll.bat
 --------------------------------------------------------------------------------
 v1.0 of 22 Aug 2007  - First version.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 DevTools\BuildHelp.bat
 --------------------------------------------------------------------------------
 v1.0 of 22 Aug 2007  - First version.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 DevTools\BuildInstaller.bat
 --------------------------------------------------------------------------------
 v1.0 of 22 Aug 2007  - First version.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 DevTools\BuildPascal.bat
 --------------------------------------------------------------------------------
 v1.0 of 22 Aug 2007  - First version.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 DevTools\BuildResources.bat
 --------------------------------------------------------------------------------
 v1.0 of 22 Aug 2007  - First version.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 DevTools\CollectAssets.bat
 --------------------------------------------------------------------------------
 v1.0 of 22 Aug 2007  - First version.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 DevTools\ReleaseExe.bat
 --------------------------------------------------------------------------------
 v1.0 of 22 Aug 2007  - First version.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 DevTools\ReleaseSrc.bat
 --------------------------------------------------------------------------------
 v1.0 of 22 Aug 2007  - First version.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 DevTools\Tidy.bat
 --------------------------------------------------------------------------------
 v1.0 of 22 Aug 2007  - First version.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\Build.bat
+--------------------------------------------------------------------------------
+v1.0 of 21 Aug 2007  - First version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\CmpHotButton.pas
+--------------------------------------------------------------------------------
+v1.0 of 23 May 2004  - First version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\CmpTextBox.pas
+--------------------------------------------------------------------------------
+v1.0 of 20 Oct 2004  - First version.
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\App\FileVer.dpr
@@ -945,7 +963,121 @@ v7.2 of 21 Aug 2007  - Fixed corrupt form entries for FmHTMLReport and
                      - Deleted reference to FileVer.res and replaced with
                        inclusion of Images.res that now contains the program's
                        MAINICON.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\FmBase.pas
+--------------------------------------------------------------------------------
+v1.0 of 20 Oct 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\FmBaseTabbedDlg.pas
+--------------------------------------------------------------------------------
+v1.0 of 20 Oct 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\FmDisplayOpts.pas
+--------------------------------------------------------------------------------
+v1.0 of 19 Oct 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\FmErrorReport.pas
+--------------------------------------------------------------------------------
+v1.0 of 23 May 2004  - Original version.
+v1.1 of 07 Mar 2005  - Added lowered outer bevel to panel that hosts web browser
+                       since browser no longer displays a border.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\FmExplExt.pas
+-------------------------------------------------------------------------------
+v1.0 of 04 Aug 2002  - Original version. Originally named FmCtxMenu.
+v2.0 of 24 Feb 2003  - Total redesign. The dialog now permits user to specify
+                       the extensions that the context menu handler will operate
+                       with. The user can now also switch on or off automatic
+                       registration of new extensions as they are used. The
+                       first page permits basic changes to be made - turning on
+                       and off all extensions or other simple configurations.
+                       The second page presents the list of all relevant
+                       extensions that can be customised.
+v3.0 of 19 Oct 2004  - Major update:
+                       - Dialog now derives from a tabbed dialog base class that
+                         in turn derives from a new dialog class heirachy. The
+                         bases classes provide alignment of dialog, arrangement
+                         of main controls, calling of required help and saving
+                         of active tab.
+                       - Revised to support configuration of both context menu
+                         and property sheet shell extensions.
+                       - Added new controls and modified layout, correcting
+                         typos.
+                       - Supporting code totally rewritten to use a separate
+                         object to manage the changes to extension recording and
+                         registration.
+                       - Made list view control on advanced tab into owner draw
+                         control to support two check boxes per item.
+                       - Removed inclusion of map file contain help context
+                         numbers: help system now uses form name as keyword.
+                       - The tab displayed when dialog is closed is now
+                         remembered and re-displayed when dialog is next opened.
+                       - Renamed dialog box class from TCtxMenuDlg to
+                         TExplExtDlg and renamed unit from FmCtxMenu to
+                         FmExplExt.
+v3.1 of 22 Aug 2007  - Fixed various problems with list view on advanced tab:
+                       - Made checkbox columns fixed size and gave text columns
+                         minimum size. Sizes will restore after dragging.
+                       - Fixed bug that wasn't vertically aligning text in list
+                         view items.
+                       - Fixed bug where when columns were dragged across
+                         checkboxes, part of check box image was being left
+                         behind in dragged column as an artifact.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\FmExplExtAdd.pas
+--------------------------------------------------------------------------------
+v1.0 of 05 Jun 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\FmFixedSourceReport.pas
+--------------------------------------------------------------------------------
+v1.0 of 23 May 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\FmGenericDlg.pas
+--------------------------------------------------------------------------------
+v1.0 of 20 Oct 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\FmGenericOKDlg.pas
+--------------------------------------------------------------------------------
+v1.0 of 20 Oct 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\FmGenericViewDlg.pas
+--------------------------------------------------------------------------------
+v1.0 of 20 Oct 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\FmHelpAware.pas
+--------------------------------------------------------------------------------
+v1.0 of 20 Oct 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\FmHTMLReport.pas
+--------------------------------------------------------------------------------
+v1.0 of 20 Oct 2004  - Original version.
+v1.1 of 07 Mar 2005  - Added lowered outer bevel to panel that hosts web browser
+                       since browser no longer displays a border.
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\App\FmMain.pas
@@ -1102,7 +1234,80 @@ v7.0 of 05 Jun 2004  - Major update: many aspects of form and its code changed:
                          creation rather than in project file.
 v7.1 of 28 Aug 2007  - Fixed bug where form caption was being incorrectly set on
                        startup. Now displays application name.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\FmRegExtQuery.pas
+--------------------------------------------------------------------------------
+v1.0 of 31 May 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\FmReport.pas
+--------------------------------------------------------------------------------
+v1.0 of 24 Feb 2003  - Original version.
+v2.0 of 25 May 2004  - Major update:
+                       - Redesigned as a base class for specialist dialog boxes
+                         that display different kinds of version information
+                         reports generated by FVReport.dll rather than providing
+                         a dialog box that directly displays different reports
+                         as text.
+                       - Now derived from TGenericViewDlg rather than TForm to
+                         enable access to help and alignment functionality.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\FmSourceReport.pas
+--------------------------------------------------------------------------------
+v1.0 of 25 May 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\FmTextReport.pas
+--------------------------------------------------------------------------------
+v1.0 of 25 May 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\FrHTMLViewer.pas
+--------------------------------------------------------------------------------
+v1.0 of 20 Oct 2004  - Original version.
+v2.0 of 07 Mar 2005  - Major revision of frame:
+                       - Frame implements IDocHostUIHandler and IOleClientSite
+                         interfaces to enable frame to be a client site for web
+                         browser control and to control its UI.
+                       - Removed browser's 3D border and prevented from
+                         displaying IE context menu.
+                       - Made browser able to load content from a string rather
+                         than from having to write content to a file before
+                         loading into browser.
+                       - Removed object that creates temporary files since no
+                         longer needed.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\FrMemoViewer.pas
+--------------------------------------------------------------------------------
+v1.0 of 23 May 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\FrViewerBase.pas
+--------------------------------------------------------------------------------
+v1.0 of 20 Oct 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\Images.rc
+--------------------------------------------------------------------------------
+v1.0 of 19 Aug 2007  - Original version that included program's MAINICON.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\IntfUIHandlers.pas
+--------------------------------------------------------------------------------
+v1.0 of 07 Mar 2005  - Original version.
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\App\Option_f.pas
@@ -1117,10 +1322,43 @@ v1.0 of 07 Jul 1998  - Original version.
         04 Dec 1999  - DELETED.
 
 --------------------------------------------------------------------------------
+Src\App\UCBDisplayMgr.pas
+--------------------------------------------------------------------------------
+v1.0 of 23 May 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
 Src\App\UCtxMenuMgr.pas
 --------------------------------------------------------------------------------
 v1.0 of 04 Aug 2002  - Original version.
         24 Feb 2003  - DELETED.
+
+--------------------------------------------------------------------------------
+Src\App\UDictionaries.pas
+--------------------------------------------------------------------------------
+v1.0 of 23 May 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\UDisplayMgrs.pas
+--------------------------------------------------------------------------------
+v1.0 of 23 May 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\UExtensions.pas
+--------------------------------------------------------------------------------
+v1.0 of 19 Oct 2004  - Original version.
+v1.1 of 28 Aug 2007  - Refactoring. Added a helper function to test for presence
+                       of a flag in a bitmask to replace numerous explicit
+                       bitmask tests.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\ULVDisplayMgr.pas
+--------------------------------------------------------------------------------
+v1.0 of 18 Oct 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\App\UPJSoftNet.pas
@@ -1132,6 +1370,88 @@ v2.0 of 04 Aug 2002  - Completely re-written to descend TPJSoftNet class from a
                        to use the execute and check the routines within the
                        PJSoftNet DLL.
         24 Feb 2003  - DELETED.
+
+--------------------------------------------------------------------------------
+Src\App\UPopupWindow.pas
+--------------------------------------------------------------------------------
+v1.0 of 23 May 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\USettings.pas
+--------------------------------------------------------------------------------
+v1.0 of 30 Mar 2002  - Original version.
+v1.1 of 04 Aug 2002  - Changed registry key to use version 5.0 rather than 4.0.
+                     - Added ShowFFIStructure and CtxMenuRunsSingleInst
+                       properties and supporting registry settings.
+v1.2 of 24 Feb 2003  - Moved the registry key constants that are shared with
+                       other apps to new URegistry unit.
+                     - Renamed CtxMenuRunsSingleInst property registry value to
+                       RunSingleInst and moved it to the CtxMenu key.
+                     - Added AutoRegExtension property and associated
+                       AutoRegExts registry value under CtxMenu key.
+v2.0 of 19 Oct 2004  - Major update:
+                       - Changed the usage of the class: we now create a
+                         globally available singleton Settings object rather
+                         than having to create and destroy setting objects
+                         wherever they are used.
+                       - Replaced DescFileFlags and ShowFFIStructure properties
+                         with GUIFlags bit mask property and added many other
+                         flags to control ther appearance of the program's GUI.
+                       - Added new Integer accessor methods.
+                       - Added StrHighlightColour and TransHighlightColour
+                         integer properties under Preferences key to store the
+                         colours used to highlight items in the translation
+                         combo box and string information list view.
+                       - Changed record structure holding settings information
+                         to use a union of different types of fields for
+                         different default value types.
+                       - Changed registry access engine so that indexed values
+                         are read from registry only once and cached for future
+                         reads.
+                       - Added CurrentTabSheetIdx property that records last
+                         used tab in a given tabbed dialog box. This property is
+                         not indexed and does not cache reads.
+                       - Added QueryMissingCOMServer property that records
+                         whether to notify user if shell extension COM server
+                         not registered at startup.
+                       - Renamed CtxMenuRunsSingleInst property as
+                         ShellExRunsSingleInst property.
+                       - Deleted WdwRegKey class function.
+                       - Changed usage of constants from URegistry to deal with
+                         renamed constants.
+                       - Replaced use of CtxMenu registry key with ExplExt key.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\UStartup.pas
+--------------------------------------------------------------------------------
+v1.0 of 04 Aug 2002  - Original version.
+v1.1 of 24 Feb 2003  - Changed window class name from PJSoft.FileVer.5 to
+                       DelphiDabbler.FileVer.5.
+v1.2 of 05 Jun 2004  - Changed to use global Settings object rather than create
+                       and destroy own instance.
+                     - Update main form window class name.
+                     - Builds window class name from global constants
+                     - Changed switch passed from shell extensions from 'c' to
+                       'shellex' and changes internal switch flags accordingly.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\UStringListStream.pas
+--------------------------------------------------------------------------------
+v1.0 of 24 Feb 2003  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\App\UTempFiles.pas
+--------------------------------------------------------------------------------
+v1.0 of 24 Feb 2003  - Original version.
+v2.0 of 17 Aug 2003  - Revised method used to produce temp file names from
+                       sequential numbering to random numbering. Also improved
+                       method used to build file names and record Windows
+                       temporary folder name.
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\App\UVerInfoStream.pas
@@ -1184,7 +1504,7 @@ Src\App\VFileVer.vi
                      - Added MPL and build instructions.
                      - Removed path to BRCC32.
                      - Updated file and product numbers.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\App\WdwOpts.pas
@@ -1197,6 +1517,20 @@ Src\App\WdwState.pas
 --------------------------------------------------------------------------------
 v1.0 of 06 Jul 1998  - Original version.
         04 Dec 1999  - DELETED.
+
+--------------------------------------------------------------------------------
+Src\App\Help\FileVer.cnt
+--------------------------------------------------------------------------------
+v1.0 of 30 Mar 2002  - Original version.
+v1.1 of 04 Aug 2002  - Added new Explorer Extension topic under "Using the
+                       program" heading and What's new top at top of contents.
+v1.2 of 24 Feb 2003  - Updated What's new to release 6.
+                     - Added new command line topic.
+v1.3 of 19 Oct 2004  - Revised topic list, adding new entries.
+                     - Changed some identifiers that have been renamed.
+v1.4 of 22 Aug 2007  - Changed to refer to EULA rather than Copyright and
+                       licensing.
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\App\Help\FileVer.hap
@@ -1224,7 +1558,7 @@ Src\App\Help\FileVer.hap
                        additional general usage information.
         22 Aug 2007  - Updated with new EULA replacing previous copyright topic.
                      - Updated copyright date to include 2007.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\App\Help\FileVer.hpj
@@ -1245,7 +1579,7 @@ v2.4 of 19 Oct 2033  - Updated copyright date to 2004.
 v2.5 of 19 Aug 2007  - Changed path to output file name to reflect restructure
                        of source tree.
                      - Updated copyright date range to include 2007.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\App\Help\FileVer.inc
@@ -1279,7 +1613,7 @@ Src\App\Help\Bitmaps\BtnAbout.bmp
         10 Mar 2002  - New glyph for about button, named AboutBtn.bmp.
         19 Oct 2004  - Renamed BtnAbout.bmp from AboutBtn.bmp
                      - Changed glyph.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\App\Help\Bitmaps\BtnHelp.bmp
@@ -1287,7 +1621,7 @@ Src\App\Help\Bitmaps\BtnHelp.bmp
         29 Oct 1999  - New glyph for help button, named HelpBtn.bmp.
         19 Oct 2004  - Renamed BtnHelp.bmp from HelpBtn.bmp
                      - Changed glyph.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\App\Help\Bitmaps\BtnOpen.bmp
@@ -1295,13 +1629,13 @@ Src\App\Help\Bitmaps\BtnOpen.bmp
         29 Oct 1999  - New glyph for browse button, named BrowseBtn.bmp.
         19 Oct 2004  - Renamed BtnOpen.bmp from BrowseBtn.bmp
                      - Changed glyph.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\App\Help\Bitmaps\BtnWebsite.bmp
 --------------------------------------------------------------------------------
         19 Oct 2004  - New glyph for website button.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\App\Help\Bitmaps\ExitBtn.bmp
@@ -1313,7 +1647,13 @@ v1.0 of 29 Oct 1999  - New glyph for exit button.
 Src\App\Images\FileVer.ico
 --------------------------------------------------------------------------------
         07 Jul 1998  - Original version of program's MAINICON.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\CmdApp\Build.bat
+--------------------------------------------------------------------------------
+v1.0 of 22 Aug 2007  - First version.
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\CmdApp\FileVerCmd.dpr
@@ -1327,7 +1667,19 @@ v1.2 of 21 Aug 2007  - Changed paths to some interfaces. Interfaces are no
                        relevant DLL source code.
                      - Deleted reference to FileVerCmd.res and replaced with
                        inclusion of FVCImages.res that now contains MAINICON.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\CmdApp\FVCImages.rc
+--------------------------------------------------------------------------------
+v1.0 of 19 Aug 2007  - Original version that included program's MAINICON.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\CmdApp\UStdOutStream.pas
+--------------------------------------------------------------------------------
+v1.0 of 24 Feb 2003  - Original version.
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\CmdApp\VFileVerCmd.vi
@@ -1347,13 +1699,254 @@ Src\CmdApp\VFileVerCmd.vi
                      - Added MPL and build instructions.
                      - Removed path to BRCC32.
                      - Updated file and product numbers.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\CmdApp\Images\FileVerCmd.ico
 --------------------------------------------------------------------------------
         07 Jul 1998  - Original version of program's MAINICON.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\CtxMenu\Build.bat
+--------------------------------------------------------------------------------
+v1.0 of 22 Aug 2007  - First version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\CtxMenu\FileVerCM.dpr
+--------------------------------------------------------------------------------
+v1.0 of 04 Aug 2002  - Original version.
+v1.1 of 24 Feb 2003  - Added new units: UFileVerBaseCM, IntfFileVerCM,
+                       URegistry.
+v2.0 of 20 Oct 2004  - Added new units: IntfVerInfoReader, UFileReaderLoader,
+                       UDisplayFmt, UDLLLoader, UGlobals, UPropSheetCard,
+                       UPropSheetHandler, UPSEngine, UPSView, URegistry,
+                       UShellExtBase, UVerUtils, UVIPropSheetCard,
+                       UVIShellExtBase, UWButton, UWComboBox, UWidget, UWLabel,
+                       UWListView.
+                     - Renamed UFileVerCM as UCOMLibExp, IntfFileVerCM as
+                       IntfFileVerShellExt, UFileVerCMFactory as UObjFactory,
+                       UFileVerCMHandler as UCtxMenuHandler, UFileVerCMReg as
+                       UShellExtReg, UFileVerCMBase as UBaseCOMObj.
+                     - Added new IsServerRegistered function to export list.
+v2.1 of 28 Aug 2007  - Changed paths to some interfaces. Interfaces are no
+                       longer in Intf folder but in Exports sub folder of
+                       relevant DLL source code.
+                     - Changed to use renamed UCard unit.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\CtxMenu\UBaseCOMObj.pas
+--------------------------------------------------------------------------------
+v1.0 of 24 Feb 2003  - Original version named UFileVerCMBase.
+v1.1 of 05 Jun 2004  - Renamed GetInstanceCount method as InstanceCount and
+                       renamed clashing global variable as gInstanceCount.
+                     - Renamed unit from UFileVerCMBase to UBaseCOMObj.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\CtxMenu\UCard.pas
+--------------------------------------------------------------------------------
+v1.0 of 30 May 2004  - Original version named UPropSheetCard.
+v1.1 of 28 Aug 2007  - Renamed from UPropSheetCard.pas to UCard.pas and renamed
+                       class from TPropSheetCard to TCard. This done because
+                       this class works for any window, not just property
+                       sheets.
+                     - Renamed TCard.DlgTextHeight to TCard.TextHeight.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\CtxMenu\UCOMLibExp.pas
+--------------------------------------------------------------------------------
+v1.0 of 04 Aug 2002  - Original version.
+v1.1 of 24 Feb 2003  - Changed DllGetClassObject to return factory for either
+                       context menu handler or new extension registrar object.
+                     - Now uses new TServerRegistrar static class to register
+                       COM objects.
+v2.0 of 05 Jun 2004  - Updated name of CLSID_FileVerReg from CLSID_FileVerCMReg.
+                     - Added support for property sheet handler.
+                     - Made detect false return in DllCanUnloadNow and increment
+                       lock count to prevent future removal. This prevents
+                       errors in Explorer when property sheet is left open and
+                       explorer is closed.
+                     - Modified to use renamed units.
+                     - Changed to use renamed TBaseCOMObj InstanceCount method.
+                     - Added new exported function IsServerRegistered that is
+                       not required by COM but is used by other applications in
+                       the suite.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\CtxMenu\UCtxMenuHandler.pas
+--------------------------------------------------------------------------------
+v1.0 of 04 Aug 2002  - Original version.
+v1.1 of 24 Feb 2003  - Moved base COM object class to own unit (since now used
+                       by other units.
+                     - Moved CLSID for handler object to new interface unit.
+                     - Moved code to find location of FileVer.exe from
+                       UFileVerCMReg unit to here.
+                     - Changed fatal error prompt to advise user to contact
+                       author rather than PJSoft.
+                     - Removed check for file containing version information
+                       before loading program: now loads program and lets the
+                       program report any errors since these messages are more
+                       informative.
+v2.0 of 19 Oct 2004  - Changed to derive from new TVIShellExtBase class rather
+                       than directly from TBaseCOMObject. This new parent class
+                       provides common functionality shared with other version
+                       information shell extensions.
+                     - Context menu option is now greyed out if selected file
+                       contains version information. Consequently Version
+                       Information Spy is now not loaded in these cases.
+                     - Problems with hints not displaying correctly in Explorer
+                       status bar fixed.
+                     - Hint now indicates if selected file contains version
+                       information.
+                     - Provided message window now passed to ShellExecute rather
+                       than desktop handle (0).
+                     - Renamed TVIContextMenu class as TContextMenuHandler.
+v2.1 of 23 Nov 2005  - Fixed bug in setting "help text" that appears in Windows
+                       status bar. Now provides unicode or ANSI text as
+                       requested by Windows rather that always providing
+                       Unicode.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\CtxMenu\UObjFactory.pas
+--------------------------------------------------------------------------------
+v1.0 of 04 Aug 2002  - Original version.
+v2.0 of 24 Feb 2003  - Changed class factory object so that it can create either
+                       context meny handler or new extension registrar COM
+                       object.
+v2.1 of 05 Jun 2004  - Changed name of CLSID_FileVerCMReg to CLSID_FileVerReg.
+                     - Added support for property sheet handler
+                       TPropSheetHandler.
+                     - Added static method to increment lock count: called from
+                       DllCanUnloadNow.
+                     - Changed name of TVIContextMenuFactory class to
+                       TObjFactory.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\CtxMenu\UPropSheetHandler.pas
+--------------------------------------------------------------------------------
+v1.0 of 19 Oct 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\CtxMenu\UPSEngine.pas
+--------------------------------------------------------------------------------
+v1.0 of 23 May 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\CtxMenu\UPSView.pas
+--------------------------------------------------------------------------------
+v1.0 of 23 May 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\CtxMenu\UShellExtBase.pas
+--------------------------------------------------------------------------------
+v1.0 of 05 Jun 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\CtxMenu\UShellExtReg.pas
+--------------------------------------------------------------------------------
+v1.0 of 04 Aug 2002  - Original version.
+v2.0 of 24 Feb 2003  - Major update:
+                       - Extensions supported by context menu handler can now be
+                         user defined.
+                       - Added new registrar COM object and helper routines used
+                         to manage the extensions supported by context menu
+                         handler.
+                       - New registry constants for registering new COM object.
+                       - Moved some registry settings that are used by this DLL
+                         and other applications to a new common unit.
+                       - Changed prog id of context menu handler to show version
+                         2.
+                       - Now automatically registers just three extensions for
+                         context menu handler, but provides details of others
+                         that user can register.
+                       - Removed code to find location FileVer.exe from registry
+                         to UFileVerCMHandler unit.
+                       - Created new static class to be used to register /
+                         unregister COM objects and removed previous simple
+                         procedures.
+                       - Fixed problem where unregister routine was failing to
+                         delete references to removed file type registry
+                         entries.
+v3.0 of 05 Jun 2004  - Major update:
+                       - Added support for registering Property Sheet shell
+                         extension COM server.
+                       - Extended registration functions to register either
+                         property sheet or contect menu shell extensions for
+                         given file extensions and added approval registry entry
+                         when running on NT.
+                       - Added support for new IFileVerExtRecorder,
+                         IFileVerExtRegistrar and IFileVerExtInfo interfaces to
+                         TFileRegistrar.
+                       - Left old IFileVerCMRegistrar methods in TFileRegistrar
+                         but re-implemented in terms of new multi-extension
+                         registration code.
+                       - Renamed many constants to do with registration.
+                       - Changed to use renamed units.
+                       - Fixed problem where unregister routine was failing to
+                         delete references to removed file type registry
+                         entries.
+                       - Replaced some string literals with constants from
+                         globals unit.
+v3.1 of 28 Aug 2007  - Changed so that code that checks if shell extension COM
+                       server is registered is no longer case sensitive.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\CtxMenu\UVIPropSheetCard.pas
+--------------------------------------------------------------------------------
+v1.0 of 30 May 2004  - Original version.
+v1.1 of 28 Aug 2007  - Changed include statement not to include path to included
+                       file.
+                     - Changed to use renamed UCard unit and TCard class.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\CtxMenu\UVIShellExtBase.pas
+--------------------------------------------------------------------------------
+v1.0 of 05 Jun 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\CtxMenu\UWButton.pas
+--------------------------------------------------------------------------------
+v1.0 of 30 May 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\CtxMenu\UWComboBox.pas
+--------------------------------------------------------------------------------
+v1.0 of 30 May 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\CtxMenu\UWidget.pas
+--------------------------------------------------------------------------------
+v1.0 of 30 May 2004  - Original version.
+v1.1 of 28 Aug 2007  - Changed to use renamed UCard unit and TCard class.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\CtxMenu\UWLabel.pas
+--------------------------------------------------------------------------------
+v1.0 of 30 May 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\CtxMenu\UWListView.pas
+--------------------------------------------------------------------------------
+v1.0 of 30 May 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\CtxMenu\VFileVerCM.vi
@@ -1375,13 +1968,63 @@ Src\CtxMenu\VFileVerCM.vi
                      - Removed path to BRCC32.
                      - Updated file and product numbers.
                      - Removed resource identifier.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\CtxMenu\VIPropSheetDlg.rc
+--------------------------------------------------------------------------------
+v1.0 of 24 May 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\CtxMenu\Exports\IntfFileVerShellExt.pas
+--------------------------------------------------------------------------------
+v1.0 of 24 Feb 2003  - Original version.
+v2.0 of 05 Jun 2004  - Major update to provide recording and registration
+                       support for both shell extension COM servers. The
+                       registration / recording and extension info functionality
+                       encapsulated by the IFileVerCMRegistrar interface has now
+                       been split between three distinct interfaces.
+                       Specifically:
+                       - Added new IFileVerExtRecorder, IFileVerExtRegistrar and
+                         IFileVerExtInfo interfaces.
+                       - Added CLSID for new property sheet extension.
+                       - Added CLSIDStr_FileVerReg as a synomim for
+                         CLSIDStr_FileVerCMReg.
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\CtxMenu\Help\FileVerShExt.hap
 --------------------------------------------------------------------------------
         30 May 2004  - New help topic source file.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\CtxMenu\Help\FileVerShExt.hpj
+--------------------------------------------------------------------------------
+v1.0 of 30 May 2004  - Original version.
+v1.1 of 19 Aug 2007  - Changed path to output file name to reflect restructure
+                       of source tree.
+                     - Updated copyright date range to include 2007.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\CtxMenu\Help\FileVerShExt.map
+--------------------------------------------------------------------------------
+v1.0 of 30 May 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\Imports\IntfBinaryVerInfo.pas
+--------------------------------------------------------------------------------
+v1.0 of 04 Aug 2002  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\Installer\Build.bat
+--------------------------------------------------------------------------------
+v1.0 of 21 Aug 2007  - First version.
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\Installer\FileVer7.iss
@@ -1401,7 +2044,13 @@ v2.0 of 28 Aug 2007  - Now uses ISPP macros and defines to make install script
                        UninstMsg.exe program.
                      - Changed to install VIBinData.dll to application folder
                        instead of as shared DLL in Common Files.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\Installer\Uninstall.ps
+--------------------------------------------------------------------------------
+v1.0 of 28 Aug 2007  - Original version.
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\Installer\UninstMsg\UninstMsg.dpr
@@ -1409,6 +2058,23 @@ Src\Installer\UninstMsg\UninstMsg.dpr
 v1.0 of 26 Oct 2004  - Original version of program run by installer that
                        displays a prompt on uninstallation.
         28 Aug 2007  - DELETED.        
+
+--------------------------------------------------------------------------------
+Src\Reader\Build.bat
+--------------------------------------------------------------------------------
+v1.0 of 22 Aug 2007  - First version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\Reader\FVFileReader.dpr
+--------------------------------------------------------------------------------
+v1.0 of 24 Feb 2003  - Original version.
+v1.1 of 20 Oct 2004  - Added UGlobals unit.
+v1.2 of 21 Aug 2007  - Changed paths to some interfaces. Interfaces are no
+                       longer in Intf folder but in Exports sub folder of
+                       relevant DLL source code or in Imports folder if
+                       providing interface to external DLL.
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\Reader\UFileReader.pas
@@ -1435,19 +2101,52 @@ v3.0 of 23 May 2004  - Updated TVarVerInfo to support the new IVerInfoVarReader2
                        VARVERINFO_STATUS_* flags.
                      - Added support for IVerInfoFileQuery interface in new
                        TVerInfoQuery object.        
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
         
+--------------------------------------------------------------------------------
+Src\Reader\UResourceFile.pas
+--------------------------------------------------------------------------------
+v1.0 of 24 Feb 2003  - Original version.
+v1.1 of 23 May 2004  - Added class function IsValidResourceStream to
+                       TResourceFile and modified LoadFromStream method to use
+                       it.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\Reader\UResourceFileStream.pas
+--------------------------------------------------------------------------------
+v1.0 of 24 Feb 2003  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\Reader\UResourceUtils.pas
+--------------------------------------------------------------------------------
+v1.0 of 24 Feb 2003  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\Reader\UVerInfoFileStream.pas
+--------------------------------------------------------------------------------
+v1.0 of 04 Aug 2002  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
 --------------------------------------------------------------------------------
 Src\Reader\UVIBinary.pas
 --------------------------------------------------------------------------------
-        24 Feb 2002  - v1.0 of from Src\App.
+        24 Feb 2002  - v1.0 moved from Src\App.
 v1.1 of 24 Feb 2003  - Changed to derive from TDDabblerDLLLoader class rather
                        than previous TPJSoftDLLLoader.
 v2.0 of 23 May 2004  - Changed method of operation of DLL loader to be
                        compatible with revised parent class:
                        - Removed DLL global reference count.
                        - Removed global DLL handle.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\Reader\UVInfoResFileStream.pas
+--------------------------------------------------------------------------------
+v1.0 of 24 Feb 2003  - Original version.
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\Reader\VFVFileReader.vi
@@ -1469,7 +2168,28 @@ Src\Reader\VFVFileReader.vi
                      - Removed path to BRCC32.
                      - Updated file and product numbers.
                      - Removed resource identifier.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\Reader\Exports\IntfVerInfoReader.pas
+--------------------------------------------------------------------------------
+v1.0 of 24 Feb 2003  - Original version.
+v2.0 of 20 May 2004  - Added IVerInfoVarReader2 interface that extends
+                       IVerInfoVarReader to support an extended status method:
+                       StatusEx.
+                     - Created additional VARVERINFO_STATUS_* constants to use
+                       with IVerInfoVarReader2.StatusEx.
+                     - Added new Added IVerInfoFileQuery and new class id to use
+                       to create a supporting object.
+                     - Replaced IUnknown with IInterface: interfaces here do not
+                       represent COM objects.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\Reporter\Build.bat
+--------------------------------------------------------------------------------
+v1.0 of 22 Aug 2007  - First version.
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\Reporter\FVReport.dpr
@@ -1481,14 +2201,85 @@ v2.0 of 20 Oct 2004  - Added new units: UHTMLWriter, UTextStreamWriter,
 v2.1 of 21 Aug 2007  - Changed paths to some interfaces. Interfaces are no
                        longer in Intf folder but in Exports sub folder of
                        relevant DLL source code.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\Reporter\HTML.rc
+--------------------------------------------------------------------------------
+v1.0 of 20 May 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\Reporter\UErrorReporter.pas
+--------------------------------------------------------------------------------
+v1.0 of 06 May 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\Reporter\UHTMLReporter.pas
+--------------------------------------------------------------------------------
+v1.0 of 20 May 2004  - Original version - greatly revised version of code
+                       extracted from previous version of UReporter.pas.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\Reporter\UHTMLWriter.pas
+--------------------------------------------------------------------------------
+v1.0 of 20 May 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\Reporter\UPlainReporter.pas
+--------------------------------------------------------------------------------
+v1.0 of 20 May 2004  - Original version - based on code extracted from previous
+                       version of UReporter.pas.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\Reporter\URCReporter.pas
+--------------------------------------------------------------------------------
+v1.0 of 20 May 2004  - Original version - greatly revised version of code
+                       extracted from previous version of UReporter.pas.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\Reporter\UReportConsts.pas
+--------------------------------------------------------------------------------
+v1.0 of 20 May 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\Reporter\UReporter.pas
+--------------------------------------------------------------------------------
+v1.0 of 24 Feb 2003  - Original version.
+v1.1 of 14 Aug 2003  - Changed code that writes table cells to write out &nbsp;
+                       character if an empty string is to be written to a table
+                       cell. This ensures empty table cells display properly.
+v2.0 of 20 May 2004  - Major update - code for specific reports and support code
+                       moved to separate units. This unit now contains only the
+                       abstract base class for all version information reports.
+                       Specifically:
+                       - Removed concrete classes (TPlainReporter,
+                         TSourceReporter, THTMLReporter) to separate units
+                       - Moved CSS style sheet const to UHTMLWriter unit (and
+                         added new values to it)
+                       - Removed text writing helper routines - we now use new
+                         text writing class is defined in a different unit.
+                       - Report object creator function moved to new unit.
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\Reporter\UReportExp.pas
 --------------------------------------------------------------------------------
 v1.0 of 20 May 2004  - Original version - updated version of function extracted
                        from previous version of UReporter.pas.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\Reporter\UTextStreamWriter.pas
+--------------------------------------------------------------------------------
+v1.0 of 20 May 2004  - Original version.
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\Reporter\VFVReport.vi
@@ -1508,7 +2299,7 @@ Src\Reporter\VFVReport.vi
                      - Removed path to BRCC32.
                      - Updated file and product numbers.
                      - Removed resource identifier.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\Reporter\Exports\IntfVerInfoReport.pas
@@ -1520,80 +2311,179 @@ v2.0 of 20 May 2004  - Added completely new IVerInfoErrReporter interface to
                        that implements the new interface.
                      - Added new CLSID for a new object in FVReport.dll that
                        implements IVerInfoReporter.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\Reporter\Res\Bomb.gif
 --------------------------------------------------------------------------------
         20 Feb 2004  - New glyph indicating error or problem in reports.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\Reporter\Res\FFIHelp.html
 --------------------------------------------------------------------------------
         20 Feb 2004  - HTML file containing help information about fixed file
                        information.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\Reporter\Res\Fill.gif
 --------------------------------------------------------------------------------
         19 Feb 2004  - New gradient image used as background to titles in
                        reports.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\Reporter\Res\Help.gif
 --------------------------------------------------------------------------------
         20 Feb 2004  - New glyph used in help links in reports.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\Reporter\Res\LeftArrow.gif
 --------------------------------------------------------------------------------
         20 Feb 2004  - New left facing arrow glyph displayed in reports.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\Reporter\Res\Report.css
 --------------------------------------------------------------------------------
         05 Jun 2004  - New CSS style sheet used for HTML reports.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\Reporter\Res\Rule.gif
 --------------------------------------------------------------------------------
         19 Feb 2004  - New ruling image displayed in reports.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 Src\Reporter\Res\StrTableHelp.html
 --------------------------------------------------------------------------------
         20 Feb 2004  - New HTML file containing help information about string
                        tables.
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\Shared\UDisplayFmt.pas
+--------------------------------------------------------------------------------
+v1.0 of 24 Feb 2003  - Original version.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\Shared\UDLLLoader.pas
+--------------------------------------------------------------------------------
+v1.0 of 04 Aug 2002  - Original version.
+v1.1 of 24 Feb 2003  - Changed name of TPJSoftDLLLoader class to
+                       TDDabblerDLLLoader and made it place [Common Files]\
+                       DelphiDabbler on search path rather than [Common Files]\
+                       PJSoft.
+v2.0 of 23 May 2004  - Changed method of operation of DLL loader - we no longer
+                       count number of instances of the class that have been
+                       created. Consequently:
+                       - We now store the DLL handle in a field rather than
+                         requiring a reference to an externally stored handle.
+                       - We no longer use an externally stored reference count.
+                       - Changed to get module name rather than ParamStr(0) for
+                         program path. This is needed in case DLL is loaded from
+                         other DLLs not loaded directly from Version Info Spy or
+                         command line application.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\Shared\UFileReaderLoader.pas
+--------------------------------------------------------------------------------
+v1.0 of 24 Feb 2003  - Original version.
+v2.0 of 23 May 2004  - Changed method of operation of DLL loader to be
+                       compatible with revised parent class:
+                       - Removed DLL global reference count.
+                       - Removed global DLL handle.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\Shared\UGlobals.pas
+--------------------------------------------------------------------------------
+v1.0 of 05 Jun 2004  - Original version.
+v1.1 of 28 Aug 2007  - Changed last build year to 2007.
+                     - Changed developer name to include middle initial.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\Shared\URegistry.pas
+--------------------------------------------------------------------------------
+v1.0 of 24 Feb 2003  - Original version.
+v2.0 of 05 Jun 2004  - Major update:
+                       - Added new GUI subkey to store all GUI persistent
+                         values.
+                       - Added GUIWindowKey function to return a registry subkey
+                         for any form under the new GUI subkey.
+                       - Deleted cWdwRegKey subkey - main form's subkey now
+                         returned by GUIWindowKey function.
+                       - Changed registry key to increment product version from
+                         6 to 7.
+                       - Added AppPath routine that looks up applications in App
+                         Paths section of registry and returns full path to
+                         registered extensions.
+                       - Deleted constant giving key for VIS in
+                         REGSTR_PATH_APPPATHS.
+                       - Replaced former cCtxMenuKey constant with new
+                         cExplExtKey constant and changed value to "ExplExt".
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\Shared\UReporterLoader.pas
+--------------------------------------------------------------------------------
+v1.0 of 24 Feb 2003  - Original version.
+v2.0 of 23 May 2004  - Changed method of operation of DLL loader to be
+                       compatible with revised parent class:
+                       - Removed DLL global reference count.
+                       - Removed global DLL handle.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\Shared\UVerUtils.pas
+--------------------------------------------------------------------------------
+v1.0 of 30 Mar 2002  - Original version.
+v1.1 of 04 Aug 2002  - Added functions to return langauge and character set
+                       descriptions from codes.
+v2.0 of 24 Feb 2003  - Changed so that functions that return information about
+                       fixed file info to return either descriptions or symbolic
+                       constants according to a type code passed to each
+                       routine. Some routines were renamed, lookup tables
+                       extended and some new routines were added.
+v2.1 of 20 May 2004  - Added function to check standard string file information
+                       names.
+                     - Updated list of character sets: modified one name and
+                       added character set #0.
+        16 Nov 2009  - Moved to SVN.
+
+--------------------------------------------------------------------------------
+Src\Shared\
+--------------------------------------------------------------------------------
+
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
 vx.x of xx xxx xxxx  - 
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
 vx.x of xx xxx xxxx  - 
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
 vx.x of xx xxx xxxx  - 
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
 vx.x of xx xxx xxxx  - 
-        16 Nov 2009  - Moved to SVN
+        16 Nov 2009  - Moved to SVN.
 
