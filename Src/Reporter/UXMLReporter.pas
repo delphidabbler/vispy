@@ -4,7 +4,7 @@
  * Defines a class that generates a XML report about some given version
  * information.
  *
- * $Rev
+ * $Rev$
  * $Date$
  *
  * ***** BEGIN LICENSE BLOCK *****
