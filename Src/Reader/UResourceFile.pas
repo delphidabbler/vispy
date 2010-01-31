@@ -1,31 +1,12 @@
-{ ##
-  @PROJECT_NAME             Version Information Spy File Reader DLL.
-  @PROJECT_DESC             Enables version information data to be read from
-                            excutable and binary resource files that contain
-                            version information.
-  @FILE                     UResourceFile.pas
-  @COMMENTS                 Class that encapsulates a 32 bit bianry resource
-                            file and allows its resources to be read edited and
-                            written.
-  @DEPENDENCIES             None.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 24/02/2003
-      @COMMENTS             Original version.
-    )
-    @REVISION(
-      @VERSION              1.1
-      @DATE                 23/05/2004
-      @COMMENTS             Added class function IsValidResourceStream to
-                            TResourceFile and modified LoadFromStream method to
-                            use it.
-    )
-  )
-}
-
-
 {
+ * UResourceFile.pas
+ *
+ * Class that encapsulates a 32 bit binary resource file and allows its
+ * resources to be read edited and written.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  *
  * Version: MPL 1.1
@@ -43,10 +24,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2003-2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2003-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

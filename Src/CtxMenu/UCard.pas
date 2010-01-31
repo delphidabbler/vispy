@@ -1,35 +1,11 @@
-{ ##
-  @FILE                     UPropSheetCard.pas
-  @COMMENTS                 Defines a class that encapsulates a  window and the
-                            "widgets" it contains.
-  @PROJECT_NAME             Version Information Spy Shell Extension.
-  @PROJECT_DESC             Provides a context menu handler that can launch
-                            Version Information Spy from the Explorer context
-                            menu for executable files and adds a version info
-                            tab to the property sheet.
-  @DEPENDENCIES             None.
-  @OTHER_NAMES              Renamed from UPropSheetCard.pas to UCard.pas at
-                            v1.1.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 30/05/2004
-      @COMMENTS             Original version.
-    )
-    @REVISION(
-      @VERSION              1.1
-      @DATE                 28/08/2007
-      @COMMENTS             + Renamed from UPropSheetCard.pas to UCard.pas and
-                              renamed class from TPropSheetCard to TCard. This
-                              done because this class works for any window, not
-                              just property sheets.
-                            + Renamed TCard.DlgTextHeight to TCard.TextHeight.
-    )
-  )
-}
-
-
 {
+ * UCard.pas
+ *
+ * Defines a class that encapsulates a window and the "widgets" it contains.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  *
  * Version: MPL 1.1
@@ -42,15 +18,16 @@
  * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
  * the specific language governing rights and limitations under the License.
  *
- * The Original Code is UCard.pas (formerly UPropSheetCard.pas).
+ * The Original Code is UCard.pas
  *
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2004-2007 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

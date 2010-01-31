@@ -1,22 +1,12 @@
-{ ##
-  @FILE                     ULVDisplayMgr.pas
-  @COMMENTS                 Defines a class that manages the display of various
-                            list view controls used in Version Information Spy.
-  @PROJECT_NAME             Version Information Spy Windows application.
-  @PROJECT_DESC             Displays version information embedded in executable
-                            and binary resource files.
-  @DEPENDENCIES             None
-  @HISTORY(
-    @REVISION(
-      @DATE                 18/10/2004
-      @VERSION              1.0
-      @COMMENTS             Original version
-    )
-  )
-}
-
-
 {
+ * ULVDisplayMgr.pas
+ *
+ * Defines a class that manages the display of various list view controls used
+ * in Version Information Spy.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  *
  * Version: MPL 1.1
@@ -34,10 +24,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

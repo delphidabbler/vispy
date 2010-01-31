@@ -1,23 +1,12 @@
-{ ##
-  @FILE                     FmFixedSourceReport.pas
-  @COMMENTS                 Implements a dialog box that displays the decompiled
-                            source code of the version information, with any
-                            inconsistencies and errors corrected.
-  @PROJECT_NAME             Version Information Spy Windows application.
-  @PROJECT_DESC             Displays version information embedded in executable
-                            and binary resource files.
-  @DEPENDENCIES             None
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 23/05/2004
-      @COMMENTS             Original version
-    )
-  )
-}
-
-
 {
+ * FmFixedSourceReport.pas
+ *
+ * Implements a dialog box that displays the decompiled source code of the
+ * version information, with any inconsistencies and errors corrected.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  * 
  * Version: MPL 1.1
@@ -35,10 +24,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  * 
- * Portions created by the Initial Developer are Copyright (C) 2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
  * Johnson. All Rights Reserved.
  * 
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

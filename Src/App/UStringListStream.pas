@@ -1,22 +1,11 @@
-{ ##
-  @FILE                     UStringListStream.pas
-  @COMMENTS                 Defines stream class for reading and writing string
-                            lists.
-  @PROJECT_NAME             Version Information Spy Windows application.
-  @PROJECT_DESC             Displays version information embedded in executable
-                            and binary resource files.
-  @DEPENDENCIES             PJIStreamWrapper from the PJIStreams library unit.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 24/02/2003
-      @COMMENTS             Original version.
-    )
-  )
-}
-
-
 {
+ * UStringListStream.pas
+ *
+ * Defines stream class for reading and writing string lists.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  * 
  * Version: MPL 1.1
@@ -34,10 +23,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  * 
- * Portions created by the Initial Developer are Copyright (C) 2003 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2003-2010 Peter
  * Johnson. All Rights Reserved.
  * 
  * Contributor(s):
+ *   NONE
  * 
  * ***** END LICENSE BLOCK *****
 }

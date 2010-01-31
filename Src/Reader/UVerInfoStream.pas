@@ -1,23 +1,12 @@
-{ ##
-  @FILE                     UVerInfoFileStream.pas
-  @COMMENTS                 Defines stream class for accessing version
-                            information embedded in an executable file.
-  @PROJECT_NAME             Version Information Spy File Reader DLL.
-  @PROJECT_DESC             Enables version information data to be read from
-                            excutable and binary resource files that contain
-                            version information.
-  @DEPENDENCIES             PJIStreamWrapper from the PJIStreams library unit.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 04/08/2002
-      @COMMENTS             Original version.
-    )
-  )
-}
-
-
 {
+ * UVerInfoFileStream.pas
+ *
+ * Defines stream class for accessing version information embedded in an
+ * executable file.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  * 
  * Version: MPL 1.1
@@ -35,10 +24,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  * 
- * Portions created by the Initial Developer are Copyright (C) 2002 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2002-2010 Peter
  * Johnson. All Rights Reserved.
  * 
  * Contributor(s):
+ *   NONE
  * 
  * ***** END LICENSE BLOCK *****
 }

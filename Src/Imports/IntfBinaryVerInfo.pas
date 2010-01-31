@@ -1,24 +1,13 @@
-{ ##
-  @FILE                     IntfBinaryVerInfo.pas
-  @COMMENTS                 Provides interface to binary version information
-                            reader and writer objects exported from the DLL
-                            along with all the supporting types required and a
-                            prototype for the DLL's exported function.
-  @PROJECT_NAME             Binary Version Information Manipulator Library
-  @PROJECT_DESC             Enables binary version information data to be read
-                            from and written to streams and to be updated.
-  @DEPENDENCIES             None.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 04/08/2002
-      @COMMENTS             Original version.
-    )
-  )
-}
-
-
 {
+ * IntfBinaryVerInfo.pas
+ *
+ * Provides interface to binary version information reader and writer objects
+ * exported from the DLL along with all the supporting types required and a
+ * prototype for the DLL's exported function.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  * 
  * Version: MPL 1.1
@@ -36,10 +25,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  * 
- * Portions created by the Initial Developer are Copyright (C) 2002 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2002-2010 Peter
  * Johnson. All Rights Reserved.
  * 
  * Contributor(s):
+ *   NONE
  * 
  * ***** END LICENSE BLOCK *****
 }

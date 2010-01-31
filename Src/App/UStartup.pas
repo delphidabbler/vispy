@@ -1,42 +1,14 @@
-{ ##
-  @FILE                     UStartup.pas
-  @COMMENTS                 Defines data types, constants and classes that
-                            handle start-up for the application. This includes
-                            parsing the command line and determining if the
-                            application should run or simply pass its command
-                            line to another instance of the application.
-  @PROJECT_NAME             Version Information Spy Windows application.
-  @PROJECT_DESC             Displays version information embedded in executable
-                            and binary resource files.
-  @DEPENDENCIES             None.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 04/08/2002
-      @COMMENTS             Original version.
-    )
-    @REVISION(
-      @VERSION              1.1
-      @DATE                 24/02/2003
-      @COMMENTS             Changed window class name from PJSoft.FileVer.5 to
-                            DelphiDabbler.FileVer.5.
-    )
-    @REVISION(
-      @VERSION              1.2
-      @DATE                 05/06/2004
-      @COMMENTS             + Changed to use global Settings object rather than
-                              create and destroy own instance.
-                            + Update main form window class name.
-                            + Builds window class name from global constants
-                            + Changed switch passed from shell extensions from
-                              'c' to 'shellex' and changes internal switch flags
-                              accordingly.
-    )
-  )
-}
-
-
 {
+ * UStartup.pas
+ *
+ * Defines data types, constants and classes that handle start-up for the
+ * application. This includes parsing the command line and determining if the
+ * application should run or simply pass its command line to another instance of
+ * the application.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  * 
  * Version: MPL 1.1
@@ -54,10 +26,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  * 
- * Portions created by the Initial Developer are Copyright (C) 2002-2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2002-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

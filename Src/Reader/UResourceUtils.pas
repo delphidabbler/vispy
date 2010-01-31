@@ -1,23 +1,11 @@
-{ ##
-  @PROJECT_NAME             Version Information Spy File Reader DLL.
-  @PROJECT_DESC             Enables version information data to be read from
-                            excutable and binary resource files that contain
-                            version information.
-  @FILE                     UResourceUtils.pas
-  @COMMENTS                 Provides some utility functions to assist in working
-                            with resource files.
-  @DEPENDENCIES             None
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 24/02/2003
-      @COMMENTS             Original version.
-    )
-  )
-}
-
-
 {
+ * UResourceUtils.pas
+ *
+ * Provides some utility functions to assist in working with resource files.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  * 
  * Version: MPL 1.1
@@ -35,10 +23,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  * 
- * Portions created by the Initial Developer are Copyright (C) 2003 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2003-2010 Peter
  * Johnson. All Rights Reserved.
  * 
  * Contributor(s):
+ *   NONE
  * 
  * ***** END LICENSE BLOCK *****
 }

@@ -1,50 +1,16 @@
-{ ##
-  @PROJECT_NAME             Version Information Spy Shared Code
-  @PROJECT_DESC             Code units shared between various Version
-                            Information Spy applications and DLLs.
-  @FILE                     UDLLLoader.pas
-  @COMMENTS                 Defines base for classes used to dynamically load /
-                            unload DLLs from a search path. Also defines a
-                            descendant class acts as a base for classes that
-                            search for DLLs in the application's path or in the
-                            DelphiDabbler sub-folder of the system's Common
-                            Files folder.
-  @DEPENDENCIES             PJSysInfo unit from DelphiDabbler library.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 04/08/2002
-      @COMMENTS             Original version.
-    )
-    @REVISION(
-      @VERSION              1.1
-      @DATE                 24/02/2003
-      @COMMENTS             Changed name of TPJSoftDLLLoader class to
-                            TDDabblerDLLLoader and made it now use place [Common
-                            Files]\DelphiDabbler on search path rather than
-                            [Common Files]\PJSoft.
-    )
-    @REVISION(
-      @VERSION              2.0
-      @DATE                 23/05/2004
-      @COMMENTS             Changed method of operation of DLL loader - we no
-                            longer count number of instances of the class that
-                            have been created. Consequently:
-                            + We now store the DLL handle in a field rather than
-                              requiring a reference to an externally stored
-                              handle.
-                            + We no longer use an externally stored reference
-                              count.
-                            + Changed to get module name rather than ParamStr(0)
-                              for program path. This is needed in case DLL is
-                              loaded from other DLLs not loaded directly from
-                              Version Info Spy or command line application.
-    )
-  )
-}
-
-
 {
+ * UDLLLoader.pas
+ *
+ * Defines base for classes used to dynamically load / unload DLLs from a search
+ * path. Also defines a descendant class acts as a base for classes that search
+ * for DLLs in the application's path or in the DelphiDabbler sub-folder of the
+ * system's Common Files folder.
+ *
+ * Requires PJSysInfo unit from DelphiDabbler library.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  *
  * Version: MPL 1.1
@@ -62,10 +28,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2002-2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2002-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

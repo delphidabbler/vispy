@@ -1,47 +1,12 @@
-{ ##
-  @FILE                     UVerUtils.pas
-  @COMMENTS                 Library of functions that provide English language
-                            descriptions of version information related values
-                            and flags.
-  @PROJECT_NAME             Version Information Spy Shared Code
-  @PROJECT_DESC             Code units shared between various Version
-                            Information Spy applications and DLLs.
-  @DEPENDENCIES             None.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 30/03/2002
-      @COMMENTS             Original version.
-    )
-    @REVISION(
-      @VERSION              1.1
-      @DATE                 04/08/2002
-      @COMMENTS             Added functions to return langauge and character set
-                            descriptions from codes.
-    )
-    @REVISION(
-      @VERSION              2.0
-      @DATE                 24/02/2003
-      @COMMENTS             Changed so that functions that return information
-                            about fixed file info to return either descriptions
-                            or symbolic constants according to a type code
-                            passed to each routine. Some routines were renamed,
-                            lookup tables extended and some new routines were
-                            added.
-    )
-    @REVISION(
-      @VERSION              2.1
-      @DATE                 20/05/2004
-      @COMMENTS             + Added function to check standard string file
-                              information names.
-                            + Updated list of character sets: modified one name
-                              and added character set #0.
-    )
-  )
-}
-
-
 {
+ * UVerUtils.pas
+ *
+ * Library of functions that provide English language descriptions of version
+ * information related values and flags.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  * 
  * Version: MPL 1.1
@@ -59,10 +24,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2002-2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2002-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

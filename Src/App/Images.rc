@@ -1,21 +1,11 @@
-/* ##
-  @FILE                     Images.rc
-  @COMMENTS                 Resource file that stores images in program's
-                            resources.
-  @PROJECT_NAME             Version Information Spy Windows application.
-  @PROJECT_DESC             Displays version information embedded in executable
-                            and binary resource files.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 19/08/2007
-      @COMMENTS             Original version that includes program's MAINICON.
-    )
-  )
-*/
-
-
 /*
+ * Images.rc
+ *
+ * Resource file that stores images in program's resources.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  * 
  * Version: MPL 1.1
@@ -33,8 +23,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  * 
- * Portions created by the Initial Developer are Copyright (C) 2007 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2007-2010 Peter
  * Johnson. All Rights Reserved.
+ *
+ * Contributor(s):
+ *   NONE
  * 
  * ***** END LICENSE BLOCK *****
  */

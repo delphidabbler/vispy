@@ -1,41 +1,13 @@
-{ ##
-  @FILE                     FrHTMLViewer.pas
-  @COMMENTS                 Implements a frame derived from TViewerBase that is
-                            used to display HTML content using the IE browser
-                            control. It implements the abstract methods of
-                            TViewerBase. Controls the appearance of the web
-                            browser user interface.
-  @PROJECT_NAME             Version Information Spy Windows application.
-  @PROJECT_DESC             Displays version information embedded in executable
-                            and binary resource files.
-  @DEPENDENCIES             None
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 20/10/2004
-      @COMMENTS             Original version.
-    )
-    @REVISION(
-      @VERSION              2.0
-      @DATE                 07/03/2005
-      @COMMENTS             Major revision of frame:
-                            + Frame implements IDocHostUIHandler and
-                              IOleClientSite interfaces to enable frame to be a
-                              client site for web browser control and to control
-                              its UI.
-                            + Removed browser's 3D border and prevented from
-                              displaying IE context menu.
-                            + Made browser able to load content from a string
-                              rather than from having to write content to a file
-                              before loading into browser.
-                            + Removed object that creates temporary files since
-                              no longer needed.
-    )
-  )
-}
-
-
 {
+ * FrHTMLViewer.pas
+ *
+ * Implements a frame derived from TViewerBase that is used to display HTML
+ * content using the IE browser control. It implements the abstract methods of
+ * TViewerBase. Controls the appearance of the web browser user interface.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  *
  * Version: MPL 1.1
@@ -53,10 +25,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2004-2005 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

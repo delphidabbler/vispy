@@ -1,21 +1,11 @@
-{ ##
-  @PROJECT_NAME             Version Information Spy Reporter DLL
-  @PROJECT_DESC             Provides reporter objects that write reports about
-                            version information to a stream.
-  @FILE                     UTextStreamWriter.pas
-  @COMMENTS                 Defines a writer class that outputs text to a
-                            wrapped IStream.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 20/05/2004
-      @COMMENTS             Original version.
-    )
-  )
-}
-
-
 {
+ * UTextStreamWriter.pas
+ *
+ * Defines a writer class that outputs text to a wrapped IStream.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  * 
  * Version: MPL 1.1
@@ -33,10 +23,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

@@ -1,24 +1,13 @@
-{ ##
-  @FILE                     FmGenericDlg.pas
-  @COMMENTS                 Implements a dialog box base class that displays and
-                            handles a help button, sizes the window, arranges
-                            the controls and aligns the dialog box over its
-                            parent form.
-  @PROJECT_NAME             Version Information Spy Windows application.
-  @PROJECT_DESC             Displays version information embedded in executable
-                            and binary resource files.
-  @DEPENDENCIES             None
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 20/10/2004
-      @COMMENTS             Original version.
-    )
-  )
-}
-
-
 {
+ * FmGenericDlg.pas
+ *
+ * Implements a dialog box base class that displays and handles a help button,
+ * sizes the window, arranges the controls and aligns the dialog box over its
+ * parent form.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  * 
  * Version: MPL 1.1
@@ -36,10 +25,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  * 
- * Portions created by the Initial Developer are Copyright (C) 2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

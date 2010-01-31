@@ -1,31 +1,12 @@
-{ ##
-  @FILE                     UTempFiles.pas
-  @COMMENTS                 Implements a class that produces unique temporary
-                            file names without creating them and deletes any
-                            existing files when the class is destroyed.
-  @PROJECT_NAME             Version Information Spy Windows application.
-  @PROJECT_DESC             Displays version information embedded in executable
-                            and binary resource files.
-  @DEPENDENCIES             None.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 24/02/2003
-      @COMMENTS             Original version.
-    )
-    @REVISION(
-      @VERSION              2.0
-      @DATE                 17/08/2003
-      @COMMENTS             Revised method used to produce temp file names from
-                            sequential numbering to random numbering. Also
-                            improved method used to build file names and record
-                            Windows temporary folder name.
-    )
-  )
-}
-
-
 {
+ * UTempFiles.pas
+ *
+ * Implements a class that produces unique temporary file names without creating
+ * them and deletes any existing files when the class is destroyed.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  * 
  * Version: MPL 1.1
@@ -43,10 +24,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  * 
- * Portions created by the Initial Developer are Copyright (C) 2003 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2003-2010 Peter
  * Johnson. All Rights Reserved.
  * 
  * Contributor(s):
+ *   NONE
  * 
  * ***** END LICENSE BLOCK *****
 }

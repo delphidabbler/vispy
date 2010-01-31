@@ -1,59 +1,11 @@
-{ ##
-  @FILE                     FileVerCM.dpr
-  @COMMENTS                 Main project file.
-  @PROJECT_NAME             Version Information Spy Shell Extension.
-  @PROJECT_DESC             Provides a context menu handler that can launch
-                            Version Information Spy from the Explorer context
-                            menu for executable files and adds a version info
-                            tab to the property sheet.
-  @AUTHOR                   Peter D Johnson, LLANARTH, Ceredigion, Wales, UK.
-  @EMAIL                    delphidabbler@yahoo.co.uk
-  @COPYRIGHT                © Peter D Johnson, 2002-2007.
-  @WEBSITE                  http://www.delphidabbler.com/
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 04/08/2002
-      @COMMENTS             Original version.
-    )
-    @REVISION(
-      @VERSION              1.1
-      @DATE                 24/02/2003
-      @COMMENTS             Added new units: UFileVerBaseCM, IntfFileVerCM,
-                            URegistry.
-    )
-    @REVISION(
-      @VERSION              2.0
-      @DATE                 20/10/2004
-      @COMMENTS             + Added new units: IntfVerInfoReader,
-                              UFileReaderLoader, UDisplayFmt, UDLLLoader,
-                              UGlobals, UPropSheetCard, UPropSheetHandler,
-                              UPSEngine, UPSView, URegistry, UShellExtBase,
-                              UVerUtils, UVIPropSheetCard, UVIShellExtBase,
-                              UWButton, UWComboBox, UWidget, UWLabel,
-                              UWListView.
-                            + Renamed UFileVerCM as UCOMLibExp,
-                              IntfFileVerCM as IntfFileVerShellExt,
-                              UFileVerCMFactory as UObjFactory,
-                              UFileVerCMHandler as UCtxMenuHandler,
-                              UFileVerCMReg as UShellExtReg, UFileVerCMBase as
-                              UBaseCOMObj.
-                            + Added new IsServerRegistered function to export
-                              list.
-    )
-    @REVISION(
-      @VERSION              2.1
-      @DATE                 28/08/2007
-      @COMMENTS             + Changed paths to some interfaces. Interfaces are
-                              no longer in Intf folder but in Exports sub folder
-                              of relevant DLL source code.
-                            + Changed to use renamed UCard unit.
-    )
-  )
-}
-
-
 {
+ * FileVerCM.dpr
+ *
+ * Main project file for Version Information Spy Shell Extension.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  *
  * Version: MPL 1.1
@@ -71,10 +23,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2002-2007 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2002-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

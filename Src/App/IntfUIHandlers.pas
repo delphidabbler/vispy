@@ -1,25 +1,13 @@
-{ ##
-  @FILE                     IntfUIHandlers.pas
-  @COMMENTS                 Interfaces, records and constants used when
-                            hosting the IE WebBrowser Control or automating IE
-                            to replace the menus, toolbars, and context menus.
-                            The content of the unit is based on Microsoft UI
-                            documentation from MSDN.
-  @PROJECT_NAME             Version Information Spy Windows application.
-  @PROJECT_DESC             Displays version information embedded in executable
-                            and binary resource files.
-  @DEPENDENCIES             None
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 07/03/2005
-      @COMMENTS             Original version
-    )
-  )
-}
-
-
 {
+ * IntfUIHandlers.pas
+ *
+ * Interfaces, records and constants used when hosting the IE WebBrowser Control
+ * or automating IE to replace the menus, toolbars, and context menus. The
+ * content of the unit is based on Microsoft UI documentation from MSDN.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  *
  * Version: MPL 1.1
@@ -37,10 +25,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2005 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2005-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

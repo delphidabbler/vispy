@@ -1,43 +1,12 @@
-{ ##
-  @FILE                     URegistry.pas
-  @COMMENTS                 Unit that defines various registry constants and
-                            access routines used by various components of
-                            program.
-  @PROJECT_NAME             Version Information Spy Shared Code
-  @PROJECT_DESC             Code units shared between various Version
-                            Information Spy applications and DLLs.
-  @DEPENDENCIES             None.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 24/02/2003
-      @COMMENTS             Original version.
-    )
-    @REVISION(
-      @VERSION              2.0
-      @DATE                 05/06/2004
-      @COMMENTS             Major update
-                            + Added new GUI subkey to store all GUI persistent
-                              values.
-                            + Added GUIWindowKey function to return a registry
-                              subkey for any form under the new GUI subkey.
-                            + Deleted cWdwRegKey subkey - main form's subkey now
-                              returned by GUIWindowKey function.
-                            + Changed registry key to increment product version
-                              from 6 to 7.
-                            + Added AppPath routine that looks up applications
-                              in App Paths section of registry and returns full
-                              path to registered extensions. Deleted constant
-                              giving key for VIS in REGSTR_PATH_APPPATHS.
-                            + Replaced former cCtxMenuKey constant with new
-                              cExplExtKey constant and changed value to
-                              "ExplExt".
-    )
-  )
-}
-
-
 {
+ * URegistry.pas
+ *
+ * Unit that defines various registry constants and access routines used by
+ * various components of  the program.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  *
  * Version: MPL 1.1
@@ -55,10 +24,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2003-2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2003-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

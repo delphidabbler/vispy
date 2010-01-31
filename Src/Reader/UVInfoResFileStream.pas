@@ -1,24 +1,12 @@
-{ ##
-  @PROJECT_NAME             Version Information Spy File Reader DLL.
-  @PROJECT_DESC             Enables version information data to be read from
-                            excutable and binary resource files that contain
-                            version information.
-  @FILE                     UVInfoResFileStream.pas
-  @COMMENTS                 Defines a stream class that reads or writes the data
-                            of a version information resource within a binary
-                            resource file.
-  @DEPENDENCIES             None.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 24/02/2003
-      @COMMENTS             Original version.
-    )
-  )
-}
-
-
 {
+ * UVInfoResFileStream.pas
+ *
+ * Defines a stream class that reads or writes the data of a version information
+ * resource within a binary resource file.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  * 
  * Version: MPL 1.1
@@ -36,10 +24,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  * 
- * Portions created by the Initial Developer are Copyright (C) 2003 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2003-2010 Peter
  * Johnson. All Rights Reserved.
  * 
  * Contributor(s):
+ *   NONE
  * 
  * ***** END LICENSE BLOCK *****
 }

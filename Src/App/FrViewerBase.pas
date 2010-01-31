@@ -1,26 +1,15 @@
-{ ##
-  @FILE                     FrViewerBase.pas
-  @COMMENTS                 Implements a TFrame descendant that contains no
-                            controls but provides an abstract base class for
-                            frames that are used to view and save some TStrings
-                            based content. This class exposes methods by which
-                            controlling code can manipulate the frame content
-                            without knowledge of how it is displayed or stored.
-  @PROJECT_NAME             Version Information Spy Windows application.
-  @PROJECT_DESC             Displays version information embedded in executable
-                            and binary resource files.
-  @DEPENDENCIES             None
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 20/10/2004
-      @COMMENTS             Original version
-    )
-  )
-}
-
-
 {
+ * FrViewerBase.pas
+ *
+ * Implements a TFrame descendant that contains no controls but provides an
+ * abstract base class for frames that are used to view and save some TStrings
+ * based content. This class exposes methods by which controlling code can
+ * manipulate the frame content without knowledge of how it is displayed or
+ * stored.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  * 
  * Version: MPL 1.1
@@ -38,10 +27,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  * 
- * Portions created by the Initial Developer are Copyright (C) 2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
  * Johnson. All Rights Reserved.
  * 
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

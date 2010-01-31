@@ -1,22 +1,12 @@
-{ ##
-  @PROJECT_NAME             Version Information Spy Reporter DLL
-  @PROJECT_DESC             Provides reporter objects that write reports about
-                            version information to a stream.
-  @FILE                     UPlainReporter.pas
-  @COMMENTS                 Defines classes that generates a plain text report
-                            about some given version information.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 20/05/2004
-      @COMMENTS             Original version - based on code extracted from
-                            previous version of UReporter.pas.
-    )
-  )
-}
-
-
 {
+ * UPlainReporter.pas
+ *
+ * Defines classes that generates a plain text report about some given version
+ * information.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  * 
  * Version: MPL 1.1
@@ -34,10 +24,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  * 
- * Portions created by the Initial Developer are Copyright (C) 2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
  * Johnson. All Rights Reserved.
  * 
  * Contributor(s):
+ *   NONE
  * 
  * ***** END LICENSE BLOCK *****
 }

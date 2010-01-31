@@ -1,52 +1,12 @@
-{ ##
-  @FILE                     UCOMLibExp.pas
-  @COMMENTS                 Defines the functions that are need to be exported
-                            by the COM in process server.
-  @PROJECT_NAME             Version Information Spy Shell Extension.
-  @PROJECT_DESC             Provides a context menu handler that can launch
-                            Version Information Spy from the Explorer context
-                            menu for executable files and adds a version info
-                            tab to the property sheet.
-  @DEPENDENCIES             None.
-  @OTHER_NAMES              Original name was UFileVerCMExp.pas. Renamed as
-                            UCOMLibExp.pas at v1.2.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 04/08/2002
-      @COMMENTS             Original version.
-    )
-    @REVISION(
-      @VERSION              1.1
-      @DATE                 24/02/2003
-      @COMMENTS             + Changed DllGetClassObject to return factory for
-                              either context menu handler or new extension
-                              registrar object.
-                            + Now uses new TServerRegistrar static class to
-                              register COM objects.
-    )
-    @REVISION(
-      @VERSION              2.0
-      @DATE                 05/06/2004
-      @COMMENTS             + Updated name of CLSID_FileVerReg from
-                              CLSID_FileVerCMReg.
-                            + Added support for property sheet handler.
-                            + Made detect false return in DllCanUnloadNow and
-                              increment lock count to prevent future removal.
-                              This prevents errors in Explorer when property
-                              sheet is left open and explorer is closed.
-                            + Modified to use renamed units.
-                            + Changed to use renamed TBaseCOMObj InstanceCount
-                              method.
-                            + Added new exported function IsServerRegistered
-                              that is not required by COM but is used by other
-                              applications in the suite.
-    )
-  )
-}
-
-
 {
+ * UCOMLibExp.pas
+ *
+ * Defines the functions that are need to be exported by the COM in process
+ * server.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  *
  * Version: MPL 1.1
@@ -64,10 +24,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2002-2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2002-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

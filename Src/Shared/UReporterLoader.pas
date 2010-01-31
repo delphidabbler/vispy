@@ -1,32 +1,12 @@
-{ ##
-  @FILE                     UReporterLoader.pas
-  @COMMENTS                 Defines a class that wraps object creation entry
-                            point exported by FVReport.dll and dynamically loads
-                            and unloads the DLL.
-  @PROJECT_NAME             Version Information Spy Shared Code
-  @PROJECT_DESC             Code units shared between various Version
-                            Information Spy applications and DLLs.
-  @DEPENDENCIES             This unit requires FVReport.dll to be located in the
-                            application's path.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 24/02/2003
-      @COMMENTS             Original version.
-    )
-    @REVISION(
-      @VERSION              2.0
-      @DATE                 23/05/2004
-      @COMMENTS             Changed method of operation of DLL loader to be
-                            compatible with revised parent class:
-                            + Removed DLL global reference count.
-                            + Removed global DLL handle.
-    )
-  )
-}
-
-
 {
+ * UReporterLoader.pas
+ *
+ * Defines a class that wraps object creation entry point exported by
+ * FVReport.dll and dynamically loads and unloads the DLL.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  * 
  * Version: MPL 1.1
@@ -44,10 +24,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  * 
- * Portions created by the Initial Developer are Copyright (C) 2003-2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2003-2010 Peter
  * Johnson. All Rights Reserved.
  * 
  * Contributor(s):
+ *   NONE
  * 
  * ***** END LICENSE BLOCK *****
 }

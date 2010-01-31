@@ -1,46 +1,12 @@
-{ ##
-  @FILE                     UObjFactory.pas
-  @COMMENTS                 Defines the class factory object that creates the
-                            supported shell extension handler and file extension
-                            registrar COM objects.
-  @PROJECT_NAME             Version Information Spy Shell Extension.
-  @PROJECT_DESC             Provides a context menu handler that can launch
-                            Version Information Spy from the Explorer context
-                            menu for executable files and adds a version info
-                            tab to the property sheet.
-  @DEPENDENCIES             None.
-  @OTHER_NAMES              Original name was UFileVerCMFactory.pas. Renamed as
-                            UObjFactory.pas at v2.1.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 04/08/2002
-      @COMMENTS             Original version.
-    )
-    @REVISION(
-      @VERSION              2.0
-      @DATE                 24/02/2003
-      @COMMENTS             Changed class factory object so that it can create
-                            either context meny handler or new extension
-                            registrar COM object.
-    )
-    @REVISION(
-      @VERSION              2.1
-      @DATE                 05/06/2004
-      @COMMENTS             + Changed name of CLSID_FileVerCMReg to
-                              CLSID_FileVerReg.
-                            + Added support for property sheet handler
-                              TPropSheetHandler.
-                            + Added static method to increment lock count:
-                              called from DllCanUnloadNow.
-                            + Changed name of TVIContextMenuFactory class to
-                              TObjFactory.
-    )
-  )
-}
-
-
 {
+ * UObjFactory.pas
+ *
+ * Defines the class factory object that creates the supported shell extension
+ * handler and file extension registrar COM objects.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  *
  * Version: MPL 1.1
@@ -58,10 +24,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2002-2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2002-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

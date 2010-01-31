@@ -1,64 +1,14 @@
-{ ##
-  @PROJECT_NAME             Version Information Spy File Reader DLL.
-  @PROJECT_DESC             Enables version information data to be read from
-                            excutable and binary resource files that contain
-                            version information.
-  @FILE                     UFileReader.pas
-  @COMMENTS                 Defines classes which provide read access to version
-                            information contained in executable programs and
-                            implement the interface defined in
-                            IntfVerInfoReader.pas. The classes use objects
-                            exported from the VIBinData DLL to process the raw
-                            version information.
-  @DEPENDENCIES             Requires VIBinData.dll.
-  @OTHER_NAMES              + Original unit name was UVersionInfo.pas
-                            + Changed to UFileReader.pas at v2.0
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 04/08/2002
-      @COMMENTS             Original version.
-    )
-    @REVISION(
-      @VERSION              2.0
-      @DATE                 24/02/2003
-      @COMMENTS             + Rewritten to implement IVerInfoFileReader,
-                              IVerInfoReader and IVerInfoVarReader interfaces
-                              and for inclusion in the FVFileReader DLL instead
-                              of the FileVer application. Functionality of
-                              classes remains similar to version 1 but
-                              properties have been re-cast as functions and data
-                              types have been changed to be suitable for passing
-                              across DLL boundaries. All type declarations have
-                              been made private and the file reader object is
-                              now accessed by a creator function that is
-                              exported by the DLL.
-                            + Added support for reading version info from 32 bit
-                              binary resource files.
-                            + Renamed from UVersionInfo.pas and moved from
-                              FileVer.exe to FVFileReader.dll.
-    )
-    @REVISION(
-      @VERSION              2.1
-      @DATE                 10/09/2003
-      @COMMENTS             Added additional checks for valid DOS files and
-                            added support for detecting virtual device drivers.
-    )
-    @REVISION(
-      @VERSION              3.0
-      @DATE                 23/05/2004
-      @COMMENTS             + Updated TVarVerInfo to support the new
-                              IVerInfoVarReader2 interface and its StatusEx
-                              method that can return the new VARVERINFO_STATUS_*
-                              flags.
-                            + Added support for IVerInfoFileQuery interface in
-                              new TVerInfoQuery object.
-    )
-  )
-}
-
-
 {
+ * UFileReader.pas
+ *
+ * Defines classes which provide read access to version information contained in
+ * executable programs and implement the interface defined in
+ * IntfVerInfoReader.pas. The classes use objects exported from the VIBinData
+ * DLL to process the raw version information.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  *
  * Version: MPL 1.1
@@ -76,10 +26,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2002-2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2002-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

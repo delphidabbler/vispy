@@ -1,22 +1,12 @@
-{ ##
-  @PROJECT_NAME             Version Information Spy Reporter DLL
-  @PROJECT_DESC             Provides reporter objects that write reports about
-                            version information to a stream.
-  @FILE                     UHTMLReporter.pas
-  @COMMENTS                 Defines classes that generates an HTML report about
-                            some given version information.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 20/05/2004
-      @COMMENTS             Original version - greatly revised version of code
-                            extracted from previous version of UReporter.pas.
-    )
-  )
-}
-
-
 {
+ * UHTMLReporter.pas
+ *
+ * Defines classes that generates an HTML report about some given version
+ * information.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  * 
  * Version: MPL 1.1
@@ -34,10 +24,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  * 
- * Portions created by the Initial Developer are Copyright (C) 2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
  * Johnson. All Rights Reserved.
  * 
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

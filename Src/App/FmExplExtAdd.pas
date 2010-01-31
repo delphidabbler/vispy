@@ -1,23 +1,12 @@
-{ ##
-  @FILE                     FmExplExtAdd.pas
-  @COMMENTS                 Implements a dialog box that enables the user to
-                            select or enter an extension to be registered with
-                            the shell extension COM object.
-  @PROJECT_NAME             Version Information Spy Windows application.
-  @PROJECT_DESC             Displays version information embedded in executable
-                            and binary resource files.
-  @DEPENDENCIES             None
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 05/06/2004
-      @COMMENTS             Original version
-    )
-  )
-}
-
-
 {
+ * FmExplExtAdd.pas
+ *
+ * Implements a dialog box that enables the user to select or enter an extension
+ * to be registered with the shell extension COM object.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  *
  * Version: MPL 1.1
@@ -35,10 +24,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

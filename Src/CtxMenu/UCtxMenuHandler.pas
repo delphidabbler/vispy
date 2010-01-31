@@ -1,71 +1,12 @@
-{ ##
-  @FILE                     UCtxMenuHandler.pas
-  @COMMENTS                 Defines the class that implements the version
-                            information context menu handler COM object.
-  @PROJECT_NAME             Version Information Spy Shell Extension.
-  @PROJECT_DESC             Provides a context menu handler that can launch
-                            Version Information Spy from the Explorer context
-                            menu for executable files and adds a version info
-                            tab to the property sheet.
-  @DEPENDENCIES             Requires FVFileReader.dll for object that tests for
-                            presence of version information in files.
-  @OTHER_NAMES              Original name was UFileVerCMHandler.pas. Renamed as
-                            UCtxMenuHandler.pas at v2.0.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 04/08/2002
-      @COMMENTS             Original version.
-    )
-    @REVISION(
-      @VERSION              1.1
-      @DATE                 24/02/2003
-      @COMMENTS             + Moved base COM object class to own unit (since now
-                              used by other units.
-                            + Moved CLSID for handler object to new interface
-                              unit.
-                            + Moved code to find location of FileVer.exe from
-                              UFileVerCMReg unit to here.
-                            + Changed fatal error prompt to advise user to
-                              contact author rather than PJSoft.
-                            + Removed check for file containing version
-                              information before loading program: now loads
-                              program and lets the program report any errors
-                              since these messages are more informative.
-    )
-    @REVISION(
-      @VERSION              2.0
-      @DATE                 19/10/2004
-      @COMMENTS             + Changed to derive from new TVIShellExtBase class
-                              rather than directly from TBaseCOMObject. This new
-                              parent class provides common functionality shared
-                              with other version information shell extensions.
-                            + Context menu option is now greyed out if selected
-                              file contains version information. Consequently
-                              Version Information Spy is now not loaded in these
-                              cases.
-                            + Problems with hints not displaying correctly in
-                              Explorer status bar fixed.
-                            + Hint now indicates if selected file contains
-                              version information.
-                            + Provided message window now passed to ShellExecute
-                              rather than desktop handle (0).
-                            + Renamed TVIContextMenu class as
-                              TContextMenuHandler.
-    )
-    @REVISION(
-      @VERSION              2.1
-      @DATE                 23/11/2005
-      @COMMENTS             Fixed bug in setting "help text" that appears in
-                            Windows status bar. Now provides unicode or ANSI
-                            text as requested by Windows rather that always
-                            providing Unicode.
-    )
-  )
-}
-
-
 {
+ * UCtxMenuHandler.pas
+ *
+ * Defines the class that implements the version information context menu
+ * handler COM object.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  *
  * Version: MPL 1.1
@@ -83,10 +24,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2002-2005 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2002-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

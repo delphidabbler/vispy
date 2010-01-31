@@ -1,23 +1,12 @@
-{ ##
-  @FILE                     CmpTextBox.pas
-  @COMMENTS                 Implements a component that displays text in a
-                            framed box. The style of box depends on whether or
-                            not Windows XP themes are active.
-  @PROJECT_NAME             Version Information Spy Windows application.
-  @PROJECT_DESC             Displays version information embedded in executable
-                            and binary resource files.
-  @DEPENDENCIES             None
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 20/10/2004
-      @COMMENTS             Original version
-    )
-  )
-}
-
-
 {
+ * CmpTextBox.pas
+ *
+ * Implements a component that displays text in a framed box. The style of box
+ * depends on whether or not Windows XP themes are active.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  * 
  * Version: MPL 1.1
@@ -35,10 +24,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  * 
- * Portions created by the Initial Developer are Copyright (C) 2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
  * Johnson. All Rights Reserved.
  * 
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

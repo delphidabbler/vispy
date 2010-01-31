@@ -1,35 +1,12 @@
-{ ##
-  @FILE                     UBaseCOMObj.pas
-  @COMMENTS                 Defines an ancestor class for COM objects. Keeps
-                            track of total number of instances of the object in
-                            the server.
-  @PROJECT_NAME             Version Information Spy Shell Extension.
-  @PROJECT_DESC             Provides a context menu handler that can launch
-                            Version Information Spy from the Explorer context
-                            menu for executable files and adds a version info
-                            tab to the property sheet.
-  @DEPENDENCIES             None.
-  @OTHER_NAMES              Original name was UFileVerCMBase.pas. Renamed as
-                            UBaseCOMObj.pas at v1.1.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 24/02/2003
-      @COMMENTS             Original version.
-    )
-    @REVISION(
-      @VERSION              1.1
-      @DATE                 05/06/2004
-      @COMMENTS             + Renamed GetInstanceCount method as InstanceCount
-                              and renamed clashing global variable as
-                              gInstanceCount.
-                            + Renamed unit from UFileVerCMBase to UBaseCOMObj.
-    )
-  )
-}
-
-
 {
+ * UBaseCOMObj.pas
+ *
+ * Defines an ancestor class for COM objects. Keeps track of total number of
+ * instances of the object in the server.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  *
  * Version: MPL 1.1
@@ -47,10 +24,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2003-2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2003-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

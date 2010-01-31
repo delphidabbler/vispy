@@ -1,49 +1,12 @@
-{ ##
-  @PROJECT_NAME             Version Information Spy Reporter DLL
-  @PROJECT_DESC             Provides reporter objects that write reports about
-                            version information to a stream.
-  @FILE                     UReporter.pas
-  @COMMENTS                 Defines abstract base class for objects that
-                            implement the IVerInfoReporter interface and write
-                            reports that describe version information.
-  @DEPENDENCIES             DelphiDabbler PJIStreams unit for TPJFileIStream
-                            class.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 24/02/2003
-      @COMMENTS             Original version.
-    )
-    @REVISION(
-      @VERSION              1.1
-      @DATE                 14/08/2003
-      @COMMENTS             Changed code that writes table cells to write out
-                            &nbsp; character if an empty string is to be written
-                            to the cell. This ensures empty table cells display
-                            properly.
-    )
-    @REVISION(
-      @VERSION              2.0
-      @DATE                 20/05/2004
-      @COMMENTS             Major update - code for specific reports and support
-                            code moved to separate units. This unit now contains
-                            only the abstract base class for all version
-                            information reports.\
-                            Specifically:
-                            + Removed concrete classes (TPlainReporter,
-                              TSourceReporter, THTMLReporter) to separate units
-                            + Moved CSS style sheet const to UHTMLWriter unit
-                              (and added new values to it)
-                            + Removed text writing helper routines - we now use
-                              new text writing class is defined in a different
-                              unit.
-                            + Report object creator function moved to new unit.
-    )
-  )
-}
-
-
 {
+ * UReporter.pas
+ * 
+ * Defines abstract base class for objects that implement the IVerInfoReporter
+ * interface and write reports that describe version information.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  * 
  * Version: MPL 1.1
@@ -61,10 +24,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2003-2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2003-2010 Peter
  * Johnson. All Rights Reserved.
  * 
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

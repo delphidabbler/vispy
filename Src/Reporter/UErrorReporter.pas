@@ -1,23 +1,13 @@
-{ ##
-  @PROJECT_NAME             Version Information Spy Reporter DLL
-  @PROJECT_DESC             Provides reporter objects that write reports about
-                            version information to a stream.
-  @FILE                     UErrorReporter.pas
-  @COMMENTS                 Defines an object that implements the
-                            IVerInfoErrReporter interface. The object writes a
-                            HTML report of any errors or inconsistencies in
-                            version information.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 06/05/2004
-      @COMMENTS             Original version.
-    )
-  )
-}
-
-
 {
+ * UErrorReporter.pas
+ *
+ * Defines an object that implements the IVerInfoErrReporter interface. The
+ * object writes a HTML report of any errors or inconsistencies in version
+ * information.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  *
  * Version: MPL 1.1
@@ -35,10 +25,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

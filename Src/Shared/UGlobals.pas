@@ -1,28 +1,11 @@
-{ ##
-  @FILE                     UGlobals.pas
-  @COMMENTS                 Unit that defines global values used throughout the
-                            program suite.
-  @PROJECT_NAME             Version Information Spy Shared Code
-  @PROJECT_DESC             Code units shared between various Version
-                            Information Spy applications and DLLs.
-  @DEPENDENCIES             None.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 05/06/2004
-      @COMMENTS             Original version.
-    )
-    @REVISION(
-      @VERSION              1.1
-      @DATE                 28/08/2007
-      @COMMENTS             + Changed last build year to 2007.
-                            + Changed developer name to include middle initial.
-    )
-  )
-}
-
-
 {
+ * UGlobals.pas
+ *
+ * Unit that defines global values used throughout the program suite.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  *
  * Version: MPL 1.1
@@ -40,10 +23,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2004-2007 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

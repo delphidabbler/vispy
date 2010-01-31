@@ -1,38 +1,11 @@
-{ ##
-  @PROJECT_NAME             Version Information Spy File Reader DLL.
-  @PROJECT_DESC             Enables version information data to be read from
-                            excutable and binary resource files that contain
-                            version information.
-  @FILE                     VIFileReader.dpr
-  @COMMENTS                 Main project file for executable file reader DLL.
-  @AUTHOR                   Peter D Johnson, LLANARTH, Ceredigion, Wales, UK.
-  @EMAIL                    delphidabbler@yahoo.co.uk
-  @COPYRIGHT                © Peter D Johnson, 2003-2007.
-  @WEBSITE                  http://www.delphidabbler.com/
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 24/02/2003
-      @COMMENTS             Original version.
-    )
-    @REVISION(
-      @VERSION              1.1
-      @DATE                 20/10/2004
-      @COMMENTS             Added UGlobals unit.
-    )
-    @REVISION(
-      @VERSION              1.2
-      @DATE                 21/08/2007
-      @COMMENTS             Changed paths to some interfaces. Interfaces are no
-                            longer in Intf folder but in Exports sub folder of
-                            relevant DLL source code or in Imports folder if
-                            providing interface to external DLL.
-    )
-  )
-}
-
-
 {
+ * FVFileReader.dpr
+ *
+ * Main project file for executable file reader DLL.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  *
  * Version: MPL 1.1
@@ -50,10 +23,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2003-2007 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2003-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

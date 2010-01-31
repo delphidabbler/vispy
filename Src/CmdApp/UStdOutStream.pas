@@ -1,23 +1,11 @@
-{ ##
-  @FILE                     UStdOutStream.pas
-  @COMMENTS                 Defines a class that provides IStream access to the
-                            standard output.
-  @PROJECT_NAME             Version Information Spy Command Line Program
-  @PROJECT_DESC             Command line application that displays version
-                            information embedded in executable and binary
-                            resource files.
-  @DEPENDENCIES             PJ library PJIStreams unit.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 24/02/2003
-      @COMMENTS             Original version.
-    )
-  )
-}
-
-
 {
+ * UStdOutStream.pas
+ *
+ * Defines a class that provides IStream access to the standard output.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  * 
  * Version: MPL 1.1
@@ -35,10 +23,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  * 
- * Portions created by the Initial Developer are Copyright (C) 2003 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2003-2010 Peter
  * Johnson. All Rights Reserved.
  * 
  * Contributor(s):
+ *   NONE
  * 
  * ***** END LICENSE BLOCK *****
 }

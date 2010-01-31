@@ -1,38 +1,13 @@
-{ ##
-  @PROJECT_NAME             Version Information Spy File Reader DLL.
-  @PROJECT_DESC             Enables version information data to be read from
-                            excutable and binary resource files that contain
-                            version information.
-  @FILE                     IntfVerInfoReader.pas
-  @COMMENTS                 Provides interface to objects that can read and
-                            interpret version information data where variable
-                            information is viewed as a single entity, matching
-                            translations to string tables.
-  @DEPENDENCIES             None.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 24/02/2003
-      @COMMENTS             Original version.
-    )
-    @REVISION(
-      @VERSION              2.0
-      @DATE                 20/05/2004
-      @COMMENTS             + Added IVerInfoVarReader2 interface that extends
-                              IVerInfoVarReader to support an extended status
-                              method: StatusEx.
-                            + Created additional VARVERINFO_STATUS_* constants
-                              to use with IVerInfoVarReader2.StatusEx.
-                            + Added new Added IVerInfoFileQuery and new class id
-                              to use to create a supporting object.
-                            + Replaced IUnknown with IInterface: interfaces here
-                              do not represent COM objects.
-    )
-  )
-}
-
-
 {
+ * IntfVerInfoReader.pas
+ *
+ * Provides interface to objects that can read and interpret version information
+ * data where variable information is viewed as a single entity, matching
+ * translations to string tables.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  * 
  * Version: MPL 1.1
@@ -50,10 +25,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2003-2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2003-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

@@ -1,83 +1,11 @@
-{ ##
-  @FILE                     UShellExtReg.pas
-  @COMMENTS                 Defines routines that register/unregister the COM
-                            server.
-  @PROJECT_NAME             Version Information Spy Shell Extension.
-  @PROJECT_DESC             Provides a context menu handler that can launch
-                            Version Information Spy from the Explorer context
-                            menu for executable files and adds a version info
-                            tab to the property sheet.
-  @DEPENDENCIES             None.
-  @OTHER_NAMES              Original name was UFileVerCMReg.pas. Renamed as
-                            UShellExtReg.pas at v3.0.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 04/08/2002
-      @COMMENTS             Original version.
-    )
-    @REVISION(
-      @VERSION              2.0
-      @DATE                 24/02/2003
-      @COMMENTS             Major update:
-                            + Extensions supported by context menu handler can
-                              now be user defined.
-                            + Added new registrar COM object and helper routines
-                              used to manage the extensions supported by context
-                              menu handler. New registry constants for
-                              registering new COM object.
-                            + Moved some registry settings that are used by this
-                              DLL and other applications to a new common unit.
-                            + Changed prog id of context menu handler to show
-                              version 2.
-                            + Now automatically registers just three extensions
-                              for context menu handler, but provides details of
-                              others that user can register.
-                            + Removed code to find location FileVer.exe from
-                              registry to UFileVerCMHandler unit.
-                            + Created new static class to be used to register/
-                              unregister COM objects and removed previous
-                              simple procedures.
-                            + Fixed problem where unregister routine was failing
-                              to delete references to removed file type registry
-                              entries.
-    )
-    @REVISION(
-      @VERSION              3.0
-      @DATE                 05/06/2004
-      @COMMENTS             Major update:
-                            + Added support for registering Property Sheet shell
-                              extension COM server.
-                            + Extended registration functions to register either
-                              property sheet or contect menu shell extensions
-                              for given file extensions and added approval
-                              registry entry when running on NT.
-                            + Added support for new IFileVerExtRecorder,
-                              IFileVerExtRegistrar and IFileVerExtInfo
-                              interfaces to TFileRegistrar.
-                            + Left old IFileVerCMRegistrar methods in
-                              TFileRegistrar but re-implemented in terms of
-                              new multi-extension registration code.
-                            + Renamed many constants to do with registration.
-                            + Changed to use renamed units.
-                            + Fixed problem where unregister routine was failing
-                              to delete references to removed file type registry
-                              entries.
-                            + Replaced some string literals with constants from
-                              globals unit.
-    )
-    @REVISION(
-      @VERSION              3.1
-      @DATE                 28/08/2007
-      @COMMENTS             Changed so that code that checks if shell extension
-                            COM server is registered is no longer case
-                            sensitive.
-    )
-  )
-}
-
-
 {
+ * UShellExtReg.pas
+ *
+ * Defines routines that register/unregister the COM server.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  *
  * Version: MPL 1.1
@@ -95,10 +23,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2002-2007 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2002-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

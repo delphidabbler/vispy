@@ -1,43 +1,12 @@
-{ ##
-  @FILE                     IntfFileVerShellExt.pas
-  @COMMENTS                 Provides CLSIDs for supported COM server objects and
-                            defines interfaces to registrar, extension recorder
-                            and extension information objects.
-  @PROJECT_NAME             Version Information Spy Shell Extension.
-  @PROJECT_DESC             Provides a context menu handler that can launch
-                            Version Information Spy from the Explorer context
-                            menu for executable files and adds a version info
-                            tab to the property sheet.
-  @DEPENDENCIES             None.
-  @OTHER_NAMES              Original name was IntfFileVerCM.pas. Renamed as
-                            IntfFileVerShellExt.pas at v2.0.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 24/02/2003
-      @COMMENTS             Original version.
-    )
-    @REVISION(
-      @VERSION              2.0
-      @DATE                 05/06/2004
-      @COMMENTS             Major update to provide recording and registration
-                            support for both shell extension COM servers. The
-                            registration / recording and extension info
-                            functionality encapsulated by the
-                            IFileVerCMRegistrar interface has now been split
-                            between three distinct interfaces. Specifically:
-                            + Added new IFileVerExtRecorder,
-                              IFileVerExtRegistrar and IFileVerExtInfo
-                              interfaces.
-                            + Added CLSID for new property sheet extension.
-                            + Added CLSIDStr_FileVerReg as a synomim for
-                              CLSIDStr_FileVerCMReg.
-    )
-  )
-}
-
-
 {
+ * IntfFileVerShellExt.pas
+ *
+ * Provides CLSIDs for supported COM server objects and defines interfaces to
+ * registrar, extension recorder and extension information objects.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  *
  * Version: MPL 1.1
@@ -55,10 +24,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2003-2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2003-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

@@ -2,9 +2,10 @@
 @rem Script used to build the DelphiDabbler Version Information Spy Shell
 @rem Extension
 @rem
-@rem Copyright (C) Peter Johnson (www.delphidabbler.com), 2007
+@rem Copyright (C) Peter Johnson (www.delphidabbler.com), 2007-2010
 @rem
-@rem v1.0 of 22 August 2007 - First version.
+@rem $Rev$
+@rem $Date$
 @rem
 @rem Requires:
 @rem   Borland Delphi7

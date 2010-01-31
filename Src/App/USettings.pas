@@ -1,79 +1,12 @@
-{ ##
-  @FILE                     USettings.pas
-  @COMMENTS                 Defines a class used to save and retrieve the
-                            program's user-configurable settings.
-  @PROJECT_NAME             Version Information Spy Windows application.
-  @PROJECT_DESC             Displays version information embedded in executable
-                            and binary resource files.
-  @DEPENDENCIES             None.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 30/03/2002
-      @COMMENTS             Original version.
-    )
-    @REVISION(
-      @VERSION              1.1
-      @DATE                 04/08/2002
-      @COMMENTS             + Changed registry key to use version 5.0 rather
-                              than 4.0.
-                            + Added ShowFFIStructure and CtxMenuRunsSingleInst
-                              properties and supporting registry settings.
-    )
-    @REVISION(
-      @VERSION              1.2
-      @DATE                 24/02/2003
-      @COMMENTS             + Moved the registry key constants that are shared
-                              with other apps to new URegistry unit.
-                            + Renamed CtxMenuRunsSingleInst property registry
-                              value to RunSingleInst and moved it to the CtxMenu
-                              key.
-                            + Added AutoRegExtension property and associated
-                              AutoRegExts registry value under CtxMenu key.
-    )
-    @REVISION(
-      @VERSION              2.0
-      @DATE                 19/10/2004
-      @COMMENTS             Major update:
-                            + Changed the usage of the class: we now create a
-                              globally available singleton Settings object
-                              rather than having to create and destroy setting
-                              objects objects wherever they are used.
-                            + Replaced DescFileFlags and ShowFFIStructure
-                              properties with GUIFlags bit mask property and
-                              added many other flags to control ther appearance
-                              of the program's GUI.
-                            + Added new Integer accessor methods
-                            + Added StrHighlightColour and TransHighlightColour
-                              integer properties under Preferences key to store
-                              the colours used to highlight items in the
-                              translation combo box and string information list
-                              view.
-                            + Changed record structure holding settings
-                              information to use a union of different types of
-                              fields for different default value types.
-                            + Changed registry access engine so that indexed
-                              values are read from registry only once and cached
-                              for future reads.
-                            + Added CurrentTabSheetIdx property that records
-                              last used tab in a given tabbed dialog box. This
-                              property is not indexed and does not cache reads.
-                            + Added QueryMissingCOMServer property that records
-                              whether to notify user if shell extension COM
-                              server not registered at startup.
-                            + Renamed CtxMenuRunsSingleInst property as
-                              ShellExRunsSingleInst property.
-                            + Deleted WdwRegKey class function.
-                            + Changed usage of constants from URegistry to deal
-                              with renamed constants.
-                            + Replaced use of CtxMenu registry key with ExplExt
-                              key.
-    )
-  )
-}
-
-
 {
+ * USettings.pas
+ *
+ * Defines a class used to save and retrieve the program's user-configurable
+ * settings.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  *
  * Version: MPL 1.1
@@ -91,10 +24,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2002-2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2002-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

@@ -1,25 +1,13 @@
-{ ##
-  @FILE                     CmpHotButton.pas
-  @COMMENTS                 Implements a "flat" button that highlights when
-                            cursor passes over it and that can display a symbol
-                            in addition to a caption. The style of the button
-                            depends on whether or not Windows XP themes are
-                            active.
-  @PROJECT_NAME             Version Information Spy Windows application.
-  @PROJECT_DESC             Displays version information embedded in executable
-                            and binary resource files.
-  @DEPENDENCIES             None
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 23/05/2004
-      @COMMENTS             Original version
-    )
-  )
-}
-
-
 {
+ * CmpHotButton.pas
+ *
+ * Implements a "flat" button that highlights when cursor passes over it and
+ * that can display a symbol in addition to a caption. The style of the button
+ * depends on whether or not Windows XP themes are active.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  * 
  * Version: MPL 1.1
@@ -37,10 +25,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

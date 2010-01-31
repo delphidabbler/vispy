@@ -1,79 +1,12 @@
-{ ##
-  @FILE                     FmExplExt.pas
-  @COMMENTS                 Defines a dialog box class that enables shell
-                            extension handlers to be configured.
-  @PROJECT_NAME             Version Information Spy Windows application.
-  @PROJECT_DESC             Displays version information embedded in executable
-                            and binary resource files.
-  @DEPENDENCIES             None.
-  @OTHER_NAMES              Original name was FmCtxMenu.pas. Renamed as
-                            FmExplExt.pas at v3.0.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 04/08/2002
-      @COMMENTS             Original version.
-    )
-    @REVISION(
-      @VERSION              2.0
-      @DATE                 24/02/2003
-      @COMMENTS             Total redesign. The dialog now permits user to
-                            specify the extensions that the context menu handler
-                            will operate with. The user can now also switch on
-                            or off automatic registration of new extensions as
-                            they are used. The first page permits basic changes
-                            to be made - turning on and off all extensions or
-                            other simple configurations. The second page
-                            presents the list of all relevant extensions that
-                            can be customised.
-    )
-    @REVISION(
-      @VERSION              3.0
-      @DATE                 19/10/2004
-      @COMMENTS             Major update:
-                            + Dialog now derives from a tabbed dialog base class
-                              class that in turn derives from a new dialog class
-                              heirachy. The bases classes provide alignment of
-                              dialog, arrangement of main controls, calling of
-                              required help and saving of active tab.
-                            + Revised to support configuration of both context
-                              menu and property sheet shell extensions.
-                            + Added new controls and modified layout, correcting
-                              typos.
-                            + Supporting code totally rewritten to use a
-                              separate object to manage the changes to extension
-                              recording and registration.
-                            + Made list view control on advanced tab into owner
-                              draw control to support two check boxes per item.
-                            + Removed inclusion of map file contain help context
-                              numbers: help system now uses form name as
-                              keyword.
-                            + The tab displayed when dialog is closed is now
-                              remembered and re-displayed when dialog is next
-                              opened.
-                            + Renamed dialog box class from TCtxMenuDlg to
-                              TExplExtDlg and renamed unit from FmCtxMenu to
-                              FmExplExt.
-    )
-    @REVISION(
-      @VERSION              3.1
-      @DATE                 22/08/2007
-      @COMMENTS             Fixed various problems with list view on advanced
-                            tab:
-                            + Made checkbox columns fixed size and gave text
-                              columns minimum size. Sizes will restore after
-                              dragging.
-                            + Fixed bug that wasn't vertically aligning text in
-                              list view items.
-                            + Fixed bug where when columns were dragged across
-                              checkboxes, part of check box image was being left
-                              behind in dragged column as an artifact.
-    )
-  )
-}
-
-
 {
+ * FmExplExt.pas
+ *
+ * Defines a dialog box class that enables shell extension handlers to be
+ * configured.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  *
  * Version: MPL 1.1
@@ -91,10 +24,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2002-2007 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2002-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

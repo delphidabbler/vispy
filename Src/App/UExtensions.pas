@@ -1,30 +1,12 @@
-{ ##
-  @FILE                     UExtensions.pas
-  @COMMENTS                 Defines some classes that are used to edit and
-                            manipulate files extensions that can be recorded and
-                            regsitered with the shell extension COM server.
-  @PROJECT_NAME             Version Information Spy Windows application.
-  @PROJECT_DESC             Displays version information embedded in executable
-                            and binary resource files.
-  @DEPENDENCIES             Requires the FileVerCM.dll COM server.
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 19/10/2004
-      @COMMENTS             Original version.
-    )
-    @REVISION(
-      @VERSION              1.1
-      @DATE                 28/08/2007
-      @COMMENTS             Refactoring. Added a helper function to test for
-                            presence of a flag in a bitmask to replace numerous
-                            explicit bitmask tests.
-    )
-  )
-}
-
-
 {
+ * UExtensions.pas
+ *
+ * Defines some classes that are used to edit and manipulate files extensions
+ * that can be recorded and regsitered with the shell extension COM server.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  *
  * Version: MPL 1.1
@@ -42,10 +24,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2004-2007 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

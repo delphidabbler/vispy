@@ -1,23 +1,12 @@
-{ ##
-  @FILE                     FrMemoViewer.pas
-  @COMMENTS                 Implements a frame derived from TViewerBase that is
-                            used to display text content in a memo control. It
-                            implements the abstract methods of TViewerBase.
-  @PROJECT_NAME             Version Information Spy Windows application.
-  @PROJECT_DESC             Displays version information embedded in executable
-                            and binary resource files.
-  @DEPENDENCIES             None
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 23/05/2004
-      @COMMENTS             Original version
-    )
-  )
-}
-
-
 {
+ * FrMemoViewer.pas
+ *
+ * Implements a frame derived from TViewerBase that is used to display text
+ * content in a memo control. It implements the abstract methods of TViewerBase.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  * 
  * Version: MPL 1.1
@@ -35,10 +24,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  * 
- * Portions created by the Initial Developer are Copyright (C) 2004 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
  * Johnson. All Rights Reserved.
  * 
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }

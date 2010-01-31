@@ -1,29 +1,12 @@
-{ ##
-  @FILE                     FmErrorReport.pas
-  @COMMENTS                 Implements a dialog box that is used to display HTML
-                            reports on inconsistencies and errors in version
-                            information.
-  @PROJECT_NAME             Version Information Spy Windows application.
-  @PROJECT_DESC             Displays version information embedded in executable
-                            and binary resource files.
-  @DEPENDENCIES             None
-  @HISTORY(
-    @REVISION(
-      @VERSION              1.0
-      @DATE                 23/05/2004
-      @COMMENTS             Original version
-    )
-    @REVISION(
-      @VERSION              1.1
-      @DATE                 07/03/2005
-      @COMMENTS             Added lowered outer bevel to panel that hosts web
-                            browser since browser no longer displays a border.
-    )
-  )
-}
-
-
 {
+ * FmErrorReport.pas
+ *
+ * Implements a dialog box that is used to display HTML reports on
+ * inconsistencies and errors in version information.
+ *
+ * $Rev$
+ * $Date$
+ *
  * ***** BEGIN LICENSE BLOCK *****
  *
  * Version: MPL 1.1
@@ -41,10 +24,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  * 
- * Portions created by the Initial Developer are Copyright (C) 2004-2005 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }
