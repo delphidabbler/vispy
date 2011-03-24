@@ -1,15 +1,16 @@
 ================================================================================
 
-VIEd: Historical update information from v1.0 to Release 2.11.2
+VIS: Historical update information from v1.0 to Release 7.0.3
+
 ================================================================================
 
-This file records known changes to files in VIEd from v1.0 and release 2.11.2
+This file records known changes to files in VIS from v1.0 and release 7.0.3
 before the project was placed was placed under version control with Subversion.
 
 There are two sections:
 
-  1: Releases: Lists all the releases of VIEd and notes which files were
-     added, updated or deleted in each release.
+  1: Releases: Lists all the releases of VIS and notes which files were added,
+     updated or deleted in each release.
 
   2: Files: Lists all source code and development tools for which history is
      available and provides details of changes to these files.
