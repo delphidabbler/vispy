@@ -35,6 +35,7 @@
 -O"..\..\Bin\Reader"
 -I"..\..\Bin\Reader"
 -R"..\..\Bin\Reader"
--w-UNSAFE_TYPE
--w-UNSAFE_CODE
--w-UNSAFE_CAST
+-w-SYMBOL_PLATFORM
+-w+EXPLICIT_STRING_CAST_LOSS
+-w+CVT_WIDENING_STRING_LOST
+-w+CVT_ACHAR_TO_WCHAR
