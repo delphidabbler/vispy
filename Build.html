@@ -26,7 +26,7 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2009 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2009-2011 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributors:
@@ -81,7 +81,7 @@
 
 <p>
 	<em>Version Information Spy</em> is written in Object Pascal and is targeted
-	at Delphi 7. The Delphi IDE can be used to modify the source and to perform
+	at Delphi 2010. The Delphi IDE can be used to modify the source and to perform
 	test builds. Final builds should be built using the provided build scripts,
 	but you can get away with using the IDE if you don't change any resources.
 </p>
@@ -168,7 +168,7 @@
 
 <p>
 	You can edit and test compile parts of the project using the Delphi IDE.
-	Delphi 7 is the preferred compiler, and the rest of these instructions
+	Delphi 2010 is the preferred compiler, and the rest of these instructions
 	assume it is being used. The code may compile with later Delphis, but this
 	is not guaranteed.
 </p>
@@ -190,22 +190,25 @@
 	</dt>
 	<dd>
 		The Borland resource compiler. This is used to compile resource source
-		(<code>.rc</code>) files. <code>BRCC32</code> is supplied with Delphi 7.
+		(<code>.rc</code>) files. <code>BRCC32</code> is supplied with Delphi 2010.
 	</dd>
 	<dt>
 		<code>HCRTF</code>
 	</dt>
 	<dd>
-		Microsoft Help compiler. This is used to compile the WinHelp help file.
-		<code>HCRTF</code> is supplied with Delphi 7.
+		Microsoft Help compiler. This is used to compile the WinHelp help file. If
+    you don't already have a copy (it was supplied with older version of Delphi,
+    but not Delphi 2010) you can get it free of charge from <a
+      href="ftp://ftp.microsoft.com/Softlib/MSLFiles/hcwsetup.exe"
+    >Microsoft's FTP site</a>.
 	</dd>
 	<dt>
 		<code>ISCC</code>
 	</dt>
 	<dd>
-		Inno Setup command line compiler, supplied with Inno Setup. Requires
-		Inno Setup v5.x with <code>ISPP</code> v5.x. You can get Inno Setup from
-		<a
+		The Unicode version of the Inno Setup command line compiler. v5.4 or later
+    is required with a matching version of <code>ISPP</code>. You can get Inno
+    Setup from <a
 			href="http://www.innosetup.com/"
 		>http://www.innosetup.com/</a>.
 	</dd>
@@ -222,9 +225,9 @@
 	</dt>
 	<dd>
 		This program is used to create the release file. You can get a Windows
-		command line version <a
+		command line version from <a
 			href="http://stahlforce.com/dev/index.php?tool=zipunzip"
-		>here</a>. If you don't intend to create a release file then
+		>StahlWorks</a>. If you don't intend to create a release file then
 		<code>ZIP</code> is not required.
 	</dd> 
 </dl>
@@ -279,18 +282,18 @@
 
 <dl class="spaced">
 	<dt>
-		<code>DELPHI7</code>
+		<code>DELPHI2010</code>
 	</dt>
 	<dd>
-		Set to the install directory of Delphi 7: used to find
-		<code>BRCC32</code>, <code>DCC32</code> and <code>HCRTF</code>.
+		Set to the install directory of Delphi 2010: used to find <code>DCC32</code>
+    and <code>BRCC32</code>.
 	</dd>
 	<dt>
-		<code>DELPHIDABLIBD7</code>
+		<code>DELPHIDABLIBD2010</code>
 	</dt>
 	<dd>
 		Set to the directory where the required DelphiDabbler components are
-		installed in Delphi 7.
+		installed in Delphi 2010.
 	</dd>
 	<dt>
 		<code>INNOSETUP</code>
@@ -298,6 +301,21 @@
 	<dd>
 		Set to the install directory of Inno Setup 5.
 	</dd>
+</dl>
+
+<p>
+  The following environment variable is optional:
+</p>
+
+<dl class="spaced">
+  <dt>
+    <code>HCROOT</code>
+  </dt>
+  <dd>
+    Set to the install directory of the Microsoft Help Compiler,
+    <code>HCRTF.exe</code>. If this environment variable is not set then
+    <code>HCRTF.exe</code> is expected to be found on the system path.
+  </dd>
 </dl>
 
 <p>
