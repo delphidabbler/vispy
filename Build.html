@@ -304,7 +304,7 @@
 </dl>
 
 <p>
-  The following environment variable is optional:
+  The following environment variables are optional:
 </p>
 
 <dl class="spaced">
@@ -316,14 +316,22 @@
     <code>HCRTF.exe</code>. If this environment variable is not set then
     <code>HCRTF.exe</code> is expected to be found on the system path.
   </dd>
+  <dt>
+    <code>VIEDROOT</code>
+  </dt>
+  <dd>
+    Set to the install directory of DelphiDabbler Version Information Editor,
+    <code>VIEd.exe</code>. If this environment variable is not set the
+    <code>VIED.exe</code> must be on the system path.
+  </dd>
+  <dt>
+    <code>ZIPROOT</code>
+  </dt>
+  <dd>
+    Set to the install directory of <code>Zip.exe</code>. If this environment
+    variable is not set then <code>Zip.exe</code> must be on the path.
+  </dd>
 </dl>
-
-<p>
-  Note that <code>VIEd</code> and <code>ZIP</code> are expected to be found
-  on the system path. If their install directories are not on the path you
-  need to either move them to some directory that is on the path or update
-  the <code>PATH</code> environment directory accordingly.
-</p>
 
 <p>
   You may find it convenient to create a batch file that sets up the
