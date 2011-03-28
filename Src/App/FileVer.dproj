@@ -1,0 +1,166 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{E8A15F97-3208-4D89-96FA-F53DD9B225E1}</ProjectGuid>
+			<MainSource>FileVer.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Base</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+			<ProjectVersion>12.0</ProjectVersion>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_DependencyCheckOutputName>..\..\Exe\FileVer.exe</DCC_DependencyCheckOutputName>
+			<DCC_UnitSearchPath>..\..\Bin\App;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+			<DCC_ExeOutput>..\..\Exe</DCC_ExeOutput>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_CVT_WIDENING_STRING_LOST>true</DCC_CVT_WIDENING_STRING_LOST>
+			<DCC_CVT_ACHAR_TO_WCHAR>true</DCC_CVT_ACHAR_TO_WCHAR>
+			<DCC_EXPLICIT_STRING_CAST_LOSS>true</DCC_EXPLICIT_STRING_CAST_LOSS>
+			<DCC_Platform>x86</DCC_Platform>
+			<DCC_DcuOutput>..\..\Bin\App</DCC_DcuOutput>
+			<DCC_SymbolReferenceInfo>1</DCC_SymbolReferenceInfo>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="FileVer.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="CmpHotButton.pas"/>
+			<DCCReference Include="CmpTextBox.pas"/>
+			<DCCReference Include="FmBase.pas">
+				<Form>BaseForm</Form>
+			</DCCReference>
+			<DCCReference Include="FmBaseTabbedDlg.pas">
+				<Form>BaseTabbedDlg</Form>
+			</DCCReference>
+			<DCCReference Include="FmDisplayOpts.pas">
+				<Form>DisplayOptsDlg</Form>
+			</DCCReference>
+			<DCCReference Include="FmErrorReport.pas">
+				<Form>ErrorReportDlg</Form>
+			</DCCReference>
+			<DCCReference Include="FmExplExt.pas">
+				<Form>ExplExtDlg</Form>
+			</DCCReference>
+			<DCCReference Include="FmExplExtAdd.pas">
+				<Form>ExplExtAddDlg</Form>
+			</DCCReference>
+			<DCCReference Include="FmFixedSourceReport.pas">
+				<Form>FixedSourceReportDlg</Form>
+			</DCCReference>
+			<DCCReference Include="FmGenericDlg.pas">
+				<Form>GenericDlg</Form>
+			</DCCReference>
+			<DCCReference Include="FmGenericOKDlg.pas">
+				<Form>GenericOKDlg</Form>
+			</DCCReference>
+			<DCCReference Include="FmGenericViewDlg.pas">
+				<Form>GenericViewDlg</Form>
+			</DCCReference>
+			<DCCReference Include="FmHelpAware.pas">
+				<Form>HelpAwareForm</Form>
+			</DCCReference>
+			<DCCReference Include="FmHTMLReport.pas">
+				<Form>HTMLReportDlg</Form>
+			</DCCReference>
+			<DCCReference Include="FmMain.pas">
+				<Form>MainForm</Form>
+			</DCCReference>
+			<DCCReference Include="FmRegExtQuery.pas">
+				<Form>RegExtQueryDlg</Form>
+			</DCCReference>
+			<DCCReference Include="FmReport.pas">
+				<Form>ReportBaseDlg</Form>
+			</DCCReference>
+			<DCCReference Include="FmSourceReport.pas">
+				<Form>SourceReportDlg</Form>
+			</DCCReference>
+			<DCCReference Include="FmTextReport.pas">
+				<Form>TextReportDlg</Form>
+			</DCCReference>
+			<DCCReference Include="FrHTMLViewer.pas">
+				<Form>HTMLViewer</Form>
+				<DesignClass>TFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="FrMemoViewer.pas">
+				<Form>MemoViewer</Form>
+				<DesignClass>TFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="FrViewerBase.pas">
+				<Form>ViewerBase</Form>
+				<DesignClass>TFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="UCBDisplayMgr.pas"/>
+			<DCCReference Include="UDictionaries.pas"/>
+			<DCCReference Include="UDisplayMgrs.pas"/>
+			<DCCReference Include="UExtensions.pas"/>
+			<DCCReference Include="ULVDisplayMgr.pas"/>
+			<DCCReference Include="UPopupWindow.pas"/>
+			<DCCReference Include="USettings.pas"/>
+			<DCCReference Include="UStringListStream.pas"/>
+			<DCCReference Include="UStartup.pas"/>
+			<DCCReference Include="UTempFiles.pas"/>
+			<DCCReference Include="..\Shared\UDisplayFmt.pas"/>
+			<DCCReference Include="..\Shared\UDLLLoader.pas"/>
+			<DCCReference Include="..\Shared\UFileReaderLoader.pas"/>
+			<DCCReference Include="..\Shared\UGlobals.pas"/>
+			<DCCReference Include="..\Shared\URegistry.pas"/>
+			<DCCReference Include="..\Shared\UReporterLoader.pas"/>
+			<DCCReference Include="..\Shared\UVerUtils.pas"/>
+			<DCCReference Include="..\CtxMenu\Exports\IntfFileVerShellExt.pas"/>
+			<DCCReference Include="IntfUIHandlers.pas"/>
+			<DCCReference Include="..\Reader\Exports\IntfVerInfoReader.pas"/>
+			<DCCReference Include="..\Reporter\Exports\IntfVerInfoReport.pas"/>
+			<DCCReference Include="FmXMLReport.pas">
+				<Form>XMLReportDlg</Form>
+			</DCCReference>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType>VCLApplication</Borland.ProjectType>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">FileVer.dpr</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">True</VersionInfo>
+						<VersionInfo Name="MajorVer">4</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">152</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">2057</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion"/>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion"/>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+				</Delphi.Personality>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

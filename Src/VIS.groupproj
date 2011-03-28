@@ -1,0 +1,84 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{B0994D60-C77C-4552-BFC2-558453BCFF52}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="App\FileVer.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="CmdApp\FileVerCmd.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="CtxMenu\FileVerCM.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Reader\FVFileReader.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Reporter\FVReport.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="FileVer">
+			<MSBuild Projects="App\FileVer.dproj"/>
+		</Target>
+		<Target Name="FileVer:Clean">
+			<MSBuild Targets="Clean" Projects="App\FileVer.dproj"/>
+		</Target>
+		<Target Name="FileVer:Make">
+			<MSBuild Targets="Make" Projects="App\FileVer.dproj"/>
+		</Target>
+		<Target Name="FileVerCmd">
+			<MSBuild Projects="CmdApp\FileVerCmd.dproj"/>
+		</Target>
+		<Target Name="FileVerCmd:Clean">
+			<MSBuild Targets="Clean" Projects="CmdApp\FileVerCmd.dproj"/>
+		</Target>
+		<Target Name="FileVerCmd:Make">
+			<MSBuild Targets="Make" Projects="CmdApp\FileVerCmd.dproj"/>
+		</Target>
+		<Target Name="FileVerCM">
+			<MSBuild Projects="CtxMenu\FileVerCM.dproj"/>
+		</Target>
+		<Target Name="FileVerCM:Clean">
+			<MSBuild Targets="Clean" Projects="CtxMenu\FileVerCM.dproj"/>
+		</Target>
+		<Target Name="FileVerCM:Make">
+			<MSBuild Targets="Make" Projects="CtxMenu\FileVerCM.dproj"/>
+		</Target>
+		<Target Name="FVFileReader">
+			<MSBuild Projects="Reader\FVFileReader.dproj"/>
+		</Target>
+		<Target Name="FVFileReader:Clean">
+			<MSBuild Targets="Clean" Projects="Reader\FVFileReader.dproj"/>
+		</Target>
+		<Target Name="FVFileReader:Make">
+			<MSBuild Targets="Make" Projects="Reader\FVFileReader.dproj"/>
+		</Target>
+		<Target Name="FVReport">
+			<MSBuild Projects="Reporter\FVReport.dproj"/>
+		</Target>
+		<Target Name="FVReport:Clean">
+			<MSBuild Targets="Clean" Projects="Reporter\FVReport.dproj"/>
+		</Target>
+		<Target Name="FVReport:Make">
+			<MSBuild Targets="Make" Projects="Reporter\FVReport.dproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="FileVer;FileVerCmd;FileVerCM;FVFileReader;FVReport"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="FileVer:Clean;FileVerCmd:Clean;FileVerCM:Clean;FVFileReader:Clean;FVReport:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="FileVer:Make;FileVerCmd:Make;FileVerCM:Make;FVFileReader:Make;FVReport:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>
