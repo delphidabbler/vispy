@@ -28,7 +28,7 @@ DelphiDabbler Version Information Spy you are consenting to be bound by the
 agreement. If you do not agree to the terms and conditions of this agreement do
 not install or use any part of DelphiDabbler Version Information Spy.
 
-DelphiDabbler Version Information Spy is copyright (c) 1998-2009 by Peter D
+DelphiDabbler Version Information Spy is copyright (c) 1998-2011 by Peter D
 Johnson, http://www.delphidabbler.com/.
 
 
