@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <!--
  * ReadMe.html
@@ -26,7 +26,7 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2002009 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2009-2011 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributors:
@@ -40,507 +40,498 @@
 
 <head>
 
-	<title>
-		DelphiDabbler || Version Information Spy</title>
-	</title>
+  <title>
+    DelphiDabbler || Version Information Spy</title>
+  </title>
 
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta http-equiv="Content-Language" content="en" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="Content-Language" content="en" />
 
-	<style type="text/css">
-		body {
-			margin: 1em;
-			padding: 0;
-			font-family: Verdana, Arial, sans-serif;
-			font-size: 9pt;
-			line-height: 150%;
-		}
-		h1 {
-			margin: 0 0 1em 0;
-			padding: 0.5em;
-			border: 1px silver solid;
-			background-color: #eee;
-			font-size: 13pt;
-			font-weight: bold;
-			text-align: center;
-		}
-		h1 .subtitle {
-			font-style: italic;
-			color: #336;
-		}
-		h2 {
-			margin: 1em 0 0 0;
-			padding: 0;
-			padding-bottom: 6px;
-			border-bottom: 1px silver solid;
-			font-size: 11pt;
-			font-weight: bold;
-		}
-		h3 {
-			margin: 0.5em 0 0 0;
-			padding: 0;
-			font-size: 9pt;
-			font-weight: bold;
-		}
-		p {
-			margin: 0.5em 0 0 0;
-			padding: 0;
-		}
-		pre {
-			font-family: "Courier New", Courier, monospace;
-			margin: 0.5em 0 0 0;
-			padding: 0;
-		}
-		ul, ol {
-			margin: 0.5em 0 0 3em;
-			padding: 0;
-		}
-		ul {
-			list-style-type: square;
-		}
-		ul.spaced li,
-		ol.spaced li {
-			margin-top: 0.5em;
-		}
-		ul.spaced li,
-		ol.spaced li {
-			margin-top: 0.5em;
-		}
-		ul.unspaced li,
-		ol.unspaced li {
-			margin-top: 0;
-		}
-		ul.unspaced li.first,
-		ol.unspaced li.first {
-			margin-top: 0.5em;
-		}
-		code {
-			font-family: "Courier New", Courier, monospace;
-		}
-		a:link {
-			color: #336;
-			text-decoration: underline;
-		}
-		a:visited {
-			color: #669;
-			text-decoration: underline;
-		}
-		a:active {
-			color: #336;
-			text-decoration: underline;
-		}
-		a:hover {
-			text-decoration: underline;
-		}
-		.gototop {
-			margin: 1em 0 0 0;
-			padding: 0.3em 0 0 0;
-			text-align: center;
-			position: relative;
-			float: right;
-			font-weight: bold;
-		}
-		.pullout {
-			border-left: 8px silver solid;
-			background-color: #eee;
-			margin: 0.5em 0 0 0;
-			padding: 0.25em 0.5em;
-			font-style: italic;
-		}
-		.indent {
-			margin-left: 3em;
-		}
-		.hilite {
-			color: #336;
-			font-style: italic;
-			font-weight: bold;
-		}
-		.endnotes {
-			margin: 1.5em 0 0 0;
-			padding: 1em 0 0 0;
-			border-top: 1px silver solid;
-		}
-		.comments {
-			font-style: italic;
-		}
-		.copyright,
-		.copyright a:link,
-		.copyright a:visited,
-		.copyright a:active {
-			margin: 1em 0 0 0;
-			color: gray;
-			font-size: 8pt;
-			text-align: right;
-		}
-	</style>
+  <style type="text/css">
+    body {
+      margin: 1em;
+      padding: 0;
+      font-family: Verdana, Arial, sans-serif;
+      font-size: 9pt;
+      line-height: 150%;
+    }
+    h1 {
+      margin: 0 0 1em 0;
+      padding: 0.5em;
+      border: 1px silver solid;
+      background-color: #eee;
+      font-size: 13pt;
+      font-weight: bold;
+      text-align: center;
+    }
+    h1 .subtitle {
+      font-style: italic;
+      color: #336;
+    }
+    h2 {
+      margin: 1em 0 0 0;
+      padding: 0;
+      padding-bottom: 6px;
+      border-bottom: 1px silver solid;
+      font-size: 11pt;
+      font-weight: bold;
+    }
+    h3 {
+      margin: 0.5em 0 0 0;
+      padding: 0;
+      font-size: 9pt;
+      font-weight: bold;
+    }
+    p {
+      margin: 0.5em 0 0 0;
+      padding: 0;
+    }
+    pre {
+      font-family: "Courier New", Courier, monospace;
+      margin: 0.5em 0 0 0;
+      padding: 0;
+    }
+    ul, ol {
+      margin: 0.5em 0 0 3em;
+      padding: 0;
+    }
+    ul {
+      list-style-type: square;
+    }
+    ul.spaced li,
+    ol.spaced li {
+      margin-top: 0.5em;
+    }
+    ul.spaced li,
+    ol.spaced li {
+      margin-top: 0.5em;
+    }
+    ul.unspaced li,
+    ol.unspaced li {
+      margin-top: 0;
+    }
+    ul.unspaced li.first,
+    ol.unspaced li.first {
+      margin-top: 0.5em;
+    }
+    code {
+      font-family: "Courier New", Courier, monospace;
+    }
+    a:link {
+      color: #336;
+      text-decoration: underline;
+    }
+    a:visited {
+      color: #669;
+      text-decoration: underline;
+    }
+    a:active {
+      color: #336;
+      text-decoration: underline;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .gototop {
+      margin: 1em 0 0 0;
+      padding: 0.3em 0 0 0;
+      text-align: center;
+      position: relative;
+      float: right;
+      font-weight: bold;
+    }
+    .pullout {
+      border-left: 8px silver solid;
+      background-color: #eee;
+      margin: 0.5em 0 0 0;
+      padding: 0.25em 0.5em;
+      font-style: italic;
+    }
+    div.pullout .caption {
+      font-weight: bold;
+      padding: 0.25em 0;
+    }
+    div.pullout .content {
+      padding: 0.25em 0;
+    }
+    .indent {
+      margin-left: 3em;
+    }
+    .hilite {
+      color: #336;
+      font-style: italic;
+      font-weight: bold;
+    }
+    .endnotes {
+      margin: 1.5em 0 0 0;
+      padding: 1em 0 0 0;
+      border-top: 1px silver solid;
+    }
+    .comments {
+      font-style: italic;
+    }
+    .copyright,
+    .copyright a:link,
+    .copyright a:visited,
+    .copyright a:active {
+      margin: 1em 0 0 0;
+      color: gray;
+      font-size: 8pt;
+      text-align: right;
+    }
+  </style>
 
 </head>
 
 
 <body>
 
-<h1>	
-	<div>Version Information Spy</div>
-	<div class="subtitle">Read Me Document</div>
+<h1>
+  <div>Version Information Spy</div>
+  <div class="subtitle">Read Me Document</div>
 </h1>
 
 
 
 <h2 id="contents">
-	Contents
+  Contents
 </h2>
 
 <ul>
-	<li><a href="#description">Description</a></li>
-	<li><a href="#compatibility">Compatibility</a></li>
-	<li><a href="#installation">Installation &amp; Removal</a></li>
-	<li><a href="#bugs">Bugs</a></li>
-	<li><a href="#update">Update History</a></li>
-	<li><a href="#license">License and Disclaimer</a></li>
-	<li><a href="#source">Source Code</a></li>
-	<li><a href="#author">About the Author</a></li>
+  <li><a href="#description">Description</a></li>
+  <li><a href="#compatibility">Compatibility</a></li>
+  <li><a href="#installation">Installation &amp; Removal</a></li>
+  <li><a href="#bugs">Bugs</a></li>
+  <li><a href="#update">Update History</a></li>
+  <li><a href="#license">License and Disclaimer</a></li>
+  <li><a href="#source">Source Code</a></li>
+  <li><a href="#author">About the Author</a></li>
 </ul>
 
 
 
 <p class="gototop">
-	&raquo; <a href="#contents">Contents</a>
+  &raquo; <a href="#contents">Contents</a>
 </p>
 
 <h2 id="description">
-	Description
+  Description
 </h2>
 
 <p>
-	<em>Version Information Spy</em> displays the version information stored in
-	an executable file (<code>.exe</code>, <code>.dll</code> etc.), or in 32 bit
-	binary resource files.
+  <em>Version Information Spy</em> displays the version information stored in
+  an executable file (<code>.exe</code>, <code>.dll</code> etc.), or in 32 bit
+  binary resource files.
 </p>
 
 <p>
-	Several ways of displaying version information are provided:
+  Several ways of displaying version information are provided:
 </p>
 
 <ul>
-	<li>
-		A Windows program that displays version information in its main window,
-		can generate descriptive plain text or HTML reports and can decompile
-		the binary data into the equivalent RC source code.
-	</li>
-	<li>
-		A command line application that can display a textual description of the
-		version information or can decompile to RC source code.
-	</li>
-	<li>
-		A Windows Explorer context menu handler that displays the version
-		information of a selected file in the main application.
-	</li>
-	<li>
-		An Explorer property sheet extension that displays detailed version
-		information in a tab of a file's property sheet.
-	</li>
+  <li>
+    A Windows program that displays version information in its main window,
+    can generate descriptive plain text or HTML reports and can decompile
+    the binary data into the equivalent RC source code.
+  </li>
+  <li>
+    A command line application that can display a textual description of the
+    version information or can decompile to RC source code.
+  </li>
+  <li>
+    A Windows Explorer context menu handler that displays the version
+    information of a selected file in the main application.
+  </li>
+  <li>
+    An Explorer property sheet extension that displays detailed version
+    information in a tab of a file's property sheet.
+  </li>
 </ul>
 
-
-
 <p class="gototop">
-	&raquo; <a href="#contents">Contents</a>
+  &raquo; <a href="#contents">Contents</a>
 </p>
 
 <h2 id="compatibility">
-	Compatibility
+  Compatibility
 </h2>
 
 <p>
-	The program requires Windows 98 or NT4 and later. It also requires Internet
-	Explorer v5.5 (and preferably v6) or later.
+  The program requires Windows 2000 or later. It also requires Internet Explorer
+  v5.5 (and preferably v6) or later. The program does run on the old Windows 9x
+  platform.
 </p>
-
-<p>
-	<em>Version Information Spy</em> has been tested on Windows 2000, XP and
-	Vista.
-</p>
-
-
 
 <p class="gototop">
-	&raquo; <a href="#contents">Contents</a>
+  &raquo; <a href="#contents">Contents</a>
 </p>
 
 <h2 id="installation">
-	Installation &amp; removal
+  Installation &amp; removal
 </h2>
 
-<h3>
-	Installation
-</h3>
-
 <div class="pullout">
-	<div>
-		<strong>Important Notes</strong>
-	</div>
-	<ol>
-		<li>
-			To install on a Windows NT, 2000 or XP you need to be logged on with
-			power user or administrator privileges.
-		</li>
-		<li>
-			On Windows Vista and later the setup program will request elevation.
-			If you are not logged on with sufficient privileges an administrator
-			password will be requested.
-		</li>
-		<li>
-			If you have any earlier version of <em>Version Information Spy</em>
-			already installed on your system (i.e. any version below version
-			7.0) you must uninstall the old version before installing the new
-			program.
-		</li>
-	</ol>
+  <div class="caption">
+    Administrator Privileges
+  </div>
+  <div class="content">
+    When installing or uninstalling you need to ensure that you have
+    administrator privileges otherwise the installation can fail.
+  </div>
+  <div class="content">
+    On Windows Vista and later with UAC prompts enabled, the system will attempt
+    to elevate the process. Standard users will need to provide an administrator
+    password.
+  </div>
+  <div class="content">
+    Other users will need to run the setup and uninstall programs from an
+    administrator user acccount or &quot;as administrator&quot;.
+  </div>
 </div>
 
+<h3>
+  Installation
+</h3>
+
 <p>
-	The installation program for <em>Version Information Spy</em> is named
-	<code>VIS-Setup-x.x.x</code>, where x.x.x is the program's version number.
-	The install program may be distributed in a zip file. If so extract the
-	setup program from the zip file. Double click <code>VIS-Setup-x.x.x</code>
-	to start the installation then follow the on-screen instructions.
+  If you have any early version of <em>Version Information Spy</em> already
+  installed on your system (i.e. any version below version 7.0) you
+  <strong>must</strong> uninstall the old version before installing the new
+  program.
 </p>
 
 <p>
-	The program makes the following changes to your system:
+  The installation program for <em>Version Information Spy</em> is named
+  <code>VIS-Setup-x.x.x</code>, where x.x.x is the program's version number.
+  The install program may be distributed in a zip file. If so extract the setup
+  program from the zip file. Run <code>VIS-Setup-x.x.x</code> to start the
+  installation then follow the on-screen instructions.
+</p>
+
+<p>
+  The program makes the following changes to your system:
 </p>
 
 <ul class="spaced">
-	<li>
-		Files are installed as follows: 
-		<ul>
-			<li>
-				The main program and help files are copied into an installation
-				folder (<code>\Program&nbsp;Files\DelphiDabbler\VIS7</code>
-				by default).
-			</li>
-			<li>
-				Documentation is copied to the main installation's
-				<code>Docs</code> sub-folder.
-			</li>
-			<li>
-				Uninstall files are copied to the main installation's
-				<code>Uninst</code> sub-folder.
-			</li>
-		</ul>
-	</li>
-	<li>
-		The registry is updated to store information about the program as
-		follows:
-		<ul>
-			<li>
-				A COM Server, <code>FileVerCM.dll</code> is registered.
-			</li>
-			<li>
-				The Explorer extensions (context menu handler and property sheet
-				extension) are registered for several file types.
-			</li>
-			<li>
-				The program's help files are registered with Windows.
-			</li>
-			<li>
-				Both the GUI and command line application are registered with
-				Windows.
-			</li>
-			<li>
-				The
-				<code>HKEY_CURRENT_USER\Software\DelphiDabbler\FileVer\7</code>
-				registry key is created and used to store the program's
-				customisation information.
-			</li>
-			<li>
-				The program's uninstall information is registered with the
-				<em>Add / Remove Programs</em> or <em>Programs and Features</em>
-				control panel applet.
-			</li>
-		</ul>
-	</li>
-	<li>
-		A program group is optionally created in the Start Menu.
-	</li>
-	<li>
-		A desktop icon may be created.
-	</li>
+  <li>
+    Files are installed as follows:
+    <ul>
+      <li>
+        The main program and help files are copied into an installation
+        folder (<code>\Program&nbsp;Files\DelphiDabbler\VIS7</code>
+        by default).
+      </li>
+      <li>
+        Documentation is copied to the main installation's
+        <code>Docs</code> sub-folder.
+      </li>
+      <li>
+        Uninstall files are copied to the main installation's
+        <code>Uninst</code> sub-folder.
+      </li>
+    </ul>
+  </li>
+  <li>
+    The registry is updated to store information about the program as
+    follows:
+    <ul>
+      <li>
+        A COM Server, <code>FileVerCM.dll</code> is registered.
+      </li>
+      <li>
+        The Explorer extensions (context menu handler and property sheet
+        extension) are registered for several file types.
+      </li>
+      <li>
+        The program's help files are registered with Windows.
+      </li>
+      <li>
+        Both the GUI and command line application are registered with
+        Windows.
+      </li>
+      <li>
+        The
+        <code>HKEY_CURRENT_USER\Software\DelphiDabbler\FileVer\7</code>
+        registry key is created and used to store the program's
+        customisation information.
+      </li>
+      <li>
+        The program's uninstall information is registered with the
+        <em>Add / Remove Programs</em> or <em>Programs and Features</em>
+        control panel applet.
+      </li>
+    </ul>
+  </li>
+  <li>
+    A program group is optionally created in the Start Menu.
+  </li>
+  <li>
+    A desktop icon may be created.
+  </li>
 </ul>
 
-
 <h3>
-	Removal
+  Removal
 </h3>
 
-<div class="pullout">
-	<div>
-		<strong>Important Notes</strong>
-	</div>
-	<p>
-		You <strong>must</strong> close down all Explorer Windows and all
-		<em>Version Information Spy</em> instances before attempting to
-		uninstall the program.
-	</p>
-	<p>
-		The same privileges used to install the program will be required to
-		remove it.
-	</p>
-</div>
+<p>
+  You <strong>must</strong> close down all Explorer Windows and all <em>Version
+  Information Spy</em> instances before attempting to uninstall the program.
+</p>
 
 <p>
-	The program can be uninstalled via <em>Add/Remove Programs</em> or
-	<em>Programs and Features</em> accessed from the Control Panel or by
-	choosing the <em>Uninstall Version Information Spy</em> option from the
-	program's start menu group.
+  The program can be uninstalled via <em>Add/Remove Programs</em> or
+  <em>Programs and Features</em> accessed from the Control Panel or by choosing
+  the <em>Uninstall Version Information Spy</em> option from the program's start
+  menu group.
 </p>
 
 
 <p class="gototop">
-	&raquo; <a href="#contents">Contents</a>
+  &raquo; <a href="#contents">Contents</a>
 </p>
 
 <h2 id="bugs">
-	Bugs
+  Bugs
 </h2>
 
 <p>
-	Please do report any bugs you find. To do this proceed as follows:
+  Please do report any bugs you find. To do this proceed as follows:
 </p>
 
 <ol class="spaced">
-	<li>
-		Go to the <a 
-			href="http://www.delphidabbler.com/url/vitools-issues"
-		>Version Information Tools Issue Tracker</a> on Google Code.
-	</li>
-	<li>
-		Review the list of reported bugs. If the bug you have found is listed
-		and not fixed please add any information you can to the existing report.
-		If the bug is fixed, update to the latest release.
-	</li>
-	<li>
-		If the bug has not been reported please add it. Because the bug tracker
-		is used for more that one application be sure to specify that the bug
-		was found in <em>Version Information Spy</em>. Please provide as much
-		information as you can includin the program version and which version of
-		Windows and Internet Explorer you are using.
-	</li>
+  <li>
+    Go to the <a
+      href="http://www.delphidabbler.com/url/vitools-issues"
+    >Version Information Tools Issue Tracker</a> on Google Code.
+  </li>
+  <li>
+    Review the list of reported bugs. If the bug you have found is listed and
+    not fixed please add any information you can to the existing report. If the
+    bug is fixed, update to the latest release.
+  </li>
+  <li>
+    If the bug has not been reported please add it. Because the bug tracker is
+    used for more that one application be sure to specify that the bug was found
+    in <em>Version Information Spy</em> and set the <code>Project-VIS</code>.
+    Please provide as much information as you can including the program version
+    and which version of Windows and Internet Explorer you are using.
+  </li>
 </ol>
 
 
 <p class="gototop">
-	&raquo; <a href="#contents">Contents</a>
+  &raquo; <a href="#contents">Contents</a>
 </p>
 
 <h2 id="update">
-	Update History
+  Update History
 </h2>
 
 <p>
-	Please see the file <code>ChangeLog.txt</code> for details.
+  Please see the file <code>ChangeLog.txt</code> for details.
 </p>
 
 
 
 <p class="gototop">
-	&raquo; <a href="#contents">Contents</a>
+  &raquo; <a href="#contents">Contents</a>
 </p>
 
 <h2 id="license">
-	License and Disclaimer
+  License and Disclaimer
 </h2>
 
 <p>
-	The executable program's End User License Agreement is displayed by the
-	install program and must be accepted in order to proceed with installation.
-	A copy of the license is installed with the program &ndash; see
-	<code>License.txt</code> in the <code>Docs</code> subfolder of the program's
-	installation folder.
+  The executable program's End User License Agreement is displayed by the
+  install program and must be accepted in order to proceed with installation.
+  A copy of the license is installed with the program &ndash; see
+  <code>License.txt</code> in the <code>Docs</code> subfolder of the program's
+  installation folder.
 </p>
 
 <p>
-	<em>Version Information Spy</em> is supplied on an &quot;AS IS&quot; basis,
-	WITHOUT WARRANTY OF ANY KIND, either express or implied. See the license for
-	details.
+  <em>Version Information Spy</em> is supplied on an &quot;AS IS&quot; basis,
+  WITHOUT WARRANTY OF ANY KIND, either express or implied. See the license for
+  details.
 </p>
 
 <p>
-	<em>Version Information Spy</em> installs and requires another DelphiDabbler
-	product &ndash; Version Information Manipulator Library
-	(<code>VIBinData.dll</code>). The library was written by Peter D Johnson and
-	is copyright &copy; 2002-2009 Peter D Johnson, www.delphidabbler.com.
-	Portions of the DLL's source code are available from
-	http://www.delphidabbler.com/ under the terms of the Mozilla Public License
-	(<a
-		href="http://www.mozilla.org/MPL/MPL-1.1"
-	>http://www.mozilla.org/MPL/MPL-1.1</a>).
+  <em>Version Information Spy</em> installs and requires another DelphiDabbler
+  product &ndash; Version Information Manipulator Library
+  (<code>VIBinData.dll</code>). The library was written by Peter D Johnson and
+  is copyright &copy; 2002-2009 Peter D Johnson, www.delphidabbler.com.
+  Portions of the DLL's source code are available from
+  http://www.delphidabbler.com/ under the terms of the Mozilla Public License
+  (<a
+    href="http://www.mozilla.org/MPL/MPL-1.1"
+  >http://www.mozilla.org/MPL/MPL-1.1</a>).
 </p>
 
 
 <p class="gototop">
-	&raquo; <a href="#contents">Contents</a>
+  &raquo; <a href="#contents">Contents</a>
 </p>
 
 <h2 id="source">
-	Source Code
+  Source Code
 </h2>
 
 <p>
-	The source code for this program along with some required library and
-	component files is available from the <a
-		href="http://www.delphidabbler.com/software/vis/download">program's
-	home page</a>.
+  The source code for this program along with some required library and
+  component files is available from the <a
+    href="http://www.delphidabbler.com/software/vis/download">program's
+  home page</a>.
 </p>
 
 <p>
-	The source code is maintained as part of the <em>Version Information
-	Tools</em> project on Google Code. See the project's <a
-		href="http://code.google.com/p/verinfo-tools/source/browse/"
-	>subversion repository</a> and navigate to the <code>trunk/vis</code>
-	directory for the latest development tree (which may not be stable) or the
-	stable releases beneath the <code>tags\vis</code> directory.
+  The source code is maintained as part of the <em>Version Information
+  Tools</em> project on Google Code. See the project's <a
+    href="http://code.google.com/p/verinfo-tools/source/browse/"
+  >subversion repository</a> and navigate to the <code>trunk/vis</code>
+  directory for the latest development tree (which may not be stable) or the
+  stable releases beneath the <code>tags\vis</code> directory.
 </p>
 
 
 <p class="gototop">
-	&raquo; <a href="#contents">Contents</a>
+  &raquo; <a href="#contents">Contents</a>
 </p>
 
 <h2 id="author">
-	About the Author
+  About the Author
 </h2>
 
 <p>
-	I'm Peter Johnson &ndash; a hobbyist programmer living in Ceredigion in West
-	Wales,  UK, writing write mainly in Delphi. My programs and library code are
-	available for from <a
-		href="http://www.delphidabbler.com/"
-	>http://www.delphidabbler.com/</a>.
+  I'm Peter Johnson &ndash; a hobbyist programmer living in Ceredigion in West
+  Wales,  UK, writing write mainly in Delphi. My programs and library code are
+  available for from <a
+    href="http://www.delphidabbler.com/"
+  >http://www.delphidabbler.com/</a>.
 </p>
 
 <p>
-	I can be <a
-		href="http://www.delphidabbler.com/contact"
-	>contacted via the website.</a>
-</p> 
+  I can be <a
+    href="http://www.delphidabbler.com/contact"
+  >contacted via the website</a>.
+</p>
 
 
 <div class="endnotes">
 
-	<div class="comments">
-		Please <a
-			href="http://www.delphidabbler.com/contact"
-		> let me know</a> if you have any comments about the program or you want
-		to suggest any updates. Please report bugs using the bug tracker (see
-		above).
-	</div>
+  <div class="comments">
+    Please <a
+      href="http://www.delphidabbler.com/contact"
+    > let me know</a> if you have any comments about the program or you want
+    to suggest any updates. Please report bugs using the bug tracker (see
+    above).
+  </div>
 
-	<div class="copyright">
-		This read-me file is copyright &copy; 2005-2009, P D Johnson, <a
-			href="http://www.delphidabbler.com/"
-		>www.delphidabbler.com</a>.
-	</div>
+  <div class="copyright">
+    This read-me file is copyright &copy; 2005-2011, P D Johnson, <a
+      href="http://www.delphidabbler.com/"
+    >www.delphidabbler.com</a>.
+  </div>
 
 </div>
 
