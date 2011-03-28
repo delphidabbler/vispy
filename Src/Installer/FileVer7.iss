@@ -70,7 +70,7 @@ Compression=lzma/ultra
 SolidCompression=true
 OutputDir={#OutDir}
 OutputBaseFilename=VIS-Setup-{#AppVersion}
-MinVersion=4.1.1998,4.0.1381
+MinVersion=0,5.0
 RestartIfNeededByRun=false
 PrivilegesRequired=poweruser
 UsePreviousAppDir=true
@@ -150,5 +150,5 @@ Root: HKLM; Subkey: SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\FileVerC
 BeveledLabel={#Company}
 
 [Code]
-#include <Uninstall.ps>
+#include "Uninstall.ps"
 
