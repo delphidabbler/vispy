@@ -3,8 +3,8 @@
 SOURCE CODE LICENSING
 ________________________________________________________________________________
 
-This document discusses and presents the relevant licenses governing the
-Version Information Spy source code available from DelphiDabbler.com and the
+This document reviews the licenses governing the Version Information Spy source
+code that is available from DelphiDabbler.com and the
 Subversion repository on Google Code at
 http://code.google.com/p/verinfo-tools/source/browse/.
 
@@ -17,7 +17,7 @@ The source code includes:
 The download does not include all the source code required to build Version
 Information Spy. Explicitly it doesn't include:
 
-+ Source files from the Delphi 7 VCL. You must have Delphi in order to access
++ Source files from the Delphi VCL. You must have Delphi in order to access
   these files.
 + DelphiDabbler library components and units. These are all available from
   http://www.delphidabbler.com/software/vis/download
@@ -37,11 +37,11 @@ Any original source code file that is governed by a license has a comment to
 that effect in the source. The exception is that .dfm files are considered to be
 governed by the same license as their associated .pas file.
 
-Where files are auto-generated (such as .cfg and .dof file), and there are no
-copyright or license comments in the files, the licensing of the file depends on
-how it was generated. If the file was generated from another source file then
-the generated file is covered by the same license as the originating source
-file, if any. Otherwise the file is placed in the public domain.
+Where files are auto-generated (such as .cfg files), and there are no copyright
+or license comments in the files, the licensing of the file depends on how it
+was generated. If the file was generated from another source file then the
+generated file is covered by the same license as the originating source file, if
+any. Otherwise the file is placed in the public domain.
 
 Any other source code files that contain no copyright or license information are
 public domain.
@@ -54,13 +54,8 @@ license can be found in MPL.txt
 Image Files (.ico, .bmp, .gif)
 ________________________________________________________________________________
 
-Various images are used in the program. They are stored in the following
-sub-directories:
-
-+ Src\App\Help\Bitmaps
-+ Src\App\Images
-+ Src\CmdApp\Images
-+ Src\Reporter\Res
+The images used in the program are stored in the "Src" directory and its
+sub-directories.
 
 Images may also be embedded in forms by various VCL controls. Separate image
 files are not provided in the latter case.
