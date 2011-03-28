@@ -2,21 +2,21 @@
 @rem Script used to build the DelphiDabbler Version Information Spy Command Line
 @rem Application project
 @rem
-@rem Copyright (C) Peter Johnson (www.delphidabbler.com), 2007-2010
+@rem Copyright (C) Peter Johnson (www.delphidabbler.com), 2007-2011
 @rem
 @rem $Rev$
 @rem $Date$
 @rem
 @rem Requires:
-@rem   Borland Delphi7
-@rem   Borland BRCC32 from Delphi 7 installation
+@rem   Borland Delphi2010
+@rem   Borland BRCC32 from Delphi 2010 installation
 @rem   DelphiDabbler Version Information Editor v2.11 or later, available from
 @rem     www.delphidabbler.com 
 @rem
 @rem Also requires the following environment variables:
-@rem   DELPHI7 to be set to the install directory of Delphi 7
-@rem   DELPHIDABLIBD7 to be set to the install directory of the required
-@rem     DelphiDabbler components on Delphi 7.
+@rem   DELPHI2010 to be set to the install directory of Delphi 2010
+@rem   DELPHIDABLIBD2010 to be set to the install directory of the required
+@rem     DelphiDabbler components on Delphi 2010.
 @rem
 @rem Switches: exactly one of the following must be provided
 @rem   all - build everything
@@ -89,19 +89,19 @@ rem ----------------------------------------------------------------------------
 :CheckEnvVars
 
 echo Checking predefined environment environment variables
-if not defined DELPHI7 goto BadDELPHI7Env
-if not defined DELPHIDABLIBD7 goto BadDELPHIDABLIBD7Env
+if not defined DELPHI2010 goto BadDELPHI2020Env
+if not defined DELPHIDABLIBD2010 goto BadDELPHIDABLIBD2010Env
 echo Environment Variables OK.
 echo.
 
 goto SetEnvVars
 
-:BadDELPHI7Env
-set ErrorMsg=DELPHI7 Environment variable not defined
+:BadDELPHI2010Env
+set ErrorMsg=DELPHI2010 Environment variable not defined
 goto Error
 
-:BadDELPHIDABLIBD7Env
-set ErrorMsg=DELPHIDABLIBD7 Environment variable not defined
+:BadDELPHIDABLIBD2010Env
+set ErrorMsg=DELPHIDABLIBD2010 Environment variable not defined
 goto Error
 
 
@@ -121,10 +121,10 @@ set ExeDir=..\..\Exe\
 
 rem executable programs
 
-rem Delphi 7 - use full path since maybe multple installations
-set DCC32Exe="%DELPHI7%\Bin\DCC32.exe"
+rem Delphi 2010 - use full path since maybe multple installations
+set DCC32Exe="%DELPHI2010%\Bin\DCC32.exe"
 rem Borland Resource Compiler - use full path since maybe multple installations
-set BRCC32Exe="%DELPHI7%\Bin\BRCC32.exe"
+set BRCC32Exe="%DELPHI2010%\Bin\BRCC32.exe"
 rem Version Information Editor (assumed to be on path)
 set VIEDExe="VIEd"
 
@@ -199,7 +199,7 @@ rem Set up required env vars
 set PascalBase=FileVerCmd
 set PascalSrc=%SrcDir%%PascalBase%.dpr
 set PascalExe=%ExeDir%%PascalBase%.exe
-set DDabLib=%DELPHIDABLIBD7%
+set DDabLib=%DELPHIDABLIBD2010%
 
 rem Do compilation
 %DCC32Exe% -B %PascalSrc% -U"%DDabLib%"
