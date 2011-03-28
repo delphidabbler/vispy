@@ -16,7 +16,13 @@
 @rem Also requires the following environment variables:
 @rem   DELPHI2010 to be set to the install directory of Delphi 2010
 @rem   DELPHIDABLIBD2010 to be set to the install directory of the required
-@rem     DelphiDabbler components on Delphi 2010.
+@rem     DelphiDabbler components on Delphi 2010
+@rem
+@rem The following environment variables are optional:
+@rem   VIEDROOT to reference the directory where Version Information Editor is
+@rem     installed. If not set the program must be on the path
+@rem   HCROOT to reference the directory where Microsoft Help Compiler is
+@rem     installed. If not set the compiler must be on the path
 @rem
 @rem Switches: exactly one of the following must be provided
 @rem   all - build everything
@@ -136,8 +142,9 @@ set BRCC32Exe="%DELPHI2010%\Bin\BRCC32.exe"
 rem MS Help Compiler: HCROOT may specify install dir
 set HCRTFExe="%HCROOT%\HCRTF.exe"
 if "%HCROOT%" == "" set HCRTFExe="HCRTF.exe"
-rem Version Information Editor (assumed to be on path)
-set VIEDExe="VIEd"
+rem Version Information Editor: VIEDROOT may specify install dir
+set VIEDExe="%VIEDROOT%\VIEd.exe"
+if "%VIEDROOT%" == "" set VIEDExe="VIEd.exe"
 
 echo Local Environment Variables OK.
 echo.

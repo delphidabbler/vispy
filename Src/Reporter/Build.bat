@@ -18,6 +18,10 @@
 @rem   DELPHIDABLIBD2010 to be set to the install directory of the required
 @rem     DelphiDabbler components on Delphi 2010.
 @rem
+@rem The following environment variables are optional:
+@rem   VIEDROOT to reference the directory where Version Information Editor is
+@rem     installed. If not set the program must be on the path
+@rem
 @rem Switches: exactly one of the following must be provided
 @rem   all - build everything
 @rem   res - build binary resource files only
@@ -126,8 +130,9 @@ rem Delphi 2010 - use full path since maybe multple installations
 set DCC32Exe="%DELPHI2010%\Bin\DCC32.exe"
 rem Borland Resource Compiler - use full path since maybe multple installations
 set BRCC32Exe="%DELPHI2010%\Bin\BRCC32.exe"
-rem Version Information Editor (assumed to be on path)
-set VIEDExe="VIEd"
+rem Version Information Editor: VIEDROOT may specify install dir
+set VIEDExe="%VIEDROOT%\VIEd.exe"
+if "%VIEDROOT%" == "" set VIEDExe="VIEd.exe"
 
 echo Local Environment Variables OK.
 echo.
