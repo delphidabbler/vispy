@@ -133,8 +133,9 @@ rem Delphi 2010 - use full path since maybe multple installations
 set DCC32Exe="%DELPHI2010%\Bin\DCC32.exe"
 rem Borland Resource Compiler - use full path since maybe multple installations
 set BRCC32Exe="%DELPHI2010%\Bin\BRCC32.exe"
-rem MS Help Compiler
-set HCRTFExe="%DELPHI2010%\Help\Tools\HCRTF.exe"
+rem MS Help Compiler: HCROOT may specify install dir
+set HCRTFExe="%HCROOT%\HCRTF.exe"
+if "%HCROOT%" == "" set HCRTFExe="HCRTF.exe"
 rem Version Information Editor (assumed to be on path)
 set VIEDExe="VIEd"
 
