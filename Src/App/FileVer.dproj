@@ -10,8 +10,9 @@
 			<Base>true</Base>
 		</PropertyGroup>
 		<PropertyGroup Condition="'$(Base)'!=''">
-			<DCC_DependencyCheckOutputName>..\..\Exe\FileVer.exe</DCC_DependencyCheckOutputName>
 			<DCC_UnitSearchPath>..\..\Bin\App;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+			<DCC_DependencyCheckOutputName>..\..\Exe\FileVer.exe</DCC_DependencyCheckOutputName>
+			<DCC_SYMBOL_PLATFORM>false</DCC_SYMBOL_PLATFORM>
 			<DCC_ExeOutput>..\..\Exe</DCC_ExeOutput>
 			<DCC_ImageBase>00400000</DCC_ImageBase>
 			<DCC_CVT_WIDENING_STRING_LOST>true</DCC_CVT_WIDENING_STRING_LOST>

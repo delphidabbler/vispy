@@ -12,6 +12,7 @@
 		<PropertyGroup Condition="'$(Base)'!=''">
 			<DCC_DependencyCheckOutputName>..\..\Exe\FVFileReader.dll</DCC_DependencyCheckOutputName>
 			<DCC_UnitSearchPath>..\..\Bin\Reader;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+			<DCC_SYMBOL_PLATFORM>false</DCC_SYMBOL_PLATFORM>
 			<GenDll>true</GenDll>
 			<DCC_ExeOutput>..\..\Exe</DCC_ExeOutput>
 			<DCC_ImageBase>00400000</DCC_ImageBase>
