@@ -8,27 +8,28 @@
 @rem $Date$
 @rem ---------------------------------------------------------------------------
 
+@echo off
+
 setlocal
 
-@echo off
-set SrcDir=..\Src
-set DocsDir=..\Docs
+echo Deleting temporary files
 
-echo Deleting *.~* from "%SrcDir%" and subfolders
-del /S %SrcDir%\*.~* 
+set RootDir=.\..
+
+del /S %RootDir%\*.~* 
+del /S %RootDir%\*.bak
+del /S %RootDir%\*.ddp 
+del /S %RootDir%\*.dsk 
+del /S %RootDir%\*.exe 
+del /S /AH %RootDir%\*.GID 
+del /S %RootDir%\*.identcache
+del /S %RootDir%\*.local
+del /S %RootDir%\*.tmp
 echo.
 
-echo Deleting *.~* from "%DocsDir%" and subfolders
-del /S %DocsDir%\*.~*
-echo.
-
-echo Deleting *.ddp from "%SrcDir%" and subfolders
-del /S %SrcDir%\*.ddp
-echo.
-
-echo Deleting *.dsk from "%SrcDir%" and subfolders
-del /S %SrcDir%\*.dsk
-echo.
+echo Deleting temporary sub-directories
+if exist %RootDir%\Release rmdir /S /Q %RootDir%\Release
+for /F "usebackq" %%i in (`dir /S /B /A:D %RootDir%\__history*`) do rmdir /S /Q %%i
 
 echo Done.
 
