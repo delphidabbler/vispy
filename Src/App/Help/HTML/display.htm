@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * $Rev$
+ * $Date$
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is display.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2011 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s)
+ *   NONE
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text-html; charset=Windows-1252">
+    <title>
+      display
+    </title>
+    <link rel="stylesheet" href="../css/help.css" type="text/css">
+  </head>
+  <body>
+    <h1>
+      Displaying Version Information
+    </h1>
+    <p>
+      When a file containing version information is loaded the information is
+      displayed in the main window.
+    </p>
+    <p>
+      Version information falls into two distinct types: Fixed File Information
+      and Variable Information.
+    </p>
+    <h2>
+      Fixed file information
+    </h2>
+    <p>
+      Fixed File Information describes the various attributes of the file
+      concerned. This information is displayed at the top of the main window.
+      <br>
+      &raquo; <a
+        href="fixed-file-info.htm"
+      >More info</a>
+    </p>
+    <h2>
+      Variable information
+    </h2>
+    <p>
+      The variable information section largely consists of descriptive strings
+      (String File Information). This information is displayed towards the
+      bottom of the main window. There can be more than one table of string
+      information in a version information resource. These are usually in
+      different languages and / or use different character sets.
+    </p>
+    <p>
+      The different combinations of languages and character sets are listed in
+      the <em>Translations</em> drop down list. Selecting a
+      &quot;translation&quot; from this list displays the table of String File
+      Information that is associated with it. When the file is first loaded the
+      string table associated with the first translation in the file is
+      displayed. Most files contain only one "translation".<br>
+      &raquo; <a
+        href="string-info.htm"
+      >More info</a>
+    </p>
+    <p>
+      String information can be sorted by name by clicking the string name
+      column header or by right clicking and selecting the <span
+        class="menuref"
+      >Sort By Name</span> menu option.
+    </p>
+    <p>
+      The version information specification requires that the translations and
+      string information language and character codes should match &ndash; but
+      some programs do not follow this rule. Problems can be either that there
+      is no translation associated with a particular string table or that there
+      is no string table associated with a given translation. <em>Version
+      Information Spy</em> detects these problems and can highlight them,
+      provide additional information and suggest fixes. These features are
+      configured on the <em>Translation</em> tab of the <a
+        href="dlg-display-options.htm"
+      >Display Options dialog box</a>.
+    </p>
+    <div class="seealso">
+      <div class="caption">
+        See also:
+      </div>
+      <ul>
+        <li>
+          <a
+            href="fixed-file-info.htm"
+          >About Fixed File Information</a>
+        </li>
+        <li>
+          <a
+            href="string-info.htm"
+          >About String Information</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
+

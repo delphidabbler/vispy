@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * $Rev$
+ * $Date$
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is loading-files.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2011 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s)
+ *   NONE
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text-html; charset=Windows-1252">
+    <title>
+      loading-files
+    </title>
+    <link rel="stylesheet" href="../css/help.css" type="text/css">
+  </head>
+  <body>
+    <h1>
+      Opening a File
+    </h1>
+    <p>
+      There are several ways in which files can be loaded into the program. They
+      are:
+    </p>
+    <ol>
+      <li>
+        Select the <span
+          class="menuref"
+        >File | Open</span> menu item. This displays a standard Windows dialog
+        box where a file can be selected. By default the dialog box only
+        displays EXE and DLL files. Other file types can be displayed by
+        selecting the <em>All Files</em> filter.
+      </li>
+      <li>
+        Select the <img
+          src="../images/btn-open.gif"
+          class="glyph"
+        > button on the toolbar. This displays the same dialog box as described
+        in 1 above. (Note: if the toolbar is not visible it can be displayed
+        using the <span
+          class="menuref"
+        >Options | Toolbar</span> menu option).
+      </li>
+      <li>
+        Select a file in Windows Explorer, drag it over the <em>Version
+        Information Spy</em> window and then drop it.
+      </li>
+      <li>
+        Use the Explorer extensions to either display a selected file's version
+        information in the program or on a custom property sheet. See <a
+          href="explorer-extensions.htm"
+        >Using the Explorer Extensions</a> topic for more information.
+      </li>
+      <li>
+        Pass a file name to the program on the command line.
+      </li>
+    </ol>
+    <p>
+      Once a file has been loaded the program attempts to extract version
+      information from it. If successful the information is displayed in the
+      main window. Should the selected file contain no version information then
+      a message is displayed to that effect.
+    </p>
+    <div class="seealso">
+      <div class="caption">
+        See also:
+      </div>
+      <ul>
+        <li>
+          <a
+            href="display.htm"
+          >Displaying Version Information</a>
+        </li>
+        <li>
+          <a
+            href="explorer-extensions.htm"
+          >Using the Explorer Extensions</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * $Rev$
+ * $Date$
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is explorer-extensions.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2011 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s)
+ *   NONE
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text-html; charset=Windows-1252">
+    <title>
+      explorer-extensions
+    </title>
+    <link rel="stylesheet" href="../css/help.css" type="text/css">
+  </head>
+  <body>
+    <h1>
+      Using the Explorer Extensions
+    </h1>
+    <p>
+      When <em>Version Information Spy</em> is installed a Windows Explorer
+      shell extension is provided. The extension provides two facilities when a
+      file containing version information is selected in Explorer.
+    </p>
+    <h2>
+      Explorer Context Menu
+    </h2>
+    <p>
+      A new <em>Version Information</em> menu option is added to the Explorer
+      context menu. Selecting this menu option opens <em>Version Information
+      Spy</em> and displays the file's version information.
+    </p>
+    <p>
+      The context menu item only appears for files with extensions that are
+      known to <em>Version Information Spy</em>. Further extensions can be added
+      and activated using the <em>Advanced</em> tab of the <a
+        href="dlg-explorer-ext.htm"
+      >Explorer Extensions dialog box</a>. Alternatively the program can ask the
+      user whether to activate the context menu for a previously unknown file
+      type when such a file is opened.
+    </p>
+    <p>
+      By default a single instance of the program is used for all files accessed
+      via this context menu, but this can be changed.
+    </p>
+    <h2>
+      Property Sheet Enhancement
+    </h2>
+    <p>
+      <em>Version Information Spy</em> can also add a new <em>Version Extra</em>
+      tab to a file's property sheet. This new tab provides more information
+      than the existing tabs. It has a similar display layout to the main
+      program, but does not support all the highlighting and reporting features
+      of the full program. If these facilities are required then clicking the
+      <em>Advanced</em> button starts the main program and displays the file's
+      information in it.
+    </p>
+    <p>
+      Like the context menu handler, the property sheet is only available for
+      files with known extensions. The <em>Advanced</em> tab of the <a
+        href="dlg-explorer-ext.htm"
+      >Explorer Extensions dialog box</a> can also be used to add further file
+      extensions. The automatic registration of unknown file extensions noted
+      above also works for the property sheet.
+    </p>
+    <h2>
+      Customising the Shell Extensions
+    </h2>
+    <p>
+      The behaviour of both the context menu and the property sheet can be
+      customised, or switched on or off, by using the <a
+        href="dlg-explorer-ext.htm"
+      >Explorer Extensions dialog box</a>. The dialog box is displayed by
+      selecting the <span
+        class="menuref"
+      >Options | Explorer Extension</span> menu option.
+    </p>
+  </body>
+</html>
+

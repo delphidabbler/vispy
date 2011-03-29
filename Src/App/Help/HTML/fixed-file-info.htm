@@ -1,0 +1,332 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * $Rev$
+ * $Date$
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is fixed-file-info.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2011 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s)
+ *   NONE
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text-html; charset=Windows-1252">
+    <title>
+      fixed-file-info
+    </title>
+    <link rel="stylesheet" href="../css/help.css" type="text/css">
+  </head>
+  <body>
+    <h1>
+      About Fixed File Information
+    </h1>
+    <p>
+      Fixed file information is made up of several integer valued fields, as
+      follows:
+    </p>
+    <h3>
+      File Version
+    </h3>
+    <p>
+      Specifies the version number for the file.
+    </p>
+    <h3>
+      Product Version
+    </h3>
+    <p>
+      Specifies the version number of the product of which the file is part.
+    </p>
+    <h3>
+      File Flags Mask
+    </h3>
+    <p>
+      This bit mask specifies which elements of the <em>File Flags</em>-
+      field (below) are valid. Only if an element is present in <em>File Flags
+      Mask</em> is the corresponding element of <em>File Flags</em> valid.
+      <em>Version Information Spy</em> can display either the numeric value of
+      this item (in hexadecimal) or can described it fully &ndash; use the
+      <em>Describe file flags</em> check box on the <em>Fixed File Info</em>
+      tab of the <a
+        href="dlg-display-options.htm"
+      >Display Options dialog box</a> to choose the display format.
+    </p>
+    <h3>
+      File Flags
+    </h3>
+    <p>
+      Specifies the Boolean attributes of the file in a bitmask.
+    </p>
+    <table>
+      <tr>
+        <th>
+          Flag
+        </th>
+        <th>
+          Purpose
+        </th>
+      </tr>
+      <tr>
+        <td>
+          Debug
+        </td>
+        <td>
+          File may contain debugging information or have debugging features
+          enabled.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Pre-release
+        </td>
+        <td>
+          This is a development version of the file.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Patched
+        </td>
+        <td>
+          File has been patched.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Private build
+        </td>
+        <td>
+          File was not built using standard release procedures. The <a
+            href="string-info.htm"
+          >String Information</a> should contain a <em>PrivateBuild</em> string.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Dynamically-created
+        </td>
+        <td>
+          The version information was created dynamically rather than using the
+          VERSIONINFO resource statement.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Special build
+        </td>
+        <td>
+          This is a variation on a standard build. The <a
+            href="string-info.htm"
+          >String Information</a> should contain a <em>SpecialBuild</em> string.
+        </td>
+      </tr>
+    </table>
+    <p>
+      The display format used for <em>File Flags</em> depends on the Display
+      Options setting noted in the description of <em>File Flags Mask</em>.
+    </p>
+    <h3>
+      Operating System
+    </h3>
+    <p>
+      Specifies the operating system for which this file was designed. The value
+      displayed describes both the base and target operating systems.
+    </p>
+    <h3>
+      File Type
+    </h3>
+    <p>
+      Specifies the general type of the file. Further information about the
+      types of some files may be given by the <em>File Sub Type</em> field
+      (below). Supported file types are:
+    </p>
+    <ul class="unspaced">
+      <li>
+        Application
+      </li>
+      <li>
+        Dynamic-link library (DLL)
+      </li>
+      <li>
+        Device driver*
+      </li>
+      <li>
+        Font*
+      </li>
+      <li>
+        Static-link library
+      </li>
+      <li>
+        Virtual device*
+      </li>
+    </ul>
+    <p>
+      Any other file type will be flagged as <em>unknown</em>. File types marked
+      with an asterisk have further information provided by the <em>File Sub
+      Type</em> field.
+    </p>
+    <h3>
+      File Sub Type
+    </h3>
+    <p>
+      For certain file types, <em>File Sub Type</em> provides additional
+      information to that given by the <em>File Type</em> field. The following
+      table lists the file types for which further information is available and
+      details what information is provided:
+    </p>
+    <table>
+      <tr>
+        <th>
+          File type
+        </th>
+        <th>
+          Additional information
+        </th>
+      </tr>
+      <tr>
+        <td>
+          Device driver
+        </td>
+        <td>
+          <div>
+            The type of driver is specified. It can be one of:
+          </div>
+          <ul class="unspaced">
+            <li>
+              Communications driver
+            </li>
+            <li>
+              Printer driver
+            </li>
+            <li>
+              Keyboard driver
+            </li>
+            <li>
+              Language driver
+            </li>
+            <li>
+              Display driver
+            </li>
+            <li>
+              Mouse driver
+            </li>
+            <li>
+              Network driver
+            </li>
+            <li>
+              System driver
+            </li>
+            <li>
+              Installable driver
+            </li>
+            <li>
+              Sound driver
+            </li>
+          </ul>
+          <div style="margin-top: 0.5em;">
+            If the type is not recognised or not specified then the
+            <em>Unknown driver</em> type is displayed.
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Font
+        </td>
+        <td>
+          <div>
+            The type of font is specified:
+          </div>
+          <ul class="unspaced">
+            <li>
+              Raster font
+            </li>
+            <li>
+              Vector font
+            </li>
+            <li>
+              TrueType font
+            </li>
+          </ul>
+          <div style="margin-top: 0.5em;">
+            If the font type is not recognised or not specified then the
+            <em>Unknown font</em> type is displayed.
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Virtual device
+        </td>
+        <td>
+          The virtual-device identifier from the virtual-device control block is
+          displayed as a hexadecimal value.
+        </td>
+      </tr>
+    </table>
+    <h3>
+      Creation Date
+    </h3>
+    <p>
+      The file's creation date may be included in the version information,
+      although this is rarely used and is usually set to zero (<em>Version
+      Information Spy</em> displays zero values as &quot;No date
+      specified&quot;). This field is not displayed by default &ndash; check the
+      <em>Display creation date</em> check box on the <em>Fixed File Info</em>
+      tab of the <a
+        href="dlg-display-options.htm"
+      >Display Options dialog box</a> to show the field.
+    </p>
+    <h3>
+      Fixed File Info Structure Information
+    </h3>
+    <p>
+      The fixed file information's structure signature and version number can
+      optionally be displayed. The signature should be FEEF04BD (hex) and the
+      structure version should be 1.0 in order to be confident that <em>Version
+      Information Spy</em> has interpreted the structure correctly. This
+      information is not displayed by default &ndash; check the <em>Display
+      structure information</em> check box on the <em>Fixed File Info</em> tab
+      of the <a
+        href="dlg-display-options.htm"
+      >Display Options dialog box</a> to enable this feature.
+    </p>
+    <div class="seealso">
+      <div class="caption">
+        See also:
+      </div>
+      <ul>
+        <li>
+          <a
+            href="string-info.htm"
+          >About String Information</a>
+        </li>
+        <li>
+          <a
+            href="display.htm"
+          >Displaying Version Information</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
+

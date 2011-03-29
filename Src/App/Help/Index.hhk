@@ -1,0 +1,239 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="author">
+		<param name="Name" value="About the Author">
+		<param name="Local" value="HTML\author.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="command line program">
+		<param name="Name" value="Command Line Program">
+		<param name="Local" value="HTML\command-line-program.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="commands">
+		<param name="Name" value="Menus and Toolbar">
+		<param name="Local" value="HTML\commands.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="copyright">
+		<param name="Name" value="End User License Agreement">
+		<param name="Local" value="HTML\copyright.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="display options">
+		<param name="Name" value="Display Options Dialog Box">
+		<param name="Local" value="HTML\dlg-display-options.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="displaying version information">
+		<param name="Name" value="Displaying Version Information">
+		<param name="Local" value="HTML\display.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="end user license agreement">
+		<param name="Name" value="End User License Agreement">
+		<param name="Local" value="HTML\copyright.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="explorer extensions">
+		<param name="Name" value="Add Extension Dialog Box">
+		<param name="Local" value="HTML\dlg-add-extension.htm">
+		<param name="Name" value="Explorer Extension Configuration Dialog Box">
+		<param name="Local" value="HTML\explorer-extensions.htm">
+		<param name="Name" value="Explorer Extension Configuration Dialog Box">
+		<param name="Local" value="HTML\dlg-explorer-ext.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="configuration">
+			<param name="Name" value="Explorer Extension Configuration Dialog Box">
+			<param name="Local" value="HTML\dlg-explorer-ext.htm">
+			<param name="Name" value="Add Extension Dialog Box ">
+			<param name="Local" value="HTML\dlg-add-extension.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="using">
+			<param name="Name" value="Explorer Extension Configuration Dialog Box">
+			<param name="Local" value="HTML\explorer-extensions.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="features">
+		<param name="Name" value="Features">
+		<param name="Local" value="HTML\features.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="file menu">
+		<param name="Name" value="File Menu Commands">
+		<param name="Local" value="HTML\menu-file.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="files">
+		<param name="Name" value="Opening a File">
+		<param name="Local" value="HTML\loading-files.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="fixed file information">
+		<param name="Name" value="About Fixed File Information">
+		<param name="Local" value="HTML\fixed-file-info.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="help menu">
+		<param name="Name" value="Help Menu Options">
+		<param name="Local" value="HTML\menu-help.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="interface">
+		<param name="Name" value="User Interface">
+		<param name="Local" value="HTML\user-interface.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="license">
+		<param name="Name" value="End User License Agreement">
+		<param name="Local" value="HTML\copyright.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="loading files">
+		<param name="Name" value="Opening a File">
+		<param name="Local" value="HTML\loading-files.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="main menu">
+		<param name="Name" value="Main Menu">
+		<param name="Local" value="HTML\commands.htm">
+		<param name="Name" value="File Menu Commands">
+		<param name="Local" value="HTML\menu-file.htm">
+		<param name="Name" value="Report Menu Command">
+		<param name="Local" value="HTML\menu-report.htm">
+		<param name="Name" value="Options Menu Commands">
+		<param name="Local" value="HTML\menu-options.htm">
+		<param name="Name" value="Help Menu Commands">
+		<param name="Local" value="HTML\menu-help.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="file">
+			<param name="Name" value="File Menu Commands">
+			<param name="Local" value="HTML\menu-file.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="help">
+			<param name="Name" value="Help Menu Commands">
+			<param name="Local" value="HTML\menu-help.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="options">
+			<param name="Name" value="Options Menu Commands">
+			<param name="Local" value="HTML\menu-options.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="report">
+			<param name="Name" value="Report Menu Commands">
+			<param name="Local" value="HTML\menu-report.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="options menu">
+		<param name="Name" value="Options Menu Commands">
+		<param name="Local" value="HTML\menu-options.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="overview">
+		<param name="Name" value="Overview">
+		<param name="Local" value="HTML\overview.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="popup menus">
+		<param name="Name" value="Popup Menu Commands">
+		<param name="Local" value="HTML\menu-popups.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="report menu">
+		<param name="Name" value="Report Menu Options">
+		<param name="Local" value="HTML\menu-report.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="reports">
+		<param name="Name" value="Creating Reports">
+		<param name="Local" value="HTML\creating-reports.htm">
+		<param name="Name" value="Descriptive HTML Report Dialog Box">
+		<param name="Local" value="HTML\dlg-report-html.htm">
+		<param name="Name" value="Descriptive Text Report Dialog Box">
+		<param name="Local" value="HTML\dlg-report-text.htm">
+		<param name="Name" value="Resource Source Code Dialog Box">
+		<param name="Local" value="HTML\dlg-report-source.htm">
+		<param name="Name" value="XML Report Dialog Box">
+		<param name="Local" value="HTML\dlg-report-xml.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="creating">
+			<param name="Name" value="Creating Reports">
+			<param name="Local" value="HTML\creating-reports.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="html">
+			<param name="Name" value="Descriptive HTML Report Dialog Box">
+			<param name="Local" value="HTML\dlg-report-html.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="source code">
+			<param name="Name" value="Resource Source Code Dialog Box">
+			<param name="Local" value="HTML\dlg-report-source.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="text">
+			<param name="Name" value="Descriptive Text Report Dialog Box">
+			<param name="Local" value="HTML\dlg-report-text.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="xml">
+			<param name="Name" value="XML Report Dialog Box">
+			<param name="Local" value="HTML\dlg-report-xml.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="source code">
+		<param name="Name" value="Recreating RC Source Code">
+		<param name="Local" value="HTML\recreating-source.htm">
+		<param name="Name" value="Resource Source Code Dialog Box">
+		<param name="Local" value="HTML\dlg-report-source.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="string information">
+		<param name="Name" value="About String Information">
+		<param name="Local" value="HTML\string-info.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="toolbar">
+		<param name="Name" value="Toolbar">
+		<param name="Local" value="HTML\toolbar.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="translation errors">
+		<param name="Name" value="Translation Inconsistency Explanation Dialog Box">
+		<param name="Local" value="HTML\dlg-bad-trans.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="user guide">
+		<param name="Name" value="User Guide">
+		<param name="Local" value="HTML\using.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="user interface">
+		<param name="Name" value="User Interface">
+		<param name="Local" value="HTML\user-interface.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="version information">
+		<param name="Name" value="Version Information">
+		<param name="Local" value="HTML\version-info.htm">
+		</OBJECT>
+</UL>
+</BODY></HTML>

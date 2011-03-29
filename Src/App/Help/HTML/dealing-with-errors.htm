@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * $Rev$
+ * $Date$
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is dealing-with-errors.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2011 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s)
+ *   NONE
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text-html; charset=Windows-1252">
+    <title>
+      dealing-with-errors
+    </title>
+    <link rel="stylesheet" href="../css/help.css" type="text/css">
+  </head>
+  <body>
+    <h1>
+      Dealing With Errors and Inconsistencies
+    </h1>
+    <p>
+      <em>Version Information Spy</em> can handle version information data that
+      breaks the resource's data format rules. It can even display some code
+      that the Windows API will fail on. It silently reads and displays the data
+      in these cases.
+    </p>
+    <p>
+      The program can also cope with version information that breaks the
+      semantic rules set down by Microsoft. It detects some of these and draws
+      them to the user's attention. In particular the program flags up the
+      following conditions:
+    </p>
+    <ol class="spaced">
+      <li>
+        Where there is translation information present but there are no string
+        tables.
+      </li>
+      <li>
+        Where there are string tables but no translation data.
+      </li>
+      <li>
+        Where there are both string tables and translation data but the string
+        table's locale information does not match the translation data.
+      </li>
+    </ol>
+    <p>
+      These cases are highlighted in the following ways:
+    </p>
+    <ol class="spaced">
+      <li>
+        Highlighting a problem translation in the translation drop down list.
+      </li>
+      <li>
+        Placing a brief description of the error above the drop down list.
+      </li>
+      <li>
+        Displaying a button above the drop down list that, when clicked,
+        displays a report of the problem in the <a
+          href="dlg-bad-trans.htm"
+        >Translation Inconsistency Explanation dialog box</a>. This report also
+        suggests how to fix the problem.
+      </li>
+      <li>
+        Noting problems in the text and HTML <a
+          href="creating-reports.htm"
+        >reports</a>.
+      </li>
+    </ol>
+    <p>
+      The first three methods noted above can be configured and disabled or
+      enabled by the user in the <a
+        href="dlg-display-options.htm"
+      >Display Options dialog box</a>.
+    </p>
+    <p>
+      Finally, the program can generate RC source code for the version
+      information that either fixes the problems or notes the problems in
+      comments in the code.
+    </p>
+    <div class="seealso">
+      <div class="caption">
+        See also:
+      </div>
+      <ul>
+        <li>
+          <a
+            href="creating-reports.htm"
+          >Creating reports</a>
+        </li>
+        <li>
+          <a
+            href="recreating-source.htm"
+          >Recreating RC source code</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
+

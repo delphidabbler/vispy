@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * $Rev$
+ * $Date$
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is creating-reports.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2011 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s)
+ *   NONE
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text-html; charset=Windows-1252">
+    <title>
+      creating-reports
+    </title>
+    <link rel="stylesheet" href="../css/help.css" type="text/css">
+  </head>
+  <body>
+    <h1>
+      Creating Reports
+    </h1>
+    <p>
+      <em>Version Information Spy</em> doesn't just display the version
+      information from within a program, it also lets you get some reports on
+      the content. There are four main reports that are available:
+    </p>
+    <ol class="spaced">
+      <li>
+        A plain text description of the version information contained in the
+        current file. This is provided in a human readable format suitable for
+        documenting a program. Any structural problems are flagged up but not
+        explained. This report appears in the <a
+          href="dlg-report-text.htm"
+        >Descriptive Text Report dialog box</a> and is accessed via the <span
+          class="menuref"
+        >Reports | Text Description</span> menu option.
+      </li>
+      <li>
+        A HTML description of a file's version information. This report provides
+        essentially the same information as the plain text report but it is laid
+        out in a much more attractive and readbale format. The report goes into
+        more detail about any translation / string table inconsistencies. This
+        report is displayed in the <a
+          href="dlg-report-html.htm"
+        >Descriptive HTML Report dialog box</a> and is displayed by clicking the
+        <span
+          class="menuref"
+        >Reports | HTML Description</span> menu item.
+      </li>
+      <li>
+        A XML document containing all of a file's version information. This
+        report is displayed in the <a
+          href="dlg-report-xml.htm"
+        >XML Report dialog box</a> which is activated from the <span
+          class="menuref"
+        >Reports | XML menu</span> item.
+      </li>
+      <li>
+        For files that have structural inconsistencies a separate report of each
+        translation or string table's problems is available. This report is in
+        HTML format. It describes the problem in detail and suggests source
+        code changes to fix the problem. This facility can be enabled and
+        disabled via the <a
+          href="dlg-display-options.htm"
+        >Display Options dialog box</a> (<em>Translations</em> tab). When enabled
+        a <em>Explain Problem</em> button appears above the main window's
+        translations drop-down list whenever the current translation exhibits
+        inconsistencies. Clicking the button displays the report in the <a
+          href="dlg-bad-trans.htm"
+        >Translation Inconsistency Explanation dialog box</a>.
+      </li>
+    </ol>
+    <div class="seealso">
+      <div class="caption">
+        See also:
+      </div>
+      <ul>
+        <li>
+          <a
+            href="recreating-source.htm"
+          >Recreating RC source code</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
+

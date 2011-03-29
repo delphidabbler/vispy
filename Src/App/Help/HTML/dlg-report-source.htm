@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * $Rev$
+ * $Date$
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is dlg-report-source.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2011 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s)
+ *   NONE
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text-html; charset=Windows-1252">
+    <title>
+      dlg-report-source
+    </title>
+    <link rel="stylesheet" href="../css/help.css" type="text/css">
+  </head>
+  <body>
+    <h1>
+      Resource Source Code Dialog Box
+    </h1>
+    <p>
+      This dialog displays decompiled resource (RC) source code for the current
+      file's version information. It is displayed when either the <span
+        class="menuref"
+      >Report | Source Code</span> or <span
+        class="menuref"
+      >Report | Corrected Source Code</span> menu options are selected. (The
+      latter is only enabled if the program detects problems with the version
+      information).
+    </p>
+    <p>
+      The code that is displayed varies slightly depending on which menu option
+      was used to display the dialog box. Here are the differences:
+    </p>
+    <ul class="spaced">
+      <li>
+        <span
+          class="menuref"
+        >Report | Source Code</span><br>
+        The source code is a an estimation of the code that was used to create
+        the resource. If any errors or inconsistencies have been detected the
+        they are noted in comments in the source code but are not fixed.
+      </li>
+      <li>
+        <span
+          class="menuref"
+        >Report | Corrected Source Code</span><br>
+        The errors detected in the source code are corrected and comments are
+        used to identify the changes.
+      </li>
+    </ul>
+    <p>
+      Clicking the <em>View Externally</em> button displays the source code in
+      <em>NotePad</em>.
+    </p>
+    <p>
+      To save the source code to disk click the <em>Save</em> button. The
+      <em>Copy</em> button stores the code on the clipboard in text format.
+    </p>
+    <p>
+      Click <em>Close</em> to dismiss the dialog box.
+    </p>
+  </body>
+</html>
+

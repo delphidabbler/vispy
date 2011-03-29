@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * $Rev$
+ * $Date$
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is dlg-explorer-ext.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2011 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s)
+ *   NONE
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text-html; charset=Windows-1252">
+    <title>
+      dlg-explorer-ext
+    </title>
+    <link rel="stylesheet" href="../css/help.css" type="text/css">
+  </head>
+  <body>
+    <h1>
+      Explorer Extension Configuration Dialog Box
+    </h1>
+    <p>
+      This dialog box permits the Explorer shell extensions to be enabled,
+      disabled and configured. The dialog is displayed by selecting the <span
+        class="menuref"
+      >Options | Explorer Extensions</span> menu option.
+    </p>
+    <p>
+      The dialog box has two tabs &ndash; basic and advanced. The basic tab can
+      be used for straightforward configuration of the extensions, while the
+      advanced tab is used for more refined &quot;tweaking&quot;.
+    </p>
+    <h2>
+      Basic tab
+    </h2>
+    <p>
+      This tab contains four check boxes that are used to set up the shell
+      extensions and the behaviour of <em>Version Information Spy</em> when
+      working with the extensions. A description of each check box follows.
+    </p>
+    <ul class="spaced">
+      <li>
+        <em>Enable Explorer context menu extension</em><br>
+        Use this check box to enable or disable the context menu handler.
+        Enabling the handler registers it for use with all the file extensions
+        listed on the <em>Advanced tab</em>. This handler adds a <span
+          class="menuref"
+        >Version Information</span> menu item to Explorer's context menu which
+        opens the selected file in <em>Version Information Spy</em>.
+      </li>
+      <li>
+        <em>Enable Explorer property sheet tab</em><br>
+        This check box enables or disables the property sheet tab extension.
+        Enabling the property sheet tab registers it for use with all the file
+        extensions listed on the <em>Advanced tab</em>. This extension adds a
+        <em>Version Extra</em> tab to a file's property sheet and displays
+        version information in it.
+      </li>
+      <li>
+        <em>Explorer extensions use a single application instance</em><br>
+        The context menu handler extension activates <em>Version Information
+        Spy</em> to display version information for a selected file while the
+        property sheet extension can activate <em>Version Information Spy</em>
+        when the <em>Advanced</em> button is clicked. You can configure these
+        extensions to re-use an open instance of <em>Version Information
+        Spy</em> (checked) or to always start a new instance (unchecked).
+      </li>
+      <li>
+        <em>Ask user whether to register extension for new file extensions</em>
+        <br>
+        When <em>Version Information Spy</em> opens a file which has an
+        extension that is not known the to explorer extensions it can offer to
+        register the extension with them. Check this box to use this facility.
+      </li>
+    </ul>
+    <p>
+      The <em>Enable Explorer context menu extension</em> and <em>Enable
+      Explorer property sheet tab</em> check boxes can have an indeterminate
+      state. In this case consult the <em>Advanced tab</em> to see which file
+      extensions are registered.
+    </p>
+    <h2>
+      Advanced tab
+    </h2>
+    <p>
+      This tab lists the types of file containing version information that are
+      known to the program. Some file types are pre-defined while others may
+      have been added to the list by the user. There are two check boxes next to
+      each file extension. Check the first check box (column <em>CM</em>) to
+      register the file extension with the contect menu handler. Check the second
+      box (column <em>PS</em>) to register it with the property sheet extension.
+    </p>
+    <p>
+      You can use the <em>Select All</em> button to check all the boxes or use
+      <em>Clear All</em> to clear them all. This is the same as checking or
+      clearing both the <em>Enable Explorer context menu extension</em> and
+      <em>Enable Explorer property sheet tab</em> check boxes on the
+      <em>Basic</em> tab.
+    </p>
+    <p>
+      New file extensions can be added to the list manually by clicking the
+      <em>Add</em> button and selecting the required file extension from the <a
+        href="dlg-add-extension.htm"
+      >Add Extension dialog box</a>. The newly added file extension appears in
+      the list. You need to tick the related check boxes to register the
+      extension with the context menu or property sheet extension.
+    </p>
+    <p>
+      File extensions can be deleted from the list by highlighting the extension
+      and clicking the <em>Delete</em> button. Note that the .dll, .exe and .res
+      extensions are required and cannot be deleted, although they can be hidden
+      from the shell extensions by clearing the appropriate check boxes.
+    </p>
+    <h2>
+      Other controls
+    </h2>
+    <p>
+      Once selections have been made choose the <em>OK</em> button to confirm
+      selections or the <em>Cancel</em> button to abort the changes.
+    </p>
+    <p>
+      The dialog box remembers the tab that was in use when it is closed and
+      displays the same tab again when the dialog is next opened.
+    </p>
+    <div class="seealso">
+      <div class="caption">
+        See also:
+      </div>
+      <ul>
+        <li>
+          <a
+            href="explorer-extensions.htm"
+          >Using the Explorer Extensions</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
+

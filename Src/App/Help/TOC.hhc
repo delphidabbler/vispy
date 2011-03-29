@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="ImageType" value="Folder">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Overview">
+		<param name="Local" value="HTML\overview.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Using the Program">
+		<param name="Local" value="HTML\using.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="User Interface">
+			<param name="Local" value="HTML\user-interface.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Opening a File">
+			<param name="Local" value="HTML\loading-files.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Menus and Toolbar">
+			<param name="Local" value="HTML\commands.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="File Menu Commands">
+				<param name="Local" value="HTML\menu-file.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Report Menu Commands">
+				<param name="Local" value="HTML\menu-report.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Options Menu Commands">
+				<param name="Local" value="HTML\menu-options.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Help Menu Commands">
+				<param name="Local" value="HTML\menu-help.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Toolbar">
+				<param name="Local" value="HTML\toolbar.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Popup Menu Commands">
+				<param name="Local" value="HTML\menu-popups.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Creating Reports">
+			<param name="Local" value="HTML\creating-reports.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Recreating RC Source Code">
+			<param name="Local" value="HTML\recreating-source.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Dealing With Errors and Inconsistencies">
+			<param name="Local" value="HTML\dealing-with-errors.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Explorer Extensions">
+			<param name="Local" value="HTML\explorer-extensions.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Command Line Program">
+			<param name="Local" value="HTML\command-line-program.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Version Information">
+		<param name="Local" value="HTML\version-info.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Displaying Version Information">
+			<param name="Local" value="HTML\display.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="About Fixed File Information">
+			<param name="Local" value="HTML\fixed-file-info.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="About String Information">
+			<param name="Local" value="HTML\string-info.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="End User License Agreement">
+		<param name="Local" value="HTML\copyright.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="About the Author">
+		<param name="Local" value="HTML\author.htm">
+		</OBJECT>
+</UL>
+</BODY></HTML>

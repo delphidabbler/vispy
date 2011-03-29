@@ -1,0 +1,44 @@
+[OPTIONS]
+Binary Index=No
+Compatibility=1.1
+Compiled file=..\..\..\Exe\VIS.chm
+Contents file=TOC.hhc
+Default Window=default
+Default topic=HTML\overview.htm
+Display compile progress=No
+Index file=Index.hhk
+Language=0x809 English (United Kingdom)
+Title=Version Information Spy Help
+
+[FILES]
+HTML\author.htm
+HTML\command-line-program.htm
+HTML\commands.htm
+HTML\copyright.htm
+HTML\creating-reports.htm
+HTML\dealing-with-errors.htm
+HTML\display.htm
+HTML\dlg-add-extension.htm
+HTML\dlg-bad-trans.htm
+HTML\dlg-display-options.htm
+HTML\dlg-explorer-ext.htm
+HTML\dlg-report-html.htm
+HTML\dlg-report-source.htm
+HTML\dlg-report-text.htm
+HTML\dlg-report-xml.htm
+HTML\explorer-extensions.htm
+HTML\features.htm
+HTML\fixed-file-info.htm
+HTML\loading-files.htm
+HTML\menu-file.htm
+HTML\menu-help.htm
+HTML\menu-options.htm
+HTML\menu-popups.htm
+HTML\menu-report.htm
+HTML\overview.htm
+HTML\recreating-source.htm
+HTML\string-info.htm
+HTML\toolbar.htm
+HTML\user-interface.htm
+HTML\using.htm
+HTML\version-info.htm

@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * $Rev$
+ * $Date$
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is dlg-display-options.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2011 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s)
+ *   NONE
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text-html; charset=Windows-1252">
+    <title>
+      dlg-display-options
+    </title>
+    <link rel="stylesheet" href="../css/help.css" type="text/css">
+  </head>
+  <body>
+    <h1>
+      Display Options Dialog Box
+    </h1>
+    <p>
+      This tabbed dialog box is used to customise <em>Version Information
+      Spy</em>'s appearance. It is accessed from the <span
+        class="menuref"
+      >Options | Display Options</span> menu item. The four tabs are:
+    </p>
+    <h2>
+      Pop-ups
+    </h2>
+    <p>
+      Used to determine whether a pop-up hint is displayed when the cursor
+      hovers over information that extends beyond the edge of the display. If
+      the <em>Display overflow text in pop-up window</em> check box is checked
+      these pop-up windows are displayed (the default). Clear the check box to
+      prevent pop-ups.
+    </p>
+    <h2>
+      Fixed File Info
+    </h2>
+    <p>
+      This tab is used to configure how <a
+        href="fixed-file-info.htm"
+      >fixed file information</a> is displayed. There are three options, each
+      selected via a check box:
+    </p>
+    <ul class="spaced">
+      <li>
+        <em>Display structure information</em><br>
+        Two lines of information that describe the fixed file information record
+        structure can be displayed &nbsp; the structure's version number and a
+        &quot;signature&quot;. This information is the same for every program,
+        so the information is of little value and is hidden by default. Tick the
+        check box to display the information.
+      </li>
+      <li>
+        <em>Display creation date</em><br>
+        Programmers may store a program's creation date in a fixed file
+        information field, although this is rarely done. <em>Version Information
+        Spy</em> can display this field, which is hidden by default. Tick the
+        check box to display the creation date.
+      </li>
+      <li>
+        <em>Describe file flags</em><br>
+        The <em>File Flags</em> and <em>File Flags Mask</em> fixed file
+        information fields are bitmasks that can either be displayed as hex
+        values or as natural language descriptions of the flags. Check the box
+        to display the natural language description and clear it to display the
+        value in hexadecimal.
+      </li>
+    </ul>
+    <h2>
+      Translation
+    </h2>
+    <p>
+      Several programs contain version information that departs from the
+      Microsoft specification which states that for each translation there
+      should be a matching string table. <em>Version Information Spy</em> can
+      detect any deviation from the standard and can highlight or provide
+      additional information about such inconsistencies. Use the following
+      controls to customise how these errors are reported:
+    </p>
+    <ul class="spaced">
+      <li>
+        <em>Highlight inconsistent translation entries</em><br>
+        When this check box is ticked inconsistent translations are highlighted
+        in the translation drop-down list using the colour specified by the
+        <em>Highlight colour colour</em> selector.
+      </li>
+      <li>
+        <em>Explain translation inconsistencies</em><br>
+        A brief explanation of any translation inconsistencies is displayed
+        above the translation drop-down list if this check box is ticked.
+      </li>
+      <li>
+        <em>Add explanation button</em><br>
+        If this box is checked a button is displayed above the translation
+        drop-down list whenever an inconsistent translation is selected.
+        Clicking the button displays detailed information about the problem
+        along with a suggestion as to how to fix it.
+      </li>
+    </ul>
+    <h2>
+      String Info
+    </h2>
+    <p>
+      This tab is used to configure how the <a
+        href="string-info.htm"
+      >string file information</a> is displayed. While most software names the
+      strings in this section according to the standard recommended by Microsoft
+      it is possible (and quite common) to include arbitrary string names in
+      string tables.
+    </p>
+    <p>
+      <em>Version Information Spy</em> can highlight such names in the colour
+      specified in the <em>Highlight colour</em> colour selector. You must check
+      the <em>Highlight non-standard string information items</em> check box to
+      enable this feature.
+    </p>
+    <h2>
+      Other Controls
+    </h2>
+    <p>
+      You can restore all the display options to their default values by
+      clicking the <em>Restore Defaults</em> button.
+    </p>
+    <p>
+      All changes can be aborted by clicking the <em>Cancel button</em>. Click
+      <em>OK</em> to accept changes. Changes are immediately reflected in the
+      display.
+    </p>
+    <p>
+      The dialog box remembers the tab that was in use when the dialog is closed
+      and displays the same tab again when the dialog is next opened.
+    </p>
+  </body>
+</html>
+

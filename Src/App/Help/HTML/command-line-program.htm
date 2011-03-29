@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * $Rev$
+ * $Date$
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is command-line-program.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2011 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s)
+ *   NONE
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text-html; charset=Windows-1252">
+    <title>
+      command-line-program
+    </title>
+    <link rel="stylesheet" href="../css/help.css" type="text/css">
+  </head>
+  <body>
+    <h1>
+      Command Line Program
+    </h1>
+    <p>
+      The command line program can read version information from a file passed
+      as a parameter on the command line. By default, some text describing the
+      version information is displayed. This description is in the same format
+      as can be displayed in the main Windows application. The program can also
+      display decompiled resource source code. All output is to the standard
+      output, which can be redirected as required.
+    </p>
+    <p>
+      The program's usage is:
+    </p>
+    <div class="indent">
+      <pre>FileVerCmd &lt;filename&gt; [-r | -x] [-p] [-q | -Q]</pre>
+      <p class="indent">
+        or
+      </p>
+      <pre>FileVerCmd -? | -h </pre>
+    </div>
+    <p>
+      <em>&lt;filename&gt;</em> is the name of the file to be analysed. The
+      various switches that can follow the file name are:
+    </p>
+    <table class="clear unspaced indent">
+      <col style="width: 7em;">
+      <tr>
+        <td>
+          <em>-r or -R</em>
+        </td>
+        <td>
+          Displays resource source code rather than a description.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>-x or -X</em>
+        </td>
+        <td>
+          Displays an XML document that encapsulates the version information.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>-p or -P</em>
+        </td>
+        <td>
+          Prompts and waits for input before exiting program.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>-q</em>
+        </td>
+        <td>
+          Displays only version information and error codes &ndash; other output
+          is inhibited.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>-Q</em>
+        </td>
+        <td>
+          Displays version information only &nbsp; other output and error codes
+          are inhibited.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>-?, -h or -H</em>
+        </td>
+        <td>
+          Displays brief help in standard output &nbsp; other parameters are
+          ignored.
+        </td>
+      </tr>
+    </table>
+    <p>
+      Switches can be preceeded by either / or -.
+    </p>
+    <h2>
+      Example
+    </h2>
+    <p>
+      Assume you have a program containing version information that you wish to
+      include in another application you are building, but don't have the
+      version information source. You can use <code>FileVerCmd</code> and a
+      resource compiler, such as Borland <code>BRCC32</code>, to create a binary
+      resource file ready for linking into a new application.
+    </p>
+    <p>
+      A batch file with the following contents will copy version information out
+      of <code>FileVerCM.dll</code> (the explorer extension) and compile it
+      into <code>VFileVerCM.res</code>. The code assumes that
+      <code>FileVerCmd</code> and <code>BRCC32</code> are on the path and that
+      the batch file is in the same folder as <code>FileVerCM</code>.
+    </p>
+    <pre class="indent">@echo off
+C:\Prg\Apps\VerInfo\Exe\FileVerCmd
+  &raquo; C:\Prg\Apps\VerInfo\Exe\FileVerCM.dll /r /q &gt;test.rc
+brcc32 test.rc -foVFileVerCM.res
+del test.rc</pre>
+    <p>
+      Note that <code>&raquo;</code> indicates a continuation of a single line
+      in the above code.
+    </p>
+  </body>
+</html>
+
