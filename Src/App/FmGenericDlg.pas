@@ -59,18 +59,31 @@ type
     bvlBottom: TBevel;
     pnlBody: TPanel;
     btnHelp: TButton;
+    ///  <summary>Handles clicks on Help button. Displays help topic(s) for the
+    ///  that match the dialog's default a-link keyword.</summary>
     procedure btnHelpClick(Sender: TObject);
+    ///  <summary>Handles form creation event. Positions components on form and
+    ///  aligns form to any owning form.</summary>
     procedure FormCreate(Sender: TObject);
+    ///  <summary>Handles key down events on form. Displays help topic(s) that
+    ///  match dialog's default a-link keyword when F1 pressed.</summary>
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
-  private
+ private
+    ///  <summary>Aligns this dialog box relative to its owner form.</summary>
     procedure AlignToOwner;
-      {Aligns this dialog box relative to its owner form. Called automatically
-      when form is created}
   protected
+    ///  <summary>Positions form's controls and sets form size to fit.</summary>
     procedure ArrangeForm; virtual;
-      {Positions controls and sets form size according to body panel dimensions}
-    function GetDefaultKeyword: string;
+    ///  <summary>Returns default help a-link keyword for use when none is
+    ///  supplied to DisplayHelp.</summary>
+    ///  <remarks>If HelpKeyword is set it is used. Otherwise form's name is
+    ///  used.</remarks>
+    function GetDefaultKeyword: string; virtual;
+    ///  <summary>Displays topic(s) in help file matching default a-link
+    ///  keyword.</summary>
     procedure DisplayHelp; overload;
+    ///  <summary>Displays topic(s) in help file matching given a-link keyword.
+    ///  </summary>
     procedure DisplayHelp(const AKeyword: string); overload;
   end;
 
@@ -91,8 +104,6 @@ uses
 { TGenericDlg }
 
 procedure TGenericDlg.AlignToOwner;
-  {Aligns this dialog box relative to its owner form. Called automatically when
-  form is created}
 var
   OwnerForm: TForm;     // form that owns this dialog box
   WorkArea: TRect;      // work area rectangle (excludes task bars)
@@ -135,16 +146,12 @@ begin
   // Now try to ensure form fits in work area
   // get work area
   WorkArea := Screen.WorkAreaRect;
-  // if right edge of form is off work area, move left
   if BoundsR.Right > WorkArea.Right then
     OffsetRect(BoundsR, WorkArea.Right - BoundsR.Right, 0);
-  // if left edge of form is off work area move right
   if BoundsR.Left < WorkArea.Left then
     OffsetRect(BoundsR, WorkArea.Left - BoundsR.Left, 0);
-  // if bottom edge of form is off work area then move up
   if BoundsR.Bottom > WorkArea.Bottom then
     OffsetRect(BoundsR, 0, WorkArea.Bottom - BoundsR.Bottom);
-  // if top edge of form is off work area then move down
   if BoundsR.Top < WorkArea.Top then
     OffsetRect(BoundsR, 0, WorkArea.Top - BoundsR.Top);
 
@@ -169,7 +176,6 @@ begin
 end;
 
 procedure TGenericDlg.btnHelpClick(Sender: TObject);
-  {Displays default help for the dialog box using inherited DisplayHelp method}
 begin
   DisplayHelp;
 end;
@@ -185,7 +191,6 @@ begin
 end;
 
 procedure TGenericDlg.FormCreate(Sender: TObject);
-  {Positions components on form and aligns form to any owning form}
 begin
   inherited;
   ArrangeForm;
@@ -212,3 +217,4 @@ begin
 end;
 
 end.
+
