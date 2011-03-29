@@ -1,7 +1,7 @@
 [OPTIONS]
 Binary Index=No
 Compatibility=1.1
-Compiled file=..\..\..\Exe\VIS.chm
+Compiled file=..\..\Exe\VIS.chm
 Contents file=TOC.hhc
 Default Window=default
 Default topic=HTML\overview.htm
