@@ -11,7 +11,7 @@
 @rem   Borland BRCC32 from Delphi 2010 installation
 @rem   DelphiDabbler Version Information Editor v2.11 or later, available from
 @rem     www.delphidabbler.com 
-@rem   Microsoft Help Compiler v4
+@rem   Microsoft HTML Help Compiler
 @rem
 @rem Also requires the following environment variables:
 @rem   DELPHI2010 to be set to the install directory of Delphi 2010
@@ -21,7 +21,7 @@
 @rem The following environment variables are optional:
 @rem   VIEDROOT to reference the directory where Version Information Editor is
 @rem     installed. If not set the program must be on the path
-@rem   HCROOT to reference the directory where Microsoft Help Compiler is
+@rem   HHCROOT to reference the directory where Microsoft HTML Help Compiler is
 @rem     installed. If not set the compiler must be on the path
 @rem
 @rem Switches: exactly one of the following must be provided
@@ -140,8 +140,8 @@ set DCC32Exe="%DELPHI2010%\Bin\DCC32.exe"
 rem Borland Resource Compiler - use full path since maybe multple installations
 set BRCC32Exe="%DELPHI2010%\Bin\BRCC32.exe"
 rem MS Help Compiler: HCROOT may specify install dir
-set HCRTFExe="%HCROOT%\HCRTF.exe"
-if "%HCROOT%" == "" set HCRTFExe="HCRTF.exe"
+set HHCExe="%HHCROOT%\HHC.exe"
+if "%HHCROOT%" == "" set HHCExe="HHC.exe"
 rem Version Information Editor: VIEDROOT may specify install dir
 set VIEDExe="%VIEDROOT%\VIEd.exe"
 if "%VIEDROOT%" == "" set VIEDExe="VIEd.exe"
@@ -246,25 +246,12 @@ if not defined BuildHelp goto Build_End
 echo Building Help Project
 echo.
 
-set FVHelpBase=FileVer
-set FVHelpPrj=%HelpSrcDir%%FVHelpBase%.hpj
-set FVHelpHlp=%ExeDir%%FVHelpBase%.hlp
-set FVHelpGid=%ExeDir%%FVHelpBase%.gid
-set FVHelpCntSrc=%HelpSrcDir%%FVHelpBase%.cnt
-set FVHelpCntDest=%ExeDir%%FVHelpBase%.cnt
+set FVHelpBase=VIS
+set FVHelpPrj=%HelpSrcDir%%FVHelpBase%.hhp
 
-rem Ensure we have no .gid file
-if exist %FVHelpGid% del /A:H %FVHelpGid%
+echo Compiling %FVHelpPrj%
 
-rem Copy help contents file to exe folder
-echo Copying %FVHelpCntSrc% to %FVHelpCntDest%
-copy %FVHelpCntSrc% %FVHelpCntDest% >nul
-
-rem Ensure FileVer.hlp exists to get required case of file name
-echo Compiling %FVHelpPrj% as %FVHelpHlp%
-if not exist %FVHelpHlp% echo Dummy File > %FVHelpHlp%
-rem Compile help file
-%HCRTFExe% /x %FVHelpPrj%
+%HHCExe% %FVHelpPrj%
 
 goto Build_End
 
