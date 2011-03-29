@@ -25,7 +25,7 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  * 
- * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2011 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
@@ -45,7 +45,7 @@ uses
   // Delphi
   StdCtrls, Controls, ExtCtrls, Classes,
   // Project
-  FmHelpAware;
+  FmBase;
 
 
 type
@@ -55,12 +55,13 @@ type
     Generic base class for dialog boxes. Displays and handles help button and
     aligns the dialog box to its owners.
   }
-  TGenericDlg = class(THelpAwareForm)
+  TGenericDlg = class(TBaseForm)
     bvlBottom: TBevel;
     pnlBody: TPanel;
     btnHelp: TButton;
     procedure btnHelpClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
     procedure AlignToOwner;
       {Aligns this dialog box relative to its owner form. Called automatically
@@ -68,6 +69,9 @@ type
   protected
     procedure ArrangeForm; virtual;
       {Positions controls and sets form size according to body panel dimensions}
+    function GetDefaultKeyword: string;
+    procedure DisplayHelp; overload;
+    procedure DisplayHelp(const AKeyword: string); overload;
   end;
 
 
@@ -76,7 +80,9 @@ implementation
 
 uses
   // Delphi
-  Windows, Forms;
+  Windows, Forms,
+  // Project
+  UHelpManager;
 
 
 {$R *.DFM}
@@ -165,8 +171,17 @@ end;
 procedure TGenericDlg.btnHelpClick(Sender: TObject);
   {Displays default help for the dialog box using inherited DisplayHelp method}
 begin
-  // Display the help, telling that it was activated from help button 
-  DisplayHelp(haButton);
+  DisplayHelp;
+end;
+
+procedure TGenericDlg.DisplayHelp;
+begin
+  DisplayHelp(GetDefaultKeyword);
+end;
+
+procedure TGenericDlg.DisplayHelp(const AKeyword: string);
+begin
+  THelpManager.ShowALink(AKeyword, THelpManager.NoDlgHelpTopic);
 end;
 
 procedure TGenericDlg.FormCreate(Sender: TObject);
@@ -175,6 +190,25 @@ begin
   inherited;
   ArrangeForm;
   AlignToOwner;
+end;
+
+procedure TGenericDlg.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  inherited;
+  if (Key = VK_F1) and (Shift * [ssShift, ssCtrl, ssAlt] = []) then
+  begin
+    Key := 0;
+    DisplayHelp;
+  end;
+end;
+
+function TGenericDlg.GetDefaultKeyword: string;
+begin
+  if HelpKeyword <> '' then
+    Result := HelpKeyword
+  else
+    Result := Name;
 end;
 
 end.

@@ -58,9 +58,6 @@
 			<DCCReference Include="FmGenericViewDlg.pas">
 				<Form>GenericViewDlg</Form>
 			</DCCReference>
-			<DCCReference Include="FmHelpAware.pas">
-				<Form>HelpAwareForm</Form>
-			</DCCReference>
 			<DCCReference Include="FmHTMLReport.pas">
 				<Form>HTMLReportDlg</Form>
 			</DCCReference>
@@ -79,6 +76,9 @@
 			<DCCReference Include="FmTextReport.pas">
 				<Form>TextReportDlg</Form>
 			</DCCReference>
+			<DCCReference Include="FmXMLReport.pas">
+				<Form>XMLReportDlg</Form>
+			</DCCReference>
 			<DCCReference Include="FrHTMLViewer.pas">
 				<Form>HTMLViewer</Form>
 				<DesignClass>TFrame</DesignClass>
@@ -95,6 +95,8 @@
 			<DCCReference Include="UDictionaries.pas"/>
 			<DCCReference Include="UDisplayMgrs.pas"/>
 			<DCCReference Include="UExtensions.pas"/>
+			<DCCReference Include="UHelpManager.pas"/>
+			<DCCReference Include="UHTMLHelp.pas"/>
 			<DCCReference Include="ULVDisplayMgr.pas"/>
 			<DCCReference Include="UPopupWindow.pas"/>
 			<DCCReference Include="USettings.pas"/>
@@ -112,9 +114,6 @@
 			<DCCReference Include="IntfUIHandlers.pas"/>
 			<DCCReference Include="..\Reader\Exports\IntfVerInfoReader.pas"/>
 			<DCCReference Include="..\Reporter\Exports\IntfVerInfoReport.pas"/>
-			<DCCReference Include="FmXMLReport.pas">
-				<Form>XMLReportDlg</Form>
-			</DCCReference>
 			<BuildConfiguration Include="Base">
 				<Key>Base</Key>
 			</BuildConfiguration>
@@ -139,7 +138,7 @@
 						<VersionInfo Name="MajorVer">4</VersionInfo>
 						<VersionInfo Name="MinorVer">0</VersionInfo>
 						<VersionInfo Name="Release">0</VersionInfo>
-						<VersionInfo Name="Build">152</VersionInfo>
+						<VersionInfo Name="Build">155</VersionInfo>
 						<VersionInfo Name="Debug">False</VersionInfo>
 						<VersionInfo Name="PreRelease">False</VersionInfo>
 						<VersionInfo Name="Special">False</VersionInfo>
@@ -151,7 +150,7 @@
 					<VersionInfoKeys>
 						<VersionInfoKeys Name="CompanyName"/>
 						<VersionInfoKeys Name="FileDescription"/>
-						<VersionInfoKeys Name="FileVersion"/>
+						<VersionInfoKeys Name="FileVersion">4.0.0.155</VersionInfoKeys>
 						<VersionInfoKeys Name="InternalName"/>
 						<VersionInfoKeys Name="LegalCopyright"/>
 						<VersionInfoKeys Name="LegalTrademarks"/>

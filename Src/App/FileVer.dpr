@@ -23,7 +23,7 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 1998-2009 Peter
+ * Portions created by the Initial Developer are Copyright (C) 1998-2011 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
@@ -50,13 +50,13 @@ uses
   FmGenericDlg in 'FmGenericDlg.pas' {GenericDlg},
   FmGenericOKDlg in 'FmGenericOKDlg.pas' {GenericOKDlg},
   FmGenericViewDlg in 'FmGenericViewDlg.pas' {GenericViewDlg},
-  FmHelpAware in 'FmHelpAware.pas' {HelpAwareForm},
   FmHTMLReport in 'FmHTMLReport.pas' {HTMLReportDlg},
   FmMain in 'FmMain.pas' {MainForm},
   FmRegExtQuery in 'FmRegExtQuery.pas' {RegExtQueryDlg},
   FmReport in 'FmReport.pas' {ReportBaseDlg},
   FmSourceReport in 'FmSourceReport.pas' {SourceReportDlg},
   FmTextReport in 'FmTextReport.pas' {TextReportDlg},
+  FmXMLReport in 'FmXMLReport.pas' {XMLReportDlg},
   FrHTMLViewer in 'FrHTMLViewer.pas' {HTMLViewer: TFrame},
   FrMemoViewer in 'FrMemoViewer.pas' {MemoViewer: TFrame},
   FrViewerBase in 'FrViewerBase.pas' {ViewerBase: TFrame},
@@ -64,6 +64,8 @@ uses
   UDictionaries in 'UDictionaries.pas',
   UDisplayMgrs in 'UDisplayMgrs.pas',
   UExtensions in 'UExtensions.pas',
+  UHelpManager in 'UHelpManager.pas',
+  UHTMLHelp in 'UHTMLHelp.pas',
   ULVDisplayMgr in 'ULVDisplayMgr.pas',
   UPopupWindow in 'UPopupWindow.pas',
   USettings in 'USettings.pas',
@@ -80,8 +82,7 @@ uses
   IntfFileVerShellExt in '..\CtxMenu\Exports\IntfFileVerShellExt.pas',
   IntfUIHandlers in 'IntfUIHandlers.pas',
   IntfVerInfoReader in '..\Reader\Exports\IntfVerInfoReader.pas',
-  IntfVerInfoReport in '..\Reporter\Exports\IntfVerInfoReport.pas',
-  FmXMLReport in 'FmXMLReport.pas' {XMLReportDlg};
+  IntfVerInfoReport in '..\Reporter\Exports\IntfVerInfoReport.pas';
 
 {$Resource Images.res}    // contains program's icon
 {$Resource VFileVer.res}  // version information
@@ -108,6 +109,6 @@ begin
   begin
     // App can start: do it
     Application.CreateForm(TMainForm, MainForm);
-    Application.Run;
+  Application.Run;
   end;
 end.

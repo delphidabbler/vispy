@@ -27,7 +27,7 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 1998-2009 Peter
+ * Portions created by the Initial Developer are Copyright (C) 1998-2011 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
@@ -50,7 +50,7 @@ uses
   // DelphiDabbler library
   PJAbout, PJDropFiles, PJVersionInfo, PJWdwState, PJMessageDialog,
   // Project
-  CmpHotButton, FmHelpAware, FmReport,
+  CmpHotButton, FmBase, FmReport,
   IntfVerInfoReader, UFileReaderLoader, ULVDisplayMgr, UCBDisplayMgr;
 
 
@@ -61,7 +61,7 @@ type
     Application's main form class: handles main user interface code and
     initialisation and finalisation.
   }
-  TMainForm = class(THelpAwareForm)
+  TMainForm = class(TBaseForm)
     bvlSpacer1: TBevel;
     bvlSpacer2: TBevel;
     dlgAbout: TPJAboutBoxDlg;
@@ -110,7 +110,6 @@ type
     actReportSource: TAction;
     actToolbar: TAction;
     actExplorerExt: TAction;
-    actHelpContents: THelpContents;
     actDelphiDabblerWeb: TAction;
     actAbout: TAction;
     actSortStringInfo: TAction;
@@ -124,6 +123,7 @@ type
     RegisterExplorerExtensions1: TMenuItem;
     actReportXML: TAction;
     miReportXML: TMenuItem;
+    actHelpContents: TAction;
     procedure fdfFileCatcherDropFiles(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -144,6 +144,7 @@ type
     procedure actExplainProblemExecute(Sender: TObject);
     procedure actReportFixedSourceExecute(Sender: TObject);
     procedure actReportXMLExecute(Sender: TObject);
+    procedure actHelpContentsExecute(Sender: TObject);
   private
     fFixedLVMgr: TLVDisplayMgr;
       {Object that manages display of fixed file info list view}
@@ -255,7 +256,8 @@ uses
   IntfFileVerShellExt,
   FmHTMLReport, FmTextReport, FmSourceReport, FmXMLReport,
   FmFixedSourceReport, FmErrorReport, FmExplExt, FmDisplayOpts, FmRegExtQuery,
-  UGlobals, URegistry, USettings, UStartup, UVerUtils, UDisplayFmt;
+  UGlobals, UHelpManager, URegistry, USettings, UStartup, UVerUtils,
+  UDisplayFmt;
 
 
 {$R *.DFM}
@@ -386,6 +388,11 @@ begin
     finally
       Free;
     end;
+end;
+
+procedure TMainForm.actHelpContentsExecute(Sender: TObject);
+begin
+  THelpManager.Contents;
 end;
 
 procedure TMainForm.actOpenAccept(Sender: TObject);
