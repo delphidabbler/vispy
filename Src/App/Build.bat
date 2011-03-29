@@ -11,7 +11,6 @@
 @rem   Borland BRCC32 from Delphi 2010 installation
 @rem   DelphiDabbler Version Information Editor v2.11 or later, available from
 @rem     www.delphidabbler.com 
-@rem   Microsoft HTML Help Compiler
 @rem
 @rem Also requires the following environment variables:
 @rem   DELPHI2010 to be set to the install directory of Delphi 2010
@@ -21,14 +20,11 @@
 @rem The following environment variables are optional:
 @rem   VIEDROOT to reference the directory where Version Information Editor is
 @rem     installed. If not set the program must be on the path
-@rem   HHCROOT to reference the directory where Microsoft HTML Help Compiler is
-@rem     installed. If not set the compiler must be on the path
 @rem
 @rem Switches: exactly one of the following must be provided
 @rem   all - build everything
 @rem   res - build binary resource files only
 @rem   pas - build Delphi Pascal project only
-@rem   help - build help file
 @rem
 @rem ---------------------------------------------------------------------------
 
@@ -58,13 +54,11 @@ rem reset all config variables
 set BuildAll=
 set BuildResources=
 set BuildPascal=
-set BuildHelp=
 
 rem check switches
 if "%~1" == "all" goto Config_BuildAll
 if "%~1" == "res" goto Config_BuildResources
 if "%~1" == "pas" goto Config_BuildPascal
-if "%~1" == "help" goto Config_BuildHelp
 set ErrorMsg=Unknown switch "%~1"
 if "%~1" == "" set ErrorMsg=No switch specified
 goto Error
@@ -73,7 +67,6 @@ rem set config variables
 :Config_BuildAll
 set BuildResources=1
 set BuildPascal=1
-set BuildHelp=1
 goto Config_OK
 
 :Config_BuildResources
@@ -82,10 +75,6 @@ goto Config_OK
 
 :Config_BuildPascal
 set BuildPascal=1
-goto Config_OK
-
-:Config_BuildHelp
-set BuildHelp=1
 goto Config_OK
 
 :Config_OK
@@ -127,8 +116,6 @@ echo Setting Up Local Environment Variables
 
 rem source directory
 set SrcDir=.\
-rem help source directory
-set HelpSrcDir=%SrcDir%Help\
 rem binary files directory
 set BinDir=..\..\Bin\App\
 rem executable files directory
@@ -139,9 +126,6 @@ rem Delphi 2010 - use full path since maybe multple installations
 set DCC32Exe="%DELPHI2010%\Bin\DCC32.exe"
 rem Borland Resource Compiler - use full path since maybe multple installations
 set BRCC32Exe="%DELPHI2010%\Bin\BRCC32.exe"
-rem MS Help Compiler: HCROOT may specify install dir
-set HHCExe="%HHCROOT%\HHC.exe"
-if "%HHCROOT%" == "" set HHCExe="HHC.exe"
 rem Version Information Editor: VIEDROOT may specify install dir
 set VIEDExe="%VIEDROOT%\VIEd.exe"
 if "%VIEDROOT%" == "" set VIEDExe="VIEd.exe"
@@ -209,7 +193,7 @@ rem Build Pascal project
 rem ----------------------------------------------------------------------------
 
 :Build_Pascal
-if not defined BuildPascal goto Build_Help
+if not defined BuildPascal goto Build_End
 echo Building Pascal Source
 echo.
 
@@ -233,25 +217,6 @@ goto Error
 :Pascal_End
 echo Pascal Source Built OK.
 echo.
-
-goto Build_Help
-
-
-rem ----------------------------------------------------------------------------
-rem Build help project
-rem ----------------------------------------------------------------------------
-
-:Build_Help
-if not defined BuildHelp goto Build_End
-echo Building Help Project
-echo.
-
-set FVHelpBase=VIS
-set FVHelpPrj=%HelpSrcDir%%FVHelpBase%.hhp
-
-echo Compiling %FVHelpPrj%
-
-%HHCExe% %FVHelpPrj%
 
 goto Build_End
 
