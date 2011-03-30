@@ -152,7 +152,7 @@ implementation
 
 uses
   // Delphi
-  SysUtils, Messages;
+  SysUtils, StrUtils, Messages;
 
 
 { TParams }
@@ -178,7 +178,7 @@ begin
       and (Param[1] in ['-', '/']) then
     begin
       // We have a switch
-      Switch := LowerCase(Copy(Param, 2, Length(Param) - 1));
+      Switch := AnsiLowerCase(Copy(Param, 2, Length(Param) - 1));
       if Switch = 'shellex' then
         // switch indicates started from one of shell extensions
         fSwitches := fSwitches or Param_StartFromShellEx;
@@ -202,14 +202,17 @@ function EnumWdwProc(WndH: HWND; Param: LPARAM): BOOL; stdcall;
 type
   PHWND = ^HWND;  // pointer to HWND type
 var
-  WdwClassName: array[0..255] of Char;  // stores a window class name
-  PFoundHWnd: PHWND;                    // points to app's window handle
+  PFoundHWnd: PHWND;    // points to app's window handle
+  WdwClassName: string; // class name of window given by WndH
 begin
   // Get pointer to window handle variable passed from caller
   PFoundHWnd := PHWND(Param);
   // Get name of passed window's class and compare to ours
-  GetClassName(WndH, WdwClassName, SizeOf(WdwClassName));
-  if (AnsiStrIComp(WdwClassName, cWdwClassName) = 0) then
+  SetLength(WdwClassName, 256);
+  SetLength(
+    WdwClassName, GetClassNameW(WndH, PChar(WdwClassName), Length(WdwClassName))
+  );
+  if AnsiSameText(WdwClassName, cWdwClassName) then
   begin
     // given window is an instance of this app: record it
     PFoundHWnd^ := WndH;
