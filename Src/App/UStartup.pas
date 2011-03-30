@@ -26,7 +26,7 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  * 
- * Portions created by the Initial Developer are Copyright (C) 2002-2010 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2002-2011 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
@@ -57,7 +57,7 @@ const
   // Watermark stored in data structure passed between instances of application
   // using WM_COPYDATA: used to ensure that the message came from another
   // instance of this application
-  cCopyDataWaterMark: LongWord = $504A6676; // = 'PJfv'
+  cCopyDataWaterMark: LongWord = $46563036; // = 'FV07'
 
 type
 
@@ -68,10 +68,8 @@ type
     reserved records for potential use by later versions).
   }
   TDataPacket = record
-    FileName: ShortString;                        // cmd line file name
-    ReservedStr: ShortString;                     // reserved string
+    FileName: array[0..MAX_PATH] of Char;         // cmd line file name
     Switches: LongWord;                           // bitmask of switches
-    ReservedData: packed array[1..7] of LongWord; // 7 more reserved LongWords
   end;
 
   {
@@ -237,7 +235,10 @@ begin
   SetForegroundWindow(WndH);
   // Set up data packet to be sent to other instance
   // store file name and switches in data packet
-  DataPacket.FileName := fParams.FileName;
+  FillChar(DataPacket.FileName, SizeOf(DataPacket.FileName), 0);
+  StrPLCopy(
+    DataPacket.FileName, fParams.FileName, SizeOf(DataPacket.FileName) - 1
+  );
   DataPacket.Switches := fParams.Switches;
   // store info to be transmitted in require structure
   CopyData.lpData := @DataPacket;         // pointer to data
