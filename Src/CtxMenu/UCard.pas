@@ -23,7 +23,7 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2011 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
@@ -58,9 +58,6 @@ type
   private
     fWidgets: TObjectList;
       {List that stores widget objects that wrap child window objects}
-    procedure WMHelp(var Msg: TWMHelp); message WM_HELP;
-      {Handles WM_HELP message: calls WinHelp using help context of widget
-      associated with window handle provided by help message}
     procedure WMCommand(var Msg: TWMCommand); message WM_COMMAND;
       {WM_COMMAND message handler: we pass message on to widget with window
       handle specified in message}
@@ -91,8 +88,8 @@ implementation
 
 
 uses
-  // Project
-  UGlobals;
+  // Delphi
+  SysUtils;
 
 
 { TCard }
@@ -171,26 +168,6 @@ begin
   if Assigned(Widget) then
     // Pass message on to required widget
     Widget.Dispatch(Msg);
-end;
-
-procedure TCard.WMHelp(var Msg: TWMHelp);
-  {Handles WM_HELP message: calls WinHelp using help context of widget
-  associated with window handle provided by help message}
-var
-  Widget: TWidget;  // reference to widget
-begin
-  // Find widget associated with given window handle
-  Widget := FindWidgetFromHandle(Msg.HelpInfo.hItemHandle);
-  // If widget found and it has a help keyword, display help
-  if Assigned(Widget) and (Widget.HelpContext <> 0) then
-    WinHelp(
-      Handle,
-      UGlobals.cShExtHelpFile,
-      HELP_CONTEXTPOPUP,
-      Widget.HelpContext
-    );
-  // Indicate we handled message
-  Msg.Result := 1;
 end;
 
 end.

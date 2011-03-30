@@ -24,7 +24,7 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2011 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
@@ -41,6 +41,8 @@ interface
 
 
 uses
+  // Delphi
+  Messages,
   // Project
   UCard, UWLabel, UWButton, UWComboBox, UWListView;
 
@@ -63,11 +65,17 @@ type
     fTransCombo: TComboBoxWidget;
     fFFIListView: TListViewWidget;
     fStrInfoListView: TLIstViewWidget;
+  private
+    procedure WMHelp(var Msg: TWMHelp); message WM_HELP;
+      {Handles WM_HELP message: calls WinHelp using help context of widget
+      associated with window handle provided by help message}
   protected
     procedure CreateControls; override;
       {Overridden method that creates the controls (widgets) that populate the
       dialog box}
   public
+    destructor Destroy; override;
+      {Object destructor. Releases help system}
     property FFILabel: TLabelWidget read fFFILabel;
       {Label that describes the fixed file info list view}
     property FFIListView: TListViewWidget read fFFIListView;
@@ -90,11 +98,10 @@ implementation
 
 uses
   // Delphi
-  Windows, Classes;
+  SysUtils, Windows, Classes,
+  // Project
+  UGlobals, UHTMLHelp;
 
-
-const
-  {$INCLUDE FileVerShExt.map}  // help context numbers from help map file
 
 { TVIPropSheetCard }
 
@@ -126,7 +133,6 @@ begin
     Self, Bounds(cDlgMargin, NextTop, CtlW, TextH)
   );
   FFILabel.Caption := 'Fixed file information:';
-  FFILabel.HelpContext := IDH_PS_FFILBL;
   Inc(NextTop, FFILabel.Height);
 
   // fixed file information list view
@@ -134,7 +140,6 @@ begin
     Self, Bounds(cDlgMargin, NextTop, CtlW, 122)
   );
   FFIListView.SetupColumns(['FFI Item', 'Details'], [100, CtlW - 124]);
-  FFIListView.HelpContext := IDH_PS_FFILV;
   Inc(NextTop, FFIListView.Height + cDlgMargin);
 
   // trans combo label
@@ -142,14 +147,12 @@ begin
     Self, Bounds(cDlgMargin, NextTop, CtlW, TextH)
   );
   TransLabel.Caption := '';   // caption is set when version info loaded
-  TransLabel.HelpContext := IDH_PS_TRANSLBL;
   Inc(NextTop, TransLabel.Height);
 
   // trans comb box
   fTransCombo := TComboBoxWidget.Create(
     Self, Bounds(cDlgMargin, NextTop, CtlW, TextH * 4)  // height=>dropdown size
   );
-  TransCombo.HelpContext := IDH_PS_TRANSCOMBO;
   Inc(NextTop, TransCombo.Height + cDlgMargin);
 
   // string info label
@@ -157,7 +160,6 @@ begin
     Self, Bounds(cDlgMargin, NextTop, CtlW, TextH)
   );
   StrInfoLabel.Caption := 'String file information:';
-  StrInfoLabel.HelpContext := IDH_PS_STRINGLBL;
   Inc(NextTop, StrInfoLabel.Height);
 
   // string info list view
@@ -168,7 +170,6 @@ begin
   StrInfoListView.SetupColumns(
     ['String Item', 'Details'], [100, CtlW - 124]
   );
-  StrInfoListView.HelpContext := IDH_PS_STRINGLV;
   NextTop := DlgH - cDlgMargin - 23;
 
   // "advanced" button
@@ -176,8 +177,27 @@ begin
     Self, Bounds(DlgW - cDlgMargin - 75, NextTop, 75, 23)
   );
   AdvButton.Caption := 'Ad&vanced...';
-  AdvButton.HelpContext := IDH_PS_ADVANCEDBTN;
 
+end;
+
+destructor TVIPropSheetCard.Destroy;
+begin
+  HtmlHelp(0, nil, HH_CLOSE_ALL, 0);
+  inherited;
+end;
+
+procedure TVIPropSheetCard.WMHelp(var Msg: TWMHelp);
+  {Handles WM_HELP message: calls WinHelp using help context of widget
+  associated with window handle provided by help message}
+var
+  HelpFile: string;   // help file containing required topic
+  HelpTopic: string;  // full path to property sheet help topic
+begin
+  // TODO: Move 'VIS.chm' to UGlobals and use in FileVer project also
+  HelpFile := ExtractFilePath(GetModuleName(HInstance))
+    + UGlobals.cHelpFile;
+  HelpTopic := HelpFile + '::/HTML/property-sheet.htm';
+  HtmlHelp(GetDesktopWindow, PChar(HelpTopic), HH_DISPLAY_TOPIC, 0);
 end;
 
 end.

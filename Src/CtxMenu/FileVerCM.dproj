@@ -52,6 +52,7 @@
 			<DCCReference Include="..\Shared\UVerUtils.pas"/>
 			<DCCReference Include="Exports\IntfFileVerShellExt.pas"/>
 			<DCCReference Include="..\Reader\Exports\IntfVerInfoReader.pas"/>
+			<DCCReference Include="..\Shared\UHTMLHelp.pas"/>
 			<BuildConfiguration Include="Base">
 				<Key>Base</Key>
 			</BuildConfiguration>

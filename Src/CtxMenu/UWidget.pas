@@ -100,9 +100,6 @@ type
       widget's window}
     property Height: Integer read GetHeight;
       {Height of widget}
-    property HelpContext: Integer read fHelpContext write fHelpContext;
-      {Help context number associated with the widget. Owning "card" (window)
-      handles display of help using this property}
   end;
 
 

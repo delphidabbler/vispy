@@ -61,7 +61,8 @@ uses
   URegistry in '..\Shared\URegistry.pas',
   UVerUtils in '..\Shared\UVerUtils.pas',
   IntfFileVerShellExt in 'Exports\IntfFileVerShellExt.pas',
-  IntfVerInfoReader in '..\Reader\Exports\IntfVerInfoReader.pas';
+  IntfVerInfoReader in '..\Reader\Exports\IntfVerInfoReader.pas',
+  UHTMLHelp in '..\Shared\UHTMLHelp.pas';
 
 {$Resource 'VFileVerCM.res'}   // version information
 
