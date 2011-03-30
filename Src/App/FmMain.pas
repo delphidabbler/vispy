@@ -844,7 +844,6 @@ begin
   hbExplain.Action := actExplainProblem;  // action when explain btn pressed
 
   // Set Application object
-  Application.HelpFile := UGlobals.cAppHelpFile;
   Application.Title := UGlobals.cLongSuiteName;
   Application.OnException := ExceptionHandler;
 

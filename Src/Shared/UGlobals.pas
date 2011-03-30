@@ -52,10 +52,7 @@ const
   // Application file names
   cVISExe = 'FileVer.exe';              // main GUI application
   cVISShellExDll = 'FileVerCM.dll';     // shell extension COM server
-
-  // Help files
-  cAppHelpFile = 'FileVer.hlp';         // main application
-  cShExtHelpFile = 'FileVerShExt.hlp';  // shel extension help file
+  cHelpFile = 'VIS.chm';                // HTML help file
 
   // 3rd party application names
   cIEExe = 'IExplore.exe';            // internet explorer
