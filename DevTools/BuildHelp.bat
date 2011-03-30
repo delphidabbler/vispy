@@ -14,9 +14,3 @@ setlocal
 cd ..\Src\Help
 call build
 endlocal
-
-rem Build WinHelp for context menu handler
-setlocal
-cd ..\Src\CtxMenu
-call build help
-endlocal
