@@ -77,7 +77,7 @@ type
   ///  </summary>
   IVerInfoReporter3 = interface(IUnknown)
     ['{B0CA21C7-A6C0-4840-A22D-2D2A14A4D3F5}']
-    ///  <summary>Writes a version information report to a stream.</summary>
+    ///  <summary>Writes a version information report to a stream</summary>
     ///  <param name="VI">IVerInfoReader [in] Object storing details of version
     ///  information.</param>
     ///  <param name="Stm">IStream in] Stream to which report is written.
@@ -85,7 +85,10 @@ type
     ///  <param name="Header">WideString [in] Heading text that is written
     ///  before the body of the report. Ignored if empty string.</param>
     ///  <returns>Boolean. True on success, False on failure.</returns>
-    ///  <remarks>If report fails the LastError function provides a description.
+    ///  <remarks>
+    ///  <para>Report is written as Unicode text.</para>
+    ///  <para>If report fails the LastError function provides a description.
+    ///  </para>
     ///  </remarks>
     function ReportToStream(const VI: IVerInfoReader;
       const Stm: IStream; const Header: WideString): WordBool; stdcall;
@@ -113,7 +116,10 @@ type
     ///  <returns>HResult. S_OK returned if translation contains errors and a
     ///  report was written. S_FALSE returned if translation has no errors and
     ///  no report was written. E_FAIL returned on error.</returns>
-    ///  <remarks>If report fails the LastError function provides a description.
+    ///  <remarks>
+    ///  <para>Report is written as Unicode text.</para>
+    ///  <para>If report fails the LastError function provides a description.
+    ///  </para>
     ///  </remarks>
     function ReportTransErrToStream(const VI: IVerInfoReader;
       const Stm: IStream; const TransIdx: Integer): HResult; stdcall;
