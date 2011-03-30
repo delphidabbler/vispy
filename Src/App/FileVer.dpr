@@ -65,7 +65,7 @@ uses
   UDisplayMgrs in 'UDisplayMgrs.pas',
   UExtensions in 'UExtensions.pas',
   UHelpManager in 'UHelpManager.pas',
-  UHTMLHelp in 'UHTMLHelp.pas',
+  UHTMLHelp in '..\Shared\UHTMLHelp.pas',
   ULVDisplayMgr in 'ULVDisplayMgr.pas',
   UPopupWindow in 'UPopupWindow.pas',
   USettings in 'USettings.pas',
