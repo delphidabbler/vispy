@@ -44,10 +44,12 @@
 		<param name="Name" value="explorer extensions">
 		<param name="Name" value="Add Extension Dialog Box">
 		<param name="Local" value="HTML\dlg-add-extension.htm">
-		<param name="Name" value="Explorer Extension Configuration Dialog Box">
+		<param name="Name" value="Using Explorer Extension">
 		<param name="Local" value="HTML\explorer-extensions.htm">
 		<param name="Name" value="Explorer Extension Configuration Dialog Box">
 		<param name="Local" value="HTML\dlg-explorer-ext.htm">
+		<param name="Name" value="Version Extra Property Sheet">
+		<param name="Local" value="HTML\property-sheet.htm">
 		</OBJECT>
 	<UL>
 		<LI> <OBJECT type="text/sitemap">
@@ -61,6 +63,11 @@
 			<param name="Name" value="using">
 			<param name="Name" value="Explorer Extension Configuration Dialog Box">
 			<param name="Local" value="HTML\explorer-extensions.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="property sheet">
+			<param name="Name" value="Version Extra Property Sheet">
+			<param name="Local" value="HTML\property-sheet.htm">
 			</OBJECT>
 	</UL>
 	<LI> <OBJECT type="text/sitemap">
@@ -154,6 +161,11 @@
 		<param name="Local" value="HTML\menu-popups.htm">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="property sheet">
+		<param name="Name" value="Version Extra Property Sheet">
+		<param name="Local" value="HTML\property-sheet.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="report menu">
 		<param name="Name" value="Report Menu Options">
 		<param name="Local" value="HTML\menu-report.htm">
@@ -229,6 +241,11 @@
 		<param name="Name" value="user interface">
 		<param name="Name" value="User Interface">
 		<param name="Local" value="HTML\user-interface.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="version extra property sheet">
+		<param name="Name" value="Version Extra Property Sheet">
+		<param name="Local" value="HTML\property-sheet.htm">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="version information">
