@@ -198,17 +198,7 @@
   <dd>
     Microsoft HTML Help compiler. This command line compiler is supplied with
     Microsoft HTML Help Workshop. It is used to compile program's HTML Help
-    file. 
-  </dd>
-  <dt>
-    <code>HCRTF</code>
-  </dt>
-  <dd>
-    Microsoft Help compiler. This is used to compile the WinHelp help file. If
-    you don't already have a copy (it was supplied with older version of Delphi,
-    but not Delphi 2010) you can get it free of charge from <a
-      href="ftp://ftp.microsoft.com/Softlib/MSLFiles/hcwsetup.exe"
-    >Microsoft's FTP site</a>.
+    file.
   </dd>
   <dt>
     <code>ISCC</code>
@@ -325,14 +315,6 @@
     <code>HHC.exe</code> is expected to be found on the system path.
   </dd>
   <dt>
-    <code>HCROOT</code>
-  </dt>
-  <dd>
-    Set to the install directory of the Microsoft Help Compiler,
-    <code>HCRTF.exe</code>. If this environment variable is not set then
-    <code>HCRTF.exe</code> is expected to be found on the system path.
-  </dd>
-  <dt>
     <code>VIEDROOT</code>
   </dt>
   <dd>
@@ -383,8 +365,6 @@
       +-- CtxMenu            - context menu handler source
       |   |
       |   +-- Exports        - interfaces exported by context menu handler
-      |   |
-      |   +-- Help           - context menu handler help source
       |
       +-- Help               - project HTML help file source
       |   |
@@ -526,9 +506,8 @@
     <code>BuildHelp</code>
   </dt>
   <dd>
-    Generates the binary help files for the main GUI application and the
-    context menu handler. The help files and any associated
-    <code>.cnt</code> files are placed in the <code>Exe</code> directory.
+    Generates the project's binary HTML help file and places it in the
+    <code>Exe</code> directory.
   </dd>
   <dt>
     <code>BuildInstaller</code>
@@ -543,7 +522,7 @@
     <code>BuildAll</code>
   </dt>
   <dd>
-    This script builds all the executable files, the help files and the
+    This script builds all the executable files, the help file and the
     installer. It is a shortcut for all the preceeding commands.
     <code>VIBinData.dll</code> must have been copied to the <code>Exe</code>
     directory before running this script.
@@ -650,9 +629,6 @@
       <li>
         <code>pas</code> - builds Pascal source and links with resource
         files.
-      </li>
-      <li>
-        <code>help</code> - builds help files.
       </li>
     </ul>
   </dd>
