@@ -204,7 +204,7 @@ begin
     begin
       // We have some version info: report on it
       // create stream that updates content string list
-      Stm := TStringListIStream.Create(Content, True);
+      Stm := TStringListIStream.Create(Content, TEncoding.Unicode, True);
       // create reporter object of required kind and write report
       if Failed(fLoader.CreateFunc(GetCLSID, Reporter)) then
         raise Exception.Create(sCantCreateReporter);

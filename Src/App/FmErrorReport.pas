@@ -117,7 +117,7 @@ begin
     begin
       // We have some version info: report on it
       // create stream that updates display memo
-      Stm := TStringListIStream.Create(Content, True);
+      Stm := TStringListIStream.Create(Content, TEncoding.Unicode, True);
       // create error reporter object
       Res := fLoader.CreateFunc(CLSID_VerInfoHTMLErrReporter, Reporter);
       if Failed(Res) then raise

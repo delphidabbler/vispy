@@ -52,12 +52,10 @@ type
   TStringListIStream
     Class that implements an IStream interface to reads & writes data from & to
     a string list object.
-
-    Inheritance: TStringListIStream -> [TPJIStreamWrapper]
   }
   TStringListIStream = class(TPJIStreamWrapper, IStream)
   public
-    constructor Create(const StrList: TStrings;
+    constructor Create(const StrList: TStrings; const Encoding: TEncoding;
       const AutoUpdate: Boolean = False);
       {Class constructor: checks that the given string list is not nil and then
       wraps an underlying TStringListStream object to perform actual stream
@@ -78,8 +76,6 @@ type
     on directly or copied and the stream attached to the copy. Updates to
     external streams can either be immediate or can be deferred until just
     before the stream is destroyed.
-
-    Inheritance: TStringListStream -> [TStream]
   }
   TStringListStream = class(TStream)
   private
@@ -98,7 +94,7 @@ type
       {Whether the string list should be updated after every write (true) or
       just when the StrList property is read and the stream is destroyed}
   public
-    constructor Create(const StrList: TStrings;
+    constructor Create(const StrList: TStrings; const Encoding: TEncoding;
       const CopyStrings: Boolean = False; const AutoUpdate: Boolean = False);
       {Class constructor: creates stream instance that operates on the given
       string list. If CopyStrings is true that the given string list is copied
@@ -132,7 +128,8 @@ type
 { TStringListStream }
 
 constructor TStringListStream.Create(const StrList: TStrings;
-  const CopyStrings: Boolean; const AutoUpdate: Boolean);
+  const Encoding: TEncoding; const CopyStrings: Boolean;
+  const AutoUpdate: Boolean);
   {Class constructor: creates stream instance that operates on the given string
   list. If CopyStrings is true that the given string list is copied to a new
   string list owned by the class. If StrList is nil then a new owned string list
@@ -156,7 +153,7 @@ begin
     // we need to operate directly on user-provided string list
     fStrList := StrList;
   // Create string stream object that does all the work
-  fStrStm := TStringStream.Create(fStrList.Text);
+  fStrStm := TStringStream.Create(fStrList.Text, Encoding);
   fStrStm.Position := 0;
 end;
 
@@ -225,7 +222,7 @@ resourcestring
   sErrNilStrList = 'Can''t create IStringListStream on nil string list';
 
 constructor TStringListIStream.Create(const StrList: TStrings;
-  const AutoUpdate: Boolean);
+  const Encoding: TEncoding; const AutoUpdate: Boolean);
   {Class constructor: checks that the given string list is not nil and then
   wraps an underlying TStringListStream object to perform actual stream
   operations. If AutoUpdate parameter is true the string list is updated with
@@ -239,6 +236,7 @@ begin
   inherited Create(             // this is PJIStreamWrapper constructor
     TStringListStream.Create(   // create a TStringListStream object to do i/o
       StrList,                  // underlying string list
+      Encoding,
       False,                    // act on actual string list, not a copy
       AutoUpdate                // udpate with each write or when stream freed
     ),
