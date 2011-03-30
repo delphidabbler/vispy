@@ -24,7 +24,7 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  * 
- * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2011 Peter
  * Johnson. All Rights Reserved.
  * 
  * Contributor(s):
@@ -167,12 +167,9 @@ begin
   Writer.WriteTextLine([sTXTTranslation, ' = ', DispStr]);
   // Display all strings in translation
   for Idx := 0 to Pred(VarInfo.StringCount) do
-    Writer.WriteTextLine([
-      '  ',
-      AnsiString(VarInfo.StringName(Idx)),
-      ' = ',
-      AnsiString(VarInfo.StringValue(Idx))
-    ]);
+    Writer.WriteTextLine(
+      ['  ', VarInfo.StringName(Idx), ' = ', VarInfo.StringValue(Idx)]
+    );
 end;
 
 end.
