@@ -163,17 +163,14 @@ var
   Switch: string;     // switch with leading / or - removed and made lower case
 begin
   inherited;
-  // Set file name to '' => no file name to open
   fFileName := '';
-  // Zero switched
   fSwitches := 0;
   // Scan all parameters
   for ParamIdx := 1 to ParamCount do
   begin
     Param := ParamStr(ParamIdx);
     // Check for switches
-    if (Length(Param) > 1)
-      and (Param[1] in ['-', '/']) then
+    if (Length(Param) > 1) and CharInSet(Param[1], ['-', '/']) then
     begin
       // We have a switch
       Switch := AnsiLowerCase(Copy(Param, 2, Length(Param) - 1));
@@ -189,7 +186,6 @@ begin
     end;
   end;
 end;
-
 
 { TStartup }
 
@@ -305,3 +301,4 @@ begin
 end;
 
 end.
+
