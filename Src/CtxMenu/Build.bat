@@ -12,7 +12,6 @@
 @rem   Borland BRCC32 from Delphi 2010 installation
 @rem   DelphiDabbler Version Information Editor v2.11 or later, available from
 @rem     www.delphidabbler.com 
-@rem   Microsoft Help Compiler v4
 @rem
 @rem Also requires the following environment variables:
 @rem   DELPHI2010 to be set to the install directory of Delphi 2010
@@ -22,14 +21,11 @@
 @rem The following environment variables are optional:
 @rem   VIEDROOT to reference the directory where Version Information Editor is
 @rem     installed. If not set the program must be on the path
-@rem   HCROOT to reference the directory where Microsoft Help Compiler is
-@rem     installed. If not set the compiler must be on the path
 @rem
 @rem Switches: exactly one of the following must be provided
 @rem   all - build everything
 @rem   res - build binary resource files only
 @rem   pas - build Delphi Pascal project only
-@rem   help - build help file
 @rem
 @rem ---------------------------------------------------------------------------
 
@@ -59,13 +55,11 @@ rem reset all config variables
 set BuildAll=
 set BuildResources=
 set BuildPascal=
-set BuildHelp=
 
 rem check switch
 if "%~1" == "all" goto Config_BuildAll
 if "%~1" == "res" goto Config_BuildResources
 if "%~1" == "pas" goto Config_BuildPascal
-if "%~1" == "help" goto Config_BuildHelp
 set ErrorMsg=Unknown switch "%~1"
 if "%~1" == "" set ErrorMsg=No switch specified
 goto Error
@@ -74,7 +68,6 @@ rem set config variables
 :Config_BuildAll
 set BuildResources=1
 set BuildPascal=1
-set BuildHelp=1
 goto Config_OK
 
 :Config_BuildResources
@@ -83,10 +76,6 @@ goto Config_OK
 
 :Config_BuildPascal
 set BuildPascal=1
-goto Config_OK
-
-:Config_BuildHelp
-set BuildHelp=1
 goto Config_OK
 
 :Config_OK
@@ -128,8 +117,6 @@ echo Setting Up Local Environment Variables
 
 rem source directory
 set SrcDir=.\
-rem help source directory
-set HelpSrcDir=%SrcDir%Help\
 rem binary files directory
 set BinDir=..\..\Bin\CtxMenu\
 rem executable files directory
@@ -140,9 +127,6 @@ rem Delphi 2010 - use full path since maybe multple installations
 set DCC32Exe="%DELPHI2010%\Bin\DCC32.exe"
 rem Borland Resource Compiler - use full path since maybe multple installations
 set BRCC32Exe="%DELPHI2010%\Bin\BRCC32.exe"
-rem MS Help Compiler: HCROOT may specify install dir
-set HCRTFExe="%HCROOT%\HCRTF.exe"
-if "%HCROOT%" == "" set HCRTFExe="HCRTF.exe"
 rem Version Information Editor: VIEDROOT may specify install dir
 set VIEDExe="%VIEDROOT%\VIEd.exe"
 if "%VIEDROOT%" == "" set VIEDExe="VIEd.exe"
@@ -210,7 +194,7 @@ rem Build Pascal project
 rem ----------------------------------------------------------------------------
 
 :Build_Pascal
-if not defined BuildPascal goto Build_Help
+if not defined BuildPascal goto Build_End
 echo Building Pascal Source
 echo.
 
@@ -219,10 +203,9 @@ set PascalBase=FileVerCM
 set PascalSrc=%SrcDir%%PascalBase%.dpr
 set PascalExe=%ExeDir%%PascalBase%.dll
 set DDabLib=%DELPHIDABLIBD2010%
-set IncPath=.\Help
 
 rem Do compilation
-%DCC32Exe% -B %PascalSrc% -U"%DDabLib%" -I%IncPath%
+%DCC32Exe% -B %PascalSrc% -U"%DDabLib%" 
 if errorlevel 1 goto Pascal_Error
 goto Pascal_End
 
@@ -235,38 +218,6 @@ goto Error
 :Pascal_End
 echo Pascal Source Built OK.
 echo.
-
-goto Build_Help
-
-
-rem ----------------------------------------------------------------------------
-rem Build help project
-rem ----------------------------------------------------------------------------
-
-:Build_Help
-if not defined BuildHelp goto Build_End
-echo Building Help Project
-echo.
-
-set FVHelpBase=FileVerShExt
-set FVHelpPrj=%HelpSrcDir%%FVHelpBase%.hpj
-set FVHelpHlp=%ExeDir%%FVHelpBase%.hlp
-set FVHelpGid=%ExeDir%%FVHelpBase%.gid
-set FVHelpCntSrc=%HelpSrcDir%%FVHelpBase%.cnt
-set FVHelpCntDest=%ExeDir%%FVHelpBase%.cnt
-
-rem Ensure we have no .gid file
-if exist %FVHelpGid% del /A:H %FVHelpGid%
-
-rem Copy help contents file to exe folder
-echo Copying %FVHelpCntSrc% to %FVHelpCntDest%
-copy %FVHelpCntSrc% %FVHelpCntDest% >nul
-
-rem Ensure FileVerShExt.hlp exists to get required case of file name
-echo Compiling %FVHelpPrj% as %FVHelpHlp%
-if not exist %FVHelpHlp% echo Dummy File > %FVHelpHlp%
-rem Compile help file
-%HCRTFExe% /x %FVHelpPrj%
 
 goto Build_End
 
