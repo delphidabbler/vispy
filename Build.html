@@ -701,6 +701,80 @@
 </p>
 
 <h2>
+  Compiling &amp; Testing FileVerCM.dll
+</h2>
+
+<p>
+  Because <code>FileVerCM.dll</code> hooks into Windows Explorer it can be
+  difficult to test and may sometimes refuse to compile.
+</p>
+
+<h3>
+  Testing
+</h3>
+
+<p>
+  So that the development version of the DLL is used by Explorer on its context
+  menu and in the file property sheet, you need to make sure that the correct
+  file is used by Explorer.
+</p>
+
+<p>
+  The easiest way to do this is to first ensure there is a valid install of
+  <em>Version Information Spy</em> because this creates the required registry
+  entries. Next run <em>RegEdit</em> with administrator privileges and find all
+  sub-keys in <code>HKEY_CLASSES_ROOT\CLSID</code> that contain a path to
+  <code>FileVerCM.dll</code> and change them to reference the development
+  version of the file. You can change them back later by re-installing the
+  program or by manually changing the paths back to their old values.
+</p>
+
+<p>
+  You may also want to change the <code>FileVer.exe</code> sub-key of
+  <code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App
+  Paths</code> to reference the development exe file and path. This will enable
+  <code>FileVerCM.dll</code> to find the development version of the GUI program
+  rather than starting the installed version. Again, a fresh install should
+  restore the original value.
+</p>
+
+<h3>
+  Compiling
+</h3>
+
+<p>
+  Once <code>FileVerCM.dll</code> has been used by Explorer you may find that
+  the DLL remains loaded and can't be overwritten by a fresh compile. Close all
+  Explorer windows and check if the compile now succeeds. If this doesn't help
+  (and it often doesn't) you need to restart Explorer entirely. Do this as
+  follows:
+</p>
+
+<ol class="spaced">
+  <li>
+    Open Windows Task Manager by pressing Ctrl+Shift+Esc.
+  </li>
+  <li>
+    Go to the <em>Processes</em> tab, find <code>explorer.exe</code> and stop it
+    by right clicking and choosing the <em>End Process</em> from the context
+    menu. This actions kills the desktop and task bar so don't close Task
+    Manager!
+  </li>
+  <li>
+    Select Task Manager's <em>File | New Task (Run)</em> menu option and enter
+    <code>explorer.exe</code> in the resulting <em>Create New Task</em> dialog
+    box. Click <em>OK</em> to restart Explorer. The desktop and taskbar should
+    come back.
+  </li>
+</ol>
+
+<p>
+  <code>FileVerCM.dll</code> should now have been unloaded and a fresh compile
+  should succeed. If this fails try repeating the above procedure but do the
+  recompile between steps 2 and 3 while Explorer is not running.
+</p>
+
+<h2>
   Copyright
 </h2>
 
