@@ -23,7 +23,7 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2011 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
@@ -47,7 +47,7 @@ const
   cLongSuiteName
     = 'Version Information Spy';        // long name of suite
   cVersion = '7';                       // major version number
-  cUpdateYear = '2007';                 // year of last update
+  cUpdateYear = '2011';                 // year of last update
 
   // Application file names
   cVISExe = 'FileVer.exe';              // main GUI application
