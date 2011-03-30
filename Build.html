@@ -45,6 +45,10 @@
     body {
       font-family: sans-serif;
     }
+    p, div.spaced {
+      margin: 0 0 0.5em 0;
+      padding: 0;
+    }
     dl.spaced dt {
       margin-top: 0.5em;
     }
@@ -98,18 +102,23 @@
 <ul>
   <li>
     <a
-      href="http://www.delphidabbler.com/software/aboutbox"
-    >About Box Component</a> v3.4 or later. <sup>1</sup>
+      href="http://www.delphidabbler.com/software/verinfo"
+    >Version Information Component</a> v3.3 or later. <sup>1</sup>
   </li>
   <li>
     <a
-      href="http://www.delphidabbler.com/software/verinfo"
-    >Version Information Component</a> v3.2 or later. <sup>1</sup>
+      href="http://www.delphidabbler.com/software/sysinfo"
+    >System Information Unit</a> v3.3 or later. <sup>2</sup>
+  </li>
+  <li>
+    <a
+      href="http://www.delphidabbler.com/software/msgdlg"
+    >Message Dialog Components</a> v2.3 or later. <sup>2</sup>
   </li>
   <li>
     <a
       href="http://www.delphidabbler.com/software/dropfiles"
-    >Drop Files Components</a> v5.0.1 or later. <sup>1</sup>
+    >Drop Files Components</a> v5.0.2 or later. <sup>1</sup>
   </li>
   <li>
     <a
@@ -118,13 +127,8 @@
   </li>
   <li>
     <a
-      href="http://www.delphidabbler.com/software/msgdlg"
-    >Message Dialog Components</a> v2.2 or later. <sup>2</sup>
-  </li>
-  <li>
-    <a
-      href="http://www.delphidabbler.com/software/sysinfo"
-    >System Information Unit</a> v3.2.1 or later. <sup>2</sup>
+      href="http://www.delphidabbler.com/software/aboutbox"
+    >About Box Component</a> v3.5.1 or later. <sup>1</sup>
   </li>
   <li>
     <a
@@ -158,8 +162,8 @@
     href="http://www.delphidabbler.com/software/vibindata/download"
   >here</a>. The source code for the DLL is available from <a
     href="http://code.google.com/p/verinfo-tools/source/browse/#svn/trunk/vibindata"
-  >this repository</a>, but is not required to build <em>Version Information
-  Spy</em>.
+  >this repository</a>. The DLL source is <em>not</em> required to build
+  <em>Version Information Spy</em>.
 </p>
 
 <h2>
@@ -198,7 +202,9 @@
   <dd>
     Microsoft HTML Help compiler. This command line compiler is supplied with
     Microsoft HTML Help Workshop. It is used to compile program's HTML Help
-    file.
+    file. You can get HTML Help Workshop from <a
+      href="http://msdn.microsoft.com/en-us/library/ms669985"
+    />Microsoft</a>. Requires release 1.3 or later.
   </dd>
   <dt>
     <code>ISCC</code>
@@ -206,9 +212,9 @@
   <dd>
     The Unicode version of the Inno Setup command line compiler. v5.4 or later
     is required with a matching version of <code>ISPP</code>. You can get Inno
-    Setup from <a
+    Setup from the <a
       href="http://www.innosetup.com/"
-    >http://www.innosetup.com/</a>.
+    >InnoSetup site</a>.
   </dd>
   <dt>
     <code>VIEd</code>
@@ -251,17 +257,20 @@
     a suitable folder, preserving the directory structure.
   </li>
   <li>
-    <div>
-      Get the source code of a suitable release or the latest development
-      code using <em>Subversion</em>. Check out the latest development
-      code into a folder named <code>vis</code> by doing:
+    <div class="spaced">
+      Get the source code of either the latest development code (which may not
+      be stable) or of a specified stable release using <em>Subversion</em>.
+    </div>
+    <div class="spaced">
+      Check out the latest development code into a folder named <code>vis</code>
+      by doing:
     </div>
     <pre class="indent"><span class="prompt">&gt;</span> svn checkoput http://verinfo-tools.googlecode.com/svn/trunk/vis/ vis</pre>
-    <div>
+    <div class="spaced">
       Alternatively check out the source code of a release by doing
     </div>
     <pre class="indent"><span class="prompt">&gt;</span> svn checkout http://verinfo-tools.googlecode.com/svn/tags/vis/release-9.9.9/ vis</pre>
-    <div>
+    <div class="spaced">
       Replace <code>9.9.9</code> with the version number of the required
       release. All available releases can be viewed in <a
         href="http://code.google.com/p/verinfo-tools/source/browse/#svn/tags/vis"
@@ -393,7 +402,7 @@
 <p>
   If your source tree also contains one or more of the <code>Bin</code>,
   <code>Exe</code> or <code>Release</code> directories that's OK, as will
-  become clear later. Subversion users will also see the usual hidden
+  become clear later. Subversion users will also have the usual hidden
   <code>.svn</code> directories.
 </p>
 
@@ -418,10 +427,9 @@
     these directories already existed they will have been emptied.
   </li>
   <li>
-    It creates the <code>.cfg</code> and <code>.dof</code> files from
-    template files. These files are required to configure the Delphi command
-    line compiler and IDE respectively. These new files will be ignored by
-    Subversion.
+    It creates <code>.cfg</code> files for each Delphi sub-project from template
+    files. <code>.cfg</code> files are required to configure the Delphi command
+    line compiler. These new files will be ignored by Subversion.
   </li>
 </ol>
 
@@ -433,8 +441,8 @@
 </p>
 
 <p>
-  If you intending to edit and compile the code using the Delphi IDE you must
-  also run the following script from the <code>DevTools</code> directory:
+  If you are intending to edit and compile the code using the Delphi IDE you
+  must also run the following script from the <code>DevTools</code> directory:
 </p>
 
 <pre class="indent"><span class="prompt">&gt;</span> BuildResources</pre>
@@ -460,7 +468,7 @@
   <li>
     By building each sub-project separately: each sub-directory of
     <code>Src</code> except <code>Imports</code> and <code>Shared</code>
-    contain a script named <code>Build.bat</code> that is used to build
+    contains a script named <code>Build.bat</code> that is used to build
     that sub-project.
   </li>
   <li>
@@ -490,7 +498,7 @@
   <dd>
     Builds all the resources required by any of the project's applications
     and DLLs. The generated <code>.res</code> files are placed in the
-    appropriate sub-directories of <code>Bin</code>. This tool must be used
+    appropriate sub-directories of <code>Bin</code>. This script must be run
     before using <code>BuildPascal</code>.
   </dd>
   <dt>
@@ -498,7 +506,7 @@
   </dt>
   <dd>
     Builds the Pascal source code for all the project's applications and
-    DLLs and links in resources to create the final executable. The
+    DLLs and links in resources to create the final executables. The
     executables are placed in the <code>Exe</code> directory.
     <code>BuildResources</code> must be run before running this script.
   </dd>
@@ -513,10 +521,10 @@
     <code>BuildInstaller</code>
   </dt>
   <dd>
-    Creates the install file. The executable files and help files must have
-    been generated and <code>VIBinData.dll</code> must have been copied to
-    the <code>Exe</code> directory before running this script. The resulting
-    installer is placed in the <code>Exe</code> directory.
+    Creates the setup program. The executable and help files must have been
+    generated and <code>VIBinData.dll</code> must have been copied to the
+    <code>Exe</code> directory before running this script. The resulting
+    program is placed in the <code>Exe</code> directory.
   </dd>
   <dt>
     <code>BuildAll</code>
@@ -539,8 +547,7 @@
     <code>Tidy</code>
   </dt>
   <dd>
-    This script deletes temporary files from the <code>Src</code> and
-    <code>Docs</code> directories.
+    This script deletes temporary files and directories.
   </dd>
   <dt>
     <code>Config</code>
@@ -561,8 +568,8 @@
 </p>
 
 <p>
-  To use a script open a console window, set up the environment and then set
-  the console's working directory to the appropriate source directory.
+  To use a script open a console window, set up the environment if necessary,
+  then set the console's working directory to the appropriate source directory.
 </p>
 
 <p>
