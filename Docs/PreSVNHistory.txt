@@ -9,8 +9,8 @@ before the project was placed was placed under version control with Subversion.
 
 There are two sections:
 
-  1: Releases: Lists all the releases of VIS and notes which files were added,
-     updated or deleted in each release.
+  1: Releases: Lists all the releases of VIS and the component sub-projects and
+     notes which files were added, updated or deleted in each release.
 
   2: Files: Lists all source code and development tools for which history is
      available and provides details of changes to these files.
@@ -18,6 +18,144 @@ There are two sections:
 ================================================================================
 2: RELEASES
 ================================================================================
+
+This section is in two parts. The first lists releases of the complete project
+and lists which executable files were included in the releases. The second part
+lists each subproject along with change notes and details of changed files.
+
+Section 1: Details of complete releases
+=======================================
+
+This section lists which executable files were used in each release of the
+complete project. For details of the changes made in each release see
+ChangeLog.txt.
+
+Unreleased v1.0 of 16 February 1998
++ FileVer.exe v1.0
+
+Unreleased v1.1 of 03 May 1998
++ FileVer.exe v1.1
+
+Unreleased v1.2 of 15 May 1998
++ FileVer.exe v1.2
+
+Unreleased v1.3 of 15 May 1998
++ FileVer.exe v1.3
+
+Unreleased v2.0 of 07 July 1998
++ FileVer.exe v2.0
+
+Release v2.1 of 27 August 1998
++ FileVer.exe v2.1
+
+Release v3.0 of 04 December 1999
++ FileVer.exe v3.0
+
+Release v4.0 of 30 March 2002
++ FileVer.exe v4.0
++ PJSoftNet.dll v1.0
+
+Release v5.0 of 04 August 2002
++ FileVer.exe v5.0
++ FileVerCM.dll v1.0
++ VIBinData.dll v1.0
++ PJSoftNet.dll v1.0
+
+Release v6.0 of 24 February 2003
++ FileVer.exe v6.0 (build 54)
++ FileVerCM.dll v2.0 (build 2)
++ FileVerCmd.exe v1.0 (build 1)
++ FVFileReader.dll v1.0 (build 1)
++ FVReport.dll v1.0 (build 1)
++ VIBinData.dll v1.0 (build 1)
++ DDNet.dll v1.0 (build 1)
+
+Release v6.1 of 31 May 2003
++ FileVer.exe v6.1 (build 55)
++ FleVerCM.dll v2.0 (build 3)
++ FileVerCmd.exe v1.0 (build 2)
++ FVFileReader.dll v1.0 (build 2)
++ FVReport.dll v1.0 (build 2)
++ VIBinData.dll v1.0.1 (build 2)
++ DDNet.dll v1.0 (build 1)
+
+Unreleased v6.1.1 of 14 August 2003
++ FileVer.exe v6.1.1 (build 56)
++ FileVerCM.dll v2.0 (build 4)
++ FileVerCmd.exe v1.0 (build 3)
++ FVFileReader.dll v1.0 (build 3)
++ FVReport.dll v1.0.1 (build 3)
++ VIBinData.dll v1.0.2 (build 3)
++ DDNet.dll v1.0 (build 1)
+
+Release v6.1.2 of 17 August 2003
++ FileVer.exe v6.1.2 (build 57)
++ FileVerCM.dll v2.0 (build 5)
++ FileVerCmd.exe v1.0 (build 4)
++ FVFileReader.dll v1.0 (build 4)
++ FVReport.dll v1.0.1 (build 4)
++ VIBinData.dll v1.0.3 (build 4)
++ DDNet.dll v1.0 (build 1)
+
+Release v6.1.3 of 10 September 2003
++ FileVer.exe v6.1.2 (build 58)
++ FileVerCM.dll v2.0 (build 6)
++ FileVerCmd.exe v1.0 (build 5)
++ FVFileReader.dll v1.0.1 (build 5)
++ FVReport.dll v1.0.1 (build 5)
++ VIBinData.dll v1.0.3 (build 4)
++ DDNet.dll v1.0 (build 1)
+
+Release v7.0 of 20 October 2004
++ FileVer.exe v7.0 (build 59)
++ FileVerCM.dll v3.0 (build 7)
++ FileVerCmd.exe v1.1 (build 6)
++ FVFileReader.dll v2.0 (build 6)
++ FVReport.dll v2.0 (build 6)
++ VIBinData.dll v1.0.4 (build 5)
+
+Release v7.0.1 of 07 March 2005
++ FileVer.exe v7.0.1 (build 60)
++ FileVerCM.dll v3.0 (build 8)
++ FileVerCmd.exe v1.1 (build 7)
++ FVFileReader.dll v2.0 (build 7)
++ FVReport.dll v2.0 (build 7)
++ VIBinData.dll v1.0.4 (build 5)
+
+Release v7.0.2 of 23 November 2005
++ FileVer.exe v7.0.1 (build 61)
++ FileVerCM.dll v3.0.1 (build 9)
++ FileVerCmd.exe v1.1 (build 8)
++ FVFileReader.dll v2.0 (build 8)
++ FVReport.dll v2.0 (build 8)
++ VIBinData.dll v1.0.4 (build 5)
+
+Release v7.0.3 of 28 August 2007
++ FileVer.exe v7.0.2 (build 62)
++ FileVerCM.dll v3.0.2 (build 10)
++ FileVerCmd.exe v1.1.1 (build 9)
++ FVFileReader.dll v2.0.1 (build 9)
++ FVReport.dll v2.0.1 (build 9)
++ VIBinData.dll v1.0.5 (build 6)
+
+Release v7.1.0 of 21 November 2009
++ FileVer.exe v7.1.0 (build 63)
++ FileVerCM.dll v3.0.2 (build 11)
++ FileVerCmd.exe v1.2.0 (build 10)
++ FVFileReader.dll v2.0.1 (build 10)
++ FVReport.dll v2.1.0 (build 10)
++ VIBinData.dll v1.0.5 (build 6)
+
+
+Section 2: Details of changes to sub-projects
+=============================================
+
+In this section is sub project is listed separately along with details of
+changes made for each version and details of which files were changed.
+
+--------------------------------------------------------------------------------
+FileVer
+--------------------------------------------------------------------------------
 
 v1.0 of 24 Apr 1998
 --------------------------------------------------------------------------------
@@ -311,7 +449,7 @@ New:     ..\Shared\UGlobals.pas 1.0
 Updated: ..\Shared\URegistry.pas 2.0
 Updated: ..\Shared\UReporterLoader.pas 2.0
 Updated: ..\Shared\UVerUtils.pas 2.1
-Updated: ..\..\..\Intf\IntfFileVerShellExt.pas 2.0 renamed from 
+Updated: ..\..\..\Intf\IntfFileVerShellExt.pas 2.0 renamed from
          ..\..\..\Intf\IntfFileVerCM.pas
 Updated: ..\..\..\Intf\IntfVerInfoReader.pas 2.0
 Updated: ..\..\..\Intf\IntfVerInfoReport.pas 2.0
@@ -444,7 +582,7 @@ Major update that:
 + Changes the registration COM server to support recording and registering file
   extensions for either of the shell extensions (contect menu handler and
   property sheet page).
-  
+
 Updated: FileVerCM.dpr 2.0
 Updated: UBaseCOMObj.pas 1.1 renamed from UFileVerCMBase.pas
 Updated: UCOMLibExp.pas 2.0 renamed from UFileVerCMExp.pas
@@ -828,7 +966,7 @@ Major revision:
   external UninstMsg.exe program.
 + Changed to install VIBinData.dll to application folder instead of as shared
   DLL in Common Files.
-  
+
 Removed: UninstMsg\UninstMsg.dpr
 Updated: FileVer7.iss 2.0
 New:     Uninstall.ps 1.0
@@ -928,7 +1066,7 @@ v5.0 of 03 Aug 2002  - Added new units: FmCtxMenu.pas, UCtxMenuMgr.pas,
                      - Added include statement for new version information
                        resource (version information no longer added
                        automatically by compiler).
-                     - Added code to detect if program is to run or is to 
+                     - Added code to detect if program is to run or is to
                        terminate in favour of another instance of the program.
                        The program halts without creating a main window if it is
                        not to run.
@@ -941,7 +1079,7 @@ v6.0 of 24 Feb 2003  - Added new units: UFileReaderLoader, UDisplayFmt,
 v7.0 of 20 Oct 2004  - Added new units: CmpHotButton, CmpTextBox, FmBase,
                        FmBaseTabbedDlg, FmDisplayOpts, FmErrorReport,
                        FmExplExtAdd, FmFixedSourceReport, FmGenericDlg,
-                       FmGenericOKDlg, FmGenericViewDlg, FmHelpAware, 
+                       FmGenericOKDlg, FmGenericViewDlg, FmHelpAware,
                        FmHTMLReport, FmRegExtQuery, FmSourceReport,
                        FmTextReport, FrHTMLViewer, FrMemoViewer, FrViewerBase,
                        UCBDisplayMgr, UDictionaries, UDisplayMgrs, UExtensions,
@@ -2053,7 +2191,7 @@ Src\Installer\UninstMsg\UninstMsg.dpr
 --------------------------------------------------------------------------------
 v1.0 of 26 Oct 2004  - Original version of program run by installer that
                        displays a prompt on uninstallation.
-        28 Aug 2007  - DELETED.        
+        28 Aug 2007  - DELETED.
 
 --------------------------------------------------------------------------------
 Src\Reader\Build.bat
@@ -2096,9 +2234,9 @@ v3.0 of 23 May 2004  - Updated TVarVerInfo to support the new IVerInfoVarReader2
                        interface and its StatusEx method that can return the new
                        VARVERINFO_STATUS_* flags.
                      - Added support for IVerInfoFileQuery interface in new
-                       TVerInfoQuery object.        
+                       TVerInfoQuery object.
         16 Nov 2009  - Moved to SVN.
-        
+
 --------------------------------------------------------------------------------
 Src\Reader\UResourceFile.pas
 --------------------------------------------------------------------------------
