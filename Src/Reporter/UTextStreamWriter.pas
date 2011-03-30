@@ -23,7 +23,7 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2011 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
@@ -59,11 +59,11 @@ type
   public
     constructor Create(const Stm: IStream);
       {Class constructor: records non-nil stream we're to write to}
-    procedure WriteText(const Str: string);
+    procedure WriteText(const Str: UnicodeString);
       {Writes the text in Str to the given stream}
-    procedure WriteTextLine(const Str: string); overload;
+    procedure WriteTextLine(const Str: UnicodeString); overload;
       {Writes the text in Str followed by a newline to the given stream}
-    procedure WriteTextLine(const Strs: array of string); overload;
+    procedure WriteTextLine(const Strs: array of UnicodeString); overload;
       {Consecutively writes all the strings in the given array to the given
       stream, followed by a new line}
     procedure WriteTextLine; overload;
@@ -84,13 +84,13 @@ begin
   fStream := Stm;
 end;
 
-procedure TTextStreamWriter.WriteText(const Str: string);
+procedure TTextStreamWriter.WriteText(const Str: UnicodeString);
   {Writes the text in Str to the given stream}
 begin
-  fStream.Write(Pointer(PChar(Str)), Length(Str), nil);
+  fStream.Write(Pointer(PChar(Str)), Length(Str) * SizeOf(Char), nil);
 end;
 
-procedure TTextStreamWriter.WriteTextLine(const Str: string);
+procedure TTextStreamWriter.WriteTextLine(const Str: UnicodeString);
   {Writes the text in Str followed by a newline to the given stream}
 begin
   WriteText(Str);
@@ -103,7 +103,7 @@ begin
   WriteTextLine('');
 end;
 
-procedure TTextStreamWriter.WriteTextLine(const Strs: array of string);
+procedure TTextStreamWriter.WriteTextLine(const Strs: array of UnicodeString);
   {Consecutively writes all the strings in the given array to the given stream,
   followed by a new line}
 var
