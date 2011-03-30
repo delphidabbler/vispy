@@ -25,7 +25,7 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  * 
- * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2011 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
@@ -55,10 +55,8 @@ type
     writes code that is common to all source code reports and defines abstract
     methods that are overridden by concreate descendant classes to write the
     parts of the code that vary depending on the class type.
-
-    Inheritance: TAbstractRCReporter -> TReporter -> [TInterfacedObject]
   }
-  TAbstractRCReporter = class(TReporter, IVerInfoReporter)
+  TAbstractRCReporter = class(TReporter, IVerInfoReporter3)
   protected
     function AddMissingStringTables: Boolean; virtual; abstract;
       {Descendant classes return true if entries for missing string tables are
@@ -115,11 +113,8 @@ type
     Writes version information RC source code to an output stream or file. The
     source code includes comments noting any errors and inconsistencies in the
     version information.
-
-    Inheritance: TRCReporter -> TAbstractRCReporter -> TReporter
-      -> [TInterfacedObject]
   }
-  TRCReporter = class(TAbstractRCReporter, IVerInfoReporter)
+  TRCReporter = class(TAbstractRCReporter, IVerInfoReporter3)
   protected
     function AddMissingStringTables: Boolean; override;
       {Returns false since missing string tables are to be left out of the code}
@@ -150,11 +145,8 @@ type
     Writes version information RC source code to an output stream or file. The
     source code is modified to fix any errors or inconsistencies in the version
     information.
-
-    Inheritance: TFixedRCReporter -> TAbstractRCReporter -> TReporter
-      -> [TInterfacedObject]
   }
-  TFixedRCReporter = class(TAbstractRCReporter, IVerInfoReporter)
+  TFixedRCReporter = class(TAbstractRCReporter, IVerInfoReporter3)
   protected
     function AddMissingStringTables: Boolean; override;
       {Returns true since the source code is to be corrected to include missing

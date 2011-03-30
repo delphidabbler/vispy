@@ -50,10 +50,8 @@ type
   {
   TPlainReporter:
     Writes a descriptive report about given version information.
-
-    Inheritance: TPlainReporter -> TReporter -> [TInterfacedObject]
   }
-  TPlainReporter = class(TReporter, IVerInfoReporter)
+  TPlainReporter = class(TReporter, IVerInfoReporter3)
   private
     procedure ReportFFI(const Writer: TTextStreamWriter;
       const FFI: TVSFixedFileInfo);

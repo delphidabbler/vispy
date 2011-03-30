@@ -25,7 +25,7 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2011 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
@@ -53,10 +53,8 @@ type
     TErrorReporter:
       This class implements the IVerInfoErrReporter interface and writes a HTML
       report of any errors or inconsistencies in version information.
-
-      Inheritance: TErrorReporter -> [TInterfacedObject]
   }
-  TErrorReporter = class(TInterfacedObject, IVerInfoErrReporter)
+  TErrorReporter = class(TInterfacedObject, IVerInfoErrReporter3)
   private
     fLastError: WideString;
       {Records details of last error, or '' if no error}

@@ -24,10 +24,11 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2003-2009 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2003-2011 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
+ *   NONE
  *
  * ***** END LICENSE BLOCK *****
 }
@@ -137,12 +138,12 @@ procedure Display(const VI: IVerInfoReader);
     @param VI [in] Data reader object storing required version information.
   }
 var
-  Stm: IStream;               // stream on which we output report
-  RepLoader: TReporterLoader; // object that loads reporter DLL
-  Reporter: IVerInfoReporter; // report generator object
-  CLSID: TGUID;               // id of report generator object
-  Title: string;              // title containing file name
-  Header: WideString;         // header string ot be written out
+  Stm: IStream;                 // stream on which we output report
+  RepLoader: TReporterLoader;   // object that loads reporter DLL
+  Reporter: IVerInfoReporter3;  // report generator object
+  CLSID: TGUID;                 // id of report generator object
+  Title: string;                // title containing file name
+  Header: WideString;           // header string ot be written out
 begin
   Assert(Assigned(VI));
   // Create title

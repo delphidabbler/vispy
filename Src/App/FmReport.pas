@@ -25,7 +25,7 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  * 
- * Portions created by the Initial Developer are Copyright (C) 2003-2010 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2003-2011 Peter
  * Johnson. All Rights Reserved.
  * 
  * Contributor(s):
@@ -64,9 +64,6 @@ type
     report and display it. Also provides framework for copying the report to the
     clipboard and saving it to file. Descendent classes provide suitable viewer
     frames and supply information about the type of report required.
-
-    Inheritance: TReportBaseDlg -> TGenericViewDlg -> TGenericDlg
-      -> THelpAwareForm -> TBaseForm -> [TForm]
   }
   TReportBaseDlg = class(TGenericViewDlg)
     pnlView: TPanel;
@@ -190,10 +187,10 @@ end;
 procedure TReportBaseDlg.Display;
   {Displays required report in viewer frame}
 var
-  Reporter: IVerInfoReporter; // object that creates report
-  Stm: IStream;               // stream that report is written to
-  Content: TStrings;          // content of report frame
-  View: TViewerBase;          // report veiwer frame
+  Reporter: IVerInfoReporter3;  // object that creates report
+  Stm: IStream;                 // stream that report is written to
+  Content: TStrings;            // content of report frame
+  View: TViewerBase;            // report veiwer frame
 begin
   // Get reference to view that stores/displays report & reference to content
   View := Self.GetView;

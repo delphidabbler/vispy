@@ -24,7 +24,7 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  * 
- * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2011 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
@@ -54,9 +54,6 @@ type
   TErrorReportDlg:
     Dialog box that is used to display HTML reports on inconsistencies and
     errors in version information.
-
-    Inheritance: TErrorReportDlg -> TGenericViewDlg -> TGenericDlg
-      -> THelpAwareForm -> TBaseForm -> [TForm]
   }
   TErrorReportDlg = class(TGenericViewDlg)
     frHTML: THTMLViewer;
@@ -104,7 +101,7 @@ resourcestring
 procedure TErrorReportDlg.Display;
   {Displays report in the HTML viewer frame}
 var
-  Reporter: IVerInfoErrReporter;  // object that creates report
+  Reporter: IVerInfoErrReporter3; // object that creates report
   Stm: IStream;                   // stream that report is written to
   Content: TStrings;              // content of report frame
   Res: HResult;                   // HRESULT from various functions

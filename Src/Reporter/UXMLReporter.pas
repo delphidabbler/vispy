@@ -24,7 +24,7 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2009 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2011 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
@@ -53,7 +53,7 @@ type
   TXMLReporter:
     Writes an XML report about given version information.
   }
-  TXMLReporter = class(TReporter, IVerInfoReporter)
+  TXMLReporter = class(TReporter, IVerInfoReporter3)
   private
     procedure ReportFFI(const Writer: TTextStreamWriter;
       const FFI: TVSFixedFileInfo);

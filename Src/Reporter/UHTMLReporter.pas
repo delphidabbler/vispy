@@ -24,7 +24,7 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  * 
- * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2011 Peter
  * Johnson. All Rights Reserved.
  * 
  * Contributor(s):
@@ -53,10 +53,8 @@ type
   THTMLReporter:
     Writes an HTML format descriptive report about given version information to
     an output stream or file.
-
-    Inheritance: THTMLReporter -> TReporter -> [TInterfacedObject]
   }
-  THTMLReporter = class(TReporter, IVerInfoReporter)
+  THTMLReporter = class(TReporter, IVerInfoReporter3)
   private
     procedure ReportHeadingText(const Writer: THTMLWriter;
       const Headings: string);

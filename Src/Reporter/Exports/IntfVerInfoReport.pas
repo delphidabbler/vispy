@@ -52,31 +52,31 @@ const
 
   ///  Plain text report generator: supports IVerInfoReporter
   CLSID_VerInfoPlainReporter:
-    TGUID = '{9B69F292-B6E4-4503-A290-08EC0354268C}';
+    TGUID = '{F2D14AD7-7776-4D84-BDB5-0D6517196F72}';
   ///  RC source code report generator: supports IVerInfoReporter
   CLSID_VerInfoRCReporter:
-    TGUID = '{90461D4E-DC09-4A1F-A5D8-B09704DCD8E7}';
+    TGUID = '{C46EBCDD-F346-4900-8EF0-459C886A3E90}';
   ///  RC source code report generator with errors fixed: supports
   ///  IVerInfoReporter
   CLSID_VerInfoRCFixedReporter:
-    TGUID = '{A6EE55E4-C5EC-4139-A555-5BB6780F641B}';
+    TGUID = '{585A042E-F321-4ABF-A099-DF311C142E23}';
   ///  HTML report generator: supports IVerInfoReporter
   CLSID_VerInfoHTMLReporter:
-    TGUID = '{0B75983C-3A13-4F4A-A1FB-44B22BD8D60A}';
+    TGUID = '{C6E1B57D-4214-48F8-850F-01B350A0DFD6}';
   ///  XML report generator: supports IVerInfoReporter
   CLSID_VerInfoXMLReporter:
-    TGUID = '{2474CA9D-7323-4692-BDD9-3ECDA12D33DF}';
+    TGUID = '{5E40F0F8-7B49-4932-A9D0-64E29C235541}';
   ///  HTML error reporter: supports IVerInfoErrReporter
   CLSID_VerInfoHTMLErrReporter:
-    TGUID = '{5AD57743-04EF-47B9-8CCD-2805F0AAF41A}';
+    TGUID = '{287C9617-5C02-4DAE-9A06-893DDCC2DD97}';
 
 type
 
   ///  <summary>
   ///  Interface to objects that write a version information report.
   ///  </summary>
-  IVerInfoReporter = interface(IUnknown)
-    ['{07D632A3-8563-4AEF-A2D0-07122158E837}']
+  IVerInfoReporter3 = interface(IUnknown)
+    ['{B0CA21C7-A6C0-4840-A22D-2D2A14A4D3F5}']
     ///  <summary>Writes a version information report to a stream.</summary>
     ///  <param name="VI">IVerInfoReader [in] Object storing details of version
     ///  information.</param>
@@ -89,18 +89,6 @@ type
     ///  </remarks>
     function ReportToStream(const VI: IVerInfoReader;
       const Stm: IStream; const Header: WideString): WordBool; stdcall;
-    ///  <summary>Writes a version information report to a file.</summary>
-    ///  <param name="VI">IVerInfoReader [in] Object storing details of version
-    ///  information.</param>
-    ///  <param name="FileName">WideString in] File to which report is written.
-    ///  </param>
-    ///  <param name="Header">WideString [in] Heading text that is written
-    ///  before the body of the report. Ignored if empty string.</param>
-    ///  <returns>Boolean. True on success, False on failure.</returns>
-    ///  <remarks>If report fails the LastError function provides a description.
-    ///  </remarks>
-    function ReportToFile(const VI: IVerInfoReader;
-      const FileName: WideString; const Header: WideString): WordBool; stdcall;
     ///  <summary>Returns a description of error if previous operation failed,
     ///  or empty string if previous operation succeeded.</summary>
     function LastError: WideString; stdcall;
@@ -111,8 +99,8 @@ type
   ///  Interface to objects that can write report of any inconsistencies or
   ///  errors in version information.
   ///  </summary>
-  IVerInfoErrReporter = interface(IInterface)
-    ['{7D3692D3-80B6-472D-B3E2-C11D2C885302}']
+  IVerInfoErrReporter3 = interface(IInterface)
+    ['{E103B003-2EBD-4AF8-9CB2-CB03086CB11D}']
     ///  <summary>Checks a version information translation and reports any
     ///  inconsistencies to a stream. No report is written if translation is
     ///  valid.</summary>

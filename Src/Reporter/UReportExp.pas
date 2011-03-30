@@ -24,7 +24,7 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2004-2009 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2011 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
@@ -71,26 +71,26 @@ begin
     Result := S_OK;
     if IsEqualIID(CLSID, CLSID_VerInfoPlainReporter) then
       // Create plain text reporter
-      IVerInfoReporter(Obj) := TPlainReporter.Create
-        as IVerInfoReporter
+      IVerInfoReporter3(Obj) := TPlainReporter.Create
+        as IVerInfoReporter3
     else if IsEqualIID(CLSID, CLSID_VerInfoRCReporter) then
       // Create resource source reporter
-      IVerInfoReporter(Obj) := TRCReporter.Create
-        as IVerInfoReporter
+      IVerInfoReporter3(Obj) := TRCReporter.Create
+        as IVerInfoReporter3
     else if IsEqualIID(CLSID, CLSID_VerInfoRCFixedReporter) then
       // Create resource source reporter
-      IVerInfoReporter(Obj) := TFixedRCReporter.Create
-        as IVerInfoReporter
+      IVerInfoReporter3(Obj) := TFixedRCReporter.Create
+        as IVerInfoReporter3
     else if IsEqualIID(CLSID, CLSID_VerInfoHTMLReporter) then
       // Create resource source reporter
-      IVerInfoReporter(Obj) := THTMLReporter.Create
-        as IVerInfoReporter
+      IVerInfoReporter3(Obj) := THTMLReporter.Create
+        as IVerInfoReporter3
     else if IsEqualIID(CLSID, CLSID_VerInfoXMLReporter) then
-      IVerInfoReporter(Obj) := TXMLReporter.Create
-        as IVerInfoReporter
+      IVerInfoReporter3(Obj) := TXMLReporter.Create
+        as IVerInfoReporter3
     else if IsEqualIID(CLSID, CLSID_VerInfoHTMLErrReporter) then
-      IVerInfoErrReporter(Obj) := TErrorReporter.Create
-        as IVerInfoErrReporter
+      IVerInfoErrReporter3(Obj) := TErrorReporter.Create
+        as IVerInfoErrReporter3
     else
     begin
       // Unsupported object: set object nil and set error code
