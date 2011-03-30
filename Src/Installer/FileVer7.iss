@@ -22,7 +22,7 @@
 ; The Initial Developer of the Original Code is Peter Johnson
 ; (http://www.delphidabbler.com/).
 ;
-; Portions created by the Initial Developer are Copyright (C) 2004-2009 Peter
+; Portions created by the Initial Developer are Copyright (C) 2004-2011 Peter
 ; Johnson. All Rights Reserved.
 ;
 ; Contributor(s):
@@ -98,10 +98,9 @@ Name: desktopicon; Description: {cm:CreateDesktopIcon}; GroupDescription: {cm:Ad
 ; Executable files
 Source: {#SrcExePath}FileVer.exe; DestDir: {app}; Flags: uninsrestartdelete
 Source: {#SrcExePath}FileVer.cnt; DestDir: {app}; Flags: ignoreversion
-Source: {#SrcExePath}FileVer.hlp; DestDir: {app}; Flags: ignoreversion
+Source: {#SrcExePath}VIS.chm; DestDir: {app}; Flags: ignoreversion
 Source: {#SrcExePath}FileVerCM.dll; DestDir: {app}; Flags: regserver uninsrestartdelete
 Source: {#SrcExePath}FileVerCmd.exe; DestDir: {app}; Flags: uninsrestartdelete
-Source: {#SrcExePath}FileVerShExt.hlp; DestDir: {app}; Flags: ignoreversion
 Source: {#SrcExePath}FVFileReader.dll; DestDir: {app}; Flags: uninsrestartdelete
 Source: {#SrcExePath}FVReport.dll; DestDir: {app}; Flags: uninsrestartdelete
 Source: {#SrcExePath}VIBinData.dll; DestDir: {app}; Flags: uninsrestartdelete
@@ -137,8 +136,7 @@ Root: HKCU; Subkey: Software\{#AppPublisher}; Flags: uninsdeletekeyifempty
 Root: HKCU; Subkey: Software\{#AppPublisher}\FileVer; Flags: uninsdeletekeyifempty
 Root: HKCU; Subkey: Software\{#AppPublisher}\FileVer\7; Flags: uninsdeletekey
 ; Register help files
-Root: HKLM; Subkey: SOFTWARE\Microsoft\Windows\Help; ValueType: string; ValueName: FileVer.hlp; ValueData: {app}; Flags: uninsdeletevalue
-Root: HKLM; Subkey: SOFTWARE\Microsoft\Windows\Help; ValueType: string; ValueName: FileVerShExt.hlp; ValueData: {app}; Flags: uninsdeletevalue
+Root: HKLM; Subkey: SOFTWARE\Microsoft\Windows\Help; ValueType: string; ValueName: VIS.chm; ValueData: {app}; Flags: uninsdeletevalue
 ; Register applications and their paths
 Root: HKLM; Subkey: SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\FileVer.exe; ValueType: string; ValueData: {app}\FileVer.exe; Flags: uninsdeletekey
 Root: HKLM; Subkey: SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\FileVer.exe; ValueType: string; ValueName: Path; ValueData: {app}\; Flags: uninsdeletekey
