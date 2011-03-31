@@ -23,7 +23,7 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2004-2010 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2004-2011 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
@@ -66,7 +66,6 @@ type
   TWidget = class(TObject)
   private // properties
     fHandle: HWND;
-    fHelpContext: Integer;
     function GetCaption: string;
     procedure SetCaption(const Value: string);
     function GetHeight: Integer;
@@ -159,7 +158,7 @@ begin
     fBounds.Bottom - fBounds.Top,   // ...
     GetParentWdw,                   // get parent window of widget
     0,                              // no menu
-    MainInstance,                      // instance this module
+    MainInstance,                   // instance of this module
     nil                             // no custom application data
   );
   if fHandle = 0 then

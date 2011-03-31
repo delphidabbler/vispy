@@ -24,7 +24,7 @@
  * The Initial Developer of the Original Code is Peter Johnson
  * (http://www.delphidabbler.com/).
  *
- * Portions created by the Initial Developer are Copyright (C) 2002-2010 Peter
+ * Portions created by the Initial Developer are Copyright (C) 2002-2011 Peter
  * Johnson. All Rights Reserved.
  *
  * Contributor(s):
@@ -123,7 +123,9 @@ begin
     end
     else
       // ansi help string needed
-      StrPLCopy(pszName, Hint, cchMax);
+      {$WARN EXPLICIT_STRING_CAST_LOSS OFF}
+      StrPLCopy(pszName, AnsiString(Hint), cchMax);
+      {$WARN EXPLICIT_STRING_CAST_LOSS ON}
     // whether we pass back text or not we return OK
     Result := S_OK;
   end

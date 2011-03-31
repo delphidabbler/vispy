@@ -89,7 +89,7 @@ implementation
 
 uses
   // Delphi
-  SysUtils;
+  SysUtils, Classes {for inlining};
 
 
 { TCard }
