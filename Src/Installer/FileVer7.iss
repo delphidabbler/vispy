@@ -97,7 +97,6 @@ Name: desktopicon; Description: {cm:CreateDesktopIcon}; GroupDescription: {cm:Ad
 [Files]
 ; Executable files
 Source: {#SrcExePath}FileVer.exe; DestDir: {app}; Flags: uninsrestartdelete
-Source: {#SrcExePath}FileVer.cnt; DestDir: {app}; Flags: ignoreversion
 Source: {#SrcExePath}VIS.chm; DestDir: {app}; Flags: ignoreversion
 Source: {#SrcExePath}FileVerCM.dll; DestDir: {app}; Flags: regserver uninsrestartdelete
 Source: {#SrcExePath}FileVerCmd.exe; DestDir: {app}; Flags: uninsrestartdelete
