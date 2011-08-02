@@ -2,7 +2,7 @@
 @rem Script used to delete Version Information Spy's temp and backup source
 @rem files
 @rem
-@rem Copyright (C) Peter Johnson (www.delphidabbler.com), 2007-2010
+@rem Copyright (C) Peter Johnson (www.delphidabbler.com), 2007-2011
 @rem
 @rem $Rev$
 @rem $Date$
@@ -20,7 +20,6 @@ del /S %RootDir%\*.~*
 del /S %RootDir%\*.bak
 del /S %RootDir%\*.ddp 
 del /S %RootDir%\*.dsk 
-del /S %RootDir%\*.exe 
 del /S /AH %RootDir%\*.GID 
 del /S %RootDir%\*.identcache
 del /S %RootDir%\*.local
