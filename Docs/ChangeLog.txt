@@ -4,16 +4,17 @@
 ; $Date$
 ; ------------------------------------------------------------------------------
 
-Release NEXT
+Release 7.2.0 of 02 August 2011
 + Added Unicode support:
   - Reports now generated in Unicode. Interfaces supported by reporter DLL changed re this Unicode support.
   - Communication between GUI app instances changed to support passing of Unicode command line information. Communication with none Unicode version of GUI app will now fail.
   - Install program now Unicode compatible.
 + Completely rewrote help system:
-  - Changed from WinHelp to HTML Help.
+  - Changed from WinHelp to HTML Help (fixes issue #2).
   - Single help file now shared between GUI app and shell extension property sheet.
   - Property sheet now displays a single help topic on pressing F1 - popup help for each control removed.
 + Modified to compile cleanly with Delphi 2010 compiler.
++ Alt key bug (issue #4) and FlipUI bug (issue #1) fixed as a side effect of switch to Delphi 2010 compiler.
 + Program now requires Windows 2000 as the minimum operating system and will no longer run on the Windows 9x platform.
 + Updated documentation.
 
