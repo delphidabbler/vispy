@@ -4,6 +4,19 @@
 ; $Date$
 ; ------------------------------------------------------------------------------
 
+Release NEXT
++ Unicode support:
+  - Reports now generated in Unicode. Interfaces supported by reporter DLL changed re this Unicode support.
+  - Communication between GUI app instances changed to support passing of Unicode command line information. Communication with none Unicode version of GUI app will now fail.
++ Completely rewrote help system:
+  - Changed from WinHelp to HTML Help.
+  - Single help file now shared between GUI app and shell extension property sheet.
+  - Property sheet now displays a single help topic on pressing F1 - popup help for each control removed.
++ Modified to compile cleanly with Delphi 2010 compiler.
++ Install program now Unicode compatible.
++ Program now requires Windows 2000 as the minimum operating system and will no longer run on the Windows 9x platform.
++ Updated documentation.
+
 Release v7.1.0 of 21 November 2009
 + Added new XML report of version information to both GUI application (Reports menu) and command line application (-x switch). Report provided by updated FVReport.dll.
 + Fixed bug (issue #5) in GUI app's method of displaying reports: was not displaying required heading.
