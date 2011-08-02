@@ -4,9 +4,8 @@ SOURCE CODE LICENSING
 ________________________________________________________________________________
 
 This document reviews the licenses governing the Version Information Spy source
-code that is available from DelphiDabbler.com and the
-Subversion repository on Google Code at
-http://code.google.com/p/verinfo-tools/source/browse/.
+code that is available from DelphiDabbler.com and the Subversion repository on
+Google Code at http://code.google.com/p/verinfo-tools/source/browse/.
 
 The source code includes:
 
@@ -17,7 +16,7 @@ The source code includes:
 The download does not include all the source code required to build Version
 Information Spy. Explicitly it doesn't include:
 
-+ Source files from the Delphi VCL. You must have Delphi in order to access
++ Source files from the Delphi VCL. You must have Delphi 2010 or later to access
   these files.
 + DelphiDabbler library components and units. These are all available from
   http://www.delphidabbler.com/software/vis/download
@@ -58,7 +57,7 @@ The images used in the program are stored in the "Src" directory and its
 sub-directories.
 
 Images may also be embedded in forms by various VCL controls. Separate image
-files are not provided in the latter case.
+files are not provided in this case.
 
 All images are either original or have been copied or adapted from various
 sources. With the exception of the images listed under "Exceptions" below, all
@@ -67,16 +66,13 @@ images are in the public domain and can be re-used without restriction.
 Exceptions
 ----------
 
-The files Src\Apps\Images\FileVer.ico and Src\CmdApp\Images\FileVerCmd.ico are
-This file are copyright (C) 2009 Peter Johnson (www.delphidabbler.com).
-
-These files may not be altered in any way and may not be used in any other
-programs, including programs derived from the Version Information Spy code base,
-unless explicit permission is given by the author.
-
-This means that if you modify an aspect of the Version Information Spy code base
-and publish your changes then you must remove the icons or repace them with you
-own.
+The files Src\App\Images\FileVer.ico and Src\CmdApp\Images\FileVerCmd.ico are
+both copyright (C) 2009 Peter Johnson (www.delphidabbler.com). These files may
+not be altered in any way and may not be used in any other programs, including
+programs derived from the Version Information Spy code base, unless explicit
+permission is given by the author. This means that if you modify an aspect of
+the Version Information Spy code base and publish your changes then you must
+remove the icons or repace them with you own.
 
 
 ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
